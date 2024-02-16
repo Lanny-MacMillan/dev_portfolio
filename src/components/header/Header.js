@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HeaderContainer, LinksDiv } from "./Header.styles.js";
 
 const Header = () => {
   const pages = ["Home", "About", "Apps", "Work", "Contact"];
+  const divRef = useRef();
+
+  const scrollToElement = () => {
+    const { current } = divRef;
+    if (current !== null) {
+      current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(scrollToElement, []);
 
   return (
     <HeaderContainer>
       {pages.map((page) => (
         <LinksDiv key={page}>
           <h2 textAlign="center">
-            <Link style={{ color: "white" }} to={`/${page}`}>
+            <div style={{ color: "white" }} ref={divRef}>
               {page}
-            </Link>
+            </div>
           </h2>
         </LinksDiv>
       ))}
