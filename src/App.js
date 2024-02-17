@@ -1,50 +1,47 @@
 // import { Route, Routes } from "react-router";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Home from "./components/home/Home";
-import Header from "./components/header/Header";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import {
-  HeaderContainer,
-  LinksDiv,
-} from "./components/header/Header.styles.js";
-
-import "./App.css";
+import { HeaderContainer, LinksDiv } from "./components/home/Home.styles.js";
 
 function App() {
-  const pages = ["Home", "About", "Apps", "Work", "Contact"];
-  const contact = useRef();
+  const pages = ["// home", "// about", "// apps", "// work", "// contact"];
+  const pageRef = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
+
+  const scrollToRef = (ref) => {
+    pageRef[ref].current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
-      {/* <Header /> */}
       <HeaderContainer>
-        {pages.map((page) => (
+        {pages.map((page, pageRef) => (
           <LinksDiv key={page}>
             <h2 textAlign="center">
-              <button
-                onClick={() => {
-                  console.log(page);
-                  contact.current.scrollIntoView({ behavior: "smooth" });
-                }}
+              <div
+                onClick={() => scrollToRef(pageRef)}
                 style={{ color: "white" }}
               >
                 {page}
-              </button>
+              </div>
             </h2>
           </LinksDiv>
         ))}
       </HeaderContainer>
-      <Home />
-      <About />
-      <Contact contact={contact} />
-
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes> */}
+      <Home home={pageRef[0]} />
+      <About about={pageRef[1]} />
+      {/* <Apps apps={pageRef[2]} />
+      <Work work={pageRef[3]} /> */}
+      <Contact contact={pageRef[4]} />
     </>
   );
 }
