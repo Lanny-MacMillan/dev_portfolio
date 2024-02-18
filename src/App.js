@@ -1,7 +1,7 @@
 // import { Route, Routes } from "react-router";
 import React, { useRef } from "react";
 import Home from "./components/home/Home";
-import About from "./components/about/About";
+import Skills from "./components/skills/Skills.js";
 import Projects from "./projects/Projects.js";
 import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
@@ -15,7 +15,13 @@ import {
 } from "./components/home/Home.styles.js";
 
 function App() {
-  const pages = ["// home", "// about", "// projects", "// work", "// contact"];
+  const pages = [
+    "// home",
+    "// skills",
+    "// projects",
+    "// work",
+    "// contact",
+  ];
   const pageRef = [
     useRef(null),
     useRef(null),
@@ -44,7 +50,7 @@ function App() {
         </HeaderLinksDiv>
       </HeaderContainer>
       <Home home={pageRef[0]} />
-      <About about={pageRef[1]} />
+      <Skills skills={pageRef[1]} />
       <Projects projects={pageRef[2]} />
       <Work work={pageRef[3]} />
       <Contact contact={pageRef[4]} />
