@@ -2,11 +2,20 @@
 import React, { useRef } from "react";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
+import Projects from "./projects/Projects.js";
+import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
-import { HeaderContainer, LinksDiv } from "./components/home/Home.styles.js";
+import {
+  HeaderContainer,
+  OurHerosName,
+  HeaderLinksDiv,
+  LinksContent,
+  Links,
+  PageRefIcon,
+} from "./components/home/Home.styles.js";
 
 function App() {
-  const pages = ["// home", "// about", "// apps", "// work", "// contact"];
+  const pages = ["// home", "// about", "// projects", "// work", "// contact"];
   const pageRef = [
     useRef(null),
     useRef(null),
@@ -24,23 +33,20 @@ function App() {
   return (
     <>
       <HeaderContainer>
-        {pages.map((page, pageRef) => (
-          <LinksDiv key={page}>
-            <h2 textAlign="center">
-              <div
-                onClick={() => scrollToRef(pageRef)}
-                style={{ color: "white" }}
-              >
-                {page}
-              </div>
-            </h2>
-          </LinksDiv>
-        ))}
+        <OurHerosName>Lanny_MacMillan</OurHerosName>
+        <HeaderLinksDiv>
+          {pages.map((page, pageRef) => (
+            <LinksContent key={page} onClick={() => scrollToRef(pageRef)}>
+              <PageRefIcon>0{pageRef}</PageRefIcon>
+              <Links>{page}</Links>
+            </LinksContent>
+          ))}
+        </HeaderLinksDiv>
       </HeaderContainer>
       <Home home={pageRef[0]} />
       <About about={pageRef[1]} />
-      {/* <Apps apps={pageRef[2]} />
-      <Work work={pageRef[3]} /> */}
+      <Projects projects={pageRef[2]} />
+      <Work work={pageRef[3]} />
       <Contact contact={pageRef[4]} />
     </>
   );

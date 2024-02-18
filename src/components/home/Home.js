@@ -4,7 +4,7 @@ import { BodyContainer } from "./Home.styles.js";
 const Home = ({ home }) => {
   return (
     <BodyContainer ref={home}>
-      <p1>HomePage</p1>
+      <h1>HomePage</h1>
     </BodyContainer>
   );
 };
