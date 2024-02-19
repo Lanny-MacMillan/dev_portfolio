@@ -29,7 +29,7 @@ export const Skills0 = styled.div`
 
 export const Skills1 = styled.div`
   grid-area: skills1;
-  background-color: darkblue;
+  background-color: green;
 `;
 
 export const Skills2 = styled.div`
@@ -39,5 +39,5 @@ export const Skills2 = styled.div`
 
 export const Skills3 = styled.div`
   grid-area: skills3;
-  background-color: cyan;
+  background-color: navy;
 `;
