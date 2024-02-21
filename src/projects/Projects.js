@@ -1,9 +1,87 @@
-import React from "react";
-import { ProjectsContainer } from "./Projects.styles";
+import React, { useState } from "react";
+import theAdventure from "../components/assets/img/theAdventure.png";
+import {
+  ProjectsContainer,
+  ProjectCard,
+  CardFooter,
+  ProjectCard2,
+  Box,
+  Content,
+  ContentH2,
+  ContentH3,
+  ContentP,
+  ContentA,
+  ProjectCard3,
+  Footer,
+  Image,
+  Description,
+  Name,
+  Stack,
+} from "./Projects.styles";
 const Projects = ({ projects }) => {
+  const [hoverState, setHoverState] = useState(false);
+
+  const hoverStyle = {
+    transform: "scale(1.05)",
+    transformOrigin: "50% 50%",
+  };
+  const hoverStyleStack = {
+    // transition: "all .2s ease-in-out",
+    // // transform: "rotateX(0deg)",
+    // // transform: "rotateX(45deg)",
+    // transform: "rotateX(90deg)",
+  };
+  const noHoverStyleStack = {
+    transition: "all .2s ease-in-out",
+    transform: "rotateX(90deg)",
+    // transform: "rotateX(45deg)",
+    // transform: "rotateX(0deg)",
+  };
+
   return (
     <ProjectsContainer ref={projects}>
-      <ul>
+      {/* Card One - GlassMorphism UI Design */}
+      <ProjectCard>
+        <p>
+          <strong>The Quickstop - Component Library</strong>
+          <br />A personal component library for all my building needs. Brings
+          speed and ease with reusable components like modals, tooltips,buttons
+          etc.
+        </p>
+        <CardFooter>Created By Lanny_MacMillan</CardFooter>
+      </ProjectCard>
+      {/* Card Two - Nuemorphism UI Design */}
+      <ProjectCard2>
+        <Box>
+          <Content>
+            <ContentH2>01</ContentH2>
+            <ContentH3>Tetris</ContentH3>
+            <ContentP>
+              A clone of the original Tetris, done with React.
+            </ContentP>
+            <ContentA href="#">Read More</ContentA>
+          </Content>
+        </Box>
+      </ProjectCard2>
+      {/* Card Three - Nuemorphism UI Design */}
+      <ProjectCard3
+        onMouseEnter={() => setHoverState(true)}
+        onMouseLeave={() => setHoverState(false)}
+      >
+        <Image style={hoverState ? hoverStyle : null} src={theAdventure} />
+        <Footer>
+          <Name>The Adventure</Name>
+          <Description>
+            {" "}
+            An sidescrolling RPG platformer. Can you discover whats destroying
+            the land, unite the magi and bring a stop to it?
+          </Description>
+          <Stack style={hoverState ? hoverStyleStack : noHoverStyleStack}>
+            {hoverState ? "Show Project Code" : "Stacks Used"}
+          </Stack>
+        </Footer>
+      </ProjectCard3>
+      {/* <ul>
         <h1>ProjectPage</h1>
         <h1>Apps</h1>
         <li>
@@ -87,12 +165,12 @@ const Projects = ({ projects }) => {
           <p>GeometryDash in github</p>
         </li>
         <li>
-          <h3>Franks Nightmare</h3>
+          <h3>Two Dudes Nightmare</h3>
           <p>A 2d platformer</p>
           <p>C#, Unity, Aesprite</p>
           <p>Unity_Game_Two_Dudes in github</p>
         </li>
-      </ul>
+      </ul> */}
     </ProjectsContainer>
   );
 };
