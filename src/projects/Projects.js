@@ -1,5 +1,13 @@
 import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
 import theAdventure from "../components/assets/img/theAdventure.png";
+import {
+  UnityIcon,
+  CSharpIcon,
+  ReactIconColor,
+  JavascriptIcon,
+  TypescriptIcon,
+} from "../components/assets/img/icons";
 import {
   ProjectsContainer,
   ProjectCard,
@@ -17,6 +25,7 @@ import {
   Description,
   Name,
   Stack,
+  SkillsDiv,
 } from "./Projects.styles";
 const Projects = ({ projects }) => {
   const [hoverState, setHoverState] = useState(false);
@@ -25,41 +34,53 @@ const Projects = ({ projects }) => {
     transform: "scale(1.05)",
     transformOrigin: "50% 50%",
   };
-  const hoverStyleStack = {
-    // transition: "all .2s ease-in-out",
-    // // transform: "rotateX(0deg)",
-    // // transform: "rotateX(45deg)",
-    // transform: "rotateX(90deg)",
-  };
-  const noHoverStyleStack = {
-    transition: "all .2s ease-in-out",
-    transform: "rotateX(90deg)",
-    // transform: "rotateX(45deg)",
-    // transform: "rotateX(0deg)",
-  };
+  // const hoverStyleStack = {
+  //   // transition: "all .5s ease-in-out",
+  //   // // transform: "rotateX(0deg)",
+  //   // // transform: "rotateX(45deg)",
+  //   display: "none",
+  //   // transform: "rotateX(90deg)",
+  // };
+  // const noHoverStyleStack = {
+  //   // transition: "all .5s ease-in-out",
+  //   // transform: "rotateX(90deg)",
+  //   // transform: "rotateX(45deg)",
+  //   // transform: "rotateX(0deg)",
+  // };
 
   return (
     <ProjectsContainer ref={projects}>
       {/* Card One - GlassMorphism UI Design */}
       <ProjectCard>
+        <strong>The Quickstop - Component Library</strong>
         <p>
-          <strong>The Quickstop - Component Library</strong>
           <br />A personal component library for all my building needs. Brings
           speed and ease with reusable components like modals, tooltips,buttons
           etc.
         </p>
-        <CardFooter>Created By Lanny_MacMillan</CardFooter>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <ReactIconColor />
+          <TypescriptIcon />
+          <JavascriptIcon logoFill={"black"} backgroundFill={"yellow"} />
+        </div>
+
+        <CardFooter>Created By Lanny_MacMillan 2023</CardFooter>
       </ProjectCard>
       {/* Card Two - Nuemorphism UI Design */}
       <ProjectCard2>
         <Box>
           <Content>
-            <ContentH2>01</ContentH2>
-            <ContentH3>Tetris</ContentH3>
+            <ContentH2>Tetris</ContentH2>
+            <ContentH3>React JS</ContentH3>
             <ContentP>
               A clone of the original Tetris, done with React.
             </ContentP>
+
             <ContentA href="#">Read More</ContentA>
+            <SkillsDiv>
+              <ReactIconColor />
+              <JavascriptIcon logoFill={"black"} backgroundFill={"yellow"} />
+            </SkillsDiv>
           </Content>
         </Box>
       </ProjectCard2>
@@ -72,12 +93,43 @@ const Projects = ({ projects }) => {
         <Footer>
           <Name>The Adventure</Name>
           <Description>
-            {" "}
             An sidescrolling RPG platformer. Can you discover whats destroying
             the land, unite the magi and bring a stop to it?
           </Description>
-          <Stack style={hoverState ? hoverStyleStack : noHoverStyleStack}>
-            {hoverState ? "Show Project Code" : "Stacks Used"}
+          <Stack>
+            {hoverState ? (
+              <Transition
+                show={hoverState}
+                enter="transition-opacity duration-75"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <span>Link to Project Code</span>
+              </Transition>
+            ) : (
+              <Transition
+                show={!hoverState}
+                enter="transition-opacity duration-75"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <span>
+                  <UnityIcon
+                    width={40}
+                    height={40}
+                    logoFill={"white"}
+                    backgroundFill={"#262626"}
+                  />
+                  <CSharpIcon width={40} height={40} logoFill={"white"} />
+                </span>
+              </Transition>
+            )}
           </Stack>
         </Footer>
       </ProjectCard3>

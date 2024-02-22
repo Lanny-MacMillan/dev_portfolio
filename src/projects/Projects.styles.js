@@ -94,7 +94,7 @@ export const ContentH2 = styled.div`
   position: absolute;
   top: -10px;
   right: 30px;
-  font-size: 8rem;
+  font-size: 6rem;
   color: rgba(255, 255, 255, 0.1);
 `;
 
@@ -133,6 +133,16 @@ export const ContentA = styled.div`
     background: #fff;
     color: #000;
   }
+`;
+
+export const SkillsDiv = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  width: 85%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
 `;
 
 //  Card Three - Project UI Display
@@ -188,14 +198,13 @@ export const Stack = styled.div`
   height: 15%;
   padding: 5px;
   border-radius: 0px 0px 15px 15px;
+  flex-direction: row;
   align-items: center;
   color: white;
   justify-content: center;
-  align-items: flex-end;
-  align-content: flex-end;
   transition: all 0.4s ease-in-out;
   // border: 1px solid red;
-  &:hover:before {
-    // content: "Stacks Used!";
+  &:hover:span {
+    display: none;
   }
 `;
