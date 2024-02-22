@@ -7,7 +7,7 @@ import {
   ReactIconColor,
   JavascriptIcon,
   TypescriptIcon,
-} from "../components/assets/img/icons";
+} from "../components/assets/icons";
 import {
   ProjectsContainer,
   ProjectCard,
@@ -64,7 +64,7 @@ const Projects = ({ projects }) => {
           <JavascriptIcon logoFill={"black"} backgroundFill={"yellow"} />
         </div>
 
-        <CardFooter>Created By Lanny_MacMillan 2023</CardFooter>
+        <CardFooter>Lanny_MacMillan 2023</CardFooter>
       </ProjectCard>
       {/* Card Two - Nuemorphism UI Design */}
       <ProjectCard2>
@@ -96,6 +96,7 @@ const Projects = ({ projects }) => {
             An sidescrolling RPG platformer. Can you discover whats destroying
             the land, unite the magi and bring a stop to it?
           </Description>
+
           <Stack>
             {hoverState ? (
               <Transition

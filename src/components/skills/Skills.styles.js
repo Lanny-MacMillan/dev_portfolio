@@ -14,12 +14,22 @@ export const SkillsContainer = styled.div`
     ". skills0 skills1 skills2 ."
     ". skills3 skills3 skills3 ."
     ". . . . .";
-  background-color: yellow;
+  background: #2b2b2b;
+  // background: #121212;
+  background-opacity: 0.5;
 `;
 
 export const Header = styled.div`
   grid-area: header;
-  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  // background-color: grey;
 `;
 
 export const Skills0 = styled.div`
