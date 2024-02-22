@@ -53,6 +53,8 @@ export const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  // width: 25%;
+  // border: 1px solid red;
 `;
 
 export const ColorAccent = styled.div`
@@ -89,7 +91,7 @@ export const HTMLSnippet = styled.div`
   // display: flex;
   // flex-direction: column;
   height: 100%;
-  width: 10%;
+  // width: 10%;
   border: 2px solid yellow;
 `;
 
@@ -119,7 +121,12 @@ export const Skills2 = styled.div`
 
 export const Skills3 = styled.div`
   grid-area: skills3;
+  padding: 60px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
   border: 5px solid white;
   border-top: none;
-  background-color: navy;
+  // background-color: navy;
 `;

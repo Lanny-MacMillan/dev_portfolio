@@ -1,5 +1,10 @@
 import React from "react";
-import { ReactIconColor } from "../assets/icons.js";
+import {
+  ReactIcon,
+  MobileIcon,
+  SoftwareIcon,
+  UnityIcon2,
+} from "../assets/icons.js";
 import {
   SkillsContainer,
   Header,
@@ -24,7 +29,7 @@ const Skills = ({ skills }) => {
         <Skills0>
           <SkillsHeader>
             <Icon>
-              <ReactIconColor height={60} width={60} />{" "}
+              <SoftwareIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
               <ColorAccent />
@@ -43,7 +48,7 @@ const Skills = ({ skills }) => {
         <Skills1>
           <SkillsHeader>
             <Icon>
-              <ReactIconColor height={60} width={60} />{" "}
+              <ReactIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
               <ColorAccent background={"purple"} width={"126px"} />
@@ -61,7 +66,7 @@ const Skills = ({ skills }) => {
         <Skills2>
           <SkillsHeader>
             <Icon>
-              <ReactIconColor height={60} width={60} />{" "}
+              <MobileIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
               <ColorAccent background={"blue"} width={"95px"} />
@@ -74,7 +79,22 @@ const Skills = ({ skills }) => {
             <Description>React Native, Flutter, Android iOS</Description>
           </DescriptionBody>
         </Skills2>
-        <Skills3>Game Development - Unity C# developer</Skills3>
+        <Skills3>
+          <SkillsHeader>
+            <Icon>
+              <UnityIcon2 height={60} width={60} />{" "}
+            </Icon>
+            <Title>
+              <ColorAccent background={"#00DDFF"} width={"85px"} />
+              Game <br />
+              Development{" "}
+            </Title>
+          </SkillsHeader>
+          <DescriptionBody>
+            <HTMLSnippet></HTMLSnippet>
+            <Description>Unity C# developer</Description>
+          </DescriptionBody>
+        </Skills3>
       </SkillsContainer>
     </>
   );
