@@ -1,48 +1,58 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // width: 100%;
-  // height: 150vh;
   font: 1em/1.618 Inter, sans-serif;
-
   display: flex;
-  // align-items: center;
-  // justify-content: center;
-
-  min-height: 100vh;
-  max-height: 150vh;
+  // margin: 2em auto; // for header
+  flex-direction: column;
+  min-height: 200vh;
   padding: 30px;
   margin: 0;
-
+  border: 1px solid white;
   color: #224;
-  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
+  background: #1a191d;
+  // background: #2b2b2b;
+  // background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
     cover no-repeat fixed;
 `;
-// Card One - GlassMorphism UI Design
-export const ProjectCard = styled.div`
-  max-width: 300px;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
-  max-width: 500px;
-  height: 300px;
-  padding: 35px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-
-  backdrop-filter: blur(15px);
+export const Container = styled.div`
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 50px 50px;
+  grid-template-areas:
+    "projectOne projectTwo projectTwo"
+    "projectThree projectThree projectFour"
+    "projectThree projectThree projectFive"
+    "projectSix projectSeven projectEight";
 `;
-
-export const CardFooter = styled.div`
-  font-size: 0.65em;
-  color: #446;
+export const ProjectOne = styled.div`
+  grid-area: projectOne;
+`;
+export const ProjectTwo = styled.div`
+  grid-area: projectTwo;
+  border: 1px solid white;
+`;
+export const ProjectThree = styled.div`
+  grid-area: projectThree;
+  border: 1px solid white;
+`;
+export const ProjectFour = styled.div`
+  grid-area: projectFour;
+`;
+export const ProjectFive = styled.div`
+  grid-area: projectFive;
+`;
+export const ProjectSix = styled.div`
+  grid-area: projectSix;
+`;
+export const ProjectSeven = styled.div`
+  grid-area: projectSeven;
+`;
+export const ProjectEight = styled.div`
+  grid-area: projectEight;
 `;
 
 //  Card Two - Nuemorphism UI Design
@@ -145,32 +155,61 @@ export const SkillsDiv = styled.div`
   justify-content: center;
 `;
 
+export const Header = styled.div`
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  padding-bottom: 30px;
+  color: white;
+`;
+
 //  Card Three - Project UI Display
-export const ProjectCard3 = styled.div`
+// export const ProjectCard = styled.div`
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   // max-width: ${(props) => (props.maxWidth ? props.maxWidth : "420px")};
+//   // height: ${(props) => (props.height ? props.height : "440px")};
+//   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+//     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+//     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+//   border-radius: 15px;
+//   overflow: hidden;
+//   transition: all 0.4s ease-in-out;
+//   }
+// `;
+
+export const ProjectCardContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 420px;
-  height: 440px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+  height: ${(props) => (props.height ? props.height : "440px")};
+
   }
 `;
 export const Image = styled.img`
   width: 100%;
-  height: 60%;
+  height: ${(props) => (props.height ? props.height : "60%")};
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   // border: 1px solid blue;
 `;
 export const Footer = styled.div`
   width: 100%;
-  height: 40%;
-  background: rgba(0, 0, 0, 0.8);
+  height: ${(props) => (props.height ? props.height : "200px")};
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
   // border: 1px solid blue;
 `;
@@ -178,7 +217,7 @@ export const Name = styled.div`
   font-size: "20px";
   display: flex;
   height: 20%;
-  padding: 0px 30px 0px 30px;
+  padding: 10px 30px 0px 30px;
   color: white;
   align-items: center;
   // border: 1px solid green;
@@ -186,7 +225,7 @@ export const Name = styled.div`
 export const Description = styled.div`
   font-size: "10px";
   display: flex;
-  height: 55%;
+  min-height: 50%;
   color: white;
   padding: 0px 20px 0px 30px;
   align-items: center;
@@ -197,7 +236,7 @@ export const Stack = styled.div`
   display: flex;
   height: 15%;
   padding: 5px;
-  border-radius: 0px 0px 15px 15px;
+  // border-radius: 0px 0px 15px 15px;
   flex-direction: row;
   align-items: center;
   color: white;

@@ -4,6 +4,8 @@ export const SkillsContainer = styled.div`
   display: grid;
   height: 100vh;
   color: white;
+  // margin: 2em auto; // for header
+
   grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
   grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -14,7 +16,8 @@ export const SkillsContainer = styled.div`
     ". skills0 skills1 skills2 ."
     ". skills3 skills3 skills3 ."
     ". . . . .";
-  background: #2b2b2b;
+  background: #1a191d;
+  // background: #2b2b2b;
   // background: #121212;
   background-opacity: 0.5;
 `;
@@ -29,6 +32,7 @@ export const Header = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  padding-bottom: 30px;
 `;
 
 export const Skills0 = styled.div`
@@ -38,7 +42,7 @@ export const Skills0 = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  border: 5px solid white;
+  border: 2px solid white;
   border-right: none;
 `;
 
@@ -102,7 +106,7 @@ export const Skills1 = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  border: 5px solid white;
+  border: 2px solid white;
   // outline-style: solid none;
   // background-color: green;
 `;
@@ -114,7 +118,7 @@ export const Skills2 = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  border: 5px solid white;
+  border: 2px solid white;
   border-left: none;
   // background-color: purple;
 `;
@@ -126,7 +130,7 @@ export const Skills3 = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  border: 5px solid white;
+  border: 2px solid white;
   border-top: none;
   // background-color: navy;
 `;

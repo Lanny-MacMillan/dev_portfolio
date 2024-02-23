@@ -22,6 +22,7 @@ import {
 } from "./Skills.styles.js";
 
 const Skills = ({ skills }) => {
+  // add video on hover, icon changes to color and rotates
   return (
     <>
       <SkillsContainer ref={skills}>
@@ -41,7 +42,7 @@ const Skills = ({ skills }) => {
             <HTMLSnippet></HTMLSnippet>
             <Description>
               Software Dev, functional and OOP programming, Javascript, C#,
-              Typescript, Python - Animated screen typing
+              Typescript, Python
             </Description>
           </DescriptionBody>
         </Skills0>
@@ -76,7 +77,7 @@ const Skills = ({ skills }) => {
           </SkillsHeader>
           <DescriptionBody>
             <HTMLSnippet></HTMLSnippet>
-            <Description>React Native, Flutter, Android iOS</Description>
+            <Description>React Native, Flutter?, iOS, Android</Description>
           </DescriptionBody>
         </Skills2>
         <Skills3>
