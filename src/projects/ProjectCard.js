@@ -17,6 +17,8 @@ const ProjectCard = ({
   link,
   height,
   imgHeight,
+  margin,
+  padding,
 }) => {
   const [hoverState, setHoverState] = useState(false);
 
@@ -36,10 +38,11 @@ const ProjectCard = ({
           style={hoverState ? hoverStyle : null}
           src={img}
           height={imgHeight}
+          margin={margin}
         />
         <Footer height={height}>
           {/* color splash to match skills page */}
-          <Name>{nameText}</Name>
+          <Name padding={padding}>{nameText}</Name>
           <Description>{description}</Description>
           <Stack>
             {hoverState ? (

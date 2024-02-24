@@ -1,14 +1,29 @@
 import React from "react";
 import theAdventureImg from "../components/assets/img/theAdventure.png";
+import tetrisReact from "../components/assets/img/tetrisReact.png";
+import amiiboAppImg from "../components/assets/img/amiibo.png";
+import vacationImg from "../components/assets/img/vacation.png";
+import geoDashImg from "../components/assets/img/geoDash.png";
+import crappyBirdImg from "../components/assets/img/crappyBird.png";
+import nightmareImg from "../components/assets/img/nightmare.png";
+import storybookImg from "../components/assets/img/storybook.png";
 import {
   UnityIcon,
   CSharpIcon,
   ReactIconColor,
   TypescriptIcon,
   JavascriptIcon,
+  StorybookIcon,
+  MongoDBIcon,
+  ExpressIcon,
+  PostregSQLIcon,
+  NodeJSIcon,
+  PythonIcon,
+  DjangoIcon,
 } from "../components/assets/icons";
 
 import ProjectCard from "./ProjectCard";
+
 import {
   ProjectsContainer,
   Container,
@@ -44,7 +59,7 @@ const Projects = ({ projects }) => {
 
   const tetris = {
     nameText: "Tetric React",
-    image: theAdventureImg,
+    image: tetrisReact,
     description: "A clone of the original Tetris, done with React.",
     link: "link to project",
     icons: [<ReactIconColor width={40} height={40} />],
@@ -52,7 +67,7 @@ const Projects = ({ projects }) => {
 
   const theQuickStop = {
     nameText: "The Quickstop - Component Library",
-    image: theAdventureImg,
+    image: storybookImg,
     description:
       "A personal component library for all my building needs. Brings speed and ease to reusable components like modals, tooltips, buttons etc.",
     link: "link to project",
@@ -60,44 +75,44 @@ const Projects = ({ projects }) => {
       <ReactIconColor width={40} height={40} />,
       <TypescriptIcon width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
-      // Storybook Icon here
+      <StorybookIcon width={35} height={35} />,
     ],
   };
 
   const amiiboApp = {
     nameText: "Amiibo App",
-    image: theAdventureImg,
+    image: amiiboAppImg,
     description:
       "A Full Stack Nintendo Amiibos App for collectors. You can add Amiibos from your personal collection and gain information about them inclucing game functionality.",
     link: "link to project",
     icons: [
+      <ExpressIcon width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
-      // MongoDB Icon
-      // Express Icon
-      // Node JS Icon
-      // EJS
+      <MongoDBIcon width={40} height={40} />,
+      <NodeJSIcon width={40} height={40} />,
     ],
   };
 
   const vacationApp = {
     nameText: "Vacation App",
-    image: theAdventureImg,
+    image: vacationImg,
     description:
       "Vacation is a full stack application that helps users while vaationing. ",
     link: "link to project",
     icons: [
       <ReactIconColor width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
+      <PostregSQLIcon width={38} height={38} />,
+      <PythonIcon width={40} height={40} />,
+      <DjangoIcon width={40} height={40} />,
       // Python3 Icon
       // Django Icon
-      // PostregSQL Icon
-      // NodeJS Icon
     ],
   };
 
   const crappyBird = {
     nameText: "Crappy Bird",
-    image: theAdventureImg,
+    image: crappyBirdImg,
     description: "A clone of the popular flappy bird",
     link: "link to project",
     icons: [
@@ -113,7 +128,7 @@ const Projects = ({ projects }) => {
 
   const geoDash = {
     nameText: "Geometry Dash",
-    image: theAdventureImg,
+    image: geoDashImg,
     description:
       "Working on a a version of geometry dash that will have v.1, v.2 and a new v.3 with all new rules and gameModes",
     link: "",
@@ -130,7 +145,7 @@ const Projects = ({ projects }) => {
 
   const twoDudesNightmare = {
     nameText: "Two Dudes Nightmare",
-    image: theAdventureImg,
+    image: nightmareImg,
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
     link: "",
@@ -166,10 +181,10 @@ const Projects = ({ projects }) => {
             description={theQuickStop.description}
             icons={theQuickStop.icons}
             link={theQuickStop.link}
+            margin={"none"}
           />
         </ProjectTwo>
         <ProjectThree>
-          {" "}
           <ProjectCard
             nameText={theAdventure.nameText}
             img={theAdventure.image}
@@ -181,7 +196,6 @@ const Projects = ({ projects }) => {
           />
         </ProjectThree>
         <ProjectFour>
-          {" "}
           <ProjectCard
             nameText={amiiboApp.nameText}
             img={amiiboApp.image}
@@ -191,43 +205,44 @@ const Projects = ({ projects }) => {
           />
         </ProjectFour>
         <ProjectFive>
-          {" "}
           <ProjectCard
             nameText={tetris.nameText}
             img={tetris.image}
             description={tetris.description}
             icons={tetris.icons}
             link={tetris.link}
+            margin={"none"}
           />
         </ProjectFive>
         <ProjectSix>
-          {" "}
           <ProjectCard
             nameText={twoDudesNightmare.nameText}
             img={twoDudesNightmare.image}
             description={twoDudesNightmare.description}
             icons={twoDudesNightmare.icons}
             link={twoDudesNightmare.link}
+            margin={"none"}
           />
         </ProjectSix>
         <ProjectSeven>
-          {" "}
           <ProjectCard
             nameText={crappyBird.nameText}
             img={crappyBird.image}
             description={crappyBird.description}
             icons={crappyBird.icons}
             link={crappyBird.link}
+            margin={"none"}
           />
         </ProjectSeven>
         <ProjectEight>
-          {" "}
           <ProjectCard
             nameText={geoDash.nameText}
             img={geoDash.image}
             description={geoDash.description}
             icons={geoDash.icons}
             link={geoDash.link}
+            padding={"20px 30px 0px 30px"}
+            // imgHeight={"70%"}
           />
         </ProjectEight>
       </Container>

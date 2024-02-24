@@ -33,11 +33,9 @@ export const ProjectOne = styled.div`
 `;
 export const ProjectTwo = styled.div`
   grid-area: projectTwo;
-  border: 1px solid white;
 `;
 export const ProjectThree = styled.div`
   grid-area: projectThree;
-  border: 1px solid white;
 `;
 export const ProjectFour = styled.div`
   grid-area: projectFour;
@@ -200,7 +198,10 @@ export const ProjectCardContainer = styled.div`
   }
 `;
 export const Image = styled.img`
-  width: 100%;
+  // width: 100%;
+  display: block;
+  max-width: 100%;
+  margin: ${(props) => (props.margin ? props.margin : "auto")};
   height: ${(props) => (props.height ? props.height : "60%")};
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
@@ -208,6 +209,7 @@ export const Image = styled.img`
 `;
 export const Footer = styled.div`
   width: 100%;
+
   height: ${(props) => (props.height ? props.height : "200px")};
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
@@ -217,7 +219,8 @@ export const Name = styled.div`
   font-size: "20px";
   display: flex;
   height: 20%;
-  padding: 10px 30px 0px 30px;
+  padding: ${(props) => (props.padding ? props.padding : "10px 30px 0px 30px")};
+  // padding: 10px 30px 0px 30px;
   color: white;
   align-items: center;
   // border: 1px solid green;
