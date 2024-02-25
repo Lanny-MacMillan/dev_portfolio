@@ -7,6 +7,7 @@ import {
   Description,
   Name,
   Stack,
+  ColorAccent,
 } from "./Projects.styles";
 
 const ProjectCard = ({
@@ -19,6 +20,9 @@ const ProjectCard = ({
   imgHeight,
   margin,
   padding,
+  colorSplash,
+  colorSplashWidth,
+  colorSplashPosition,
 }) => {
   const [hoverState, setHoverState] = useState(false);
 
@@ -42,7 +46,15 @@ const ProjectCard = ({
         />
         <Footer height={height}>
           {/* color splash to match skills page */}
-          <Name padding={padding}>{nameText}</Name>
+          <Name padding={padding}>
+            <strong>{nameText}</strong>
+          </Name>
+          <ColorAccent
+            background={colorSplash}
+            width={colorSplashWidth}
+            bottom={colorSplashPosition}
+          />
+
           <Description>{description}</Description>
           <Stack>
             {hoverState ? (

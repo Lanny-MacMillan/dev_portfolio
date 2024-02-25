@@ -8,7 +8,7 @@ export const ProjectsContainer = styled.div`
   min-height: 200vh;
   padding: 30px;
   margin: 0;
-  border: 1px solid white;
+  // border: 1px solid white;
   color: #224;
   background: #1a191d;
   // background: #2b2b2b;
@@ -209,19 +209,23 @@ export const Image = styled.img`
 `;
 export const Footer = styled.div`
   width: 100%;
-
+  z-index: 1;
   height: ${(props) => (props.height ? props.height : "200px")};
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
   // border: 1px solid blue;
 `;
 export const Name = styled.div`
-  font-size: "20px";
+  font-size: 30px;
   display: flex;
+  z-index: 5;
   height: 20%;
+
   padding: ${(props) => (props.padding ? props.padding : "10px 30px 0px 30px")};
   // padding: 10px 30px 0px 30px;
   color: white;
+  font-family: "DM Sans", sans-serif;
+
   align-items: center;
   // border: 1px solid green;
 `;
@@ -235,7 +239,7 @@ export const Description = styled.div`
   // border: 1px solid orange;
 `;
 export const Stack = styled.div`
-  font-size: "14px";
+  font-size: 14px;
   display: flex;
   height: 15%;
   padding: 5px;
@@ -249,4 +253,14 @@ export const Stack = styled.div`
   &:hover:span {
     display: none;
   }
+`;
+
+export const ColorAccent = styled.div`
+  position: absolute;
+  bottom: ${(props) => (props.bottom ? props.bottom : "133px")};
+  left: 25px;
+  z-index: -1;
+  width: ${(props) => (props.width ? props.width : "125px")};
+  background: ${(props) => (props.background ? props.background : "red")};
+  height: 10px;
 `;

@@ -6,6 +6,12 @@ import {
   UnityIcon2,
 } from "../assets/icons.js";
 import {
+  softwareDev,
+  frontendDev,
+  mobileDev,
+  gameDev,
+} from "../assets/constants.js";
+import {
   SkillsContainer,
   Header,
   Skills0,
@@ -33,7 +39,7 @@ const Skills = ({ skills }) => {
               <SoftwareIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
-              <ColorAccent />
+              <ColorAccent background={softwareDev} />
               Software <br />
               Development{" "}
             </Title>
@@ -52,7 +58,7 @@ const Skills = ({ skills }) => {
               <ReactIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
-              <ColorAccent background={"purple"} width={"126px"} />
+              <ColorAccent background={frontendDev} width={"126px"} />
               Frontend <br />
               Development{" "}
             </Title>
@@ -70,7 +76,7 @@ const Skills = ({ skills }) => {
               <MobileIcon height={60} width={60} />{" "}
             </Icon>
             <Title>
-              <ColorAccent background={"blue"} width={"95px"} />
+              <ColorAccent background={mobileDev} width={"95px"} />
               Mobile <br />
               Development{" "}
             </Title>
@@ -86,7 +92,7 @@ const Skills = ({ skills }) => {
               <UnityIcon2 height={60} width={60} />{" "}
             </Icon>
             <Title>
-              <ColorAccent background={"#00DDFF"} width={"85px"} />
+              <ColorAccent background={gameDev} width={"85px"} />
               Game <br />
               Development{" "}
             </Title>

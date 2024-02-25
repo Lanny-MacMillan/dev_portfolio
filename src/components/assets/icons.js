@@ -89,7 +89,6 @@ export const MobileIcon = ({ logoFill, width, height }) => (
   </svg>
 );
 
-// Credit to FA
 export const LaptopIcon = ({ logoFill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +206,6 @@ export const TypescriptIcon = ({ width, height, logoFill, backgroundFill }) => (
     />
   </svg>
 );
-
 // Credit to Icons8
 export const JavascriptIcon = ({ logoFill, backgroundFill, width, height }) => (
   <svg
@@ -264,6 +262,7 @@ export const UnityIcon = ({ logoFill, backgroundFill, width, height }) => (
     />
   </svg>
 );
+
 export const UnityIcon2 = ({ logoFill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -540,6 +539,7 @@ export const MongoDBIcon = ({ width, height, backgroundFill }) => (
     </g>
   </svg>
 );
+
 export const ExpressIcon = ({ width, height, logoFill }) => (
   <svg
     width={width || "48"}
@@ -557,6 +557,7 @@ export const ExpressIcon = ({ width, height, logoFill }) => (
     </g>
   </svg>
 );
+
 export const EJSIcon = ({ width, height, logoFill }) => (
   <svg
     width={width || "48"}
@@ -571,6 +572,7 @@ export const EJSIcon = ({ width, height, logoFill }) => (
     />
   </svg>
 );
+
 export const NodeJSIcon = ({ width, height, logoFill }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

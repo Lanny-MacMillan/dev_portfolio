@@ -37,28 +37,33 @@ import {
   ProjectEight,
   Header,
 } from "./Projects.styles";
+import {
+  frontendDev,
+  gameDev,
+  softwareDev,
+} from "../components/assets/constants";
 
 const Projects = ({ projects }) => {
-  //
   const theAdventure = {
     nameText: "TheAdventure",
+    colorSplash: gameDev,
     image: theAdventureImg,
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
     link: "link to project",
     icons: [
       <UnityIcon
-        width={60}
-        height={60}
+        width={50}
+        height={50}
         logoFill={"white"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={60} height={60} logoFill={"white"} />,
+      <CSharpIcon width={50} height={50} logoFill={"white"} />,
     ],
   };
 
   const tetris = {
-    nameText: "Tetric React",
+    nameText: "Tetris React",
     image: tetrisReact,
     description: "A clone of the original Tetris, done with React.",
     link: "link to project",
@@ -67,6 +72,7 @@ const Projects = ({ projects }) => {
 
   const theQuickStop = {
     nameText: "The Quickstop - Component Library",
+    colorSplash: softwareDev,
     image: storybookImg,
     description:
       "A personal component library for all my building needs. Brings speed and ease to reusable components like modals, tooltips, buttons etc.",
@@ -81,9 +87,9 @@ const Projects = ({ projects }) => {
 
   const amiiboApp = {
     nameText: "Amiibo App",
+    colorSplash: frontendDev,
     image: amiiboAppImg,
-    description:
-      "A Full Stack Nintendo Amiibos App for collectors. You can add Amiibos from your personal collection and gain information about them inclucing game functionality.",
+    description: "A Full Stack Nintendo Amiibos App for collectors.",
     link: "link to project",
     icons: [
       <ExpressIcon width={40} height={40} />,
@@ -95,6 +101,7 @@ const Projects = ({ projects }) => {
 
   const vacationApp = {
     nameText: "Vacation App",
+    colorSplash: frontendDev,
     image: vacationImg,
     description:
       "Vacation is a full stack application that helps users while vaationing. ",
@@ -105,13 +112,12 @@ const Projects = ({ projects }) => {
       <PostregSQLIcon width={38} height={38} />,
       <PythonIcon width={40} height={40} />,
       <DjangoIcon width={40} height={40} />,
-      // Python3 Icon
-      // Django Icon
     ],
   };
 
   const crappyBird = {
     nameText: "Crappy Bird",
+    colorSplash: gameDev,
     image: crappyBirdImg,
     description: "A clone of the popular flappy bird",
     link: "link to project",
@@ -128,6 +134,7 @@ const Projects = ({ projects }) => {
 
   const geoDash = {
     nameText: "Geometry Dash",
+    colorSplash: gameDev,
     image: geoDashImg,
     description:
       "Working on a a version of geometry dash that will have v.1, v.2 and a new v.3 with all new rules and gameModes",
@@ -145,6 +152,7 @@ const Projects = ({ projects }) => {
 
   const twoDudesNightmare = {
     nameText: "Two Dudes Nightmare",
+    colorSplash: gameDev,
     image: nightmareImg,
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
@@ -172,6 +180,8 @@ const Projects = ({ projects }) => {
             description={vacationApp.description}
             icons={vacationApp.icons}
             link={vacationApp.link}
+            colorSplash={vacationApp.colorSplash}
+            colorSplashWidth={"205px"}
           />
         </ProjectOne>
         <ProjectTwo>
@@ -181,6 +191,8 @@ const Projects = ({ projects }) => {
             description={theQuickStop.description}
             icons={theQuickStop.icons}
             link={theQuickStop.link}
+            colorSplash={theQuickStop.colorSplash}
+            colorSplashWidth={"525px"}
             margin={"none"}
           />
         </ProjectTwo>
@@ -191,8 +203,11 @@ const Projects = ({ projects }) => {
             description={theAdventure.description}
             icons={theAdventure.icons}
             link={theAdventure.link}
+            colorSplash={theAdventure.colorSplash}
+            colorSplashWidth={"205px"}
+            colorSplashPosition={"322px"}
             height={"100%"}
-            imgHeight={"800px"}
+            // imgHeight={"800px"}
           />
         </ProjectThree>
         <ProjectFour>
@@ -202,6 +217,8 @@ const Projects = ({ projects }) => {
             description={amiiboApp.description}
             icons={amiiboApp.icons}
             link={amiiboApp.link}
+            colorSplash={amiiboApp.colorSplash}
+            colorSplashWidth={"180px"}
           />
         </ProjectFour>
         <ProjectFive>
@@ -211,6 +228,8 @@ const Projects = ({ projects }) => {
             description={tetris.description}
             icons={tetris.icons}
             link={tetris.link}
+            colorSplash={tetris.colorSplash}
+            colorSplashWidth={"180px"}
             margin={"none"}
           />
         </ProjectFive>
@@ -221,6 +240,8 @@ const Projects = ({ projects }) => {
             description={twoDudesNightmare.description}
             icons={twoDudesNightmare.icons}
             link={twoDudesNightmare.link}
+            colorSplash={twoDudesNightmare.colorSplash}
+            colorSplashWidth={"320px"}
             margin={"none"}
           />
         </ProjectSix>
@@ -231,6 +252,8 @@ const Projects = ({ projects }) => {
             description={crappyBird.description}
             icons={crappyBird.icons}
             link={crappyBird.link}
+            colorSplash={crappyBird.colorSplash}
+            colorSplashWidth={"180px"}
             margin={"none"}
           />
         </ProjectSeven>
@@ -241,8 +264,9 @@ const Projects = ({ projects }) => {
             description={geoDash.description}
             icons={geoDash.icons}
             link={geoDash.link}
+            colorSplash={geoDash.colorSplash}
+            colorSplashWidth={"233px"}
             padding={"20px 30px 0px 30px"}
-            // imgHeight={"70%"}
           />
         </ProjectEight>
       </Container>
