@@ -201,6 +201,7 @@ export const Image = styled.img`
   // width: 100%;
   display: block;
   max-width: 100%;
+  z-index: 10;
   margin: ${(props) => (props.margin ? props.margin : "auto")};
   height: ${(props) => (props.height ? props.height : "60%")};
   border-radius: 15px 15px 0px 0px;

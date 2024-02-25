@@ -138,7 +138,7 @@ const Projects = ({ projects }) => {
     image: geoDashImg,
     description:
       "Working on a a version of geometry dash that will have v.1, v.2 and a new v.3 with all new rules and gameModes",
-    link: "",
+    link: "link to project",
     icons: [
       <UnityIcon
         width={40}
@@ -156,7 +156,7 @@ const Projects = ({ projects }) => {
     image: nightmareImg,
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
-    link: "",
+    link: "link to project",
     icons: [
       <UnityIcon
         width={40}

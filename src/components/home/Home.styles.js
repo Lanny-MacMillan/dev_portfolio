@@ -3,10 +3,13 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  z-index: 25;
+  margin-bottom: 2em auto; // for header
+
   // justify-content: space-between;
   justify-content: space-evenly;
   width: 100%;
-  height: 5vh;
+  height: 3em;
   background-color: black;
 `;
 
@@ -45,6 +48,8 @@ export const Links = styled.div`
 export const BodyContainer = styled.div`
   display: flex;
   flex-direction: row;
+  // margin: 2em auto; // for header
+
   width: 100%;
   height: 100vh;
   background-color: cyan;

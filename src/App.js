@@ -5,6 +5,7 @@ import Skills from "./components/skills/Skills.js";
 import Projects from "./projects/Projects.js";
 import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
+import ScrollToTop from "./components/util/ScrollToTop.js";
 import {
   HeaderContainer,
   OurHerosName,
@@ -22,6 +23,7 @@ function App() {
     "// work",
     "// contact",
   ];
+
   const pageRef = [
     useRef(null),
     useRef(null),
@@ -49,6 +51,7 @@ function App() {
           ))}
         </HeaderLinksDiv>
       </HeaderContainer>
+      <ScrollToTop />
       <Home home={pageRef[0]} />
       <Skills skills={pageRef[1]} />
       <Projects projects={pageRef[2]} />
