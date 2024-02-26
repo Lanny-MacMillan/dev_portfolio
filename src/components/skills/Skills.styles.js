@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
   display: grid;
-  height: 100vh;
+  height: 120vh;
   color: white;
   // margin: 2em auto; // for header
-
   grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
   grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -19,7 +18,7 @@ export const SkillsContainer = styled.div`
   background: #1a191d;
   // background: #2b2b2b;
   // background: #121212;
-  background-opacity: 0.5;
+  // background-opacity: 0.5;
 `;
 
 export const Header = styled.div`

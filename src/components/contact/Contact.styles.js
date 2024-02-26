@@ -2,30 +2,59 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   height: 100vh;
-  display: grid;
-  grid-template-columns: 0.6fr 0.5fr 0.7fr;
-  grid-template-rows: 0.6fr 0.8fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . ."
-    "showDiv1 showDiv3 contact"
-    "showDiv2 showDiv3 contact";
-  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #1a191d;
 `;
 
 export const ContactDiv = styled.div`
-  grid-area: contact;
-  background-color: black;
+  // grid-area: contact;
+  // display: flex;
+  // flex-direction: row;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
 `;
 export const ShowDiv1 = styled.div`
-  grid-area: showDiv1;
-  background-color: lightblue;
+  margin-left: 20%;
+  background-color: rgba(255, 255, 255);
+  display: block;
+  position: relative;
+  z-index: 100;
+  width: 30%;
+  height: 70%;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  // box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+  //   inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  //   5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 `;
 export const ShowDiv2 = styled.div`
-  grid-area: showDiv2;
-  background-color: blue;
+  margin-left: 8%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: block;
+  width: 30%;
+  height: 70%;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  bottom: 60%;
+  position: relative;
+  left: 40%;
 `;
-export const ShowDiv3 = styled.div`
-  grid-area: showDiv3;
-  background-color: teal;
+export const Image = styled.img`
+  max-width: 100%;
 `;

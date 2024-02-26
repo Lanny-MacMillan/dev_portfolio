@@ -5,10 +5,10 @@ export const ProjectsContainer = styled.div`
   display: flex;
   // margin: 2em auto; // for header
   flex-direction: column;
-  min-height: 200vh;
+  min-height: 230vh;
   padding: 30px;
   margin: 0;
-  // border: 1px solid white;
+  border: 1px solid white;
   color: #224;
   background: #1a191d;
   // background: #2b2b2b;
@@ -21,7 +21,7 @@ export const Container = styled.div`
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 50px 50px;
+  gap: 60px 60px;
   grid-template-areas:
     "projectOne projectTwo projectTwo"
     "projectThree projectThree projectFour"
