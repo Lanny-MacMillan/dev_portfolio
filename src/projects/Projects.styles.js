@@ -8,7 +8,7 @@ export const ProjectsContainer = styled.div`
   min-height: 230vh;
   padding: 30px;
   margin: 0;
-  border: 1px solid white;
+  // border: 1px solid white;
   color: #224;
   background: #1a191d;
   // background: #2b2b2b;
