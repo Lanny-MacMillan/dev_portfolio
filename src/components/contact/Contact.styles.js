@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Input } from '@lanny-macmillan/thequickstop'
 
 export const ContactContainer = styled.div`
   height: 100vh;
@@ -46,7 +47,7 @@ export const ShowDiv1 = styled.div`
 
 export const ShowDiv2 = styled.div`
   margin-left: 8%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   display: block;
   width: 30%;
   height: 70%;
@@ -108,15 +109,14 @@ export const CardSubHeader = styled.div`
   color: black;
 `;
 export const CardForm = styled.div`
-  // grid-area: header;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // font-size: 1em;
-  // font-family: "DM Sans", sans-serif;
-  // font-optical-sizing: auto;
-  // font-weight: 800;
-  // font-style: normal;
-  // padding-bottom: 30px;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
   color: black;
+`;
+export const StyledInput = styled(Input)`
+  // max-height: 35px
+  // margin-top: 12px;
+  // padding-bottom: 8px
 `;

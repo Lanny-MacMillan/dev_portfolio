@@ -79,7 +79,7 @@ const ProjectCard = ({
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <span>{icons}</span>
+                <div style={{display: 'flex', flexDirection: 'row'}}>{icons}</div>
               </Transition>
             )}
           </Stack>

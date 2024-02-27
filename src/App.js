@@ -1,11 +1,15 @@
 // import { Route, Routes } from "react-router";
 import React, { useRef } from "react";
+import '@lanny-macmillan/thequickstop'
+import '@lanny-macmillan/thequickstop/dist/tailwind.css'
+
 import Home from "./components/home/Home";
 import Skills from "./components/skills/Skills.js";
 import Projects from "./projects/Projects.js";
 import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/util/ScrollToTop.js";
+
 import {
   HeaderContainer,
   OurHerosName,

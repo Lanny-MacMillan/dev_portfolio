@@ -1,9 +1,9 @@
 import React from "react";
-import {
-  ReactIconColor,
-  JavascriptIcon,
-  TypescriptIcon,
-} from "../components/assets/icons";
+// import {
+//   ReactIconColor,
+//   JavascriptIcon,
+//   TypescriptIcon,
+// } from "../components/assets/icons";
 import {
   ExperienceContainer,
   Header,
