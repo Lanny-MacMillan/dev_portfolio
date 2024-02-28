@@ -7,6 +7,13 @@ import geoDashImg from "../components/assets/img/geoDash.png";
 import crappyBirdImg from "../components/assets/img/crappyBird.png";
 import nightmareImg from "../components/assets/img/nightmare.png";
 import storybookImg from "../components/assets/img/storybook.png";
+import ProjectCard from "./ProjectCard";
+import {
+  frontendDev,
+  gameDev,
+  softwareDev,
+} from "../components/assets/constants";
+
 import {
   UnityIcon,
   CSharpIcon,
@@ -22,8 +29,6 @@ import {
   DjangoIcon,
 } from "../components/assets/icons";
 
-import ProjectCard from "./ProjectCard";
-
 import {
   ProjectsContainer,
   Container,
@@ -37,11 +42,7 @@ import {
   ProjectEight,
   Header,
 } from "./Projects.styles";
-import {
-  frontendDev,
-  gameDev,
-  softwareDev,
-} from "../components/assets/constants";
+
 
 const Projects = ({ projects }) => {
   const theAdventure = {
@@ -53,12 +54,12 @@ const Projects = ({ projects }) => {
     link: "link to project",
     icons: [
       <UnityIcon
-        width={50}
-        height={50}
+        width={40}
+        height={40}
         logoFill={"white"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={50} height={50} logoFill={"white"} />,
+      <CSharpIcon width={40} height={40} logoFill={"white"} />,
     ],
   };
 
@@ -71,7 +72,7 @@ const Projects = ({ projects }) => {
   };
 
   const theQuickStop = {
-    nameText: "The Quickstop - Component Library",
+    nameText: "The Quickstop - Library",
     colorSplash: softwareDev,
     image: storybookImg,
     description:
@@ -137,7 +138,7 @@ const Projects = ({ projects }) => {
     colorSplash: gameDev,
     image: geoDashImg,
     description:
-      "Working on a a version of geometry dash that will have v.1, v.2 and a new v.3 with all new rules and gameModes",
+      "Geo Dash with some twists",
     link: "link to project",
     icons: [
       <UnityIcon
@@ -151,7 +152,7 @@ const Projects = ({ projects }) => {
   };
 
   const twoDudesNightmare = {
-    nameText: "Two Dudes Nightmare",
+    nameText: "2D Nightmare",
     colorSplash: gameDev,
     image: nightmareImg,
     description:
@@ -171,29 +172,31 @@ const Projects = ({ projects }) => {
 
   return (
     <ProjectsContainer ref={projects}>
-      <Header>My Projects</Header>
+      <Header>Projects</Header>
       <Container>
         <ProjectOne>
           <ProjectCard
             nameText={vacationApp.nameText}
-            img={vacationApp.image}
+            // img={vacationApp.image}
             description={vacationApp.description}
             icons={vacationApp.icons}
             link={vacationApp.link}
             colorSplash={vacationApp.colorSplash}
-            colorSplashWidth={"205px"}
+            colorSplashWidth={"135px"}
           />
         </ProjectOne>
         <ProjectTwo>
           <ProjectCard
             nameText={theQuickStop.nameText}
-            img={theQuickStop.image}
+            // img={theQuickStop.image}
             description={theQuickStop.description}
             icons={theQuickStop.icons}
             link={theQuickStop.link}
             colorSplash={theQuickStop.colorSplash}
-            colorSplashWidth={"525px"}
+            colorSplashWidth={"230px"}
             margin={"none"}
+            type={"wide"}
+            // height={"100%"}
           />
         </ProjectTwo>
         <ProjectThree>
@@ -204,10 +207,9 @@ const Projects = ({ projects }) => {
             icons={theAdventure.icons}
             link={theAdventure.link}
             colorSplash={theAdventure.colorSplash}
-            colorSplashWidth={"205px"}
-            colorSplashPosition={"322px"}
-            height={"100%"}
-            // imgHeight={"800px"}
+            colorSplashWidth={"140px"}
+            // colorSplashPosition={"370px"}
+            type={'large'}
           />
         </ProjectThree>
         <ProjectFour>
@@ -218,7 +220,7 @@ const Projects = ({ projects }) => {
             icons={amiiboApp.icons}
             link={amiiboApp.link}
             colorSplash={amiiboApp.colorSplash}
-            colorSplashWidth={"180px"}
+            colorSplashWidth={"120px"}
           />
         </ProjectFour>
         <ProjectFive>
@@ -229,7 +231,7 @@ const Projects = ({ projects }) => {
             icons={tetris.icons}
             link={tetris.link}
             colorSplash={tetris.colorSplash}
-            colorSplashWidth={"180px"}
+            colorSplashWidth={"120px"}
             margin={"none"}
           />
         </ProjectFive>
@@ -241,7 +243,8 @@ const Projects = ({ projects }) => {
             icons={twoDudesNightmare.icons}
             link={twoDudesNightmare.link}
             colorSplash={twoDudesNightmare.colorSplash}
-            colorSplashWidth={"320px"}
+            colorSplashWidth={"140px"}
+            colorSplashPosition={"104px"}
             margin={"none"}
           />
         </ProjectSix>
@@ -253,7 +256,8 @@ const Projects = ({ projects }) => {
             icons={crappyBird.icons}
             link={crappyBird.link}
             colorSplash={crappyBird.colorSplash}
-            colorSplashWidth={"180px"}
+            colorSplashWidth={"125px"}
+            colorSplashPosition={"98px"}
             margin={"none"}
           />
         </ProjectSeven>
@@ -265,8 +269,9 @@ const Projects = ({ projects }) => {
             icons={geoDash.icons}
             link={geoDash.link}
             colorSplash={geoDash.colorSplash}
-            colorSplashWidth={"233px"}
-            padding={"20px 30px 0px 30px"}
+            colorSplashWidth={"155px"}
+            colorSplashPosition={"98px"}
+            // padding={"20px 30px 0px 30px"}
           />
         </ProjectEight>
       </Container>
