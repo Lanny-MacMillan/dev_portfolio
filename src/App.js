@@ -1,7 +1,5 @@
 // import { Route, Routes } from "react-router";
 import React, { useRef } from "react";
-import '@lanny-macmillan/thequickstop'
-import '@lanny-macmillan/thequickstop/dist/tailwind.css'
 
 import Home from "./components/home/Home";
 import Skills from "./components/skills/Skills.js";
