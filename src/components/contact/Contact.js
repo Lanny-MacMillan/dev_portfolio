@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Img from "../assets/img/portImg.jpg";
-import { Input, Button } from '@lanny-macmillan/thequickstop'
+// import { Input, Button } from '@lanny-macmillan/thequickstop'
 import {
   ContactContainer,
   ContactDiv,
@@ -59,7 +59,7 @@ const Contact = ({ contact }) => {
                 something fun?! I would love to hear from you.
               </CardSubHeader>
               <CardForm>
-                <Input 
+                {/* <Input 
                   name='subject'
                   value={inputs.subject}
                   onChange={(e) => onChange(e, setSubjectValid, 1)}
@@ -71,7 +71,6 @@ const Contact = ({ contact }) => {
                   labelType='floating'
                   errorMessage="Please enter a Subject"
                 />
-                {/* <br /> */}
                 <Input 
                   name='name'
                   value={inputs.name}
@@ -84,8 +83,6 @@ const Contact = ({ contact }) => {
                   labelType='floating'
                   errorMessage="Please enter a Name"
                   />
-                {/* <br/> */}
-
                 <StyledInput 
                   name='email'
                   value={inputs.email}
@@ -98,7 +95,6 @@ const Contact = ({ contact }) => {
                   labelType='floating'
                   errorMessage="Please enter a Email"
                 />
-                {/* <br/> */}
                 <StyledInput 
                   name='message'
                   value={inputs.message}
@@ -116,7 +112,7 @@ const Contact = ({ contact }) => {
                   variant='primary'
                   disabled={!inputs.name || !inputs.email || !inputs.subject || !inputs.message || isSubmitting}>
                   Connect
-                </Button>
+                </Button> */}
               </CardForm>
             </PaddedDiv>
           </ShowDiv2>

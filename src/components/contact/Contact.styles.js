@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Input } from '@lanny-macmillan/thequickstop'
+// import { Input } from '@lanny-macmillan/thequickstop'
 
 export const ContactContainer = styled.div`
   height: 100vh;
