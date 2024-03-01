@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <>
+    <div style={{display: 'flex', flexDirection: 'column', width: '100vw'}}>
       <HeaderContainer>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
         <HeaderLinksDiv>
@@ -59,7 +59,7 @@ function App() {
       <Projects projects={pageRef[2]} />
       <Work work={pageRef[3]} />
       <Contact contact={pageRef[4]} />
-    </>
+    </div>
   );
 }
 
