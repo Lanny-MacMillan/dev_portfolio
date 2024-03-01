@@ -154,8 +154,8 @@ export const CardForm = styled.div`
   z-index: 99;
   color: black;
 `;
-export const StyledInput = styled(Input)`
-  // max-height: 35px
-  // margin-top: 12px;
-  // padding-bottom: 8px
-`;
+// export const StyledInput = styled(Input)`
+//   // max-height: 35px
+//   // margin-top: 12px;
+//   // padding-bottom: 8px
+// `;
