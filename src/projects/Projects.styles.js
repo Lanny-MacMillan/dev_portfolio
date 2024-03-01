@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import { desktop } from '../components/assets/breakpoints'
+// import { desktop } from '../components/assets/breakpoints'
 
 export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
   display: flex;
-  // margin: 2em auto; // for header
   flex-direction: column;
   min-height: 230vh;
   padding: 30px;
   margin: 0;
-  // border: 1px solid white;
+  border: 1px solid teal;
   color: #224;
   background: #1a191d;
   // background: #2b2b2b;
@@ -217,9 +216,9 @@ export const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 4.5em;
+  font-weight: 800;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
   color: white;

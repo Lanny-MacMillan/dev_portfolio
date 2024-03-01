@@ -59,17 +59,17 @@ const Contact = ({ contact }) => {
                 something fun?! I would love to hear from you.
               </CardSubHeader>
               <CardForm>
-                  <Input 
-                    name='subject'
-                    value={inputs.subject}
-                    onChange={(e) => onChange(e, setSubjectValid, 1)}
-                    type='text'
-                    variant='default' 
-                    placeholder='Subject' 
-                    isValid={subjectValid} 
-                    withLabel
-                    labelType='floating'
-                    errorMessage="Please enter a Subject"
+                <Input 
+                  name='subject'
+                  value={inputs.subject}
+                  onChange={(e) => onChange(e, setSubjectValid, 1)}
+                  type='text'
+                  variant='default' 
+                  placeholder='Subject' 
+                  isValid={subjectValid} 
+                  withLabel
+                  labelType='floating'
+                  errorMessage="Please enter a Subject"
                 />
                 {/* <br /> */}
                 <Input 

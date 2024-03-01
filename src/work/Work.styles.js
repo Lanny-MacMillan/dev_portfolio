@@ -6,6 +6,7 @@ export const ExperienceContainer = styled.div`
   position: relative;
   // margin: 2em auto; // for header
   font-weight: 300;
+  border: 1px solid green;
 
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;

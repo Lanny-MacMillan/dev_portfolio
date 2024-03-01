@@ -9,12 +9,13 @@ export const ContactContainer = styled.div`
   justify-content: center;
   color: white;
   background: #1a191d;
+  border: 1px solid blue;
 `;
 
 export const ContactDiv = styled.div`
   // grid-area: contact;
-  // display: flex;
-  // flex-direction: row;
+  /* display: flex;
+  flex-direction: column; */
   margin-top: 50px;
   width: 100%;
   height: 100%;
@@ -38,16 +39,35 @@ export const ShowDiv1 = styled.div`
     0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
-  // box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-  //   inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-  //   5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  /* box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); */
 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 0 20px 0 20px;
+
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    width: 70%;
+    height: 55%;
+    bottom: 10%;
+    position: relative;
+    right: 10%;
+    z-index: 10;
+
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+  }
 `;
 
 export const ShowDiv2 = styled.div`
   margin-left: 8%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   display: block;
   width: 30%;
   height: 70%;
@@ -61,6 +81,25 @@ export const ShowDiv2 = styled.div`
   bottom: 60%;
   position: relative;
   left: 40%;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 0 20px 0 20px;
+
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    width: 70%;
+    height: 55%;
+    bottom: 20%;
+    position: relative;
+    left: 10%;
+    z-index: 100;
+
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+  }
 `;
 
 export const Image = styled.img`
