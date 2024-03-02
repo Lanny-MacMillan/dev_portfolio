@@ -5,10 +5,10 @@ export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 230vh;
+  min-height: auto;
   padding: 30px;
   margin: 0;
-  border: 1px solid teal;
+  /* border: 1px solid teal; */
   color: #224;
   background: #1a191d;
   // background: #2b2b2b;
@@ -239,6 +239,16 @@ export const Header = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: white;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 3.5em;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 //  Card Three - Project UI Display
@@ -406,7 +416,7 @@ export const Title = styled.div`
   color: white;
   font-family: "DM Sans", sans-serif;
   align-items: center;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 `;
 
 export const Description = styled.div`
@@ -417,7 +427,7 @@ export const Description = styled.div`
   padding: 0px 10px 0px 20px;
   align-items: center;
   overflow: hidden;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 `;
 export const Stack = styled.div`
   font-size: 14px;
@@ -429,7 +439,7 @@ export const Stack = styled.div`
   color: white;
   justify-content: center;
   transition: all 0.4s ease-in-out;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   &:hover:span {
     display: none;
   }
@@ -472,7 +482,7 @@ export const ColorAccentWide = styled.div`
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "120px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "118px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {

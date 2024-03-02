@@ -173,7 +173,7 @@ const Projects = ({ projects }) => {
         <ProjectOne>
           <ProjectCard
             nameText={vacationApp.nameText}
-            // img={vacationApp.image}
+            img={vacationApp.image}
             description={vacationApp.description}
             icons={vacationApp.icons}
             link={vacationApp.link}
@@ -184,7 +184,7 @@ const Projects = ({ projects }) => {
         <ProjectTwo>
           <ProjectCard
             nameText={theQuickStop.nameText}
-            // img={theQuickStop.image}
+            img={theQuickStop.image}
             description={theQuickStop.description}
             icons={theQuickStop.icons}
             link={theQuickStop.link}

@@ -9,7 +9,7 @@ export const ContactContainer = styled.div`
   justify-content: center;
   color: white;
   background: #1a191d;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 `;
 
 export const ContactDiv = styled.div`
@@ -46,8 +46,13 @@ export const ShowDiv1 = styled.div`
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-
+    /* margin: 0px 0px 0px 30px; */
+    width: 80%;
+    height: 55%;
+    bottom: 10%;
+    position: relative;
+    right: 10%;
+    z-index: 10;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -57,11 +62,9 @@ export const ShowDiv1 = styled.div`
     position: relative;
     right: 10%;
     z-index: 10;
-
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-
   }
 `;
 
@@ -83,8 +86,13 @@ export const ShowDiv2 = styled.div`
   left: 40%;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-
+    /* margin: 0 20px 0 20px; */
+    width: 80%;
+    height: 55%;
+    bottom: 20%;
+    position: relative;
+    left: 3%;
+    z-index: 100;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -94,11 +102,9 @@ export const ShowDiv2 = styled.div`
     position: relative;
     left: 10%;
     z-index: 100;
-
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-
   }
 `;
 
