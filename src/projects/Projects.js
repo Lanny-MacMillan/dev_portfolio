@@ -43,7 +43,6 @@ import {
   Header,
 } from "./Projects.styles";
 
-
 const Projects = ({ projects }) => {
   const theAdventure = {
     nameText: "TheAdventure",
@@ -104,8 +103,7 @@ const Projects = ({ projects }) => {
     nameText: "Vacation App",
     colorSplash: frontendDev,
     image: vacationImg,
-    description:
-      "Vacation is a full stack application that helps users while vaationing. ",
+    description: "Full stack application that helps users while vacationing. ",
     link: "link to project",
     icons: [
       <ReactIconColor width={40} height={40} />,
@@ -137,8 +135,7 @@ const Projects = ({ projects }) => {
     nameText: "Geometry Dash",
     colorSplash: gameDev,
     image: geoDashImg,
-    description:
-      "Geo Dash with some twists",
+    description: "Geo Dash with some twists",
     link: "link to project",
     icons: [
       <UnityIcon
@@ -155,8 +152,7 @@ const Projects = ({ projects }) => {
     nameText: "2D Nightmare",
     colorSplash: gameDev,
     image: nightmareImg,
-    description:
-      "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
+    description: "A sidescrolling platformer created in Unity ",
     link: "link to project",
     icons: [
       <UnityIcon
@@ -177,7 +173,7 @@ const Projects = ({ projects }) => {
         <ProjectOne>
           <ProjectCard
             nameText={vacationApp.nameText}
-            // img={vacationApp.image}
+            img={vacationApp.image}
             description={vacationApp.description}
             icons={vacationApp.icons}
             link={vacationApp.link}
@@ -188,7 +184,7 @@ const Projects = ({ projects }) => {
         <ProjectTwo>
           <ProjectCard
             nameText={theQuickStop.nameText}
-            // img={theQuickStop.image}
+            img={theQuickStop.image}
             description={theQuickStop.description}
             icons={theQuickStop.icons}
             link={theQuickStop.link}
@@ -209,7 +205,7 @@ const Projects = ({ projects }) => {
             colorSplash={theAdventure.colorSplash}
             colorSplashWidth={"140px"}
             // colorSplashPosition={"370px"}
-            type={'large'}
+            type={"large"}
           />
         </ProjectThree>
         <ProjectFour>
@@ -244,7 +240,7 @@ const Projects = ({ projects }) => {
             link={twoDudesNightmare.link}
             colorSplash={twoDudesNightmare.colorSplash}
             colorSplashWidth={"140px"}
-            colorSplashPosition={"104px"}
+            // colorSplashPosition={"104px"}
             margin={"none"}
           />
         </ProjectSix>
@@ -257,7 +253,7 @@ const Projects = ({ projects }) => {
             link={crappyBird.link}
             colorSplash={crappyBird.colorSplash}
             colorSplashWidth={"125px"}
-            colorSplashPosition={"98px"}
+            // colorSplashPosition={"98px"}
             margin={"none"}
           />
         </ProjectSeven>
@@ -270,7 +266,7 @@ const Projects = ({ projects }) => {
             link={geoDash.link}
             colorSplash={geoDash.colorSplash}
             colorSplashWidth={"155px"}
-            colorSplashPosition={"98px"}
+            // colorSplashPosition={"98px"}
             // padding={"20px 30px 0px 30px"}
           />
         </ProjectEight>

@@ -41,7 +41,14 @@ function App() {
   };
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', width: '100vw'}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        maxWidth: "100vw",
+        overflow: "hidden",
+      }}
+    >
       <HeaderContainer>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
         <HeaderLinksDiv>

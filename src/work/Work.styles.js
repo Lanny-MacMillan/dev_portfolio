@@ -6,7 +6,7 @@ export const ExperienceContainer = styled.div`
   position: relative;
   // margin: 2em auto; // for header
   font-weight: 300;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
@@ -19,6 +19,25 @@ export const ExperienceContainer = styled.div`
     ". experienceDiv experienceDiv ."
     ". . . .";
   background: #1a191d;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+
+    grid-template-areas:
+      ". . . ."
+      ". header header ."
+      ". experienceDiv experienceDiv ."
+      ". experienceDiv experienceDiv ."
+      ". . . .";
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 // export const Header = styled.div`
@@ -30,14 +49,25 @@ export const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 4.5em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
   color: white;
   padding-bottom: 30px;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 3.5em;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
+
 export const ExperienceDiv = styled.div`
   grid-area: experienceDiv;
   // background-color: blue;
