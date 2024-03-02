@@ -13,13 +13,13 @@ export const ProjectsContainer = styled.div`
   background: #1a191d;
   // background: #2b2b2b;
   // background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
-    // cover no-repeat fixed;
+  // cover no-repeat fixed;
 `;
 
 export const Container = styled.div`
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: .5fr 1fr 1fr 1fr .5fr;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 60px 60px;
   grid-template-areas:
@@ -29,41 +29,39 @@ export const Container = styled.div`
     ". projectSix projectSeven projectEight .";
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     gap: 30px 30px;
     grid-template-areas:
       "projectOne"
       "projectTwo"
-      "projectThree" 
+      "projectThree"
       "projectFour"
       "projectFive"
       "projectSix"
       "projectSeven"
       "projectEight";
-
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     gap: 30px 30px;
     grid-template-areas:
       "projectOne"
       "projectTwo"
-      "projectThree" 
+      "projectThree"
       "projectFour"
       "projectFive"
       "projectSix"
       "projectSeven"
       "projectEight";
-
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
     gap: 30px 30px;
@@ -284,6 +282,7 @@ export const ProjectCardContainerWide = styled.div`
   transition: all 0.4s ease-in-out;
   height: ${(props) => (props.height ? props.height : "440px")};
 `;
+
 export const ProjectCardContainerLarge = styled.div`
   position: relative;
   display: flex;
@@ -296,6 +295,7 @@ export const ProjectCardContainerLarge = styled.div`
   transition: all 0.4s ease-in-out;
   height: ${(props) => (props.height ? props.height : "440px")};
 `;
+
 export const Image = styled.img`
   // width: 100%;
   display: block;
@@ -308,8 +308,7 @@ export const Image = styled.img`
   overflow: hidden;
   // border: 1px solid blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
-
+    height: ${(props) => (props.height ? props.height : "100%")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -320,6 +319,7 @@ export const Image = styled.img`
     height: ${(props) => (props.height ? props.height : "100%")};
   }
 `;
+
 export const ImageWide = styled.img`
   // width: 100%;
   display: block;
@@ -333,7 +333,7 @@ export const ImageWide = styled.img`
 
   // border: 1px solid blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
+    height: ${(props) => (props.height ? props.height : "100%")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -344,6 +344,7 @@ export const ImageWide = styled.img`
     height: ${(props) => (props.height ? props.height : "100%")};
   }
 `;
+
 export const ImageLarge = styled.img`
   // width: 100%;
   display: block;
@@ -358,17 +359,15 @@ export const ImageLarge = styled.img`
   // border: 1px solid blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
-
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     height: ${(props) => (props.height ? props.height : "100%")};
-
   }
 `;
+
 export const Footer = styled.div`
   width: 100%;
   height: 40%;
@@ -380,7 +379,7 @@ export const Footer = styled.div`
 export const FooterWide = styled.div`
   width: 100%;
   z-index: 1;
-    /* height: "200px"; */
+  /* height: "200px"; */
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
   // border: 1px solid blue;
@@ -402,22 +401,23 @@ export const Title = styled.div`
   display: flex;
   z-index: 5;
   height: 20%;
-  padding: ${(props) => (props.padding ? props.padding : "10px 30px 0px 30px")};
+  padding: 10px 30px 0px 30px;
   // padding: 10px 30px 0px 30px;
   color: white;
   font-family: "DM Sans", sans-serif;
   align-items: center;
-  /* border: 1px solid green; */
+  border: 1px solid green;
 `;
 
 export const Description = styled.div`
-  font-size: .8em;
+  font-size: 0.8em;
   display: flex;
-  min-height: 50%;
+  height: 40%;
   color: white;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 10px 0px 20px;
   align-items: center;
-  // border: 1px solid orange;
+  overflow: hidden;
+  border: 1px solid orange;
 `;
 export const Stack = styled.div`
   font-size: 14px;
@@ -429,7 +429,7 @@ export const Stack = styled.div`
   color: white;
   justify-content: center;
   transition: all 0.4s ease-in-out;
-  // border: 1px solid red;
+  border: 1px solid red;
   &:hover:span {
     display: none;
   }
@@ -438,7 +438,7 @@ export const Stack = styled.div`
 export const ColorAccent = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")}; 
+  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
   left: 25px;
   z-index: -1;
   width: ${(props) => (props.width ? props.width : "125px")};
@@ -447,15 +447,13 @@ export const ColorAccent = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 601px) {
     width: ${(props) => (props.width ? props.width : "105px")};
-    bottom: ${(props) => (props.bottom ? props.bottom : "97px")};
-
+    bottom: ${(props) => (props.bottom ? props.bottom : "93px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
     width: ${(props) => (props.width ? props.width : "105px")};
     bottom: ${(props) => (props.bottom ? props.bottom : "97px")};
-
-}
+  }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     width: ${(props) => (props.width ? props.width : "105px")};
@@ -466,7 +464,7 @@ export const ColorAccent = styled.div`
 export const ColorAccentWide = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")}; 
+  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
   left: 25px;
   z-index: -1;
   width: ${(props) => (props.width ? props.width : "325px")};
@@ -474,7 +472,7 @@ export const ColorAccentWide = styled.div`
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "152px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "120px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -482,14 +480,13 @@ export const ColorAccentWide = styled.div`
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
-
   }
 `;
 
 export const ColorAccentLarge = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")}; 
+  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
   left: 25px;
   z-index: -1;
   width: ${(props) => (props.width ? props.width : "125px")};
@@ -497,13 +494,11 @@ export const ColorAccentLarge = styled.div`
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "143px")};
-
+    bottom: ${(props) => (props.bottom ? props.bottom : "136px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
     bottom: ${(props) => (props.bottom ? props.bottom : "143px")};
-
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {

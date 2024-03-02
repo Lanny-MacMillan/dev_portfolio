@@ -53,11 +53,11 @@ const ProjectCard = ({
       />
       <Footer>
         {/* color splash to match skills page */}
-        <Title padding={padding}>
+        <Title>
           <ColorAccent
             background={colorSplash}
             width={colorSplashWidth}
-            bottom={colorSplashPosition}
+            // bottom={colorSplashPosition}
           />
           {nameText}
         </Title>
@@ -86,15 +86,17 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{display: 'flex', flexDirection: 'row'}}>{icons}</div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                {icons}
+              </div>
             </Transition>
           )}
         </Stack>
       </Footer>
     </ProjectCardContainer>
-  )
+  );
 
-  const renderProjectCardLarge = type === 'large' && (
+  const renderProjectCardLarge = type === "large" && (
     <ProjectCardContainerLarge
       height={height}
       onMouseEnter={() => setHoverState(true)}
@@ -107,7 +109,7 @@ const ProjectCard = ({
         margin={margin}
       />
 
-      <FooterLarge >
+      <FooterLarge>
         {/* color splash to match skills page */}
         <Title padding={padding}>
           <ColorAccentLarge
@@ -142,15 +144,17 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{display: 'flex', flexDirection: 'row'}}>{icons}</div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                {icons}
+              </div>
             </Transition>
           )}
         </Stack>
       </FooterLarge>
     </ProjectCardContainerLarge>
-  )
+  );
 
-  const renderProjectCardWide = type === 'wide' && (
+  const renderProjectCardWide = type === "wide" && (
     <ProjectCardContainerWide
       height={height}
       onMouseEnter={() => setHoverState(true)}
@@ -162,7 +166,7 @@ const ProjectCard = ({
         height={imgHeight}
         margin={margin}
       />
-      <FooterWide >
+      <FooterWide>
         {/* color splash to match skills page */}
         <Title padding={padding}>
           <ColorAccentWide
@@ -197,13 +201,15 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{display: 'flex', flexDirection: 'row'}}>{icons}</div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                {icons}
+              </div>
             </Transition>
           )}
         </Stack>
       </FooterWide>
     </ProjectCardContainerWide>
-  )
+  );
 
   return (
     <>
