@@ -9,9 +9,9 @@ export const ContactContainer = styled.div`
   justify-content: center;
   color: white;
   background: #1a191d;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: 120vh;
+    height: 100vh;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -31,7 +31,17 @@ export const ContactDiv = styled.div`
 `;
 
 export const PaddedDiv = styled.div`
-  margin: 0 2em 0 3em;
+  margin: 0 2em 0 2em;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 0 1em 0 1em;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const ShowDiv1 = styled.div`
@@ -57,7 +67,7 @@ export const ShowDiv1 = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
     width: auto;
-    height: 55%;
+    height: 45%;
     bottom: 10%;
     position: relative;
     right: 10%;
@@ -79,7 +89,8 @@ export const ShowDiv1 = styled.div`
 
 export const ShowDiv2 = styled.div`
   margin-left: 8%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f0f0f0;
+  /* background-color: rgba(255, 255, 255, 1); */
   display: block;
   width: 30%;
   height: 70%;
@@ -96,12 +107,13 @@ export const ShowDiv2 = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0 20px 0 20px; */
-    width: 80%;
-    height: 55%;
-    bottom: 20%;
+    width: 83%;
+    height: 60%;
+    bottom: 11.5%;
     position: relative;
-    left: 3%;
+    left: 6%;
     z-index: 100;
+    margin-left: 0%;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -128,16 +140,25 @@ export const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 4.5em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   color: white;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    font-size: 3.5em;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 export const CardHeader = styled.div`
-  // grid-area: header;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,6 +169,16 @@ export const CardHeader = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: black;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const CardSubHeader = styled.div`
@@ -162,6 +193,17 @@ export const CardSubHeader = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: black;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const CardForm = styled.div`
@@ -173,7 +215,7 @@ export const CardForm = styled.div`
   color: black;
   height: 125px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: 100px;
+    height: 175px;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {

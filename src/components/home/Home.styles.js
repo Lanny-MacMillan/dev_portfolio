@@ -134,3 +134,89 @@ export const ImageMobile = styled.img`
   width: 100vw;
   height: 100vh;
 `;
+
+// .homeTextBen {
+//   font-family: 'Anton', cursive;
+//   margin-top: 45px;
+//   color: white;
+//   font-size: 85px;
+//   animation: Ben 2s step-end both;
+// }
+// @keyframes Ben
+// {
+//   from { color: white }
+//   to { color: Black }
+
+//   from { text-shadow: none }
+//   to   { text-shadow:
+//     rgb(13, 247, 36) 0px 54px 55px,
+//     rgb(13, 247, 36) 0px -12px 30px,
+//     rgb(13, 247, 36) 0px 4px 6px,
+//     rgb(13, 247, 36) 0px 12px 13px,
+//     rgb(13, 247, 36) 0px -3px 5px;
+//   }
+// }
+// .homeTextZach {
+//   font-family: 'Anton', cursive;  margin-top: 45px;
+//   color: white;
+//   font-size: 85px;
+//   animation: Zach 4s step-end both;
+// }
+// @keyframes Zach
+// {
+//   from { color: white }
+//   to { color: Black }
+
+//   from { text-shadow: none }
+//   to   { text-shadow:
+//     rgb(13, 247, 36) 0px 54px 55px,
+//     rgb(13, 247, 36) 0px -12px 30px,
+//     rgb(13, 247, 36) 0px 4px 6px,
+//     rgb(13, 247, 36) 0px 12px 13px,
+//     rgb(13, 247, 36) 0px -3px 5px;
+//   }
+// }
+// .homeTextLanny {
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   font-family: 'Anton', cursive;  margin-top: 45px;
+//   color: white;
+//   font-size: 85px;
+//   animation: Lanny 6s step-end both;
+// }
+// @keyframes Lanny
+// {
+//   from { color: white }
+//   to { color: Black }
+
+//   from { text-shadow: none }
+//   to   { text-shadow:
+//     rgb(13, 247, 36) 0px 54px 55px,
+//     rgb(13, 247, 36) 0px -12px 30px,
+//     rgb(13, 247, 36) 0px 4px 6px,
+//     rgb(13, 247, 36) 0px 12px 13px,
+//     rgb(13, 247, 36) 0px -3px 5px;
+//   }
+// }
+// .homeTextLeeman {
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   font-family: 'Anton', cursive;  margin-top: 45px;
+//   color: white;
+//   font-size: 85px;
+//   animation: Leeman 8s step-end both;
+// }
+// @keyframes Leeman
+// {
+//   from { color: white }
+//   to { color: Black }
+
+//   from { text-shadow: none }
+//   to   { text-shadow:
+//     rgb(13, 247, 36) 0px 54px 55px,
+//     rgb(13, 247, 36) 0px -12px 30px,
+//     rgb(13, 247, 36) 0px 4px 6px,
+//     rgb(13, 247, 36) 0px 12px 13px,
+//     rgb(13, 247, 36) 0px -3px 5px;
+//   }
+// }

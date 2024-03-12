@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import Img from "../assets/img/portImg.jpg";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useMemo } from "react";
 import { LinkedInIcon, GmailIcon, GitHubIcon } from "../assets/icons.js";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
 import {
@@ -9,7 +9,6 @@ import {
   ShowDiv1,
   ShowDiv2,
   PaddedDiv,
-  Image,
   Header,
   CardHeader,
   CardSubHeader,
@@ -31,9 +30,20 @@ const Contact = ({ contact }) => {
   const [subjectValid, setSubjectValid] = useState(true);
   const [messageValid, setMessageValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=`;
+  const [valid, setValid] = useState(false);
+
+  const iframeStyle = {
+    border: "none",
+    width: "100%",
+    height: "100%",
+    loading: "lazy",
+    borderRadius: "5px 5px 0 0",
+  };
+
+  const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=Boston,Ma`;
 
   const onChange = (e, setIsStateValidFunction, minCharCount) => {
+    e.preventDefault();
     const onlyWhiteSpace = /^\s*$/.test(e.target.value);
 
     if (e.target.value.length >= minCharCount && !onlyWhiteSpace) {
@@ -50,24 +60,18 @@ const Contact = ({ contact }) => {
     // some call to send email to me
   };
 
+  const Iframe = () => (
+    <iframe title="google" style={iframeStyle} src={`${googleURL}`} />
+  );
+
+  const renderiFrame = useMemo(() => Iframe(), []);
+
   return (
     <>
       <ContactContainer ref={contact}>
         <Header>Contact</Header>
         <ContactDiv>
-          <ShowDiv1>
-            {/*============= GOOGLE MAPS API =============*/}
-            <iframe
-              title="google"
-              className="map"
-              width="100%"
-              height="100%"
-              loading="lazy"
-              src={`${googleURL} + Boston, Ma`}
-            ></iframe>
-            {/*============= GOOGLE MAPS API =============*/}
-            {/* <Image src={Img} /> */}
-          </ShowDiv1>
+          <ShowDiv1>{renderiFrame}</ShowDiv1>
           <ShowDiv2>
             <PaddedDiv>
               <CardHeader>Lets create something amazing!</CardHeader>
@@ -76,6 +80,54 @@ const Contact = ({ contact }) => {
                 something fun?! I would love to hear from you.
               </CardSubHeader>
               <CardForm>
+                <input
+                  name="subject"
+                  value={inputs.subject}
+                  onChange={(e) => onChange(e, setSubjectValid, 1)}
+                  type="text"
+                  variant="default"
+                  placeholder="Subject"
+                  isValid={subjectValid}
+                  labelType="floating"
+                  errorMessage="Please enter a Subject"
+                />
+                <input
+                  name="name"
+                  value={inputs.name}
+                  onChange={(e) => onChange(e, setNameValid, 1)}
+                  type="text"
+                  variant="default"
+                  placeholder="Name"
+                  isValid={nameValid}
+                  labelType="floating"
+                  errorMessage="Please enter a Name"
+                />
+                <input
+                  name="email"
+                  value={inputs.email}
+                  onChange={(e) => onChange(e, setEmailValid, 1)}
+                  type="text"
+                  variant="default"
+                  placeholder="Email"
+                  isValid={emailValid}
+                  labelType="floating"
+                  errorMessage="Please enter a Email"
+                />
+                <textarea
+                  style={{ height: "100px" }}
+                  name="message"
+                  value={inputs.message}
+                  onChange={(e) => onChange(e, setMessageValid, 1)}
+                  type="text"
+                  variant="default"
+                  placeholder="Message"
+                  isValid={messageValid}
+                  labelType="floating"
+                  errorMessage="Please enter a Message"
+                />
+                <button onSubmit={onSubmit} disabled={!valid}>
+                  Submit
+                </button>
                 {/* <Input 
                   name='subject'
                   value={inputs.subject}
@@ -132,7 +184,7 @@ const Contact = ({ contact }) => {
                 </Button> */}
               </CardForm>
               <CardFooter>
-                <p>find me here</p>
+                <p>...or find me here</p>
                 <IconsDiv>
                   <a
                     href="https://www.linkedin.com/in/lanny-macmillan/"

@@ -1,15 +1,21 @@
 import React from "react";
-// import {
-//   ReactIconColor,
-//   JavascriptIcon,
-//   TypescriptIcon,
-// } from "../components/assets/icons";
+import {
+  ReactIconColor,
+  JavascriptIcon,
+  TypescriptIcon,
+  UnityIconColor,
+  CSharpIcon,
+} from "../components/assets/icons";
+
 import {
   ExperienceContainer,
   Header,
   ExperienceDiv,
   ProjectCard,
+  CardHeader,
   CardFooter,
+  Icon,
+  Smalltext,
 } from "./Work.styles.js";
 
 const Work = ({ work }) => {
@@ -20,24 +26,43 @@ const Work = ({ work }) => {
 
         <ExperienceDiv>
           <ProjectCard>
-            <strong>Thryv Inc</strong>
+            <CardHeader>
+              <strong>Thryv Inc.</strong>
+            </CardHeader>
             <p>
               <strong>Web Developer</strong>
               <br />
               Develop features, fix bugs, Asana, Duda, Oauth, LaunchDarkly etc.
             </p>
-            <CardFooter>Sept 2021 - current</CardFooter>
+            <CardFooter>
+              <Smalltext>Sept 2021 - current</Smalltext>
+
+              <Icon>
+                <ReactIconColor height={30} width={30} />{" "}
+                <JavascriptIcon height={30} width={30} />{" "}
+                <TypescriptIcon height={30} width={30} />{" "}
+              </Icon>
+            </CardFooter>
           </ProjectCard>
           <br />
           <ProjectCard>
-            <strong>Two Dudes Games</strong>
+            <CardHeader>
+              <strong>Two Dudes Games</strong>
+            </CardHeader>
             <p>
               <strong>Indie Game Developer</strong>
               <br />
               Creating indie games using Object Oriented Programming with Unity
               and C#
             </p>
-            <CardFooter>Dec 2023 - current</CardFooter>
+            <CardFooter>
+              <Smalltext>Dec 2023 - current</Smalltext>
+
+              <Icon>
+                <UnityIconColor height={30} width={30} />{" "}
+                <CSharpIcon height={30} width={30} />{" "}
+              </Icon>
+            </CardFooter>
           </ProjectCard>
         </ExperienceDiv>
       </ExperienceContainer>

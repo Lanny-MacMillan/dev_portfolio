@@ -307,7 +307,6 @@ export const ProjectCardContainerLarge = styled.div`
 `;
 
 export const Image = styled.img`
-  // width: 100%;
   display: block;
   max-width: 100%;
   z-index: 10;
