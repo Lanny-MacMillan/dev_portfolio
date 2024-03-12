@@ -22,7 +22,7 @@ export const ExperienceContainer = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
     gap: 0px 0px;
 
     grid-template-areas:
@@ -79,6 +79,7 @@ export const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1em;
 
   max-width: 100%;
   height: 20%;
@@ -87,9 +88,22 @@ export const ProjectCard = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-
+  /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25); */
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    min-height: 125px;
+    font-size: 0.9em;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const CardFooter = styled.div`

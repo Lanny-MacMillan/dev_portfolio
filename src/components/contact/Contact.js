@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import Img from "../assets/img/portImg.jpg";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
 import {
@@ -12,36 +13,39 @@ import {
   CardHeader,
   CardSubHeader,
   CardForm,
-  StyledInput
+  StyledInput,
+  CardFooter,
 } from "./Contact.styles.js";
 
 const Contact = ({ contact }) => {
-  const [inputs, setInputs] = useState({ name: '', email: '', subject: '', message: '' })
-  const [nameValid, setNameValid] = useState(true)
-  const [emailValid, setEmailValid] = useState(true)
-  const [subjectValid, setSubjectValid] = useState(true)
-  const [messageValid, setMessageValid] = useState(true)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [nameValid, setNameValid] = useState(true);
+  const [emailValid, setEmailValid] = useState(true);
+  const [subjectValid, setSubjectValid] = useState(true);
+  const [messageValid, setMessageValid] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onChange = (e, setIsStateValidFunction, minCharCount) => {
-    const onlyWhiteSpace = /^\s*$/.test(e.target.value)
-    
+    const onlyWhiteSpace = /^\s*$/.test(e.target.value);
+
     if (e.target.value.length >= minCharCount && !onlyWhiteSpace) {
-      setIsStateValidFunction(true)
+      setIsStateValidFunction(true);
     } else {
-      setIsStateValidFunction(false)
+      setIsStateValidFunction(false);
     }
 
-    setInputs({ ...inputs, [e.target.name]: e.target.value })    
-  }
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
+  };
 
   const onSubmit = () => {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     // some call to send email to me
-
-  }
+  };
 
   return (
     <>
@@ -114,6 +118,9 @@ const Contact = ({ contact }) => {
                   Connect
                 </Button> */}
               </CardForm>
+              <CardFooter>
+                <p>or find me here</p>
+              </CardFooter>
             </PaddedDiv>
           </ShowDiv2>
         </ContactDiv>

@@ -66,7 +66,7 @@ const Skills = ({ skills }) => {
           <DescriptionBody>
             <HTMLSnippet></HTMLSnippet>
             <Description>
-              HTML css JS React, Express. Mobile first development mindset
+              HTML, CSS, JS, React, Express. Mobile first development mindset
             </Description>
           </DescriptionBody>
         </Skills1>

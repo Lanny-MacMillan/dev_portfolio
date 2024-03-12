@@ -1,10 +1,11 @@
 import React from "react";
-import { BodyContainer } from "./Home.styles.js";
+import img from "../assets/img/mountainImg.jpg";
+import { BodyContainer, ImageMobile } from "./Home.styles.js";
 
 const Home = ({ home }) => {
   return (
     <BodyContainer ref={home}>
-      <h1>HomePage</h1>
+      <ImageMobile src={img} />
     </BodyContainer>
   );
 };
