@@ -6,7 +6,7 @@ const ScrollToTop = () => {
     position: "fixed",
     bottom: 50,
     right: 50,
-    zIndex: "100",
+    zIndex: "105",
     height: "75px",
     width: "50px",
     opacity: ".9",

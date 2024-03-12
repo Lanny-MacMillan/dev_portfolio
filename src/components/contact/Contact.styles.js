@@ -47,7 +47,7 @@ export const ShowDiv1 = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
-    width: 80%;
+    width: auto;
     height: 55%;
     bottom: 10%;
     position: relative;
@@ -159,9 +159,24 @@ export const CardForm = styled.div`
   position: relative;
   z-index: 99;
   color: black;
+  height: 125px;
+  border: 1px solid blue;
 `;
 // export const StyledInput = styled(Input)`
 //   // max-height: 35px
 //   // margin-top: 12px;
 //   // padding-bottom: 8px
 // `;
+export const CardFooter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  padding-bottom: 30px;
+  color: black;
+  border: 1px solid red;
+`;

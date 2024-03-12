@@ -28,6 +28,17 @@ const Work = ({ work }) => {
             </p>
             <CardFooter>Sept 2021 - current</CardFooter>
           </ProjectCard>
+          <br />
+          <ProjectCard>
+            <strong>Two Dudes Games</strong>
+            <p>
+              <strong>Indie Game Developer</strong>
+              <br />
+              Creating indie games using Object Oriented Programming with Unity
+              and C#
+            </p>
+            <CardFooter>Dec 2023 - current</CardFooter>
+          </ProjectCard>
         </ExperienceDiv>
       </ExperienceContainer>
     </>

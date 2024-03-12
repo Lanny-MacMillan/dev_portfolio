@@ -11,6 +11,7 @@ import ScrollToTop from "./components/util/ScrollToTop.js";
 import {
   HeaderContainer,
   OurHerosName,
+  ShortText,
   HeaderLinksDiv,
   LinksContent,
   Links,
@@ -51,6 +52,7 @@ function App() {
     >
       <HeaderContainer>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
+        <ShortText>LM</ShortText>
         <HeaderLinksDiv>
           {pages.map((page, pageRef) => (
             <LinksContent key={page} onClick={() => scrollToRef(pageRef)}>
