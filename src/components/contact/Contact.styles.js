@@ -149,6 +149,7 @@ export const CardHeader = styled.div`
   padding-bottom: 30px;
   color: black;
 `;
+
 export const CardSubHeader = styled.div`
   // grid-area: header;
   display: flex;
@@ -162,6 +163,7 @@ export const CardSubHeader = styled.div`
   padding-bottom: 30px;
   color: black;
 `;
+
 export const CardForm = styled.div`
   display: flex;
   flex-direction: column;
