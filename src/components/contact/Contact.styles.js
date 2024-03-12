@@ -9,7 +9,16 @@ export const ContactContainer = styled.div`
   justify-content: center;
   color: white;
   background: #1a191d;
-  /* border: 1px solid blue; */
+  padding-bottom: 30px;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    height: 120vh;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const ContactDiv = styled.div`
@@ -156,11 +165,20 @@ export const CardSubHeader = styled.div`
 export const CardForm = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
+  height: auto;
   z-index: 99;
   color: black;
   height: 125px;
-  border: 1px solid blue;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    height: 100px;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 // export const StyledInput = styled(Input)`
 //   // max-height: 35px
@@ -169,6 +187,8 @@ export const CardForm = styled.div`
 // `;
 export const CardFooter = styled.div`
   display: flex;
+  height: auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 0.9em;
@@ -178,5 +198,19 @@ export const CardFooter = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: black;
-  border: 1px solid red;
+`;
+export const IconsDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
