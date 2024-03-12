@@ -167,7 +167,7 @@ export const CardHeader = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   color: black;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -215,7 +215,6 @@ export const CardForm = styled.div`
   color: black;
   height: 125px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: 175px;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -242,6 +241,15 @@ export const CardFooter = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: black;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    /* height: 175px; */
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 export const IconsDiv = styled.div`
   display: flex;

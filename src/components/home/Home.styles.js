@@ -57,6 +57,8 @@ export const ShortText = styled.div`
   }
 `;
 export const HeaderLinksDiv = styled.div`
+  position: relative;
+  z-index: 80;
   display: flex;
   width: 50%;
 

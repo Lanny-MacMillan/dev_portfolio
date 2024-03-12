@@ -114,7 +114,7 @@ const Contact = ({ contact }) => {
                   errorMessage="Please enter a Email"
                 />
                 <textarea
-                  style={{ height: "100px" }}
+                  style={{ height: "50px" }}
                   name="message"
                   value={inputs.message}
                   onChange={(e) => onChange(e, setMessageValid, 1)}
@@ -191,7 +191,7 @@ const Contact = ({ contact }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LinkedInIcon />
+                    <LinkedInIcon height={40} width={40} />
                   </a>
 
                   <a
@@ -199,14 +199,14 @@ const Contact = ({ contact }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GitHubIcon />
+                    <GitHubIcon height={40} width={40} />
                   </a>
 
                   <a
                     href="mailto:lanny.macmillan.dev@gmail.com"
                     rel="noopener noreferrer"
                   >
-                    <GmailIcon />
+                    <GmailIcon height={40} width={40} />
                   </a>
                 </IconsDiv>
               </CardFooter>
