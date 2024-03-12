@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { gameDev } from "../components/assets/constants.js";
 
 export const ExperienceContainer = styled.div`
   height: 100vh;
@@ -97,6 +98,7 @@ export const ProjectCard = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     min-height: 125px;
     font-size: 0.9em;
+    padding: 15px 10px 10px 20px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -106,7 +108,26 @@ export const ProjectCard = styled.div`
   }
 `;
 
+export const CardHeader = styled.div`
+  color: ${gameDev};
+`;
+
 export const CardFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.65em;
   color: #446;
+`;
+
+export const Smalltext = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `;

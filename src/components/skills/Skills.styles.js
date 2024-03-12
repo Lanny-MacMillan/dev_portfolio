@@ -16,15 +16,14 @@ export const SkillsContainer = styled.div`
     ". skills0 skills1 skills2 ."
     ". skills3 skills3 skills3 ."
     ". . . . .";
-  /* background: #000; */
-  background-color: #000; /* For browsers that do not support gradients */
+  /* For browsers that do not support gradients */
+  background-color: #000;
   background-image: linear-gradient(#000, #1a191d);
-  /* background: #1a191d; */
 
   @media only screen and (min-width: 320px) and (max-width: 520px) {
     height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
+    grid-template-rows: 0.1fr 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
     grid-template-areas:
       ". "
       "header"
@@ -117,6 +116,15 @@ export const SkillsHeader = styled.div`
   flex-direction: row;
   font-size: 28px;
   font-weight: 900;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const Icon = styled.div`
@@ -160,7 +168,7 @@ export const HTMLSnippet = styled.div`
   padding: 15px;
   // display: flex;
   // flex-direction: column;
-  height: 100%;
+  height: 70px;
   // width: 10%;
   border: 2px solid yellow;
 `;
