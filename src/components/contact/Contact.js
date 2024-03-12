@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Img from "../assets/img/portImg.jpg";
+import { LinkedInIcon, GmailIcon, GitHubIcon } from "../assets/icons.js";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
 import {
   ContactContainer,
@@ -15,6 +16,7 @@ import {
   CardForm,
   StyledInput,
   CardFooter,
+  IconsDiv,
 } from "./Contact.styles.js";
 
 const Contact = ({ contact }) => {
@@ -29,6 +31,7 @@ const Contact = ({ contact }) => {
   const [subjectValid, setSubjectValid] = useState(true);
   const [messageValid, setMessageValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=`;
 
   const onChange = (e, setIsStateValidFunction, minCharCount) => {
     const onlyWhiteSpace = /^\s*$/.test(e.target.value);
@@ -53,7 +56,17 @@ const Contact = ({ contact }) => {
         <Header>Contact</Header>
         <ContactDiv>
           <ShowDiv1>
-            <Image src={Img} />
+            {/*============= GOOGLE MAPS API =============*/}
+            <iframe
+              title="google"
+              className="map"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              src={`${googleURL} + Boston, Ma`}
+            ></iframe>
+            {/*============= GOOGLE MAPS API =============*/}
+            {/* <Image src={Img} /> */}
           </ShowDiv1>
           <ShowDiv2>
             <PaddedDiv>
@@ -119,7 +132,31 @@ const Contact = ({ contact }) => {
                 </Button> */}
               </CardForm>
               <CardFooter>
-                <p>or find me here</p>
+                <p>find me here</p>
+                <IconsDiv>
+                  <a
+                    href="https://www.linkedin.com/in/lanny-macmillan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </a>
+
+                  <a
+                    href="https://github.com/Lanny-MacMillan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
+
+                  <a
+                    href="mailto:lanny.macmillan.dev@gmail.com"
+                    rel="noopener noreferrer"
+                  >
+                    <GmailIcon />
+                  </a>
+                </IconsDiv>
               </CardFooter>
             </PaddedDiv>
           </ShowDiv2>

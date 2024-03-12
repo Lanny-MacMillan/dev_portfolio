@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
   display: grid;
-  height: 120vh;
+  height: 100vh;
   color: white;
   /* border: 1px solid red; */
   // margin: 2em auto; // for header

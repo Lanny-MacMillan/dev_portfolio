@@ -5,7 +5,7 @@ export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: auto;
+  /* min-height: auto; */
   padding: 30px;
   margin: 0;
   /* border: 1px solid teal; */
