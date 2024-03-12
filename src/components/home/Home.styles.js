@@ -124,5 +124,13 @@ export const BodyContainer = styled.div`
   flex-direction: row;
   width: 100%;
   height: 100vh;
-  background-color: cyan;
+`;
+
+export const ImageMobile = styled.img`
+  /* overflow: hidden; */
+  /* object-fit: contain; */
+  object-fit: cover;
+  /* object-fit: fill; */
+  width: 100vw;
+  height: 100vh;
 `;
