@@ -373,8 +373,8 @@ export const ImageLarge = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  margin: ${(props) => (props.margin ? props.margin : "auto")};
-  height: ${(props) => (props.height ? props.height : "60%")};
+  /* margin: ${(props) => (props.margin ? props.margin : "auto")};
+  height: ${(props) => (props.height ? props.height : "60%")}; */
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -398,6 +398,13 @@ export const Footer = styled.div`
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+  @media only screen and (min-width: 750px) and (max-width: 992px) {
+    height: 50%;
+  }
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const FooterWide = styled.div`
@@ -483,7 +490,7 @@ export const ColorAccent = styled.div`
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
     width: ${(props) => (props.width ? props.width : "105px")};
-    bottom: ${(props) => (props.bottom ? props.bottom : "97px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "110px")};
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -507,7 +514,7 @@ export const ColorAccentWide = styled.div`
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "93px")};
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
@@ -529,7 +536,7 @@ export const ColorAccentLarge = styled.div`
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "143px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "107px")};
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -543,7 +550,8 @@ export const Icons = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  @media only screen and (min-width: 750px) and (max-width: 992px) {
+    /* margin-bottom: 30px; */
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {

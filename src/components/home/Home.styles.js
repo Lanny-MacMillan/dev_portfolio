@@ -60,10 +60,9 @@ export const HeaderLinksDiv = styled.div`
   position: relative;
   z-index: 80;
   display: flex;
-  width: 50%;
+  width: auto;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    width: auto;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -77,12 +76,12 @@ export const LinksContent = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 25px;
-
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     padding: 5px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
+    padding: 5px;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {

@@ -18,7 +18,8 @@ import {
   Smalltext,
 } from "./Work.styles.js";
 
-const Work = ({ work }) => {
+const Work = ({ work, largeScreen }) => {
+  console.log("largeScreen", largeScreen);
   return (
     <>
       <ExperienceContainer ref={work}>
@@ -37,11 +38,19 @@ const Work = ({ work }) => {
             <CardFooter>
               <Smalltext>Sept 2022 - current</Smalltext>
 
-              <Icon>
-                <ReactIconColor height={30} width={30} />{" "}
-                <JavascriptIcon height={30} width={30} />{" "}
-                <TypescriptIcon height={30} width={30} />{" "}
-              </Icon>
+              {largeScreen ? (
+                <Icon>
+                  <ReactIconColor height={40} width={40} />{" "}
+                  <JavascriptIcon height={40} width={40} />{" "}
+                  <TypescriptIcon height={40} width={40} />{" "}
+                </Icon>
+              ) : (
+                <Icon>
+                  <ReactIconColor height={30} width={30} />{" "}
+                  <JavascriptIcon height={30} width={30} />{" "}
+                  <TypescriptIcon height={30} width={30} />{" "}
+                </Icon>
+              )}
             </CardFooter>
           </ProjectCard>
           <br />
@@ -57,11 +66,17 @@ const Work = ({ work }) => {
             </p>
             <CardFooter>
               <Smalltext>Dec 2023 - current</Smalltext>
-
-              <Icon>
-                <UnityIconColor height={30} width={30} />{" "}
-                <CSharpIcon height={30} width={30} />{" "}
-              </Icon>
+              {largeScreen ? (
+                <Icon>
+                  <UnityIconColor height={40} width={40} />{" "}
+                  <CSharpIcon height={40} width={40} />{" "}
+                </Icon>
+              ) : (
+                <Icon>
+                  <UnityIconColor height={30} width={30} />{" "}
+                  <CSharpIcon height={30} width={30} />{" "}
+                </Icon>
+              )}
             </CardFooter>
           </ProjectCard>
         </ExperienceDiv>

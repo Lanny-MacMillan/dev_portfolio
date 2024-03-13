@@ -169,8 +169,7 @@ export const Header = styled.div`
 `;
 export const CardHeader = styled.div`
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
   font-size: 1.3em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -179,7 +178,6 @@ export const CardHeader = styled.div`
   padding-bottom: 30px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    text-align: center;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -208,6 +206,9 @@ export const CardSubHeader = styled.div`
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    align-self: center;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -265,6 +266,7 @@ export const CardFooter = styled.div`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
+
 export const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
