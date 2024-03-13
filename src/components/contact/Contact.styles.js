@@ -254,6 +254,9 @@ export const CardFooter = styled.div`
     span {
       display: none;
     }
+    p {
+      /* cursive font here */
+    }
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
