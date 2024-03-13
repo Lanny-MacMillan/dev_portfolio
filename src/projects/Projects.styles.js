@@ -319,10 +319,8 @@ export const Image = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-
   /* overflow: hidden; */
   /* object-fit: contain; */
-  object-fit: cover;
   /* object-fit: fill; */
 
   /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
@@ -330,7 +328,8 @@ export const Image = styled.img`
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  // border: 1px solid blue;
+  object-fit: cover;
+
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: ${(props) => (props.height ? props.height : "100%")};
   }
@@ -349,13 +348,13 @@ export const ImageWide = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  margin: ${(props) => (props.margin ? props.margin : "auto")};
-  height: ${(props) => (props.height ? props.height : "60%")};
+  /* margin: ${(props) => (props.margin ? props.margin : "auto")};
+  height: ${(props) => (props.height ? props.height : "60%")}; */
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  object-fit: cover;
 
-  // border: 1px solid blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: ${(props) => (props.height ? props.height : "100%")};
   }
@@ -379,8 +378,8 @@ export const ImageLarge = styled.img`
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  object-fit: fill;
 
-  // border: 1px solid blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
   }
@@ -400,14 +399,22 @@ export const Footer = styled.div`
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
 `;
+
 export const FooterWide = styled.div`
   width: 100%;
   z-index: 1;
-  /* height: "200px"; */
+  height: 40%;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
-  // border: 1px solid blue;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    height: 50%;
+  }
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
+
 export const FooterLarge = styled.div`
   width: 100%;
   z-index: 1;
@@ -533,6 +540,19 @@ export const ColorAccentLarge = styled.div`
 export const Icons = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const StyledLink = styled.a`
+  text-decoration: none;
+  font-size: 1em;
+  color: blue;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 

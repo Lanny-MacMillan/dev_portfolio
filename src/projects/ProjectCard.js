@@ -17,6 +17,7 @@ import {
   ColorAccentWide,
   ColorAccentLarge,
   Icons,
+  StyledLink,
 } from "./Projects.styles";
 
 const ProjectCard = ({
@@ -77,7 +78,9 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <span>{link}</span>
+              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
+                View Project
+              </StyledLink>
             </Transition>
           ) : (
             <Transition
@@ -133,7 +136,9 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <span>{link}</span>
+              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
+                View Project
+              </StyledLink>
             </Transition>
           ) : (
             <Transition
@@ -188,7 +193,9 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <span>{link}</span>
+              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
+                View Project
+              </StyledLink>
             </Transition>
           ) : (
             <Transition
