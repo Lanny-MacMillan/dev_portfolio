@@ -1,5 +1,5 @@
 // import { Route, Routes } from "react-router";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import Home from "./components/home/Home";
 import Skills from "./components/skills/Skills.js";
@@ -19,6 +19,23 @@ import {
 } from "./components/home/Home.styles.js";
 
 function App() {
+  const [isGreaterThan650px, setIsGreaterThan650px] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 750) {
+        setIsGreaterThan650px(true);
+      } else {
+        setIsGreaterThan650px(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const pages = [
     "// home",
     "// skills",
@@ -65,7 +82,7 @@ function App() {
       <ScrollToTop />
       <Home home={pageRef[0]} />
       <Skills skills={pageRef[1]} />
-      <Projects projects={pageRef[2]} />
+      <Projects projects={pageRef[2]} isGreaterThan650px={isGreaterThan650px} />
       <Work work={pageRef[3]} />
       <Contact contact={pageRef[4]} />
     </div>

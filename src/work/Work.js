@@ -35,7 +35,7 @@ const Work = ({ work }) => {
               Develop features, fix bugs, Asana, Duda, Oauth, LaunchDarkly etc.
             </p>
             <CardFooter>
-              <Smalltext>Sept 2021 - current</Smalltext>
+              <Smalltext>Sept 2022 - current</Smalltext>
 
               <Icon>
                 <ReactIconColor height={30} width={30} />{" "}

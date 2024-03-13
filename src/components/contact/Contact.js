@@ -184,7 +184,10 @@ const Contact = ({ contact }) => {
                 </Button> */}
               </CardForm>
               <CardFooter>
-                <p>...or find me here</p>
+                <p>
+                  ...
+                  <span>or </span>find me here
+                </p>
                 <IconsDiv>
                   <a
                     href="https://www.linkedin.com/in/lanny-macmillan/"
@@ -193,20 +196,18 @@ const Contact = ({ contact }) => {
                   >
                     <LinkedInIcon height={40} width={40} />
                   </a>
-
+                  <a
+                    href="mailto:lanny.macmillan.dev@gmail.com"
+                    rel="noopener noreferrer"
+                  >
+                    <GmailIcon height={40} width={40} />
+                  </a>
                   <a
                     href="https://github.com/Lanny-MacMillan"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <GitHubIcon height={40} width={40} />
-                  </a>
-
-                  <a
-                    href="mailto:lanny.macmillan.dev@gmail.com"
-                    rel="noopener noreferrer"
-                  >
-                    <GmailIcon height={40} width={40} />
                   </a>
                 </IconsDiv>
               </CardFooter>

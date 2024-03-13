@@ -16,6 +16,7 @@ import {
   ColorAccent,
   ColorAccentWide,
   ColorAccentLarge,
+  Icons,
 } from "./Projects.styles";
 
 const ProjectCard = ({
@@ -23,6 +24,7 @@ const ProjectCard = ({
   img,
   description,
   icons,
+  iconsLarge,
   link,
   height,
   imgHeight,
@@ -32,6 +34,7 @@ const ProjectCard = ({
   colorSplashWidth,
   colorSplashPosition,
   type,
+  isGreaterThan650px,
 }) => {
   const [hoverState, setHoverState] = useState(false);
 
@@ -86,9 +89,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                {icons}
-              </div>
+              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>
@@ -144,9 +145,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                {icons}
-              </div>
+              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>
@@ -201,9 +200,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                {icons}
-              </div>
+              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>
