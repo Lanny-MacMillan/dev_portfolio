@@ -35,7 +35,7 @@ const ProjectCard = ({
   colorSplashWidth,
   colorSplashPosition,
   type,
-  isGreaterThan650px,
+  largeScreen,
 }) => {
   const [hoverState, setHoverState] = useState(false);
 
@@ -92,7 +92,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
+              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>
@@ -150,7 +150,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
+              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>
@@ -207,7 +207,7 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Icons>{isGreaterThan650px ? iconsLarge : icons}</Icons>
+              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
             </Transition>
           )}
         </Stack>

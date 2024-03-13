@@ -35,6 +35,9 @@ export const ExperienceContainer = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
+    gap: 0px 0px;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -75,14 +78,13 @@ export const ExperienceDiv = styled.div`
 `;
 // Card One - GlassMorphism UI Design
 export const ProjectCard = styled.div`
-  max-width: 300px;
+  /* max-width: 300px; */
   min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 1em;
 
-  max-width: 100%;
   height: 20%;
   padding: 35px;
 
@@ -102,6 +104,9 @@ export const ProjectCard = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
+    min-height: 125px;
+    font-size: 0.9em;
+    padding: 15px 10px 10px 20px;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -119,6 +124,17 @@ export const CardFooter = styled.div`
   align-items: center;
   font-size: 0.65em;
   color: #446;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 0.65em;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    font-size: 0.75em;
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const Smalltext = styled.div`

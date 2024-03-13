@@ -18,14 +18,14 @@ import {
 } from "./components/home/Home.styles.js";
 
 function App() {
-  const [isGreaterThan650px, setIsGreaterThan650px] = useState(false);
+  const [largeScreen, setLargeScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 750) {
-        setIsGreaterThan650px(true);
+        setLargeScreen(true);
       } else {
-        setIsGreaterThan650px(false);
+        setLargeScreen(false);
       }
     };
 
@@ -81,8 +81,8 @@ function App() {
       <ScrollToTop />
       <Home home={pageRef[0]} />
       <Skills skills={pageRef[1]} />
-      <Projects projects={pageRef[2]} isGreaterThan650px={isGreaterThan650px} />
-      <Work work={pageRef[3]} />
+      <Projects projects={pageRef[2]} largeScreen={largeScreen} />
+      <Work work={pageRef[3]} largeScreen={largeScreen} />
       <Contact contact={pageRef[4]} />
     </div>
   );

@@ -43,7 +43,7 @@ import {
   Header,
 } from "./Projects.styles";
 
-const Projects = ({ projects, isGreaterThan650px }) => {
+const Projects = ({ projects, largeScreen }) => {
   const theAdventure = {
     nameText: "TheAdventure",
     colorSplash: gameDev,
@@ -230,7 +230,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
       <Container>
         <ProjectOne>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={vacationApp.nameText}
             img={vacationApp.image}
             description={vacationApp.description}
@@ -243,7 +243,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectOne>
         <ProjectTwo>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={theQuickStop.nameText}
             img={theQuickStop.image}
             description={theQuickStop.description}
@@ -259,7 +259,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectTwo>
         <ProjectThree>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={theAdventure.nameText}
             img={theAdventure.image}
             description={theAdventure.description}
@@ -274,7 +274,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectThree>
         <ProjectFour>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={amiiboApp.nameText}
             img={amiiboApp.image}
             description={amiiboApp.description}
@@ -287,7 +287,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectFour>
         <ProjectFive>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={tetris.nameText}
             img={tetris.image}
             description={tetris.description}
@@ -301,7 +301,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectFive>
         <ProjectSix>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={twoDudesNightmare.nameText}
             img={twoDudesNightmare.image}
             description={twoDudesNightmare.description}
@@ -316,7 +316,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectSix>
         <ProjectSeven>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={crappyBird.nameText}
             img={crappyBird.image}
             description={crappyBird.description}
@@ -331,7 +331,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
         </ProjectSeven>
         <ProjectEight>
           <ProjectCard
-            isGreaterThan650px={isGreaterThan650px}
+            largeScreen={largeScreen}
             nameText={geoDash.nameText}
             img={geoDash.image}
             description={geoDash.description}
