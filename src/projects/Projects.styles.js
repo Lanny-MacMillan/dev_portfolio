@@ -306,11 +306,26 @@ export const ProjectCardContainerLarge = styled.div`
   height: ${(props) => (props.height ? props.height : "440px")};
 `;
 
+export const ImageMobile = styled.img`
+  /* overflow: hidden; */
+  /* object-fit: contain; */
+  object-fit: cover;
+  /* object-fit: fill; */
+  width: 100vw;
+  height: 100vh;
+`;
+
 export const Image = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  margin: ${(props) => (props.margin ? props.margin : "auto")};
+
+  /* overflow: hidden; */
+  /* object-fit: contain; */
+  object-fit: cover;
+  /* object-fit: fill; */
+
+  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
   /* height: ${(props) => (props.height ? props.height : "60%")}; */
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
@@ -434,7 +449,7 @@ export const Stack = styled.div`
   height: 15%;
   padding: 5px;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   color: white;
   justify-content: center;
   transition: all 0.4s ease-in-out;
@@ -481,7 +496,7 @@ export const ColorAccentWide = styled.div`
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "118px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "110px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -512,5 +527,18 @@ export const ColorAccentLarge = styled.div`
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
+  }
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;

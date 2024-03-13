@@ -71,7 +71,7 @@ export const ShowDiv1 = styled.div`
     bottom: 10%;
     position: relative;
     right: 10%;
-    z-index: 10;
+    z-index: 1;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -89,8 +89,7 @@ export const ShowDiv1 = styled.div`
 
 export const ShowDiv2 = styled.div`
   margin-left: 8%;
-  background-color: #f0f0f0;
-  /* background-color: rgba(255, 255, 255, 1); */
+  background-color: rgba(150, 150, 150, 1);
   display: block;
   width: 30%;
   height: 70%;
@@ -104,6 +103,7 @@ export const ShowDiv2 = styled.div`
   bottom: 60%;
   position: relative;
   left: 40%;
+  z-index: 100;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0 20px 0 20px; */
@@ -112,8 +112,10 @@ export const ShowDiv2 = styled.div`
     bottom: 11.5%;
     position: relative;
     left: 6%;
-    z-index: 100;
     margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -160,14 +162,14 @@ export const Header = styled.div`
 `;
 export const CardHeader = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   font-size: 1.3em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  /* padding-bottom: 30px; */
+  padding-bottom: 30px;
   color: black;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -196,7 +198,8 @@ export const CardSubHeader = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     text-align: center;
-    padding-bottom: 25px;
+    padding: 40px 0 40px 0;
+    align-self: center;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -215,6 +218,7 @@ export const CardForm = styled.div`
   color: black;
   height: 125px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
+    display: none;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -241,8 +245,12 @@ export const CardFooter = styled.div`
   font-style: normal;
   padding-bottom: 30px;
   color: black;
+
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* height: 175px; */
+    span {
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {

@@ -43,7 +43,7 @@ import {
   Header,
 } from "./Projects.styles";
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, isGreaterThan650px }) => {
   const theAdventure = {
     nameText: "TheAdventure",
     colorSplash: gameDev,
@@ -53,12 +53,21 @@ const Projects = ({ projects }) => {
     link: "link to project",
     icons: [
       <UnityIcon
-        width={40}
-        height={40}
-        logoFill={"white"}
+        width={30}
+        height={30}
+        logoFill={"#FFFFFF"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={40} height={40} logoFill={"white"} />,
+      <CSharpIcon width={30} height={30} logoFill={"#FFFFFF"} />,
+    ],
+    iconsLarge: [
+      <UnityIcon
+        width={40}
+        height={40}
+        logoFill={"#FFFFFF"}
+        backgroundFill={"#262626"}
+      />,
+      <CSharpIcon width={40} height={40} logoFill={"#FFFFFF"} />,
     ],
   };
 
@@ -67,7 +76,8 @@ const Projects = ({ projects }) => {
     image: tetrisReact,
     description: "A clone of the original Tetris, done with React.",
     link: "link to project",
-    icons: [<ReactIconColor width={40} height={40} />],
+    icons: [<ReactIconColor width={30} height={30} />],
+    iconsLarge: [<ReactIconColor width={40} height={40} />],
   };
 
   const theQuickStop = {
@@ -78,6 +88,12 @@ const Projects = ({ projects }) => {
       "A personal component library for all my building needs. Brings speed and ease to reusable components like modals, tooltips, buttons etc.",
     link: "link to project",
     icons: [
+      <ReactIconColor width={30} height={30} />,
+      <TypescriptIcon width={30} height={30} />,
+      <JavascriptIcon width={30} height={30} />,
+      <StorybookIcon width={25} height={25} />,
+    ],
+    iconsLarge: [
       <ReactIconColor width={40} height={40} />,
       <TypescriptIcon width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
@@ -92,6 +108,12 @@ const Projects = ({ projects }) => {
     description: "A Full Stack Nintendo Amiibos App for collectors.",
     link: "link to project",
     icons: [
+      <ExpressIcon width={30} height={30} />,
+      <JavascriptIcon width={30} height={30} />,
+      <MongoDBIcon width={30} height={30} />,
+      <NodeJSIcon width={30} height={30} />,
+    ],
+    iconsLarge: [
       <ExpressIcon width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
       <MongoDBIcon width={40} height={40} />,
@@ -106,6 +128,13 @@ const Projects = ({ projects }) => {
     description: "Full stack application that helps users while vacationing. ",
     link: "link to project",
     icons: [
+      <ReactIconColor width={30} height={30} />,
+      <JavascriptIcon width={30} height={30} />,
+      <PostregSQLIcon width={28} height={28} />,
+      <PythonIcon width={30} height={30} />,
+      <DjangoIcon width={30} height={30} />,
+    ],
+    iconsLarge: [
       <ReactIconColor width={40} height={40} />,
       <JavascriptIcon width={40} height={40} />,
       <PostregSQLIcon width={38} height={38} />,
@@ -122,12 +151,21 @@ const Projects = ({ projects }) => {
     link: "link to project",
     icons: [
       <UnityIcon
-        width={40}
-        height={40}
-        logoFill={"white"}
+        width={30}
+        height={30}
+        logoFill={"#FFFFFF"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={40} height={40} logoFill={"white"} />,
+      <CSharpIcon width={30} height={30} logoFill={"#FFFFFF"} />,
+    ],
+    iconsLarge: [
+      <UnityIcon
+        width={40}
+        height={40}
+        logoFill={"#FFFFFF"}
+        backgroundFill={"#262626"}
+      />,
+      <CSharpIcon width={40} height={40} logoFill={"#FFFFFF"} />,
     ],
   };
 
@@ -139,12 +177,22 @@ const Projects = ({ projects }) => {
     link: "link to project",
     icons: [
       <UnityIcon
-        width={40}
-        height={40}
-        logoFill={"white"}
+        width={30}
+        height={30}
+        logoFill={"#FFFFFF"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={40} height={40} logoFill={"white"} />,
+      <CSharpIcon width={30} height={30} logoFill={"#FFFFFF"} />,
+    ],
+
+    iconsLarge: [
+      <UnityIcon
+        width={40}
+        height={40}
+        logoFill={"#FFFFFF"}
+        backgroundFill={"#262626"}
+      />,
+      <CSharpIcon width={40} height={40} logoFill={"#FFFFFF"} />,
     ],
   };
 
@@ -156,12 +204,22 @@ const Projects = ({ projects }) => {
     link: "link to project",
     icons: [
       <UnityIcon
-        width={40}
-        height={40}
-        logoFill={"white"}
+        width={30}
+        height={30}
+        logoFill={"#FFFFFF"}
         backgroundFill={"#262626"}
       />,
-      <CSharpIcon width={40} height={40} logoFill={"white"} />,
+      <CSharpIcon width={30} height={30} logoFill={"#FFFFFF"} />,
+      // Aesprite Icon
+    ],
+    iconsLarge: [
+      <UnityIcon
+        width={40}
+        height={40}
+        logoFill={"#FFFFFF"}
+        backgroundFill={"#262626"}
+      />,
+      <CSharpIcon width={40} height={40} logoFill={"#FFFFFF"} />,
       // Aesprite Icon
     ],
   };
@@ -172,10 +230,12 @@ const Projects = ({ projects }) => {
       <Container>
         <ProjectOne>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={vacationApp.nameText}
             img={vacationApp.image}
             description={vacationApp.description}
             icons={vacationApp.icons}
+            iconsLarge={vacationApp.iconsLarge}
             link={vacationApp.link}
             colorSplash={vacationApp.colorSplash}
             colorSplashWidth={"135px"}
@@ -183,10 +243,12 @@ const Projects = ({ projects }) => {
         </ProjectOne>
         <ProjectTwo>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={theQuickStop.nameText}
             img={theQuickStop.image}
             description={theQuickStop.description}
             icons={theQuickStop.icons}
+            iconsLarge={theQuickStop.iconsLarge}
             link={theQuickStop.link}
             colorSplash={theQuickStop.colorSplash}
             colorSplashWidth={"230px"}
@@ -197,10 +259,12 @@ const Projects = ({ projects }) => {
         </ProjectTwo>
         <ProjectThree>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={theAdventure.nameText}
             img={theAdventure.image}
             description={theAdventure.description}
             icons={theAdventure.icons}
+            iconsLarge={theAdventure.iconsLarge}
             link={theAdventure.link}
             colorSplash={theAdventure.colorSplash}
             colorSplashWidth={"140px"}
@@ -210,10 +274,12 @@ const Projects = ({ projects }) => {
         </ProjectThree>
         <ProjectFour>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={amiiboApp.nameText}
             img={amiiboApp.image}
             description={amiiboApp.description}
             icons={amiiboApp.icons}
+            iconsLarge={amiiboApp.iconsLarge}
             link={amiiboApp.link}
             colorSplash={amiiboApp.colorSplash}
             colorSplashWidth={"120px"}
@@ -221,10 +287,12 @@ const Projects = ({ projects }) => {
         </ProjectFour>
         <ProjectFive>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={tetris.nameText}
             img={tetris.image}
             description={tetris.description}
             icons={tetris.icons}
+            iconsLarge={tetris.iconsLarge}
             link={tetris.link}
             colorSplash={tetris.colorSplash}
             colorSplashWidth={"120px"}
@@ -233,10 +301,12 @@ const Projects = ({ projects }) => {
         </ProjectFive>
         <ProjectSix>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={twoDudesNightmare.nameText}
             img={twoDudesNightmare.image}
             description={twoDudesNightmare.description}
             icons={twoDudesNightmare.icons}
+            iconsLarge={twoDudesNightmare.iconsLarge}
             link={twoDudesNightmare.link}
             colorSplash={twoDudesNightmare.colorSplash}
             colorSplashWidth={"140px"}
@@ -246,10 +316,12 @@ const Projects = ({ projects }) => {
         </ProjectSix>
         <ProjectSeven>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={crappyBird.nameText}
             img={crappyBird.image}
             description={crappyBird.description}
             icons={crappyBird.icons}
+            iconsLarge={crappyBird.iconsLarge}
             link={crappyBird.link}
             colorSplash={crappyBird.colorSplash}
             colorSplashWidth={"125px"}
@@ -259,10 +331,12 @@ const Projects = ({ projects }) => {
         </ProjectSeven>
         <ProjectEight>
           <ProjectCard
+            isGreaterThan650px={isGreaterThan650px}
             nameText={geoDash.nameText}
             img={geoDash.image}
             description={geoDash.description}
             icons={geoDash.icons}
+            iconsLarge={geoDash.iconsLarge}
             link={geoDash.link}
             colorSplash={geoDash.colorSplash}
             colorSplashWidth={"155px"}

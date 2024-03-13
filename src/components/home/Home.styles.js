@@ -133,6 +133,7 @@ export const ImageMobile = styled.img`
   /* object-fit: contain; */
   object-fit: cover;
   /* object-fit: fill; */
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
 `;
