@@ -9,6 +9,10 @@ export const ContactContainer = styled.div`
   justify-content: center;
   color: white;
   background: #1a191d;
+  /* background-image: linear-gradient(#1a191d, #000); */
+
+  font-family: "DM Sans", sans-serif;
+
   /* padding-bottom: 30px; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: 100vh;
@@ -89,7 +93,10 @@ export const ShowDiv1 = styled.div`
 
 export const ShowDiv2 = styled.div`
   margin-left: 8%;
-  background-color: rgba(150, 150, 150, 1);
+  color: white;
+  /* background-color: rgba(150, 150, 150, 1); */
+  background-image: linear-gradient(rgba(120, 120, 120, 1), #000);
+
   display: block;
   width: 30%;
   height: 70%;
@@ -170,7 +177,6 @@ export const CardHeader = styled.div`
   font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
-  color: black;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     text-align: center;
@@ -194,7 +200,6 @@ export const CardSubHeader = styled.div`
   font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
-  color: black;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     text-align: center;
@@ -215,7 +220,6 @@ export const CardForm = styled.div`
   /* position: relative; */
   height: auto;
   z-index: 99;
-  color: black;
   height: 125px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     display: none;
@@ -244,12 +248,14 @@ export const CardFooter = styled.div`
   font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
-  color: black;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* height: 175px; */
     span {
       display: none;
+    }
+    p {
+      /* cursive font here */
     }
   }
 

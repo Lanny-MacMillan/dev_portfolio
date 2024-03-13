@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useMemo } from "react";
 import { LinkedInIcon, GmailIcon, GitHubIcon } from "../assets/icons.js";
+import curlyArrow from "../assets/img/curlyArrow.png";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
 import {
   ContactContainer,
@@ -188,6 +189,7 @@ const Contact = ({ contact }) => {
                   ...
                   <span>or </span>find me here
                 </p>
+                <img alt="Arrow" src={curlyArrow} />
                 <IconsDiv>
                   <a
                     href="https://www.linkedin.com/in/lanny-macmillan/"
@@ -207,7 +209,7 @@ const Contact = ({ contact }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GitHubIcon height={40} width={40} />
+                    <GitHubIcon height={40} width={40} fill={"white"} />
                   </a>
                 </IconsDiv>
               </CardFooter>

@@ -50,7 +50,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     image: theAdventureImg,
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes",
     icons: [
       <UnityIcon
         width={30}
@@ -75,7 +75,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     nameText: "Tetris React",
     image: tetrisReact,
     description: "A clone of the original Tetris, done with React.",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/tetrisClone",
     icons: [<ReactIconColor width={30} height={30} />],
     iconsLarge: [<ReactIconColor width={40} height={40} />],
   };
@@ -86,7 +86,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     image: storybookImg,
     description:
       "A personal component library for all my building needs. Brings speed and ease to reusable components like modals, tooltips, buttons etc.",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/TheQuickStop",
     icons: [
       <ReactIconColor width={30} height={30} />,
       <TypescriptIcon width={30} height={30} />,
@@ -106,7 +106,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     colorSplash: frontendDev,
     image: amiiboAppImg,
     description: "A Full Stack Nintendo Amiibos App for collectors.",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/Project2",
     icons: [
       <ExpressIcon width={30} height={30} />,
       <JavascriptIcon width={30} height={30} />,
@@ -126,7 +126,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     colorSplash: frontendDev,
     image: vacationImg,
     description: "Full stack application that helps users while vacationing. ",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/capstone_frontend",
     icons: [
       <ReactIconColor width={30} height={30} />,
       <JavascriptIcon width={30} height={30} />,
@@ -148,7 +148,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     colorSplash: gameDev,
     image: crappyBirdImg,
     description: "A clone of the popular flappy bird",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/flappyBirdClone",
     icons: [
       <UnityIcon
         width={30}
@@ -174,7 +174,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     colorSplash: gameDev,
     image: geoDashImg,
     description: "Geo Dash with some twists",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/GeometryDash",
     icons: [
       <UnityIcon
         width={30}
@@ -201,7 +201,7 @@ const Projects = ({ projects, isGreaterThan650px }) => {
     colorSplash: gameDev,
     image: nightmareImg,
     description: "A sidescrolling platformer created in Unity ",
-    link: "link to project",
+    link: "https://github.com/Lanny-MacMillan/Unity_Game_Two_Dudes",
     icons: [
       <UnityIcon
         width={30}

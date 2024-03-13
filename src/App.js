@@ -7,7 +7,6 @@ import Projects from "./projects/Projects.js";
 import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/util/ScrollToTop.js";
-
 import {
   HeaderContainer,
   OurHerosName,

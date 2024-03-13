@@ -1,33 +1,25 @@
 import React from "react";
-import Arrow from "../assets/anim/upArrowAnim.gif";
-// import { Image } from "../../projects/Projects.styles";
+import UpArrowMain from "../assets/img/upArrowMain.png";
+
 const ScrollToTop = () => {
   const style = {
     position: "fixed",
-    bottom: 50,
-    right: 50,
+    bottom: 30,
+    right: 30,
     zIndex: "105",
     height: "75px",
     width: "50px",
     opacity: ".9",
   };
-
   return (
-    // <button
-    //   onClick={() => {
-    //     window.scrollTo({ top: 0, behavior: "smooth" });
-    //   }}
-    //   style={style}
-    // >
     <img
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}
       style={style}
       alt="Arrow"
-      src={Arrow}
+      src={UpArrowMain}
     />
-    // </button>
   );
 };
 
