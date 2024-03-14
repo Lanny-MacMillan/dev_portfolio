@@ -4,6 +4,8 @@ import {
   MobileIcon,
   SoftwareIcon,
   UnityIcon2,
+  Ptag,
+  ClosingPtag,
 } from "../assets/icons.js";
 import {
   softwareDev,
@@ -26,6 +28,7 @@ import {
   Skills2,
   Skills3,
   Container,
+  VertLine,
 } from "./Skills.styles.js";
 
 const Skills = ({ skills }) => {
@@ -47,7 +50,16 @@ const Skills = ({ skills }) => {
               </Title>
             </SkillsHeader>
             <DescriptionBody>
-              <HTMLSnippet></HTMLSnippet>
+              <HTMLSnippet>
+                {" "}
+                <Ptag letterFill={softwareDev} height={25} width={25} />{" "}
+                <VertLine borderColor={softwareDev} height={"75px"} />
+                <ClosingPtag
+                  letterFill={softwareDev}
+                  height={35}
+                  width={35}
+                />{" "}
+              </HTMLSnippet>
               <Description>
                 Software Dev, functional and OOP programming, Javascript, C#,
                 Typescript, Python
@@ -66,7 +78,15 @@ const Skills = ({ skills }) => {
               </Title>
             </SkillsHeader>
             <DescriptionBody>
-              <HTMLSnippet></HTMLSnippet>
+              <HTMLSnippet>
+                <Ptag letterFill={frontendDev} height={25} width={25} />{" "}
+                <VertLine borderColor={frontendDev} height={"60px"} />
+                <ClosingPtag
+                  letterFill={frontendDev}
+                  height={35}
+                  width={35}
+                />{" "}
+              </HTMLSnippet>
               <Description>
                 HTML, CSS, JS, React, Express. Mobile first development mindset
               </Description>
@@ -84,7 +104,16 @@ const Skills = ({ skills }) => {
               </Title>
             </SkillsHeader>
             <DescriptionBody>
-              <HTMLSnippet></HTMLSnippet>
+              <HTMLSnippet>
+                {" "}
+                <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+                <VertLine borderColor={mobileDev} />
+                <ClosingPtag
+                  letterFill={mobileDev}
+                  height={35}
+                  width={35}
+                />{" "}
+              </HTMLSnippet>
               <Description>React Native, Flutter?, iOS, Android</Description>
             </DescriptionBody>
           </Skills2>
@@ -100,7 +129,12 @@ const Skills = ({ skills }) => {
               </Title>
             </SkillsHeader>
             <DescriptionBody>
-              <HTMLSnippet></HTMLSnippet>
+              <HTMLSnippet>
+                {" "}
+                <Ptag letterFill={gameDev} height={25} width={25} />{" "}
+                <VertLine borderColor={gameDev} />
+                <ClosingPtag letterFill={gameDev} height={35} width={35} />{" "}
+              </HTMLSnippet>
               <Description>Unity C# developer</Description>
             </DescriptionBody>
           </Skills3>
