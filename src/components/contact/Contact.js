@@ -17,6 +17,7 @@ import {
   StyledInput,
   CardFooter,
   IconsDiv,
+  Container,
 } from "./Contact.styles.js";
 
 const Contact = ({ contact }) => {
@@ -70,66 +71,67 @@ const Contact = ({ contact }) => {
   return (
     <>
       <ContactContainer ref={contact}>
-        <Header>Contact</Header>
-        <ContactDiv>
-          <ShowDiv1>{renderiFrame}</ShowDiv1>
-          <ShowDiv2>
-            <PaddedDiv>
-              <CardHeader>Lets create something amazing!</CardHeader>
-              <CardSubHeader>
-                Have an idea for an App, need a website or just want to create
-                something fun?! I would love to hear from you.
-              </CardSubHeader>
-              <CardForm>
-                <input
-                  name="subject"
-                  value={inputs.subject}
-                  onChange={(e) => onChange(e, setSubjectValid, 1)}
-                  type="text"
-                  variant="default"
-                  placeholder="Subject"
-                  isValid={subjectValid}
-                  labelType="floating"
-                  errorMessage="Please enter a Subject"
-                />
-                <input
-                  name="name"
-                  value={inputs.name}
-                  onChange={(e) => onChange(e, setNameValid, 1)}
-                  type="text"
-                  variant="default"
-                  placeholder="Name"
-                  isValid={nameValid}
-                  labelType="floating"
-                  errorMessage="Please enter a Name"
-                />
-                <input
-                  name="email"
-                  value={inputs.email}
-                  onChange={(e) => onChange(e, setEmailValid, 1)}
-                  type="text"
-                  variant="default"
-                  placeholder="Email"
-                  isValid={emailValid}
-                  labelType="floating"
-                  errorMessage="Please enter a Email"
-                />
-                <textarea
-                  style={{ height: "50px" }}
-                  name="message"
-                  value={inputs.message}
-                  onChange={(e) => onChange(e, setMessageValid, 1)}
-                  type="text"
-                  variant="default"
-                  placeholder="Message"
-                  isValid={messageValid}
-                  labelType="floating"
-                  errorMessage="Please enter a Message"
-                />
-                <button onSubmit={onSubmit} disabled={!valid}>
-                  Submit
-                </button>
-                {/* <Input 
+        <Container>
+          <Header>Contact</Header>
+          <ContactDiv>
+            <ShowDiv1>{renderiFrame}</ShowDiv1>
+            <ShowDiv2>
+              <PaddedDiv>
+                <CardHeader>Lets create something amazing!</CardHeader>
+                <CardSubHeader>
+                  Have an idea for an App, need a website or just want to create
+                  something fun?! I would love to hear from you.
+                </CardSubHeader>
+                <CardForm>
+                  <input
+                    name="subject"
+                    value={inputs.subject}
+                    onChange={(e) => onChange(e, setSubjectValid, 1)}
+                    type="text"
+                    variant="default"
+                    placeholder="Subject"
+                    isValid={subjectValid}
+                    labelType="floating"
+                    errorMessage="Please enter a Subject"
+                  />
+                  <input
+                    name="name"
+                    value={inputs.name}
+                    onChange={(e) => onChange(e, setNameValid, 1)}
+                    type="text"
+                    variant="default"
+                    placeholder="Name"
+                    isValid={nameValid}
+                    labelType="floating"
+                    errorMessage="Please enter a Name"
+                  />
+                  <input
+                    name="email"
+                    value={inputs.email}
+                    onChange={(e) => onChange(e, setEmailValid, 1)}
+                    type="text"
+                    variant="default"
+                    placeholder="Email"
+                    isValid={emailValid}
+                    labelType="floating"
+                    errorMessage="Please enter a Email"
+                  />
+                  <textarea
+                    style={{ height: "50px" }}
+                    name="message"
+                    value={inputs.message}
+                    onChange={(e) => onChange(e, setMessageValid, 1)}
+                    type="text"
+                    variant="default"
+                    placeholder="Message"
+                    isValid={messageValid}
+                    labelType="floating"
+                    errorMessage="Please enter a Message"
+                  />
+                  <button onSubmit={onSubmit} disabled={!valid}>
+                    Submit
+                  </button>
+                  {/* <Input 
                   name='subject'
                   value={inputs.subject}
                   onChange={(e) => onChange(e, setSubjectValid, 1)}
@@ -183,39 +185,40 @@ const Contact = ({ contact }) => {
                   disabled={!inputs.name || !inputs.email || !inputs.subject || !inputs.message || isSubmitting}>
                   Connect
                 </Button> */}
-              </CardForm>
-              <CardFooter>
-                <p>
-                  ...
-                  <span>or </span>find me here
-                </p>
-                <img alt="Arrow" src={curlyArrow} />
-                <IconsDiv>
-                  <a
-                    href="https://www.linkedin.com/in/lanny-macmillan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LinkedInIcon height={40} width={40} />
-                  </a>
-                  <a
-                    href="mailto:lanny.macmillan.dev@gmail.com"
-                    rel="noopener noreferrer"
-                  >
-                    <GmailIcon height={40} width={40} />
-                  </a>
-                  <a
-                    href="https://github.com/Lanny-MacMillan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GitHubIcon height={40} width={40} fill={"white"} />
-                  </a>
-                </IconsDiv>
-              </CardFooter>
-            </PaddedDiv>
-          </ShowDiv2>
-        </ContactDiv>
+                </CardForm>
+                <CardFooter>
+                  <p>
+                    ...
+                    <span>or </span>find me here
+                  </p>
+                  <img alt="Arrow" src={curlyArrow} />
+                  <IconsDiv>
+                    <a
+                      href="https://www.linkedin.com/in/lanny-macmillan/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <LinkedInIcon height={40} width={40} />
+                    </a>
+                    <a
+                      href="mailto:lanny.macmillan.dev@gmail.com"
+                      rel="noopener noreferrer"
+                    >
+                      <GmailIcon height={40} width={40} />
+                    </a>
+                    <a
+                      href="https://github.com/Lanny-MacMillan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon height={40} width={40} fill={"white"} />
+                    </a>
+                  </IconsDiv>
+                </CardFooter>
+              </PaddedDiv>
+            </ShowDiv2>
+          </ContactDiv>
+        </Container>
       </ContactContainer>
     </>
   );

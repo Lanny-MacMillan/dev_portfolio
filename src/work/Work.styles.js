@@ -2,11 +2,26 @@ import styled from "styled-components";
 import { gameDev } from "../components/assets/constants.js";
 
 export const ExperienceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  min-height: auto;
+  padding: 30px;
+  margin: 0;
+  background: #1a191d;
+
+  /* border: 1px solid teal; */
+  color: #224;
+  /* background: #1a191d; */
+`;
+export const Container = styled.div`
+  max-width: 1500px;
   height: 100vh;
   display: grid;
   position: relative;
   font-weight: 300;
-  /* border: 1px solid green; */
+  min-width: 100%;
 
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
@@ -41,9 +56,54 @@ export const ExperienceContainer = styled.div`
     gap: 0px 0px;
   }
 
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  @media only screen and (min-width: 1500px) {
+    min-width: 1500px;
   }
 `;
+
+// export const ExperienceContainer = styled.div`
+//   height: 100vh;
+//   display: grid;
+//   position: relative;
+//   font-weight: 300;
+//   /* border: 1px solid green; */
+
+//   -webkit-font-smoothing: antialiased;
+//   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
+//   grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr;
+//   gap: 0px 0px;
+//   grid-template-areas:
+//     ". . . ."
+//     ". header header ."
+//     ". experienceDiv experienceDiv ."
+//     ". experienceDiv experienceDiv ."
+//     ". . . .";
+//   background: #1a191d;
+
+//   @media only screen and (min-width: 320px) and (max-width: 768px) {
+//     height: 100vh;
+//     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+//     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
+//     gap: 0px 0px;
+
+//     grid-template-areas:
+//       ". . . ."
+//       ". header header ."
+//       ". experienceDiv experienceDiv ."
+//       ". experienceDiv experienceDiv ."
+//       ". . . .";
+//   }
+
+//   @media only screen and (min-width: 769px) and (max-width: 992px) {
+//     height: 100vh;
+//     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+//     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
+//     gap: 0px 0px;
+//   }
+
+//   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+//   }
+// `;
 
 // export const Header = styled.div`
 //   grid-area: header;

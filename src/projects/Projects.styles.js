@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   min-height: auto;
   padding: 30px;
@@ -27,6 +29,7 @@ export const Container = styled.div`
     ". projectThree projectThree projectFour ."
     ". projectSeven projectSix projectSix ."
     ".  projectFive projectFive projectEight .";
+  max-width: 1500px;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -60,46 +63,10 @@ export const Container = styled.div`
       "projectEight";
   }
 
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    gap: 30px 30px;
-    grid-template-areas:
-      "projectOne projectTwo projectTwo"
-      "projectThree projectThree projectFour"
-      "projectFive projectSix projectSix"
-      "projectSeven projectSeven projectEight";
+  @media only screen and (min-width: 1400px) {
+    /* padding: 150px; */
+    /* max-width: 1500px; */
   }
-  /* 1284×2778 pixels at 458ppi */
-  /* For iPhone 12 Pro Max, iPhone 13 Pro Max, and iPhone 14 Plus: */
-  /* @media only screen 
-    and (width: 428px) 
-    and (height: 926px) 
-    and (-webkit-device-pixel-ratio: 3) {
-      grid-template-columns: 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    gap: 30px 30px;
-    grid-template-areas:
-      "projectOne"
-      "projectTwo"
-      "projectThree" 
-      "projectFour"
-      "projectFive"
-      "projectSix"
-      "projectSeven"
-      "projectEight";
-    } */
-  /* @media only screen and (min-width: 1200px) {
-    /* grid-template-columns: 1fr 1fr 1fr ;
-    gap: 30px 30px;
-    grid-template-areas:
-      "projectOne projectTwo projectTwo"
-      "projectThree projectThree projectFour"
-      "projectThree projectThree projectFive"
-      "projectSix projectSeven projectEight"; */
-  /* } */
 `;
 
 export const ProjectOne = styled.div`
