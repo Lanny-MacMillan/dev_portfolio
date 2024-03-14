@@ -56,18 +56,14 @@ export const ShowDiv1 = styled.div`
   z-index: 100;
   width: 30%;
   height: 70%;
-  // padding: 10px;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 5px 5px 5px 5px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
-  /* box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-  5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); */
-
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
     width: auto;
@@ -101,12 +97,15 @@ export const ShowDiv2 = styled.div`
   width: 30%;
   height: 70%;
   padding: 10px;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 5px 5px 5px 5px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+
   bottom: 60%;
   position: relative;
   left: 40%;

@@ -85,7 +85,7 @@ const Projects = ({ projects, largeScreen }) => {
     colorSplash: softwareDev,
     image: storybookImg,
     description:
-      "A personal component library for all my building needs. Brings speed and ease to reusable components like modals, tooltips, buttons etc.",
+      "A personal component library for all my building needs. Brings speed and ease with reusable components.",
     link: "https://github.com/Lanny-MacMillan/TheQuickStop",
     icons: [
       <ReactIconColor width={30} height={30} />,
@@ -269,7 +269,7 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplash={theAdventure.colorSplash}
             colorSplashWidth={"140px"}
             // colorSplashPosition={"370px"}
-            type={"large"}
+            type={"wide"}
           />
         </ProjectThree>
         <ProjectFour>

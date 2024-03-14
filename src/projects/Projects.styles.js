@@ -19,14 +19,14 @@ export const ProjectsContainer = styled.div`
 export const Container = styled.div`
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 60px 60px;
   grid-template-areas:
     ". projectOne projectTwo projectTwo ."
     ". projectThree projectThree projectFour ."
-    ". projectThree projectThree projectFive ."
-    ". projectSix projectSeven projectEight .";
+    ". projectSeven projectSix projectSix ."
+    ".  projectFive projectFive projectEight .";
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -319,12 +319,8 @@ export const Image = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* overflow: hidden; */
-  /* object-fit: contain; */
-  /* object-fit: fill; */
-
   /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
-  /* height: ${(props) => (props.height ? props.height : "60%")}; */
+  height: ${(props) => (props.height ? props.height : "60%")};
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -332,28 +328,30 @@ export const Image = styled.img`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: ${(props) => (props.height ? props.height : "100%")};
+    object-fit: cover;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
     height: ${(props) => (props.height ? props.height : "100%")};
+    object-fit: cover;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     height: ${(props) => (props.height ? props.height : "100%")};
+    object-fit: cover;
   }
 `;
 
 export const ImageWide = styled.img`
-  // width: 100%;
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* margin: ${(props) => (props.margin ? props.margin : "auto")};
-  height: ${(props) => (props.height ? props.height : "60%")}; */
+  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
+  height: ${(props) => (props.height ? props.height : "60%")};
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: fill;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: ${(props) => (props.height ? props.height : "100%")};
@@ -373,12 +371,15 @@ export const ImageLarge = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* margin: ${(props) => (props.margin ? props.margin : "auto")};
-  height: ${(props) => (props.height ? props.height : "60%")}; */
+  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
+  height: ${(props) => (props.height ? props.height : "100%")};
   border-radius: 15px 15px 0px 0px;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  object-fit: fill;
+  /* object-fit: fill; */
+  /* object-fit: cover; */
+  /* object-fit: contain; */
+  /* object-fit: scale-down; */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
@@ -413,8 +414,9 @@ export const FooterWide = styled.div`
   height: 40%;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
+  /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: 50%;
+    height: 40%;
   }
   @media only screen and (min-width: 601px) and (max-width: 992px) {
   }
@@ -428,7 +430,7 @@ export const FooterLarge = styled.div`
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
   // border: 1px solid blue;
-  height: 40%;
+  height: 65%;
 `;
 export const Title = styled.div`
   // display: flex;
@@ -444,6 +446,7 @@ export const Title = styled.div`
   color: white;
   font-family: "DM Sans", sans-serif;
   align-items: center;
+
   /* border: 1px solid green; */
 `;
 
@@ -455,6 +458,7 @@ export const Description = styled.div`
   padding: 0px 10px 0px 20px;
   align-items: center;
   overflow: hidden;
+  position: relative;
   /* border: 1px solid orange; */
 `;
 export const Stack = styled.div`
@@ -470,6 +474,15 @@ export const Stack = styled.div`
   /* border: 1px solid red; */
   &:hover:span {
     display: none;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 601px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    height: auto;
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
 
@@ -514,7 +527,7 @@ export const ColorAccentWide = styled.div`
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "93px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "94px")};
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
