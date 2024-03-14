@@ -125,16 +125,39 @@ export const BodyContainer = styled.div`
   flex-direction: row;
   width: 100%;
   height: 100vh;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    height: 100vh;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    height: 100vh;
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    height: 100vh;
+  }
 `;
 
 export const ImageMobile = styled.img`
   /* overflow: hidden; */
   /* object-fit: contain; */
-  object-fit: cover;
-  /* object-fit: fill; */
-  background-attachment: fixed;
+  /* object-fit: cover; */
+  object-fit: fill;
+
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 16px;
+    object-fit: cover;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    object-fit: cover;
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    object-fit: cover;
+  }
 `;
 
 // .homeTextBen {

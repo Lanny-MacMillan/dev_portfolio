@@ -5,13 +5,12 @@ export const ExperienceContainer = styled.div`
   height: 100vh;
   display: grid;
   position: relative;
-  // margin: 2em auto; // for header
   font-weight: 300;
   /* border: 1px solid green; */
 
   -webkit-font-smoothing: antialiased;
   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     ". . . ."
@@ -22,6 +21,7 @@ export const ExperienceContainer = styled.div`
   background: #1a191d;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
+    height: 100vh;
     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -35,6 +35,7 @@ export const ExperienceContainer = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
+    height: 100vh;
     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -79,14 +80,12 @@ export const ExperienceDiv = styled.div`
 // Card One - GlassMorphism UI Design
 export const ProjectCard = styled.div`
   /* max-width: 300px; */
-  min-height: 200px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 1em;
-
-  height: 20%;
-  padding: 35px;
+  padding: 25px 20px 20px 30px;
 
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
