@@ -25,6 +25,7 @@ import {
   Skills1,
   Skills2,
   Skills3,
+  Container,
 } from "./Skills.styles.js";
 
 const Skills = ({ skills }) => {
@@ -32,76 +33,78 @@ const Skills = ({ skills }) => {
   return (
     <>
       <SkillsContainer ref={skills}>
-        <Header>My Skills</Header>
-        <Skills0>
-          <SkillsHeader>
-            <Icon>
-              <SoftwareIcon height={60} width={60} />{" "}
-            </Icon>
-            <Title>
-              <ColorAccent background={softwareDev} />
-              Software <br />
-              Development{" "}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet></HTMLSnippet>
-            <Description>
-              Software Dev, functional and OOP programming, Javascript, C#,
-              Typescript, Python
-            </Description>
-          </DescriptionBody>
-        </Skills0>
-        <Skills1>
-          <SkillsHeader>
-            <Icon>
-              <ReactIcon height={60} width={60} />{" "}
-            </Icon>
-            <Title>
-              <ColorAccent background={frontendDev} width={"126px"} />
-              Frontend <br />
-              Development{" "}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet></HTMLSnippet>
-            <Description>
-              HTML, CSS, JS, React, Express. Mobile first development mindset
-            </Description>
-          </DescriptionBody>
-        </Skills1>
-        <Skills2>
-          <SkillsHeader>
-            <Icon>
-              <MobileIcon height={60} width={60} />{" "}
-            </Icon>
-            <Title>
-              <ColorAccent background={mobileDev} width={"95px"} />
-              Mobile <br />
-              Development{" "}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet></HTMLSnippet>
-            <Description>React Native, Flutter?, iOS, Android</Description>
-          </DescriptionBody>
-        </Skills2>
-        <Skills3>
-          <SkillsHeader>
-            <Icon>
-              <UnityIcon2 height={60} width={60} />{" "}
-            </Icon>
-            <Title>
-              <ColorAccent background={gameDev} width={"85px"} />
-              Game <br />
-              Development{" "}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet></HTMLSnippet>
-            <Description>Unity C# developer</Description>
-          </DescriptionBody>
-        </Skills3>
+        <Container>
+          <Header>My Skills</Header>
+          <Skills0>
+            <SkillsHeader>
+              <Icon>
+                <SoftwareIcon height={60} width={60} />{" "}
+              </Icon>
+              <Title>
+                <ColorAccent background={softwareDev} />
+                Software <br />
+                Development{" "}
+              </Title>
+            </SkillsHeader>
+            <DescriptionBody>
+              <HTMLSnippet></HTMLSnippet>
+              <Description>
+                Software Dev, functional and OOP programming, Javascript, C#,
+                Typescript, Python
+              </Description>
+            </DescriptionBody>
+          </Skills0>
+          <Skills1>
+            <SkillsHeader>
+              <Icon>
+                <ReactIcon height={60} width={60} />{" "}
+              </Icon>
+              <Title>
+                <ColorAccent background={frontendDev} width={"126px"} />
+                Frontend <br />
+                Development{" "}
+              </Title>
+            </SkillsHeader>
+            <DescriptionBody>
+              <HTMLSnippet></HTMLSnippet>
+              <Description>
+                HTML, CSS, JS, React, Express. Mobile first development mindset
+              </Description>
+            </DescriptionBody>
+          </Skills1>
+          <Skills2>
+            <SkillsHeader>
+              <Icon>
+                <MobileIcon height={60} width={60} />{" "}
+              </Icon>
+              <Title>
+                <ColorAccent background={mobileDev} width={"95px"} />
+                Mobile <br />
+                Development{" "}
+              </Title>
+            </SkillsHeader>
+            <DescriptionBody>
+              <HTMLSnippet></HTMLSnippet>
+              <Description>React Native, Flutter?, iOS, Android</Description>
+            </DescriptionBody>
+          </Skills2>
+          <Skills3>
+            <SkillsHeader>
+              <Icon>
+                <UnityIcon2 height={60} width={60} />{" "}
+              </Icon>
+              <Title>
+                <ColorAccent background={gameDev} width={"85px"} />
+                Game <br />
+                Development{" "}
+              </Title>
+            </SkillsHeader>
+            <DescriptionBody>
+              <HTMLSnippet></HTMLSnippet>
+              <Description>Unity C# developer</Description>
+            </DescriptionBody>
+          </Skills3>
+        </Container>
       </SkillsContainer>
     </>
   );

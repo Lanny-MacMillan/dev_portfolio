@@ -2,29 +2,56 @@ import styled from "styled-components";
 // import { Input } from '@lanny-macmillan/thequickstop'
 
 export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* padding: 30px; */
+  margin: 0;
+  background: #1a191d;
   height: 100vh;
+`;
+
+export const Container = styled.div`
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   background: #1a191d;
-  /* background-image: linear-gradient(#1a191d, #000); */
-
   font-family: "DM Sans", sans-serif;
+  min-width: 100%;
 
-  /* padding-bottom: 30px; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: 100vh;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
   }
+  @media only screen and (min-width: 993px) and (max-width: 1499px) {
+  }
 
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  @media only screen and (min-width: 1500px) {
+    min-width: 1500px;
   }
 `;
 
+// export const Container = styled.div`
+//   /* max-width: 1500px; */
+
+//   @media only screen and (min-width: 320px) and (max-width: 768px) {
+//   }
+
+//   @media only screen and (min-width: 769px) and (max-width: 992px) {
+//   }
+
+//   @media only screen and (min-width: 1400px) {
+//     /* padding: 150px; */
+//     /* max-width: 1500px; */
+//   }
+// `;
 export const ContactDiv = styled.div`
   // grid-area: contact;
   /* display: flex;
@@ -175,6 +202,7 @@ export const CardHeader = styled.div`
   font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
+  text-align: center;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
