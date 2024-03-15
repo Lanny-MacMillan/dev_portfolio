@@ -490,7 +490,7 @@ export const ColorAccentWide = styled.div`
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "110px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : "95px")};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
