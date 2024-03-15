@@ -52,10 +52,10 @@ const Skills = ({ skills }) => {
             <DescriptionBody>
               <HTMLSnippet>
                 {" "}
-                <Ptag letterFill={softwareDev} height={25} width={25} />{" "}
-                <VertLine borderColor={softwareDev} height={"75px"} />
+                <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+                <VertLine borderColor={mobileDev} height={"75px"} />
                 <ClosingPtag
-                  letterFill={softwareDev}
+                  letterFill={mobileDev}
                   height={35}
                   width={35}
                 />{" "}
@@ -79,10 +79,10 @@ const Skills = ({ skills }) => {
             </SkillsHeader>
             <DescriptionBody>
               <HTMLSnippet>
-                <Ptag letterFill={frontendDev} height={25} width={25} />{" "}
-                <VertLine borderColor={frontendDev} height={"60px"} />
+                <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+                <VertLine borderColor={mobileDev} height={"60px"} />
                 <ClosingPtag
-                  letterFill={frontendDev}
+                  letterFill={mobileDev}
                   height={35}
                   width={35}
                 />{" "}
@@ -131,9 +131,13 @@ const Skills = ({ skills }) => {
             <DescriptionBody>
               <HTMLSnippet>
                 {" "}
-                <Ptag letterFill={gameDev} height={25} width={25} />{" "}
-                <VertLine borderColor={gameDev} />
-                <ClosingPtag letterFill={gameDev} height={35} width={35} />{" "}
+                <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+                <VertLine borderColor={mobileDev} />
+                <ClosingPtag
+                  letterFill={mobileDev}
+                  height={35}
+                  width={35}
+                />{" "}
               </HTMLSnippet>
               <Description>Unity C# developer</Description>
             </DescriptionBody>
