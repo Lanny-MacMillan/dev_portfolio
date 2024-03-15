@@ -174,22 +174,32 @@ export const DescriptionBody = styled.div`
   flex-direction: row;
   align-items: center;
   padding-top: 30px;
+  /* border: 2px solid yellow; */
 `;
 
 export const Description = styled.div`
-  padding: 10px;
-  // border: 2px solid yellow;
+  /* padding: 10px; */
+  margin-bottom: 12px;
+  /* border: 1px solid blue; */
 `;
 
 export const HTMLSnippet = styled.div`
-  padding: 15px;
-  // display: flex;
-  // flex-direction: column;
-  height: 70px;
+  /* padding: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  color: white;
   // width: 10%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 `;
 
+export const VertLine = styled.div`
+  color: ${(props) => (props.color ? props.color : "white")};
+  border: 1px dashed #00ddff;
+  border-color: ${(props) => (props.borderColor ? props.borderColor : "white")};
+  height: ${(props) => (props.height ? props.height : "50px")};
+`;
 export const Skills1 = styled.div`
   grid-area: skills1;
   padding: 60px;
