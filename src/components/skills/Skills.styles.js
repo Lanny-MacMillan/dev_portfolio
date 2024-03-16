@@ -159,6 +159,14 @@ export const ColorAccent = styled.div`
   width: ${(props) => (props.width ? props.width : "125px")};
   background: ${(props) => (props.background ? props.background : "red")};
   height: 10px;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
 
 export const Title = styled.div`
