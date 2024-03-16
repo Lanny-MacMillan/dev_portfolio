@@ -114,7 +114,9 @@ const Skills = ({ skills }) => {
                   width={35}
                 />{" "}
               </HTMLSnippet>
-              <Description>React Native, Flutter?, iOS, Android</Description>
+              <Description>
+                React Native mobile development for iOS, and Android
+              </Description>
             </DescriptionBody>
           </Skills2>
           <Skills3>
@@ -139,7 +141,11 @@ const Skills = ({ skills }) => {
                   width={35}
                 />{" "}
               </HTMLSnippet>
-              <Description>Unity C# developer</Description>
+              <Description>
+                Using the Unity game engine, C# and Object Oriented Programming
+                to adeptly design and code captivating 2D games, ensuring
+                optimal performance and engaging player experiences!
+              </Description>
             </DescriptionBody>
           </Skills3>
         </Container>
