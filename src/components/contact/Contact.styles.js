@@ -208,6 +208,7 @@ export const CardHeader = styled.div`
   text-align: center;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
+    padding-bottom: 10px;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -228,15 +229,14 @@ export const CardSubHeader = styled.div`
   font-weight: 800;
   font-style: normal;
   padding-bottom: 30px;
+  text-align: center;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
     align-self: center;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    text-align: center;
     padding: 10px 0 20px 0;
     align-self: center;
   }
