@@ -80,7 +80,7 @@ function App() {
       </HeaderContainer>
       <ScrollToTop />
       <Home home={pageRef[0]} />
-      <Skills skills={pageRef[1]} />
+      <Skills skills={pageRef[1]} largeScreen={largeScreen} />
       <Projects projects={pageRef[2]} largeScreen={largeScreen} />
       <Work work={pageRef[3]} largeScreen={largeScreen} />
       <Contact contact={pageRef[4]} />
