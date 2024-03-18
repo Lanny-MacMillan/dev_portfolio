@@ -8,7 +8,6 @@ export const SkillsContainer = styled.div`
   min-height: auto;
   padding: 30px;
   margin: 0;
-
   /* border: 1px solid teal; */
   color: #224;
   /* background: #1a191d; */

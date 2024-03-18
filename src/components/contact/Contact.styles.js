@@ -11,10 +11,12 @@ export const ContactContainer = styled.div`
   margin: 0;
   background: #1a191d;
   height: 100vh;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
-  height: 80vh;
+  height: auto;
+  /* height: 80vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +61,7 @@ export const ContactDiv = styled.div`
   margin-top: 50px;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 `;
 
 export const PaddedDiv = styled.div`
@@ -228,7 +231,7 @@ export const CardSubHeader = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     text-align: center;
-    padding: 40px 0 40px 0;
+    padding: 20px 0 20px 0;
     align-self: center;
   }
 
@@ -245,7 +248,8 @@ export const CardSubHeader = styled.div`
 export const CardForm = styled.div`
   display: flex;
   flex-direction: column;
-  /* position: relative; */
+  display: none;
+
   height: auto;
   z-index: 99;
   height: 125px;
@@ -280,7 +284,7 @@ export const CardFooter = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* height: 175px; */
     span {
-      display: none;
+      /* display: none; */
     }
     p {
       /* cursive font here */

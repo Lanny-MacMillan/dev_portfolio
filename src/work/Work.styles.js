@@ -5,7 +5,7 @@ export const ExperienceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   min-height: auto;
   padding: 30px;
   margin: 0;
