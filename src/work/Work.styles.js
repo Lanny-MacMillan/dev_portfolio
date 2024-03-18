@@ -146,10 +146,10 @@ export const ProjectCard = styled.div`
   justify-content: space-between;
   font-size: 1em;
   padding: 25px 20px 20px 30px;
-
+  /* background-color: #699298; */
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.35);
   /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25); */
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),

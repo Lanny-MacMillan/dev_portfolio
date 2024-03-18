@@ -7,6 +7,7 @@ import {
   GitHubIcon,
   CalendlyIcon,
 } from "../assets/icons.js";
+import { mobileDev } from "../assets/constants.js";
 import { InlineWidget, PopupModal } from "react-calendly";
 import curlyArrow from "../assets/img/curlyArrow.png";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
@@ -20,10 +21,14 @@ import {
   CardHeader,
   CardSubHeader,
   CardForm,
-  StyledInput,
+  Footer,
   CardFooter,
   IconsDiv,
   Container,
+  StartProject,
+  CalendlyLink,
+  ConnectHeader,
+  ConnectBody,
 } from "./Contact.styles.js";
 
 const Contact = ({ contact }) => {
@@ -92,11 +97,9 @@ const Contact = ({ contact }) => {
     <div>
       <button
         style={{
-          padding: "0",
+          padding: "15px",
+          borderRadius: "10px",
           border: "none",
-          background: "none",
-          display: "block",
-          margin: "0 auto",
         }}
         onClick={() => setIsOpen(true)}
       >
@@ -210,10 +213,65 @@ const Contact = ({ contact }) => {
   return (
     <>
       <ContactContainer ref={contact}>
-        <Container>
+        {/* <Container>
           <Header>Contact</Header>
-          <ContactDiv>{renderDivs}</ContactDiv>
-        </Container>
+          <ContactDiv></ContactDiv>
+        </Container> */}
+        <StartProject>
+          <ConnectHeader>Start A Project</ConnectHeader>
+          <ConnectBody>
+            Interested in working together? We should queue up a time to chat.
+            <br />
+            Coffee is on me
+          </ConnectBody>
+          <CalendlyLink>{renderCalendlyPopupModal}</CalendlyLink>
+        </StartProject>
+        <Footer>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              margin: "150px 0 30px 0",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "1.5em",
+                textAlign: "center",
+              }}
+            >
+              Animated SVG of myself here
+            </div>
+            <div>
+              <IconsDiv>
+                <a
+                  href="https://www.linkedin.com/in/lanny-macmillan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon height={40} width={40} />
+                </a>
+                <a
+                  href="mailto:lanny.macmillan.dev@gmail.com"
+                  rel="noopener noreferrer"
+                >
+                  <GmailIcon height={40} width={40} />
+                </a>
+                <a
+                  href="https://github.com/Lanny-MacMillan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon height={40} width={40} />
+                </a>
+              </IconsDiv>
+              <div style={{ fontSize: ".8em", textAlign: "center" }}>
+                Created by Lanny MacMillan 2024
+              </div>
+            </div>
+          </div>
+        </Footer>
       </ContactContainer>
     </>
   );
