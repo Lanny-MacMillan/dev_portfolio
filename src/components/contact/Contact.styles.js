@@ -209,6 +209,7 @@ export const CardHeader = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     padding-bottom: 10px;
+    font-size: 1.1em;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -234,6 +235,7 @@ export const CardSubHeader = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     padding: 10px 0 20px 0;
     align-self: center;
+    font-size: 0.8em;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -282,7 +284,9 @@ export const CardFooter = styled.div`
   padding-bottom: 30px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    /* height: 175px; */
+    font-size: 0.8em;
+    padding-bottom: 0px;
+
     span {
       /* display: none; */
     }
