@@ -9,8 +9,7 @@ export const ExperienceContainer = styled.div`
   min-height: auto;
   padding: 30px;
   margin: 0;
-  background: #1a191d;
-
+  background-image: linear-gradient(#141c3a, #c4cbca);
   /* border: 1px solid teal; */
   color: #224;
   /* background: #1a191d; */
@@ -33,7 +32,6 @@ export const Container = styled.div`
     ". experienceDiv experienceDiv ."
     ". experienceDiv experienceDiv ."
     ". . . .";
-  background: #1a191d;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     height: 100vh;

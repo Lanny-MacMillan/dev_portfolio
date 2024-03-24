@@ -12,7 +12,10 @@ export const ProjectsContainer = styled.div`
   margin: 0;
   /* border: 1px solid teal; */
   color: #224;
-  background: #1a191d;
+  background-image: linear-gradient(#1a191d, #141c3a);
+  /* background: #1a191d; */
+
+  /* background: #141c3a; */
   // background: #2b2b2b;
   // background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
   // cover no-repeat fixed;

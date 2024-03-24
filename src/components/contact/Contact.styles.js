@@ -8,7 +8,7 @@ export const ContactContainer = styled.div`
   color: white;
   /* padding: 30px; */
   margin: 0;
-  background: #1a191d;
+  background: #c4cbca;
   /* height: 80vh; */
   overflow: hidden;
 `;
@@ -325,7 +325,9 @@ export const Footer = styled.div`
   flex-direction: row;
   justify-content: center;
   height: 80vh;
-  background-color: rgba(90, 90, 90);
+  background-color: #68717d;
+  /* background: #109494; */
+
   /* background: #699298; */
   border-top: 2px solid white;
 
@@ -344,8 +346,9 @@ export const StartProject = styled.div`
   justify-content: space-around;
   align-self: center;
   height: 20vh;
-  width: 80vw;
-  background: #699298;
+  width: 90vw;
+  /* background: #2a1e5c; */
+  background: #141c3a;
   /* background-color: rgba(90, 90, 90); */
   border-radius: 8px;
   position: relative;
@@ -355,6 +358,8 @@ export const StartProject = styled.div`
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   @media only screen and (min-width: 320px) and (max-width: 600px) {
+    height: 30vh;
+    flex-direction: column;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -405,11 +410,51 @@ export const ConnectBody = styled.div`
   text-align: center;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
+    padding: 10px;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const IconDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  margin: 150px 0 30px 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 150px 0 100px 0;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const ButtonContainer = styled.div`
+  /* display: flex; */
+`;
+
+export const StyledButton = styled.button`
+  display: flex;
+  width: fit-content;
+  padding: 15px 30px 15px 30px;
+  border-radius: 40px;
+  border: 3px solid #3664ae;
+  color: white;
+  background: white;
+  align-items: center;
+  font-size: 1em;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  &:hover {
+    background-color: #4fecec;
+    border: 3px solid #3664ae;
   }
 `;

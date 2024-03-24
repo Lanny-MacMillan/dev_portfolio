@@ -6,12 +6,14 @@ export const SkillsContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   min-height: auto;
-  padding: 30px;
+  /* padding: 30px; */
   margin: 0;
   /* border: 1px solid teal; */
   color: #224;
-  /* background: #1a191d; */
-  background-image: linear-gradient(#000, #1a191d);
+  /* background: #141c3a; */
+  border-bottom: 2px solid white;
+  /* border-top: 2px solid white; */
+  background-image: linear-gradient(#141c3a, #1a191d);
 `;
 // export const SkillsContainer = styled.div`
 //   display: grid;
@@ -85,7 +87,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: 800;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -288,15 +290,12 @@ export const Skills3 = styled.div`
 export const Container = styled.div`
   max-width: 1500px;
   display: grid;
-  height: 130vh;
+  height: 120vh;
   color: white;
-  /* align-items: center;
-  justify-content: center; */
+  /* border: 3px solid white; */
 
-  /* border: 1px solid red; */
-  // margin: 2em auto; // for header
   grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
-  grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.5fr 1fr 1fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -306,13 +305,12 @@ export const Container = styled.div`
     ". skills3 skills3 skills3 ."
     ". . . . .";
   /* For browsers that do not support gradients */
-  background-color: #000;
-  background-image: linear-gradient(#000, #1a191d);
+  /* background: linear-gradient(#000, #1a191d); */
 
   @media only screen and (min-width: 320px) and (max-width: 520px) {
     height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.3fr;
     grid-template-areas:
       ". "
       "header"
@@ -327,7 +325,7 @@ export const Container = styled.div`
     height: auto;
     padding: 0 20px 0 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
     grid-template-areas:
       ". "
       "header"
@@ -343,7 +341,7 @@ export const Container = styled.div`
     padding: 0 20px 0 20px;
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.7fr 0.5fr 1fr 1fr 0.7fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.7fr;
     grid-template-areas:
       ". . "
       "header header"

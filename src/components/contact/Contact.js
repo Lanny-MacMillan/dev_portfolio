@@ -8,6 +8,7 @@ import {
   CalendlyIcon,
 } from "../assets/icons.js";
 import { mobileDev } from "../assets/constants.js";
+import { SelfIconLarge } from "../assets/icons.js";
 import { InlineWidget, PopupModal } from "react-calendly";
 import curlyArrow from "../assets/img/curlyArrow.png";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
@@ -29,6 +30,9 @@ import {
   CalendlyLink,
   ConnectHeader,
   ConnectBody,
+  ButtonContainer,
+  StyledButton,
+  IconDiv,
 } from "./Contact.styles.js";
 
 const Contact = ({ contact }) => {
@@ -74,139 +78,19 @@ const Contact = ({ contact }) => {
     // some call to send email to me
   };
 
-  const Iframe = () => (
-    <iframe title="google" style={iframeStyle} src={`${googleURL}`} />
-  );
-
-  const renderiFrame = useMemo(() => Iframe(), []);
-
-  const renderCalendly = (
-    <div
-    // style={{
-    //   // minWidth: "320px",
-    //   height: "650px",
-    //   border: "1px solid red",
-    //   overflow: "clip",
-    // }}
-    >
-      <InlineWidget url="https://calendly.com/lanny-macmillan-dev/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff" />
-    </div>
-  );
-
   const renderCalendlyPopupModal = (
-    <div>
-      <button
-        style={{
-          padding: "15px",
-          borderRadius: "10px",
-          border: "none",
-        }}
-        onClick={() => setIsOpen(true)}
-      >
-        <CalendlyIcon />
-      </button>
+    <>
+      <ButtonContainer>
+        <StyledButton onClick={() => setIsOpen(true)}>
+          <CalendlyIcon />
+        </StyledButton>
+      </ButtonContainer>
       <PopupModal
         url="https://calendly.com/lanny-macmillan-dev/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.getElementById("root")}
       />
-    </div>
-  );
-
-  const renderDivs = (
-    <>
-      <ShowDiv1>{renderiFrame}</ShowDiv1>
-      <ShowDiv2>
-        <PaddedDiv>
-          <CardHeader>Lets create something amazing!</CardHeader>
-          <CardSubHeader>
-            Have an idea for an App, need a website or just want to create
-            something fun?! Click on the Calendly Link to setup a time to meet
-            on Zoom and discuss your needs. I would love to hear from you.
-          </CardSubHeader>
-          <CardForm>
-            <input
-              name="subject"
-              value={inputs.subject}
-              onChange={(e) => onChange(e, setSubjectValid, 1)}
-              type="text"
-              variant="default"
-              placeholder="Subject"
-              isValid={subjectValid}
-              labelType="floating"
-              errorMessage="Please enter a Subject"
-            />
-            <input
-              name="name"
-              value={inputs.name}
-              onChange={(e) => onChange(e, setNameValid, 1)}
-              type="text"
-              variant="default"
-              placeholder="Name"
-              isValid={nameValid}
-              labelType="floating"
-              errorMessage="Please enter a Name"
-            />
-            <input
-              name="email"
-              value={inputs.email}
-              onChange={(e) => onChange(e, setEmailValid, 1)}
-              type="text"
-              variant="default"
-              placeholder="Email"
-              isValid={emailValid}
-              labelType="floating"
-              errorMessage="Please enter a Email"
-            />
-            <textarea
-              style={{ height: "50px" }}
-              name="message"
-              value={inputs.message}
-              onChange={(e) => onChange(e, setMessageValid, 1)}
-              type="text"
-              variant="default"
-              placeholder="Message"
-              isValid={messageValid}
-              labelType="floating"
-              errorMessage="Please enter a Message"
-            />
-            <button onSubmit={onSubmit} disabled={!valid}>
-              Submit
-            </button>
-          </CardForm>
-          {renderCalendlyPopupModal}
-          <CardFooter>
-            <p>
-              ...
-              <span>or </span>find me here
-            </p>
-            <img alt="Arrow" src={curlyArrow} />
-            <IconsDiv>
-              <a
-                href="https://www.linkedin.com/in/lanny-macmillan/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon height={40} width={40} />
-              </a>
-              <a
-                href="mailto:lanny.macmillan.dev@gmail.com"
-                rel="noopener noreferrer"
-              >
-                <GmailIcon height={40} width={40} />
-              </a>
-              <a
-                href="https://github.com/Lanny-MacMillan"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon height={40} width={40} fill={"white"} />
-              </a>
-            </IconsDiv>
-          </CardFooter>
-        </PaddedDiv>
-      </ShowDiv2>
     </>
   );
 
@@ -218,7 +102,7 @@ const Contact = ({ contact }) => {
           <ContactDiv></ContactDiv>
         </Container> */}
         <StartProject>
-          <ConnectHeader>Start A Project</ConnectHeader>
+          <ConnectHeader>Starting A Project?</ConnectHeader>
           <ConnectBody>
             Interested in working together? We should queue up a time to chat.
             <br />
@@ -227,22 +111,8 @@ const Contact = ({ contact }) => {
           <CalendlyLink>{renderCalendlyPopupModal}</CalendlyLink>
         </StartProject>
         <Footer>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              margin: "150px 0 30px 0",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "1.5em",
-                textAlign: "center",
-              }}
-            >
-              Animated SVG of myself here
-            </div>
+          <IconDiv>
+            <SelfIconLarge height={"700px"} width={"700px"} />
             <div>
               <IconsDiv>
                 <a
@@ -270,7 +140,7 @@ const Contact = ({ contact }) => {
                 Created by Lanny MacMillan 2024
               </div>
             </div>
-          </div>
+          </IconDiv>
         </Footer>
       </ContactContainer>
     </>
