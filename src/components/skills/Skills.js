@@ -35,9 +35,9 @@ const Skills = ({ skills, largeScreen }) => {
   // add video on hover, icon changes to color and rotates
   return (
     <>
-      <SkillsContainer ref={skills}>
+      <SkillsContainer>
         <Container>
-          <Header>My Skills</Header>
+          <Header ref={skills}>My Skills</Header>
           <Skills0>
             <SkillsHeader>
               <Icon>

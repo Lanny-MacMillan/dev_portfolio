@@ -8,7 +8,9 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 3em;
-  background-color: black;
+  background-color: #c4cbca;
+
+  /* background-color: #141c3a; */
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     justify-content: space-between;
@@ -26,7 +28,11 @@ export const OurHerosName = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: 24px;
-  color: white;
+  font-weight: 800;
+  margin-left: 2em;
+  font-family: "DM Sans", sans-serif;
+  color: #141c3a;
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
@@ -43,7 +49,11 @@ export const ShortText = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: 1.8em;
-  color: white;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+
+  /* color: white; */
+  color: #141c3a;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
   }
@@ -75,7 +85,7 @@ export const LinksContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25px;
+  padding: 20px;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     padding: 5px;
   }
@@ -91,8 +101,11 @@ export const LinksContent = styled.div`
 export const PageRefIcon = styled.div`
   display: flex;
   justify-content: flex-end;
-  font-size: 14px;
-  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  /* color: white; */
+  color: #141c3a;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
@@ -107,7 +120,11 @@ export const PageRefIcon = styled.div`
 export const Links = styled.div`
   display: flex;
   font-size: 18px;
-  color: white;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+
+  /* color: white; */
+  color: #141c3a;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 16px;
@@ -122,9 +139,12 @@ export const Links = styled.div`
 
 export const BodyContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
+  /* background: #000; */
+  background: linear-gradient(#c4cbca, #141c3a);
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     height: 100vh;
   }
@@ -135,6 +155,21 @@ export const BodyContainer = styled.div`
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     height: 100vh;
+  }
+`;
+export const IconContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid red; */
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    justify-content: space-between;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
 
@@ -159,89 +194,57 @@ export const ImageMobile = styled.img`
     object-fit: cover;
   }
 `;
+export const HeroHeader = styled.div`
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  /* border: 5px solid #4fecec; */
+  padding-top: 15px;
+  border-radius: 15px;
+  color: #141c3a;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
 
-// .homeTextBen {
-//   font-family: 'Anton', cursive;
-//   margin-top: 45px;
-//   color: white;
-//   font-size: 85px;
-//   animation: Ben 2s step-end both;
-// }
-// @keyframes Ben
-// {
-//   from { color: white }
-//   to { color: Black }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+  }
 
-//   from { text-shadow: none }
-//   to   { text-shadow:
-//     rgb(13, 247, 36) 0px 54px 55px,
-//     rgb(13, 247, 36) 0px -12px 30px,
-//     rgb(13, 247, 36) 0px 4px 6px,
-//     rgb(13, 247, 36) 0px 12px 13px,
-//     rgb(13, 247, 36) 0px -3px 5px;
-//   }
-// }
-// .homeTextZach {
-//   font-family: 'Anton', cursive;  margin-top: 45px;
-//   color: white;
-//   font-size: 85px;
-//   animation: Zach 4s step-end both;
-// }
-// @keyframes Zach
-// {
-//   from { color: white }
-//   to { color: Black }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
 
-//   from { text-shadow: none }
-//   to   { text-shadow:
-//     rgb(13, 247, 36) 0px 54px 55px,
-//     rgb(13, 247, 36) 0px -12px 30px,
-//     rgb(13, 247, 36) 0px 4px 6px,
-//     rgb(13, 247, 36) 0px 12px 13px,
-//     rgb(13, 247, 36) 0px -3px 5px;
-//   }
-// }
-// .homeTextLanny {
-//   padding-left: 1em;
-//   padding-right: 1em;
-//   font-family: 'Anton', cursive;  margin-top: 45px;
-//   color: white;
-//   font-size: 85px;
-//   animation: Lanny 6s step-end both;
-// }
-// @keyframes Lanny
-// {
-//   from { color: white }
-//   to { color: Black }
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const UpperRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 50%;
 
-//   from { text-shadow: none }
-//   to   { text-shadow:
-//     rgb(13, 247, 36) 0px 54px 55px,
-//     rgb(13, 247, 36) 0px -12px 30px,
-//     rgb(13, 247, 36) 0px 4px 6px,
-//     rgb(13, 247, 36) 0px 12px 13px,
-//     rgb(13, 247, 36) 0px -3px 5px;
-//   }
-// }
-// .homeTextLeeman {
-//   padding-left: 1em;
-//   padding-right: 1em;
-//   font-family: 'Anton', cursive;  margin-top: 45px;
-//   color: white;
-//   font-size: 85px;
-//   animation: Leeman 8s step-end both;
-// }
-// @keyframes Leeman
-// {
-//   from { color: white }
-//   to { color: Black }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-//   from { text-shadow: none }
-//   to   { text-shadow:
-//     rgb(13, 247, 36) 0px 54px 55px,
-//     rgb(13, 247, 36) 0px -12px 30px,
-//     rgb(13, 247, 36) 0px 4px 6px,
-//     rgb(13, 247, 36) 0px 12px 13px,
-//     rgb(13, 247, 36) 0px -3px 5px;
-//   }
-// }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const LowerDiv = styled.div`
+  align-self: center;
+  // alignItems: "flex-end",
+  width: 80%;
+  max-width: 1600px;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;

@@ -1,30 +1,30 @@
 import styled from "styled-components";
-// import { Input } from '@lanny-macmillan/thequickstop'
 
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   color: white;
   /* padding: 30px; */
   margin: 0;
-  background: #1a191d;
-  height: 100vh;
+  background: #c4cbca;
+  /* height: 80vh; */
   overflow: hidden;
 `;
 
 export const Container = styled.div`
-  height: auto;
-  /* height: 80vh; */
+  /* height: auto; */
+  /* height: 10vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   color: white;
   background: #1a191d;
   font-family: "DM Sans", sans-serif;
   min-width: 100%;
+  /* border: 3px solid purple; */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: 100vh;
@@ -62,6 +62,7 @@ export const ContactDiv = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* border: 1px solid red; */
 `;
 
 export const PaddedDiv = styled.div`
@@ -176,14 +177,14 @@ export const Image = styled.img`
 export const Header = styled.div`
   grid-area: header;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   font-size: 4.5em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  padding-bottom: 40px;
+  padding-top: 40px;
   color: white;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -306,7 +307,8 @@ export const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+
+  /* align-items: flex-end; */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
@@ -315,5 +317,144 @@ export const IconsDiv = styled.div`
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80vh;
+  background-color: #68717d;
+  /* background: #109494; */
+
+  /* background: #699298; */
+  border-top: 2px solid white;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const StartProject = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  height: 20vh;
+  width: 90vw;
+  /* background: #2a1e5c; */
+  background: #141c3a;
+  /* background-color: rgba(90, 90, 90); */
+  border-radius: 8px;
+  position: relative;
+  top: 85px;
+  border: 2px solid white;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    height: 30vh;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const CalendlyLink = styled.div`
+  align-self: center;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const ConnectHeader = styled.div`
+  align-self: center;
+  font-size: 2em;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const ConnectBody = styled.div`
+  align-self: center;
+  font-size: 1em;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    padding: 10px;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const IconDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  margin: 150px 0 30px 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 150px 0 100px 0;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const ButtonContainer = styled.div`
+  /* display: flex; */
+`;
+
+export const StyledButton = styled.button`
+  display: flex;
+  width: fit-content;
+  padding: 15px 30px 15px 30px;
+  border-radius: 40px;
+  border: 3px solid #3664ae;
+  color: white;
+  background: white;
+  align-items: center;
+  font-size: 1em;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  &:hover {
+    background-color: #4fecec;
+    border: 3px solid #3664ae;
   }
 `;

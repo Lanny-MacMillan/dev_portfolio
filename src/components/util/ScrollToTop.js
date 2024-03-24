@@ -11,6 +11,7 @@ const ScrollToTop = () => {
     width: "50px",
     opacity: ".9",
   };
+
   return (
     <img
       onClick={() => {
