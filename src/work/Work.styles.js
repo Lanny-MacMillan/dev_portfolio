@@ -9,7 +9,9 @@ export const ExperienceContainer = styled.div`
   min-height: auto;
   padding: 30px;
   margin: 0;
-  background-image: linear-gradient(#141c3a, #c4cbca);
+  /* background-image: linear-gradient(#141c3a, #2f4289); */
+  background-image: linear-gradient(#0a0f1e, #2f4289);
+
   /* border: 1px solid teal; */
   color: #224;
   /* background: #1a191d; */
@@ -142,10 +144,12 @@ export const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid white;
+
   font-size: 1em;
   padding: 25px 20px 20px 30px;
   /* background-color: #699298; */
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.35);
   /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25); */
