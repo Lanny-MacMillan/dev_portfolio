@@ -11,9 +11,10 @@ export const SkillsContainer = styled.div`
   /* border: 1px solid teal; */
   color: #224;
   /* background: #141c3a; */
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   /* border-top: 2px solid white; */
-  background-image: linear-gradient(#141c3a, #1a191d);
+  background-image: linear-gradient(#141c3a, #0a0f1e);
+  /* background-image: linear-gradient(#141c3a, #1a191d); */
 `;
 // export const SkillsContainer = styled.div`
 //   display: grid;

@@ -9,6 +9,8 @@ export const ContactContainer = styled.div`
   /* padding: 30px; */
   margin: 0;
   background: #c4cbca;
+  background-image: linear-gradient(#2f4289, #c4cbca);
+
   /* height: 80vh; */
   overflow: hidden;
 `;
@@ -405,7 +407,7 @@ export const ConnectBody = styled.div`
   font-size: 1em;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 800;
   font-style: normal;
   text-align: center;
 

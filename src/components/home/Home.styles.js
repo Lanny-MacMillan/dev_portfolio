@@ -204,8 +204,9 @@ export const HeroHeader = styled.div`
   color: #141c3a;
   font-weight: 800;
   font-family: "DM Sans", sans-serif;
-
+  font-size: 1em;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
+    font-size: 0.7em;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {

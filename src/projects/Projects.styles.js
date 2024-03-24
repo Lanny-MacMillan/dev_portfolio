@@ -12,7 +12,7 @@ export const ProjectsContainer = styled.div`
   margin: 0;
   /* border: 1px solid teal; */
   color: #224;
-  background-image: linear-gradient(#1a191d, #141c3a);
+  background: #0a0f1e;
   /* background: #1a191d; */
 
   /* background: #141c3a; */
@@ -241,6 +241,8 @@ export const ProjectCardContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 2px solid white;
+
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -254,6 +256,8 @@ export const ProjectCardContainerWide = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 2px solid white;
+
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -267,6 +271,8 @@ export const ProjectCardContainerLarge = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 2px solid white;
+
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -367,6 +373,8 @@ export const Footer = styled.div`
   height: 40%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
+  font-family: "DM Sans", sans-serif;
+
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -383,6 +391,8 @@ export const FooterWide = styled.div`
   z-index: 1;
   height: 40%;
   background: rgba(0, 0, 0, 0.5);
+  font-family: "DM Sans", sans-serif;
+
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
