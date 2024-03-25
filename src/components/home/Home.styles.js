@@ -199,12 +199,6 @@ export const HeroHeader = styled.div`
   text-align: center;
   width: 100%;
   /* border: 5px solid #4fecec; */
-  padding-top: 15px;
-  border-radius: 15px;
-  color: #141c3a;
-  font-weight: 800;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1em;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 0.7em;
   }
@@ -219,7 +213,7 @@ export const UpperRow = styled.div`
   display: flex;
   flex-direction: row;
   width: 90%;
-  height: 50%;
+  height: 60vh;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
@@ -234,13 +228,16 @@ export const UpperRow = styled.div`
   }
 `;
 export const LowerDiv = styled.div`
+  display: flex;
   align-self: center;
-  // alignItems: "flex-end",
+  align-items: flex-end;
   width: 80%;
   max-width: 1600px;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    width: 100%;
+    width: 99%;
+    height: 30vh;
+    /* border: 1px solid blue; */
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -253,7 +250,10 @@ export const ChatDiv = styled.div`
   margin: 40px;
   display: inline-block;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
   height: auto;
   background-color: #141c3a;
   border: 8px solid #4fecec;
@@ -262,6 +262,7 @@ export const ChatDiv = styled.div`
   -moz-border-radius: 30px;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: auto;
+    font-size: 1em;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {

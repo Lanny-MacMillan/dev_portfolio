@@ -22,14 +22,27 @@ const Home = ({ home }) => {
               <ChatArrow />
               <TalkText>
                 I'm Lanny,
-                <br />I am a Web Developer, Indie Game Developer and Designer. I
-                like to create and code simple, fun things with movement.
+                <br />A Software/web developer, Indie Gamemaker and Designer.
+                Highly organized and creative problem solver with a passion for
+                providing well crafted solutions. I love to collaborate on
+                projects and thrive solving front and back end challenges.
+                {/* I am a Web Developer, Indie Game Developer and Designer. I
+                like to create and code simple, fun things with movement. */}
               </TalkText>
             </ChatDiv>
           </HeroHeader>
         </UpperRow>
         <LowerDiv>
-          <DevDesktop />
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+              // alignSelf: "flex-end",
+              justifyContent: "center",
+            }}
+          >
+            <DevDesktop />
+          </div>
         </LowerDiv>
       </IconContainer>
     </BodyContainer>
