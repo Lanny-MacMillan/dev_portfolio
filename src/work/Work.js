@@ -26,7 +26,6 @@ const Work = ({ work, largeScreen }) => {
       <ExperienceContainer ref={work}>
         <Container>
           <Header>Experience</Header>
-
           <ExperienceDiv>
             <ProjectCard>
               <CardHeader>

@@ -359,6 +359,8 @@ export const StartProject = styled.div`
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  max-width: 1400px;
+
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: 30vh;
     flex-direction: column;

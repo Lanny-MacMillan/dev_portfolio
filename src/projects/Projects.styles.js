@@ -374,7 +374,6 @@ export const Footer = styled.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
   font-family: "DM Sans", sans-serif;
-
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
