@@ -79,7 +79,7 @@ function App() {
         </HeaderLinksDiv>
       </HeaderContainer>
       <ScrollToTop />
-      <Home home={pageRef[0]} />
+      <Home home={pageRef[0]} largeScreen={largeScreen} />
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />
       <Projects projects={pageRef[2]} largeScreen={largeScreen} />
       <Work work={pageRef[3]} largeScreen={largeScreen} />

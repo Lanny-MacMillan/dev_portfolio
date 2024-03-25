@@ -23,9 +23,8 @@ export const Container = styled.div`
   position: relative;
   font-weight: 300;
   min-width: 100%;
-
   -webkit-font-smoothing: antialiased;
-  grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
+  grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
   grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
@@ -61,54 +60,6 @@ export const Container = styled.div`
   }
 `;
 
-// export const ExperienceContainer = styled.div`
-//   height: 100vh;
-//   display: grid;
-//   position: relative;
-//   font-weight: 300;
-//   /* border: 1px solid green; */
-
-//   -webkit-font-smoothing: antialiased;
-//   grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
-//   grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr;
-//   gap: 0px 0px;
-//   grid-template-areas:
-//     ". . . ."
-//     ". header header ."
-//     ". experienceDiv experienceDiv ."
-//     ". experienceDiv experienceDiv ."
-//     ". . . .";
-//   background: #1a191d;
-
-//   @media only screen and (min-width: 320px) and (max-width: 768px) {
-//     height: 100vh;
-//     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-//     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
-//     gap: 0px 0px;
-
-//     grid-template-areas:
-//       ". . . ."
-//       ". header header ."
-//       ". experienceDiv experienceDiv ."
-//       ". experienceDiv experienceDiv ."
-//       ". . . .";
-//   }
-
-//   @media only screen and (min-width: 769px) and (max-width: 992px) {
-//     height: 100vh;
-//     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-//     grid-template-rows: 0.1fr 0.5fr 1fr 1fr 1fr;
-//     gap: 0px 0px;
-//   }
-
-//   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-//   }
-// `;
-
-// export const Header = styled.div`
-//   grid-area: header;
-//   background-color: grey;
-// `;
 export const Header = styled.div`
   grid-area: header;
   display: flex;
@@ -135,9 +86,9 @@ export const Header = styled.div`
 
 export const ExperienceDiv = styled.div`
   grid-area: experienceDiv;
-  // background-color: blue;
+  height: 400px;
 `;
-// Card One - GlassMorphism UI Design
+
 export const ProjectCard = styled.div`
   /* max-width: 300px; */
   min-height: 150px;
@@ -147,17 +98,15 @@ export const ProjectCard = styled.div`
   border: 2px solid white;
 
   font-size: 1em;
-  padding: 25px 20px 20px 30px;
-  /* background-color: #699298; */
-  /* border: 1px solid rgba(255, 255, 255, 0.25); */
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.35);
+  padding: 2em 3em 2em 4em;
+  border-radius: 10px;
+  /* background-color: rgba(255, 255, 255, 0.35); */
   /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25); */
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+  /* box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); */
   backdrop-filter: blur(15px);
-
+  color: white;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     min-height: 125px;
     font-size: 0.9em;
@@ -175,7 +124,8 @@ export const ProjectCard = styled.div`
 `;
 
 export const CardHeader = styled.div`
-  color: ${gameDev};
+  color: white;
+  /* color: ${gameDev}; */
 `;
 
 export const CardFooter = styled.div`
@@ -184,7 +134,8 @@ export const CardFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 0.65em;
-  color: #446;
+  color: white;
+  /* color: #446; */
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 0.65em;
@@ -201,6 +152,7 @@ export const CardFooter = styled.div`
 export const Smalltext = styled.div`
   display: flex;
   flex-direction: row;
+  color: white;
 `;
 
 export const Icon = styled.div`

@@ -142,9 +142,9 @@ export const BodyContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  /* background: #000; */
-  background: linear-gradient(#c4cbca, #141c3a);
-
+  background: linear-gradient(#c4cbca, #1f2c5b);
+  /* background: linear-gradient(#c4cbca, #141c3a); */
+  /* border-bottom: 3px solid white; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     height: 100vh;
   }
@@ -212,8 +212,29 @@ export const HeroHeader = styled.div`
 export const UpperRow = styled.div`
   display: flex;
   flex-direction: row;
-  width: 90%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 60vh;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+export const UpperInnerDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 100px;
+  max-width: 1400px;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
@@ -227,6 +248,7 @@ export const UpperRow = styled.div`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
+
 export const LowerDiv = styled.div`
   display: flex;
   align-self: center;
@@ -260,6 +282,7 @@ export const ChatDiv = styled.div`
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: auto;
     font-size: 1em;
@@ -330,4 +353,9 @@ export const ChatArrow = styled.div`
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
+`;
+export const CenteredDiv = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
 `;

@@ -11,9 +11,8 @@ export const SkillsContainer = styled.div`
   /* border: 1px solid teal; */
   color: #224;
   /* background: #141c3a; */
-  /* border-bottom: 2px solid white; */
-  /* border-top: 2px solid white; */
-  background-image: linear-gradient(#141c3a, #0a0f1e);
+  /* background-image: linear-gradient(#1f2c5b, #0a0f1e); */
+  background: linear-gradient(#141c3a, #0a0f1e);
   /* background-image: linear-gradient(#141c3a, #1a191d); */
 `;
 // export const SkillsContainer = styled.div`
@@ -94,7 +93,7 @@ export const Header = styled.div`
   font-optical-sizing: auto;
   font-style: normal;
   padding-bottom: 30px;
-
+  /* background: linear-gradient(#1f2c5b, #141c3a); */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 3.5em;
   }
