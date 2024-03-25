@@ -246,7 +246,7 @@ export const ProjectCardContainer = styled.div`
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   height: ${(props) => (props.height ? props.height : "440px")};
@@ -261,7 +261,7 @@ export const ProjectCardContainerWide = styled.div`
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   height: ${(props) => (props.height ? props.height : "440px")};
@@ -276,7 +276,7 @@ export const ProjectCardContainerLarge = styled.div`
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   height: ${(props) => (props.height ? props.height : "440px")};
@@ -297,7 +297,7 @@ export const Image = styled.img`
   z-index: 10;
   /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
   height: ${(props) => (props.height ? props.height : "60%")};
-  border-radius: 15px 15px 0px 0px;
+  /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   object-fit: cover;
@@ -324,7 +324,7 @@ export const ImageWide = styled.img`
   z-index: 10;
   /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
   height: ${(props) => (props.height ? props.height : "60%")};
-  border-radius: 15px 15px 0px 0px;
+  /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   object-fit: fill;
@@ -349,7 +349,7 @@ export const ImageLarge = styled.img`
   z-index: 10;
   /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
   height: ${(props) => (props.height ? props.height : "100%")};
-  border-radius: 15px 15px 0px 0px;
+  /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   /* object-fit: fill; */

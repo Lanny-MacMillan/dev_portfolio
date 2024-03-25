@@ -97,14 +97,10 @@ const Contact = ({ contact }) => {
   return (
     <>
       <ContactContainer ref={contact}>
-        {/* <Container>
-          <Header>Contact</Header>
-          <ContactDiv></ContactDiv>
-        </Container> */}
         <StartProject>
           <ConnectHeader>Starting A Project?</ConnectHeader>
           <ConnectBody>
-            Interested in working together? We should queue up a time to chat.
+            Interested in working together? We should set up a time to chat.
             <br />
             Coffee is on me
           </ConnectBody>

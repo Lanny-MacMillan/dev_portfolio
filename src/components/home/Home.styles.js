@@ -249,3 +249,84 @@ export const LowerDiv = styled.div`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
+export const ChatDiv = styled.div`
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #141c3a;
+  border: 8px solid #4fecec;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    width: auto;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const TalkText = styled.div`
+  padding: 0px 0px 40px 20px;
+  text-align: left;
+  line-height: 1.5em;
+  color: white;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    padding: 25px 20px 25px 20px;
+    /* text-align: center; */
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const ChatArrow = styled.div`
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+  &:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #4fecec transparent transparent transparent;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: #141c3a transparent transparent transparent;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
