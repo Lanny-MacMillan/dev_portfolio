@@ -5,6 +5,9 @@ import {
   HeroHeader,
   UpperRow,
   LowerDiv,
+  ChatDiv,
+  TalkText,
+  ChatArrow,
 } from "./Home.styles.js";
 import { SelfIconLarge } from "../assets/icons.js";
 import DevDesktop from "../assets/anim/devDesktop/DevDesktop.js";
@@ -15,8 +18,14 @@ const Home = ({ home }) => {
         <UpperRow>
           <SelfIconLarge height={"500px"} width={"500px"} />
           <HeroHeader>
-            <h1>Web Developer, Game Developer and Designer</h1>
-            <h1>I like to code fun things from games to interactive sites</h1>
+            <ChatDiv>
+              <ChatArrow />
+              <TalkText>
+                I'm Lanny,
+                <br />I am a Web Developer, Indie Game Developer and Designer. I
+                like to create and code simple, fun things with movement.
+              </TalkText>
+            </ChatDiv>
           </HeroHeader>
         </UpperRow>
         <LowerDiv>
