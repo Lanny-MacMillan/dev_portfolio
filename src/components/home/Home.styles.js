@@ -163,7 +163,7 @@ export const IconContainer = styled.div`
 
   /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -258,7 +258,7 @@ export const LowerDiv = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: 99%;
-    height: 30vh;
+    /* height: 30vh; */
     /* border: 1px solid blue; */
   }
 
