@@ -5,7 +5,8 @@ import Projects from "./projects/Projects.js";
 import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/util/ScrollToTop.js";
-import Cursor from "./components/assets/Tools/Cursor.jsx";
+// import Cursor from "./components/assets/Tools/Cursor.jsx";
+import CursorDrift from "./components/assets/Tools/CursorDrift.jsx";
 import {
   HeaderContainer,
   OurHerosName,
@@ -76,7 +77,8 @@ function App() {
         </HeaderLinksDiv>
       </HeaderContainer>
       <ScrollToTop />
-      <Cursor />
+      {/* <Cursor /> */}
+      <CursorDrift />
 
       <Home home={pageRef[0]} largeScreen={largeScreen} />
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />

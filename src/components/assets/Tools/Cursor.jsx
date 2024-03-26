@@ -1,11 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export default function BlurryCursor({ isActive }) {
-  const [clickable, setClickable] = useState(false);
-
+const BlurryCursor = ({ isActive }) => {
   const mouse = useRef({ x: 0, y: 0 });
   const delayedMouse = useRef({ x: 0, y: 0 });
   const rafId = useRef(null);
@@ -14,17 +12,9 @@ export default function BlurryCursor({ isActive }) {
   // const size = clickable ? 60 : 30;
 
   const lerp = (x, y, a) => x * (1 - a) + y * a;
-  console.log("clickable", clickable);
+
   const manageMouseMove = (e) => {
     const { clientX, clientY, target } = e;
-
-    const isTargetLinkOrBtn = target?.closest("a") || target?.closest("button");
-
-    if (isTargetLinkOrBtn) {
-      setClickable(true);
-    } else {
-      setClickable(false);
-    }
 
     mouse.current = {
       x: clientX,
@@ -78,4 +68,5 @@ export default function BlurryCursor({ isActive }) {
       }}
     />
   );
-}
+};
+export default BlurryCursor;
