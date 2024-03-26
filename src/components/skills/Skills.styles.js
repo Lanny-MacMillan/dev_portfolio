@@ -15,72 +15,6 @@ export const SkillsContainer = styled.div`
   background: linear-gradient(#141c3a, #0a0f1e);
   /* background-image: linear-gradient(#141c3a, #1a191d); */
 `;
-// export const SkillsContainer = styled.div`
-//   display: grid;
-//   height: 130vh;
-//   color: white;
-//   /* align-items: center;
-//   justify-content: center; */
-
-//   /* border: 1px solid red; */
-//   // margin: 2em auto; // for header
-//   grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
-//   grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr;
-//   gap: 0px 0px;
-//   grid-auto-flow: row;
-//   grid-template-areas:
-//     ". . . . ."
-//     ". header header header ."
-//     ". skills0 skills1 skills2 ."
-//     ". skills3 skills3 skills3 ."
-//     ". . . . .";
-//   /* For browsers that do not support gradients */
-//   background-color: #000;
-//   background-image: linear-gradient(#000, #1a191d);
-
-//   @media only screen and (min-width: 320px) and (max-width: 520px) {
-//     height: auto;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 0.1fr 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
-//     grid-template-areas:
-//       ". "
-//       "header"
-//       "skills0"
-//       "skills1"
-//       "skills2"
-//       "skills3"
-//       ".";
-//   }
-
-//   @media only screen and (min-width: 520px) and (max-width: 992px) {
-//     height: auto;
-//     padding: 0 20px 0 20px;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 0.7fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
-//     grid-template-areas:
-//       ". "
-//       "header"
-//       "skills0"
-//       "skills1"
-//       "skills2"
-//       "skills3"
-//       ".";
-//   }
-
-//   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-//     height: 130vh;
-//     padding: 0 20px 0 20px;
-
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 0.7fr 0.5fr 1fr 1fr 0.7fr;
-//     grid-template-areas:
-//       ". . "
-//       "header header"
-//       "skills0 skills1"
-//       "skills2 skills3"
-//       ". .";
-//   }
-// `;
 
 export const Header = styled.div`
   grid-area: header;
@@ -290,7 +224,7 @@ export const Skills3 = styled.div`
 export const Container = styled.div`
   max-width: 1500px;
   display: grid;
-  height: 120vh;
+  height: 100vh;
   color: white;
   /* border: 3px solid white; */
 
