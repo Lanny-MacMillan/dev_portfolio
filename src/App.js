@@ -1,6 +1,4 @@
-// import { Route, Routes } from "react-router";
 import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
 import Home from "./components/home/Home";
 import Skills from "./components/skills/Skills.js";
 import Projects from "./projects/Projects.js";
@@ -42,19 +40,6 @@ function App() {
       behavior: "smooth",
     });
   };
-
-  // const style = {
-  //   position: "fixed",
-  //   top: "0",
-  //   left: "0",
-  //   border: "3px solid #4fecec",
-  //   width: "1em",
-  //   height: "1em",
-  //   borderRadius: "100%",
-  //   zIndex: "10000",
-  //   userSelect: "none",
-  //   pointerEvents: "none",
-  // };
 
   useEffect(() => {
     const handleResize = () => {

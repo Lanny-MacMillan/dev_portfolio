@@ -1,36 +1,50 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export const ContactDiv = styled.div`
-  background-color: "#BCE4F2";
-  /* width: "size"; */
-  width: ${(props) => (props.width ? props.width : "20")};
+export default function BlurryCursor({ isActive }) {
+  const [clickable, setClickable] = useState(false);
 
-  /* height: "size"; */
-  height: ${(props) => (props.height ? props.height : "20")};
-  position: "fixed";
-  top: "0";
-  left: "0";
-  border-radius: "100%";
-  z-index: "10000";
-  user-select: "none";
-  pointer-events: "none";
-`;
-
-export default function BlurryCursor() {
   const mouse = useRef({ x: 0, y: 0 });
+  const delayedMouse = useRef({ x: 0, y: 0 });
+  const rafId = useRef(null);
   const circle = useRef();
   const size = 30;
+  // const size = clickable ? 60 : 30;
 
+  const lerp = (x, y, a) => x * (1 - a) + y * a;
+  console.log("clickable", clickable);
   const manageMouseMove = (e) => {
-    const { clientX, clientY } = e;
+    const { clientX, clientY, target } = e;
+
+    const isTargetLinkOrBtn = target?.closest("a") || target?.closest("button");
+
+    if (isTargetLinkOrBtn) {
+      setClickable(true);
+    } else {
+      setClickable(false);
+    }
+
     mouse.current = {
       x: clientX,
       y: clientY,
+      duration: 0.7,
+      ease: "power4",
     };
-    moveCircle(mouse.current.x, mouse.current.y);
+  };
+
+  const animate = () => {
+    const { x, y } = delayedMouse.current;
+
+    delayedMouse.current = {
+      x: lerp(x, mouse.current.x, 0.075),
+      y: lerp(y, mouse.current.y, 0.075),
+    };
+
+    moveCircle(delayedMouse.current.x, delayedMouse.current.y);
+
+    rafId.current = window.requestAnimationFrame(animate);
   };
 
   const moveCircle = (x, y) => {
@@ -38,20 +52,20 @@ export default function BlurryCursor() {
   };
 
   useEffect(() => {
+    animate();
     window.addEventListener("mousemove", manageMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
+      window.cancelAnimationFrame(rafId.current);
     };
-  }, []);
+  }, [isActive]);
 
   return (
-    // <ContactDiv ref={circle} height={size} width={size} />
-    // <div className="relative h-screen">
     <div
       ref={circle}
       style={{
-        backgroundColor: "#BCE4F2",
+        border: "3px solid #4fecec",
         width: size,
         height: size,
         position: "fixed",
@@ -63,6 +77,5 @@ export default function BlurryCursor() {
         pointerEvents: "none",
       }}
     />
-    // </div>
   );
 }
