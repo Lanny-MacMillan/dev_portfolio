@@ -3,12 +3,11 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 const CursorDrift = () => {
   const cursorRef = useRef(null);
-  const isTouchDevice = "ontouchstart" in window;
+  const isTouch = !typeof document.documentElement.ontouchstart;
 
   useEffect(() => {
     const cursor = cursorRef.current;
-
-    if (isTouchDevice || !cursor) {
+    if (isTouch || !cursor) {
       return;
     }
 
@@ -27,7 +26,7 @@ const CursorDrift = () => {
         transform: `scale(${isTargetLinkOrBtn ? 3.5 : 1})`,
       });
     });
-    // Using mouseleave() to animate the element cursor when the mouse cursor is moved off the page
+    // Using mouseleave() to animate the element cursor to nothing when the mouse cursor is moved off the page
     document.addEventListener("mouseleave", () => {
       gsap.to(cursor, {
         duration: 1.2,
@@ -37,21 +36,25 @@ const CursorDrift = () => {
   }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      style={{
-        border: "3px solid #4fecec",
-        width: "30px",
-        height: "30px",
-        position: "fixed",
-        top: "0",
-        left: "0",
-        borderRadius: "100%",
-        zIndex: "10000",
-        userSelect: "none",
-        pointerEvents: "none",
-      }}
-    />
+    <>
+      {isTouch ? null : (
+        <div
+          ref={cursorRef}
+          style={{
+            border: "3px solid #4fecec",
+            width: "30px",
+            height: "30px",
+            position: "fixed",
+            top: "0",
+            left: "0",
+            borderRadius: "100%",
+            zIndex: "10000",
+            userSelect: "none",
+            pointerEvents: "none",
+          }}
+        />
+      )}
+    </>
   );
 };
 export default CursorDrift;
