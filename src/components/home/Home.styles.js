@@ -255,10 +255,10 @@ export const LowerDiv = styled.div`
   align-items: flex-end;
   width: 80%;
   max-width: 1600px;
-
+  height: 40vh;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: 99%;
-    /* height: 30vh; */
+    height: 30vh;
     /* border: 1px solid blue; */
   }
 
@@ -358,4 +358,14 @@ export const CenteredDiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+`;
+export const Cursor = styled.div`
+  background-color: #141c3a;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 `;

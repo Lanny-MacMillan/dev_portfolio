@@ -149,14 +149,64 @@ export const CardFooter = styled.div`
   }
 `;
 
-export const Smalltext = styled.div`
-  display: flex;
-  flex-direction: row;
-  color: white;
-`;
-
 export const Icon = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+`;
+
+// ========================================================================================
+
+export const TimeLine = styled.div`
+  margin: 30px auto;
+  padding: 20px;
+`;
+
+export const Outer = styled.div`
+  border-left: 4px solid white;
+  font-family: "DM Sans", sans-serif;
+  margin: 50px 0 50px 0;
+`;
+
+export const Card = styled.div`
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  color: white;
+  max-width: 1200px;
+
+  @media only screen and (min-width: 993px) and (max-width: 1400px) {
+    max-width: 900px;
+  }
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const Title = styled.div`
+  color: #4fecec;
+  position: relative;
+  font-weight: 800;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #141c3a;
+    border-radius: 999px;
+    left: -40px;
+    border: 3px solid #4fecec;
+  }
+`;
+
+export const JobTitle = styled.div`
+  color: #4fecec;
+`;
+
+export const Smalltext = styled.div`
+  font-size: 0.85em;
+  color: white;
 `;

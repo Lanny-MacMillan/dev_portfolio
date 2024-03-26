@@ -221,22 +221,6 @@ export const Header = styled.div`
   }
 `;
 
-//  Card Three - Project UI Display
-// export const ProjectCard = styled.div`
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   // max-width: ${(props) => (props.maxWidth ? props.maxWidth : "420px")};
-//   // height: ${(props) => (props.height ? props.height : "440px")};
-//   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-//     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-//     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-//   border-radius: 15px;
-//   overflow: hidden;
-//   transition: all 0.4s ease-in-out;
-//   }
-// `;
-
 export const ProjectCardContainer = styled.div`
   position: relative;
   display: flex;
@@ -374,6 +358,7 @@ export const Footer = styled.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
   font-family: "DM Sans", sans-serif;
+  font-weight: 800;
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -391,7 +376,7 @@ export const FooterWide = styled.div`
   height: 40%;
   background: rgba(0, 0, 0, 0.5);
   font-family: "DM Sans", sans-serif;
-
+  font-weight: 800;
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -408,6 +393,8 @@ export const FooterLarge = styled.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
   // border: 1px solid blue;
   height: 65%;
 `;
@@ -424,6 +411,7 @@ export const Title = styled.div`
   // padding: 10px 30px 0px 30px;
   color: white;
   font-family: "DM Sans", sans-serif;
+  font-weight: 800;
   align-items: center;
 
   /* border: 1px solid green; */
@@ -431,6 +419,7 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   font-size: 0.8em;
+
   display: flex;
   height: 40%;
   color: white;
@@ -552,7 +541,9 @@ export const Icons = styled.div`
 export const StyledLink = styled.a`
   text-decoration: none;
   font-size: 1em;
-  color: blue;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  color: #4fecec;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 

@@ -79,7 +79,7 @@ const ProjectCard = ({
               leaveTo="opacity-0"
             >
               <StyledLink href={link} target="_blank" rel="noopener noreferrer">
-                View Project
+                View project code
               </StyledLink>
             </Transition>
           ) : (
