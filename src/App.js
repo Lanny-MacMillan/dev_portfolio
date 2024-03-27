@@ -18,10 +18,11 @@ import {
 
 function App() {
   const [largeScreen, setLargeScreen] = useState(false);
-  // const isTouch = !typeof document.documentElement.ontouchstart;
-  const isTouch = !!(
-    "undefined" != typeof document.documentElement.ontouchstart
-  );
+  // const isTouch = !!(
+  //   "undefined" != typeof document.documentElement.ontouchstart
+  // );
+  const UA = window.navigator.userAgent;
+  const isTouchIpad = UA.match(/iPad/i) === "iPad";
 
   const pages = [
     "// home",
@@ -45,8 +46,7 @@ function App() {
     });
   };
 
-  const cursorEffect = !isTouch ? <CursorDrift /> : null;
-  // const cursorEffect = !isTouch || !largeScreen ? <CursorDrift /> : null;
+  const cursorEffect = !isTouchIpad ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
