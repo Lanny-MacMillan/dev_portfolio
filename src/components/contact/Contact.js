@@ -9,6 +9,7 @@ import {
 } from "../assets/icons.js";
 import { mobileDev } from "../assets/constants.js";
 import { SelfIconLarge } from "../assets/icons.js";
+import Blinking from "../assets/anim/blinking/Blinking.js";
 import { InlineWidget, PopupModal } from "react-calendly";
 import curlyArrow from "../assets/img/curlyArrow.png";
 // import { Input, Button } from '@lanny-macmillan/thequickstop'
@@ -33,9 +34,10 @@ import {
   ButtonContainer,
   StyledButton,
   IconDiv,
+  SmallText,
 } from "./Contact.styles.js";
 
-const Contact = ({ contact }) => {
+const Contact = ({ contact, largeScreen }) => {
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -68,6 +70,7 @@ const Contact = ({ contact }) => {
     setIsSubmitting(true);
     // some call to send email
   };
+  const iconSize = largeScreen ? "50px" : "40px";
 
   const renderCalendlyPopupModal = (
     <>
@@ -106,7 +109,7 @@ const Contact = ({ contact }) => {
         </StartProject>
         <Footer>
           <IconDiv>
-            <SelfIconLarge height={"700px"} width={"700px"} />
+            <Blinking />
             <div>
               <IconsDiv>
                 <a
@@ -114,25 +117,23 @@ const Contact = ({ contact }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedInIcon height={40} width={40} />
+                  <LinkedInIcon height={iconSize} width={iconSize} />
                 </a>
                 <a
                   href="mailto:lanny.macmillan.dev@gmail.com"
                   rel="noopener noreferrer"
                 >
-                  <GmailIcon height={40} width={40} />
+                  <GmailIcon height={iconSize} width={iconSize} />
                 </a>
                 <a
                   href="https://github.com/Lanny-MacMillan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHubIcon height={40} width={40} />
+                  <GitHubIcon height={iconSize} width={iconSize} />
                 </a>
               </IconsDiv>
-              <div style={{ fontSize: ".8em", textAlign: "center" }}>
-                Created by Lanny MacMillan 2024
-              </div>
+              <SmallText>Created by Lanny MacMillan 2024</SmallText>
             </div>
           </IconDiv>
         </Footer>

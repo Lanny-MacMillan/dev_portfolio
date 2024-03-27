@@ -369,3 +369,7 @@ export const Cursor = styled.div`
   left: 0;
   pointer-events: none;
 `;
+
+export const BorderBlinkDiv = styled.div`
+  width: ${(props) => (props.width ? props.width : "500px")};
+`;
