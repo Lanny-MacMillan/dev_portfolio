@@ -18,11 +18,9 @@ import {
 
 function App() {
   const [largeScreen, setLargeScreen] = useState(false);
-  // const isTouch = !!(
-  //   "undefined" != typeof document.documentElement.ontouchstart
-  // );
-  const UA = window.navigator.userAgent;
-  const isTouchIpad = UA.match(/iPad/i) === "iPad";
+  const isTouch = !!(
+    "undefined" != typeof document.documentElement.ontouchstart
+  );
 
   const pages = [
     "// home",
@@ -46,7 +44,7 @@ function App() {
     });
   };
 
-  const cursorEffect = !isTouchIpad ? <CursorDrift /> : null;
+  const cursorEffect = !isTouch ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
@@ -83,7 +81,8 @@ function App() {
         </HeaderLinksDiv>
       </HeaderContainer>
       <ScrollToTop />
-      {cursorEffect}
+      <CursorDrift />
+      {/* {cursorEffect} */}
       <Home home={pageRef[0]} largeScreen={largeScreen} />
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />
       <Projects projects={pageRef[2]} largeScreen={largeScreen} />
