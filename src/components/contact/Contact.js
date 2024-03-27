@@ -49,16 +49,7 @@ const Contact = ({ contact }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [valid, setValid] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const iframeStyle = {
-    border: "none",
-    width: "100%",
-    height: "100%",
-    loading: "lazy",
-    borderRadius: "5px 5px 0 0",
-  };
-
-  const googleURL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&q=Boston,Ma`;
+  const [hover, setHover] = useState(false);
 
   const onChange = (e, setIsStateValidFunction, minCharCount) => {
     e.preventDefault();
@@ -75,14 +66,21 @@ const Contact = ({ contact }) => {
 
   const onSubmit = () => {
     setIsSubmitting(true);
-    // some call to send email to me
+    // some call to send email
   };
 
   const renderCalendlyPopupModal = (
     <>
       <ButtonContainer>
-        <StyledButton onClick={() => setIsOpen(true)}>
-          <CalendlyIcon />
+        <StyledButton
+          onClick={() => setIsOpen(true)}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          <CalendlyIcon
+            letterFill={hover ? "white" : null}
+            logoFillBG={hover ? "white" : null}
+          />
         </StyledButton>
       </ButtonContainer>
       <PopupModal

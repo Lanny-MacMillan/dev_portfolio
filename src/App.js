@@ -19,6 +19,9 @@ import {
 function App() {
   const [largeScreen, setLargeScreen] = useState(false);
   // const isTouch = !typeof document.documentElement.ontouchstart;
+  const isTouch = !!(
+    "undefined" != typeof document.documentElement.ontouchstart
+  );
 
   const pages = [
     "// home",
@@ -42,7 +45,7 @@ function App() {
     });
   };
 
-  const cursorEffect = largeScreen ? <CursorDrift /> : null;
+  const cursorEffect = !isTouch ? <CursorDrift /> : null;
   // const cursorEffect = !isTouch || !largeScreen ? <CursorDrift /> : null;
 
   useEffect(() => {

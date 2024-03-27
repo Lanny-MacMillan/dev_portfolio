@@ -458,7 +458,7 @@ export const StyledButton = styled.button`
   font-weight: 800;
   font-style: normal;
   &:hover {
-    background-color: #4fecec;
-    border: 3px solid #3664ae;
+    background-color: #53ddec;
+    border: 3px solid white;
   }
 `;

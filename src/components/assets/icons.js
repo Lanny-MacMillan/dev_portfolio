@@ -872,6 +872,7 @@ z"
     />
   </svg>
 );
+
 export const ClosingPtag = ({ width, height, letterFill }) => (
   <svg
     version="1.1"
@@ -1056,7 +1057,16 @@ z"
     />
   </svg>
 );
-export const CalendlyIcon = ({ width }) => (
+
+export const CalendlyIcon = ({
+  width,
+  letterFill,
+  outlineFillOne,
+  innerLogoFillTwo,
+  logoFillThree,
+  logoFillBG,
+  innerColorFill,
+}) => (
   <svg
     version="1.1"
     id="Layer_1"
@@ -1200,7 +1210,7 @@ M788.158386,184.500092
 z"
     />
     <path
-      fill="#2054F5"
+      fill={outlineFillOne || "#2054F5"} // outline of C
       opacity="1.000000"
       stroke="none"
       d="
@@ -1231,7 +1241,7 @@ M311.846161,189.078568
 z"
     />
     <path
-      fill="#2054F5"
+      fill={letterFill || "#2054F5"} // d
       opacity="1.000000"
       stroke="none"
       d="
@@ -1261,7 +1271,7 @@ M1139.403809,248.136246
 z"
     />
     <path
-      fill="#2055F7"
+      fill={letterFill || "#2054F5"} // y
       opacity="1.000000"
       stroke="none"
       d="
@@ -1291,7 +1301,7 @@ M1412.875000,192.999939
 z"
     />
     <path
-      fill="#2054F6"
+      fill={letterFill || "#2054F5"} // C
       opacity="1.000000"
       stroke="none"
       d="
@@ -1311,7 +1321,7 @@ M583.971985,249.988205
 z"
     />
     <path
-      fill="#2054F7"
+      fill={letterFill || "#2054F5"} // a
       opacity="1.000000"
       stroke="none"
       d="
@@ -1338,7 +1348,7 @@ M628.502686,240.962341
 z"
     />
     <path
-      fill="#2054F7"
+      fill={letterFill || "#2054F5"} // e
       opacity="1.000000"
       stroke="none"
       d="
@@ -1363,7 +1373,7 @@ M885.500000,197.892441
 z"
     />
     <path
-      fill="#2055F8"
+      fill={innerLogoFillTwo || "#2054F5"} // inner C
       opacity="1.000000"
       stroke="none"
       d="
@@ -1385,7 +1395,7 @@ M310.590271,162.768295
 z"
     />
     <path
-      fill="#2055F7"
+      fill={letterFill || "#2054F5"} // n
       opacity="1.000000"
       stroke="none"
       d="
@@ -1410,7 +1420,7 @@ M991.814941,146.805756
 z"
     />
     <path
-      fill="#2053F1"
+      fill={letterFill || "#2054F5"} // l
       opacity="1.000000"
       stroke="none"
       d="
@@ -1423,7 +1433,7 @@ M1292.684814,104.000168
 z"
     />
     <path
-      fill="#2055F8"
+      fill={letterFill || "#2054F5"} // l
       opacity="1.000000"
       stroke="none"
       d="
@@ -1436,7 +1446,7 @@ M788.158386,185.000092
 z"
     />
     <path
-      fill="#2055F8"
+      fill={logoFillThree || "#2054F5"} // C background
       opacity="1.000000"
       stroke="none"
       d="
@@ -1467,8 +1477,8 @@ M306.027008,143.928879
 z"
     />
     <path
-      fill="#242526"
-      opacity="0.01"
+      fill={logoFillBG || "transparent"} // C background
+      opacity="1"
       stroke="none"
       d="
 M306.337097,144.170349 
@@ -1495,7 +1505,7 @@ M306.337097,144.170349
 z"
     />
     <path
-      fill="#53DDEC"
+      fill={innerColorFill || "#53DDEC"} // C second color
       opacity="1.000000"
       stroke="none"
       d="
@@ -1580,6 +1590,7 @@ z"
     />
   </svg>
 );
+
 export const SmallCalendlyIcon = ({ width, height, fill1, fill2 }) => (
   <svg
     version="1.1"
