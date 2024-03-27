@@ -10,20 +10,22 @@ import {
   TalkText,
   ChatArrow,
   CenteredDiv,
+  BorderBlinkDiv,
 } from "./Home.styles.js";
-import { SelfIconSmall } from "../assets/icons.js";
+import BorderBlink from "../assets/anim/borderBlink/BorderBlink.js";
 import DevDesktop from "../assets/anim/devDesktop/DevDesktop.js";
+
 const Home = ({ home, largeScreen }) => {
+  const width = largeScreen ? "500px" : "250px";
+
   return (
     <BodyContainer>
       <IconContainer ref={home}>
         <UpperRow>
           <UpperInnerDiv>
-            {largeScreen ? (
-              <SelfIconSmall height={"500px"} width={"500px"} />
-            ) : (
-              <SelfIconSmall height={"200px"} width={"200px"} />
-            )}
+            <BorderBlinkDiv width={width}>
+              <BorderBlink />
+            </BorderBlinkDiv>
             <HeroHeader>
               <ChatDiv>
                 <ChatArrow />

@@ -18,9 +18,9 @@ import {
 
 function App() {
   const [largeScreen, setLargeScreen] = useState(false);
-  const isTouch = !!(
-    "undefined" != typeof document.documentElement.ontouchstart
-  );
+  // const isTouch = !!(
+  //   "undefined" != typeof document.documentElement.ontouchstart
+  // );
 
   const pages = [
     "// home",
@@ -44,7 +44,7 @@ function App() {
     });
   };
 
-  const cursorEffect = !isTouch ? <CursorDrift /> : null;
+  // const cursorEffect = !isTouch ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
@@ -82,12 +82,11 @@ function App() {
       </HeaderContainer>
       <ScrollToTop />
       <CursorDrift />
-      {/* {cursorEffect} */}
       <Home home={pageRef[0]} largeScreen={largeScreen} />
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />
       <Projects projects={pageRef[2]} largeScreen={largeScreen} />
       <Work work={pageRef[3]} largeScreen={largeScreen} />
-      <Contact contact={pageRef[4]} />
+      <Contact contact={pageRef[4]} largeScreen={largeScreen} />
     </div>
   );
 }

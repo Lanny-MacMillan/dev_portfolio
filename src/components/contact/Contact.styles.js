@@ -310,7 +310,7 @@ export const IconsDiv = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  /* align-items: flex-end; */
+  align-self: flex-end;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
@@ -426,18 +426,22 @@ export const ConnectBody = styled.div`
 export const IconDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   /* border: 1px solid red; */
   margin: 150px 0 30px 0;
-
+  width: 70%;
+  max-width: 500px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 150px 0 100px 0;
+    margin: 150px 0 50px 0;
+    max-width: 300px;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
+    max-width: 300px;
   }
 
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  @media only screen and (min-width: 993px) and (max-width: 1500px) {
+    max-width: 350px;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -461,4 +465,9 @@ export const StyledButton = styled.button`
     background-color: #53ddec;
     border: 3px solid white;
   }
+`;
+
+export const SmallText = styled.div`
+  font-size: 0.8em;
+  text-align: center;
 `;
