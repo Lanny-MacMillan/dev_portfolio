@@ -37,7 +37,9 @@ const CursorDrift = () => {
 
   return (
     <>
-      {isTouch ? null : (
+      {isTouch ? (
+        <div />
+      ) : (
         <div
           ref={cursorRef}
           style={{

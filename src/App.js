@@ -42,7 +42,7 @@ function App() {
     });
   };
 
-  const cursorEffect = !isTouch ? <CursorDrift /> : null;
+  const cursorEffect = !isTouch || !largeScreen ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
