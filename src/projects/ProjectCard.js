@@ -56,13 +56,8 @@ const ProjectCard = ({
         margin={margin}
       />
       <Footer>
-        {/* color splash to match skills page */}
         <Title>
-          <ColorAccent
-            background={colorSplash}
-            width={colorSplashWidth}
-            // bottom={colorSplashPosition}
-          />
+          <ColorAccent background={colorSplash} width={colorSplashWidth} />
           {nameText}
         </Title>
 
@@ -114,7 +109,6 @@ const ProjectCard = ({
       />
 
       <FooterLarge>
-        {/* color splash to match skills page */}
         <Title padding={padding}>
           <ColorAccentLarge
             background={colorSplash}
@@ -171,7 +165,6 @@ const ProjectCard = ({
         margin={margin}
       />
       <FooterWide>
-        {/* color splash to match skills page */}
         <Title padding={padding}>
           <ColorAccentWide
             background={colorSplash}
