@@ -18,9 +18,6 @@ import {
 
 function App() {
   const [largeScreen, setLargeScreen] = useState(false);
-  // const isTouch = !!(
-  //   "undefined" != typeof document.documentElement.ontouchstart
-  // );
 
   const pages = [
     "// home",
@@ -43,8 +40,6 @@ function App() {
       behavior: "smooth",
     });
   };
-
-  // const cursorEffect = !isTouch ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
