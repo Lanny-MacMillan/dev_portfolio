@@ -44,6 +44,9 @@ import {
 } from "./Projects.styles";
 
 const Projects = ({ projects, largeScreen }) => {
+  const xVarNegative = largeScreen ? -150 : -75;
+  const xVarPositive = largeScreen ? 150 : 75;
+
   const theAdventure = {
     nameText: "TheAdventure",
     colorSplash: gameDev,
@@ -231,13 +234,11 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectOne
           initial={{
             opacity: 0,
-            x: -150,
-            y: -150,
+            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
             x: 0,
-            y: 0,
             transition: {
               duration: 1,
             },
@@ -259,13 +260,11 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectTwo
           initial={{
             opacity: 0,
-            x: 150,
-            y: -150,
+            x: xVarPositive,
           }}
           whileInView={{
             opacity: 1,
             x: 0,
-            y: 0,
             transition: {
               duration: 1,
             },
@@ -289,7 +288,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectThree
           initial={{
             opacity: 0,
-            x: -150,
+            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
@@ -316,7 +315,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectFour
           initial={{
             opacity: 0,
-            x: 150,
+            x: xVarPositive,
           }}
           whileInView={{
             opacity: 1,
@@ -342,7 +341,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectFive
           initial={{
             opacity: 0,
-            x: -150,
+            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
@@ -369,7 +368,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectSix
           initial={{
             opacity: 0,
-            x: 150,
+            x: xVarPositive,
           }}
           whileInView={{
             opacity: 1,
@@ -396,7 +395,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectSeven
           initial={{
             opacity: 0,
-            x: -150,
+            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
@@ -423,7 +422,7 @@ const Projects = ({ projects, largeScreen }) => {
         <ProjectEight
           initial={{
             opacity: 0,
-            x: 150,
+            x: xVarPositive,
           }}
           whileInView={{
             opacity: 1,

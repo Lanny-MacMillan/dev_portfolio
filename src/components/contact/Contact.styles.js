@@ -354,22 +354,24 @@ export const StartProject = styled.div`
   /* background-color: rgba(90, 90, 90); */
   border-radius: 8px;
   position: relative;
-  top: 85px;
+  top: 125px;
   border: 2px solid white;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   max-width: 1400px;
 
-  @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: 30vh;
+  @media only screen and (min-width: 320px) and (max-width: 800px) {
+    height: 25vh;
     flex-direction: column;
+    top: 145px;
   }
 
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  @media only screen and (min-width: 801px) and (max-width: 992px) {
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    padding: 0 30px 0 30px;
   }
 `;
 
@@ -393,7 +395,7 @@ export const ConnectHeader = styled.div`
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-
+  text-align: center;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 
@@ -421,6 +423,7 @@ export const ConnectBody = styled.div`
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    padding: 20px;
   }
 `;
 export const IconDiv = styled.div`
