@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { desktop } from '../components/assets/breakpoints'
+import { motion } from "framer-motion";
 
 export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
@@ -72,28 +72,28 @@ export const Container = styled.div`
   }
 `;
 
-export const ProjectOne = styled.div`
+export const ProjectOne = styled(motion.div)`
   grid-area: projectOne;
 `;
-export const ProjectTwo = styled.div`
+export const ProjectTwo = styled(motion.div)`
   grid-area: projectTwo;
 `;
-export const ProjectThree = styled.div`
+export const ProjectThree = styled(motion.div)`
   grid-area: projectThree;
 `;
-export const ProjectFour = styled.div`
+export const ProjectFour = styled(motion.div)`
   grid-area: projectFour;
 `;
-export const ProjectFive = styled.div`
+export const ProjectFive = styled(motion.div)`
   grid-area: projectFive;
 `;
-export const ProjectSix = styled.div`
+export const ProjectSix = styled(motion.div)`
   grid-area: projectSix;
 `;
-export const ProjectSeven = styled.div`
+export const ProjectSeven = styled(motion.div)`
   grid-area: projectSeven;
 `;
-export const ProjectEight = styled.div`
+export const ProjectEight = styled(motion.div)`
   grid-area: projectEight;
 `;
 

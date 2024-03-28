@@ -228,7 +228,22 @@ const Projects = ({ projects, largeScreen }) => {
     <ProjectsContainer ref={projects}>
       <Header>Projects</Header>
       <Container>
-        <ProjectOne>
+        <ProjectOne
+          initial={{
+            opacity: 0,
+            x: -150,
+            y: -150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={vacationApp.nameText}
@@ -241,7 +256,22 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"135px"}
           />
         </ProjectOne>
-        <ProjectTwo>
+        <ProjectTwo
+          initial={{
+            opacity: 0,
+            x: 150,
+            y: -150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={theQuickStop.nameText}
@@ -254,10 +284,22 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"230px"}
             margin={"none"}
             type={"wide"}
-            // height={"100%"}
           />
         </ProjectTwo>
-        <ProjectThree>
+        <ProjectThree
+          initial={{
+            opacity: 0,
+            x: -150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={theAdventure.nameText}
@@ -268,11 +310,23 @@ const Projects = ({ projects, largeScreen }) => {
             link={theAdventure.link}
             colorSplash={theAdventure.colorSplash}
             colorSplashWidth={"140px"}
-            // colorSplashPosition={"370px"}
             type={"wide"}
           />
         </ProjectThree>
-        <ProjectFour>
+        <ProjectFour
+          initial={{
+            opacity: 0,
+            x: 150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={amiiboApp.nameText}
@@ -285,7 +339,20 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"120px"}
           />
         </ProjectFour>
-        <ProjectFive>
+        <ProjectFive
+          initial={{
+            opacity: 0,
+            x: -150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={tetris.nameText}
@@ -299,7 +366,20 @@ const Projects = ({ projects, largeScreen }) => {
             margin={"none"}
           />
         </ProjectFive>
-        <ProjectSix>
+        <ProjectSix
+          initial={{
+            opacity: 0,
+            x: 150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={twoDudesNightmare.nameText}
@@ -310,11 +390,23 @@ const Projects = ({ projects, largeScreen }) => {
             link={twoDudesNightmare.link}
             colorSplash={twoDudesNightmare.colorSplash}
             colorSplashWidth={"140px"}
-            // colorSplashPosition={"104px"}
             margin={"none"}
           />
         </ProjectSix>
-        <ProjectSeven>
+        <ProjectSeven
+          initial={{
+            opacity: 0,
+            x: -150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={crappyBird.nameText}
@@ -325,11 +417,23 @@ const Projects = ({ projects, largeScreen }) => {
             link={crappyBird.link}
             colorSplash={crappyBird.colorSplash}
             colorSplashWidth={"125px"}
-            // colorSplashPosition={"98px"}
             margin={"none"}
           />
         </ProjectSeven>
-        <ProjectEight>
+        <ProjectEight
+          initial={{
+            opacity: 0,
+            x: 150,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <ProjectCard
             largeScreen={largeScreen}
             nameText={geoDash.nameText}
@@ -340,8 +444,6 @@ const Projects = ({ projects, largeScreen }) => {
             link={geoDash.link}
             colorSplash={geoDash.colorSplash}
             colorSplashWidth={"155px"}
-            // colorSplashPosition={"98px"}
-            // padding={"20px 30px 0px 30px"}
           />
         </ProjectEight>
       </Container>
