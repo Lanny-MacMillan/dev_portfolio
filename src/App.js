@@ -6,6 +6,7 @@ import Work from "./work/Work.js";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/util/ScrollToTop.js";
 import CursorDrift from "./components/assets/Tools/CursorDrift.jsx";
+
 import {
   HeaderContainer,
   OurHerosName,
@@ -16,11 +17,8 @@ import {
   PageRefIcon,
 } from "./components/home/Home.styles.js";
 
-function App() {
+const App = () => {
   const [largeScreen, setLargeScreen] = useState(false);
-  // const isTouch = !!(
-  //   "undefined" != typeof document.documentElement.ontouchstart
-  // );
 
   const pages = [
     "// home",
@@ -43,8 +41,6 @@ function App() {
       behavior: "smooth",
     });
   };
-
-  // const cursorEffect = !isTouch ? <CursorDrift /> : null;
 
   useEffect(() => {
     const handleResize = () => {
@@ -89,6 +85,6 @@ function App() {
       <Contact contact={pageRef[4]} largeScreen={largeScreen} />
     </div>
   );
-}
+};
 
 export default App;

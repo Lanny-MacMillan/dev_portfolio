@@ -51,6 +51,7 @@ const Projects = ({ projects, largeScreen }) => {
     description:
       "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
     link: "https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes",
+    liveLink: "In Development",
     icons: [
       <UnityIcon
         width={30}
@@ -149,6 +150,7 @@ const Projects = ({ projects, largeScreen }) => {
     image: crappyBirdImg,
     description: "A clone of the popular flappy bird",
     link: "https://github.com/Lanny-MacMillan/flappyBirdClone",
+    liveLink: "https://lannymacmillan.itch.io/crappy-bird",
     icons: [
       <UnityIcon
         width={30}
@@ -175,6 +177,7 @@ const Projects = ({ projects, largeScreen }) => {
     image: geoDashImg,
     description: "Geo Dash with some twists",
     link: "https://github.com/Lanny-MacMillan/GeometryDash",
+    liveLink: "In Development",
     icons: [
       <UnityIcon
         width={30}
@@ -202,6 +205,7 @@ const Projects = ({ projects, largeScreen }) => {
     image: nightmareImg,
     description: "A sidescrolling platformer created in Unity ",
     link: "https://github.com/Lanny-MacMillan/Unity_Game_Two_Dudes",
+    liveLink: "In Development",
     icons: [
       <UnityIcon
         width={30}
