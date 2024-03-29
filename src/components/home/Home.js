@@ -16,7 +16,7 @@ import BorderBlink from "../assets/anim/borderBlink/BorderBlink.js";
 import DevDesktop from "../assets/anim/devDesktop/DevDesktop.js";
 
 const Home = ({ home, largeScreen }) => {
-  const width = largeScreen ? "500px" : "250px";
+  const width = largeScreen ? "500px" : "225px";
 
   return (
     <BodyContainer>

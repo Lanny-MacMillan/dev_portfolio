@@ -163,7 +163,7 @@ export const IconContainer = styled.div`
 
   /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    /* justify-content: space-between; */
+    /* margin-top: 3em; */
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -216,7 +216,7 @@ export const UpperRow = styled.div`
   justify-content: center;
   width: 100%;
   height: 60vh;
-
+  border: 2px solid red;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -235,11 +235,13 @@ export const UpperInnerDiv = styled.div`
   flex-direction: row;
   padding: 100px;
   max-width: 1400px;
-
+  border: 2px solid green;
+  /* height: 60vh; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -259,7 +261,7 @@ export const LowerDiv = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: 99%;
     height: 30vh;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -372,4 +374,14 @@ export const Cursor = styled.div`
 
 export const BorderBlinkDiv = styled.div`
   width: ${(props) => (props.width ? props.width : "500px")};
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    margin-top: 2.5em;
+    width: 175px;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
 `;
