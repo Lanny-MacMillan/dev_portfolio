@@ -216,12 +216,12 @@ export const UpperRow = styled.div`
   justify-content: center;
   width: 100%;
   height: 60vh;
-  border: 2px solid red;
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -235,8 +235,7 @@ export const UpperInnerDiv = styled.div`
   flex-direction: row;
   padding: 100px;
   max-width: 1400px;
-  border: 2px solid green;
-  /* height: 60vh; */
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -258,10 +257,9 @@ export const LowerDiv = styled.div`
   width: 80%;
   max-width: 1600px;
   height: 40vh;
+
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    width: 80%;
-    height: 20vh;
-    border: 1px solid blue;
+    display: none;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -287,7 +285,7 @@ export const ChatDiv = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: auto;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -307,8 +305,7 @@ export const TalkText = styled.div`
   font-size: 1.2em;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    padding: 25px 20px 25px 20px;
-    /* text-align: center; */
+    padding: 45px 20px 45px 20px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -376,7 +373,7 @@ export const BorderBlinkDiv = styled.div`
   width: ${(props) => (props.width ? props.width : "500px")};
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     margin-top: 2.5em;
-    width: 175px;
+    width: 225px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {

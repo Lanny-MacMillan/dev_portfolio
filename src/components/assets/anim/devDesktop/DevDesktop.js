@@ -225,13 +225,19 @@ export default function DevDesktop() {
       p(Math.pow(10, -2)), p(Math.pow(10, -4));
       var b = Math.PI / 180;
       function w(t) {
+        return t * b;
+      }
+      function k(t) {
+        return t / b;
+      }
+      function _(t) {
         return t;
       }
-      function k(t, e, n) {
+      function A(t, e, n) {
         var r = 1 - n;
         return 3 * n * r * (t * r + e * n) + n * n * n;
       }
-      function _() {
+      function x() {
         var t =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           e =
@@ -243,7 +249,7 @@ export default function DevDesktop() {
         return t < 0 || t > 1 || n < 0 || n > 1
           ? null
           : m(t, e) && m(n, r)
-          ? w
+          ? _
           : function (i) {
               if (i <= 0)
                 return t > 0 ? (i * e) / t : 0 === e && n > 0 ? (i * r) / n : 0;
@@ -254,41 +260,39 @@ export default function DevDesktop() {
                   ? 1 + ((i - 1) * (e - 1)) / (t - 1)
                   : 1;
               for (var o, u = 0, a = 1; u < a; ) {
-                var l = k(t, n, (o = (u + a) / 2));
+                var l = A(t, n, (o = (u + a) / 2));
                 if (m(i, l)) break;
                 l < i ? (u = o) : (a = o);
               }
-              return k(e, r, o);
+              return A(e, r, o);
             };
       }
-      function A() {
+      function S() {
         return 1;
       }
-      function x(t) {
+      function O(t) {
         return 1 === t ? 1 : 0;
       }
-      function O() {
+      function E() {
         var t =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
           e =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (1 === t) {
-          if (0 === e) return x;
-          if (1 === e) return A;
+          if (0 === e) return O;
+          if (1 === e) return S;
         }
         var n = 1 / t;
         return function (t) {
           return t >= 1 ? 1 : (t += e * n) - (t % n);
         };
       }
-      var S = Math.sin,
-        E = Math.cos,
-        j = Math.acos,
-        M = Math.asin,
-        P = Math.tan,
-        B = Math.atan2,
-        I = Math.PI / 180,
-        T = 180 / Math.PI,
+      var j = Math.sin,
+        M = Math.cos,
+        P = Math.acos,
+        B = Math.asin,
+        I = Math.tan,
+        T = Math.atan2,
         N = Math.sqrt,
         R = (function () {
           function t() {
@@ -388,8 +392,9 @@ export default function DevDesktop() {
                         ? arguments[0]
                         : 0;
                     if ((t %= 360)) {
-                      var e = S((t *= I)),
-                        n = E(t),
+                      t = w(t);
+                      var e = j(t),
+                        n = M(t),
                         r = this.m,
                         i = r[0],
                         o = r[1];
@@ -433,8 +438,8 @@ export default function DevDesktop() {
                         i = n[1],
                         o = n[2],
                         u = n[3];
-                      t && ((t = P(t * I)), (n[2] += r * t), (n[3] += i * t)),
-                        e && ((e = P(e * I)), (n[0] += o * e), (n[1] += u * e)),
+                      t && ((t = I(w(t))), (n[2] += r * t), (n[3] += i * t)),
+                        e && ((e = I(w(e))), (n[0] += o * e), (n[1] += u * e)),
                         (this.w = this.s = this.i = null);
                     }
                     return this;
@@ -549,32 +554,70 @@ export default function DevDesktop() {
                     u && (o = -o);
                     var a = i[0][0] * i[1][0] + i[0][1] * i[1][1];
                     (i[1][0] -= i[0][0] * a), (i[1][1] -= i[0][1] * a);
-                    var l = N(i[1][0] * i[1][0] + i[1][1] * i[1][1]);
-                    if (0 === l)
-                      return {
-                        origin: { x: p(n[4]), y: p(n[5]) },
-                        translate: { x: p(t), y: p(e) },
-                        scale: { x: p(o), y: 0 },
-                        skew: { x: 0, y: 0 },
-                        rotate: 0,
-                      };
-                    (i[1][0] /= l), (i[1][1] /= l), (a /= l);
-                    var s = 0;
-                    return (
-                      i[1][1] < 0
-                        ? ((s = j(i[1][1]) * T), i[0][1] < 0 && (s = 360 - s))
-                        : (s = M(i[0][1]) * T),
-                      u && (s = -s),
-                      (a = B(a, N(i[0][0] * i[0][0] + i[0][1] * i[0][1])) * T),
-                      u && (a = -a),
-                      {
-                        origin: { x: p(n[4]), y: p(n[5]) },
-                        translate: { x: p(t), y: p(e) },
-                        scale: { x: p(o), y: p(l) },
-                        skew: { x: p(a), y: 0 },
-                        rotate: p(s),
-                      }
-                    );
+                    var l,
+                      s = N(i[1][0] * i[1][0] + i[1][1] * i[1][1]);
+                    return 0 === s
+                      ? {
+                          origin: { x: p(n[4]), y: p(n[5]) },
+                          translate: { x: p(t), y: p(e) },
+                          scale: { x: p(o), y: 0 },
+                          skew: { x: 0, y: 0 },
+                          rotate: 0,
+                        }
+                      : ((i[1][0] /= s),
+                        (i[1][1] /= s),
+                        (a /= s),
+                        i[1][1] < 0
+                          ? ((l = k(P(i[1][1]))), i[0][1] < 0 && (l = 360 - l))
+                          : (l = k(B(i[0][1]))),
+                        u && (l = -l),
+                        (a = k(T(a, N(i[0][0] * i[0][0] + i[0][1] * i[0][1])))),
+                        u && (a = -a),
+                        {
+                          origin: { x: p(n[4]), y: p(n[5]) },
+                          translate: { x: p(t), y: p(e) },
+                          scale: { x: p(o), y: p(s) },
+                          skew: { x: p(a), y: 0 },
+                          rotate: p(l),
+                        });
+                  },
+                },
+                {
+                  key: "multiply",
+                  value: function (t) {
+                    return this.clone().multiplySelf(t);
+                  },
+                },
+                {
+                  key: "preMultiply",
+                  value: function (t) {
+                    return t.multiply(this);
+                  },
+                },
+                {
+                  key: "multiplySelf",
+                  value: function (t) {
+                    var e = F(this.m, t.m),
+                      n = e.a,
+                      r = e.b,
+                      i = e.c,
+                      o = e.d,
+                      u = e.tx,
+                      a = e.ty;
+                    return this.resetSelf(n, r, i, o, u, a), this;
+                  },
+                },
+                {
+                  key: "preMultiplySelf",
+                  value: function (t) {
+                    var e = F(t.m, this.m),
+                      n = e.a,
+                      r = e.b,
+                      i = e.c,
+                      o = e.d,
+                      u = e.tx,
+                      a = e.ty;
+                    return this.resetSelf(n, r, i, o, u, a), this;
                   },
                 },
                 {
@@ -634,26 +677,29 @@ export default function DevDesktop() {
             t
           );
         })();
-      function F(t, e, n) {
-        return t >= 0.5 ? n : e;
+      function F(t, e) {
+        return {
+          a: t[0] * e[0] + t[2] * e[1],
+          b: t[1] * e[0] + t[3] * e[1],
+          c: t[0] * e[2] + t[2] * e[3],
+          d: t[1] * e[2] + t[3] * e[3],
+          tx: t[0] * e[4] + t[2] * e[5] + t[4],
+          ty: t[1] * e[4] + t[3] * e[5] + t[5],
+        };
       }
       function D(t, e, n) {
-        return 0 === t || e === n ? e : t * (n - e) + e;
+        return t >= 0.5 ? n : e;
       }
       function C(t, e, n) {
-        var r = D(t, e, n);
-        return r <= 0 ? 0 : r;
+        return 0 === t || e === n ? e : t * (n - e) + e;
       }
       function q(t, e, n) {
-        var r = D(t, e, n);
-        return r <= 0 ? 0 : r >= 1 ? 1 : r;
+        var r = C(t, e, n);
+        return r <= 0 ? 0 : r;
       }
       function L(t, e, n) {
-        return 0 === t
-          ? e
-          : 1 === t
-          ? n
-          : { x: D(t, e.x, n.x), y: D(t, e.y, n.y) };
+        var r = C(t, e, n);
+        return r <= 0 ? 0 : r >= 1 ? 1 : r;
       }
       function V(t, e, n) {
         return 0 === t
@@ -663,34 +709,41 @@ export default function DevDesktop() {
           : { x: C(t, e.x, n.x), y: C(t, e.y, n.y) };
       }
       function G(t, e, n) {
+        return 0 === t
+          ? e
+          : 1 === t
+          ? n
+          : { x: q(t, e.x, n.x), y: q(t, e.y, n.y) };
+      }
+      function z(t, e, n) {
         var r = (function (t, e, n) {
-          return Math.round(D(t, e, n));
+          return Math.round(C(t, e, n));
         })(t, e, n);
         return r <= 0 ? 0 : r >= 255 ? 255 : r;
       }
-      function z(t, e, n) {
+      function Y(t, e, n) {
         return 0 === t
           ? e
           : 1 === t
           ? n
           : {
-              r: G(t, e.r, n.r),
-              g: G(t, e.g, n.g),
-              b: G(t, e.b, n.b),
-              a: D(t, null == e.a ? 1 : e.a, null == n.a ? 1 : n.a),
+              r: z(t, e.r, n.r),
+              g: z(t, e.g, n.g),
+              b: z(t, e.b, n.b),
+              a: C(t, null == e.a ? 1 : e.a, null == n.a ? 1 : n.a),
             };
       }
-      function Y(t, e, n) {
+      function U(t, e, n) {
         var r = e.length;
-        if (r !== n.length) return F(t, e, n);
-        for (var i = new Array(r), o = 0; o < r; o++) i[o] = D(t, e[o], n[o]);
+        if (r !== n.length) return D(t, e, n);
+        for (var i = new Array(r), o = 0; o < r; o++) i[o] = C(t, e[o], n[o]);
         return i;
       }
-      function U(t, e) {
+      function W(t, e) {
         for (var n = [], r = 0; r < t; r++) n.push(e);
         return n;
       }
-      function W(t, e) {
+      function $(t, e) {
         if (--e <= 0) return t;
         var n = (t = Object.assign([], t)).length;
         do {
@@ -698,8 +751,8 @@ export default function DevDesktop() {
         } while (--e > 0);
         return t;
       }
-      var $,
-        H = (function () {
+      var H,
+        Q = (function () {
           function t(e) {
             r(this, t), (this.list = e), (this.length = e.length);
           }
@@ -730,14 +783,14 @@ export default function DevDesktop() {
             t
           );
         })(),
-        Q = /-./g,
-        X = function (t, e) {
+        X = /-./g,
+        J = function (t, e) {
           return e.toUpperCase();
         };
-      function J(t) {
-        return "function" == typeof t ? t : F;
-      }
       function K(t) {
+        return "function" == typeof t ? t : D;
+      }
+      function Z(t) {
         return t
           ? "function" == typeof t
             ? t
@@ -746,15 +799,15 @@ export default function DevDesktop() {
                 var e =
                   arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
-                    : w;
+                    : _;
                 if (!Array.isArray(t)) return e;
                 switch (t.length) {
                   case 1:
-                    return O(t[0]) || e;
+                    return E(t[0]) || e;
                   case 2:
-                    return O(t[0], t[1]) || e;
+                    return E(t[0], t[1]) || e;
                   case 4:
-                    return _(t[0], t[1], t[2], t[3]) || e;
+                    return x(t[0], t[1], t[2], t[3]) || e;
                 }
                 return e;
               })(t, null)
@@ -762,21 +815,21 @@ export default function DevDesktop() {
                 var n =
                   arguments.length > 2 && void 0 !== arguments[2]
                     ? arguments[2]
-                    : w;
+                    : _;
                 switch (t) {
                   case "linear":
-                    return w;
+                    return _;
                   case "steps":
-                    return O(e.steps || 1, e.jump || 0) || n;
+                    return E(e.steps || 1, e.jump || 0) || n;
                   case "bezier":
                   case "cubic-bezier":
-                    return _(e.x1 || 0, e.y1 || 0, e.x2 || 0, e.y2 || 0) || n;
+                    return x(e.x1 || 0, e.y1 || 0, e.x2 || 0, e.y2 || 0) || n;
                 }
                 return n;
               })(t.type, t.value, null)
           : null;
       }
-      function Z(t, e, n) {
+      function tt(t, e, n) {
         var r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
           i = e.length - 1;
         if (t <= e[0].t) return r ? [0, 0, e[0].v] : e[0].v;
@@ -803,7 +856,7 @@ export default function DevDesktop() {
             u.e && (t = u.e(t)),
             r ? [o, t, n(t, u.v, a.v)] : n(t, u.v, a.v));
       }
-      function tt(t, e) {
+      function et(t, e) {
         var n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         return t && t.length
@@ -811,34 +864,34 @@ export default function DevDesktop() {
             ? null
             : ("function" != typeof n && (n = null),
               function (r) {
-                var i = Z(r, t, e);
+                var i = tt(r, t, e);
                 return null != i && n && (i = n(i)), i;
               })
           : null;
       }
-      function et(t, e) {
+      function nt(t, e) {
         return t.t - e.t;
       }
-      function nt(t, e, r, i, o) {
+      function rt(t, e, r, i, o) {
         var u,
           a = "@" === r[0],
           l = "#" === r[0],
-          s = $[r],
-          f = F;
+          s = H[r],
+          f = D;
         switch (
           (a
-            ? ((u = r.substr(1)), (r = u.replace(Q, X)))
+            ? ((u = r.substr(1)), (r = u.replace(X, J)))
             : l && (r = r.substr(1)),
           n(s))
         ) {
           case "function":
-            if (((f = s(i, o, Z, K, r, a, e, t)), l)) return f;
+            if (((f = s(i, o, tt, Z, r, a, e, t)), l)) return f;
             break;
           case "string":
-            f = tt(i, J(s));
+            f = et(i, K(s));
             break;
           case "object":
-            if ((f = tt(i, J(s.i), s.f)) && "function" == typeof s.u)
+            if ((f = et(i, K(s.i), s.f)) && "function" == typeof s.u)
               return s.u(e, f, r, a, t);
         }
         return f
@@ -848,7 +901,7 @@ export default function DevDesktop() {
                 void 0 !== arguments[3] &&
                 arguments[3]
               )
-                return t instanceof H
+                return t instanceof Q
                   ? function (r) {
                       return t.style(e, n(r));
                     }
@@ -871,7 +924,7 @@ export default function DevDesktop() {
             })(e, r, f, a)
           : null;
       }
-      function rt(t, e, r, i) {
+      function it(t, e, r, i) {
         if (!i || "object" !== n(i)) return null;
         var o = null,
           u = null;
@@ -880,24 +933,24 @@ export default function DevDesktop() {
             ? (u = (function (t) {
                 if (!t || !t.length) return null;
                 for (var e = 0; e < t.length; e++)
-                  t[e].e && (t[e].e = K(t[e].e));
-                return t.sort(et);
+                  t[e].e && (t[e].e = Z(t[e].e));
+                return t.sort(nt);
               })(i))
             : ((u = i.keys), (o = i.data || null)),
-          u ? nt(t, e, r, u, o) : null
+          u ? rt(t, e, r, u, o) : null
         );
       }
-      function it(t, e, n) {
+      function ot(t, e, n) {
         if (!n) return null;
         var r = [];
         for (var i in n)
           if (n.hasOwnProperty(i)) {
-            var o = rt(t, e, i, n[i]);
+            var o = it(t, e, i, n[i]);
             o && r.push(o);
           }
         return r.length ? r : null;
       }
-      function ot(t, e) {
+      function ut(t, e) {
         if (!e.settings.duration || e.settings.duration < 0) return null;
         var n,
           r,
@@ -920,10 +973,10 @@ export default function DevDesktop() {
                         var l = t.getElementById(o[0][a]);
                         l && u.push(l);
                       }
-                    u = u.length ? (1 === u.length ? u[0] : new H(u)) : null;
+                    u = u.length ? (1 === u.length ? u[0] : new Q(u)) : null;
                   }
                   if (u) {
-                    var s = it(t, u, o[1]);
+                    var s = ot(t, u, o[1]);
                     s && (n = n.concat(s));
                   }
                 }
@@ -933,7 +986,7 @@ export default function DevDesktop() {
                 if (e.hasOwnProperty(f)) {
                   var c = t.getElementById(f);
                   if (c) {
-                    var h = it(t, c, e[f]);
+                    var h = ot(t, c, e[f]);
                     h && (n = n.concat(h));
                   }
                 }
@@ -963,13 +1016,13 @@ export default function DevDesktop() {
             })
           : null;
       }
-      function ut(t, e) {
+      function at(t, e) {
         for (var n = e.querySelectorAll("svg"), r = 0; r < n.length; r++)
           if (n[r].id === t.root && !n[r].svgatorAnimation)
             return (n[r].svgatorAnimation = !0), n[r];
         return null;
       }
-      function at(t) {
+      function lt(t) {
         var e = function (t) {
           return t.shadowRoot;
         };
@@ -1012,30 +1065,30 @@ export default function DevDesktop() {
               .map(e)
           : [];
       }
-      function lt(t) {
+      function st(t) {
         var e =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : document,
           n =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          r = ut(t, e);
+          r = at(t, e);
         if (r) return r;
         if (n >= 20) return null;
-        for (var i = at(e), o = 0; o < i.length; o++) {
-          var u = lt(t, i[o], n + 1);
+        for (var i = lt(e), o = 0; o < i.length; o++) {
+          var u = st(t, i[o], n + 1);
           if (u) return u;
         }
         return null;
       }
-      function st(t, e) {
-        if ((($ = e), !t || !t.root || !Array.isArray(t.animations)))
+      function ft(t, e) {
+        if (((H = e), !t || !t.root || !Array.isArray(t.animations)))
           return null;
-        var n = lt(t);
+        var n = st(t);
         if (!n) return null;
         var r = t.animations
           .map(function (t) {
-            return ot(n, t);
+            return ut(n, t);
           })
           .filter(function (t) {
             return !!t;
@@ -1049,7 +1102,7 @@ export default function DevDesktop() {
             }
           : null;
       }
-      function ft(t) {
+      function ct(t) {
         var e =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -1067,28 +1120,28 @@ export default function DevDesktop() {
           ? (n(r(i)) % e) + e
           : +i;
       }
-      function ct(t, e, n) {
+      function ht(t, e, n) {
         return !t || !n || e > t.length
           ? t
-          : t.substring(0, e) + ct(t.substring(e + 1), n, n);
+          : t.substring(0, e) + ht(t.substring(e + 1), n, n);
       }
-      function ht(t) {
+      function vt(t) {
         var e =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 27;
-        return !t || t % e ? t % e : [0, 1].includes(e) ? e : ht(t / e, e);
+        return !t || t % e ? t % e : [0, 1].includes(e) ? e : vt(t / e, e);
       }
-      function vt(t, e, n) {
+      function dt(t, e, n) {
         if (t && t.length) {
-          var r = ft(n),
-            i = ht(r) + 5,
-            o = ct(t, ht(r, 5), i);
+          var r = ct(n),
+            i = vt(r) + 5,
+            o = ht(t, vt(r, 5), i);
           return (
             (o = o.replace(/\x7c$/g, "==").replace(/\x2f$/g, "=")),
             (o = (function (t, e, n) {
               var r = +("0x" + t.substring(0, 4));
               t = t.substring(4);
               for (
-                var i = (ft(e, r) % r) + (n % 27), o = [], u = 0;
+                var i = (ct(e, r) % r) + (n % 27), o = [], u = 0;
                 u < t.length;
                 u += 2
               )
@@ -1105,7 +1158,7 @@ export default function DevDesktop() {
           );
         }
       }
-      var dt = [
+      var yt = [
           { key: "alternate", def: !1 },
           { key: "fill", def: 1 },
           { key: "iterations", def: 0 },
@@ -1113,7 +1166,7 @@ export default function DevDesktop() {
           { key: "speed", def: 1 },
           { key: "fps", def: 100 },
         ],
-        yt = (function () {
+        gt = (function () {
           function t(e, n) {
             var i = this,
               o =
@@ -1127,7 +1180,7 @@ export default function DevDesktop() {
               (this._animations = e),
               (this._settings = n),
               (!o || o < "2022-05-02") && delete this._settings.speed,
-              dt.forEach(function (t) {
+              yt.forEach(function (t) {
                 i._settings[t.key] = i._settings[t.key] || t.def;
               }),
               (this.duration = n.duration),
@@ -1324,15 +1377,15 @@ export default function DevDesktop() {
                   key: "build",
                   value: function (t, e) {
                     delete t.animationSettings,
-                      (t.options = vt(t.options, t.root, "91c80d77")),
+                      (t.options = dt(t.options, t.root, "91c80d77")),
                       t.animations.map(function (e) {
-                        (e.settings = vt(e.s, t.root, "91c80d77")),
+                        (e.settings = dt(e.s, t.root, "91c80d77")),
                           delete e.s,
                           t.animationSettings ||
                             (t.animationSettings = e.settings);
                       });
                     var n = t.version;
-                    if (!(t = st(t, e))) return null;
+                    if (!(t = ft(t, e))) return null;
                     var r = t.options || {},
                       i = new this(t.animations, t.animationSettings, n);
                     return { el: t.svg, options: r, player: i };
@@ -1384,7 +1437,7 @@ export default function DevDesktop() {
           }),
           (window.cancelAnimationFrame = window.clearTimeout));
       })();
-      var gt = (function () {
+      var pt = (function () {
         function t(e, n, i) {
           r(this, t);
           var o = (function (t) {
@@ -1523,53 +1576,60 @@ export default function DevDesktop() {
           t
         );
       })();
-      function pt(t) {
+      function mt(t) {
         return p(t) + "";
       }
-      function mt(t) {
+      function bt(t) {
         var e =
           arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : " ";
-        return t && t.length ? t.map(pt).join(e) : "";
-      }
-      function bt(t) {
-        return pt(t.x) + "," + pt(t.y);
+        return t && t.length ? t.map(mt).join(e) : "";
       }
       function wt(t) {
-        if (!t) return "transparent";
-        if (null == t.a || t.a >= 1) {
-          var e = function (t) {
-              return 1 === (t = parseInt(t).toString(16)).length ? "0" + t : t;
-            },
-            n = function (t) {
-              return t.charAt(0) === t.charAt(1);
-            },
-            r = e(t.r),
-            i = e(t.g),
-            o = e(t.b);
-          return (
-            n(r) &&
-              n(i) &&
-              n(o) &&
-              ((r = r.charAt(0)), (i = i.charAt(0)), (o = o.charAt(0))),
-            "#" + r + i + o
-          );
-        }
-        return "rgba(" + t.r + "," + t.g + "," + t.b + "," + t.a + ")";
+        return mt(t.x) + "," + mt(t.y);
       }
       function kt(t) {
+        return t
+          ? null == t.a || t.a >= 1
+            ? (function (t) {
+                if (!t) return "transparent";
+                var e = function (t) {
+                  return parseInt(t).toString(16).padStart(2, "0");
+                };
+                return (function (t) {
+                  for (
+                    var e = [], n = "#" === t[0] ? e.push("#") : 0;
+                    n < t.length;
+                    n += 2
+                  ) {
+                    if (t[n] !== t[n + 1]) return t;
+                    e.push(t[n]);
+                  }
+                  return e.join("");
+                })(
+                  "#" +
+                    e(t.r) +
+                    e(t.g) +
+                    e(t.b) +
+                    (null == t.a || t.a >= 1 ? "" : e(255 * t.a))
+                );
+              })(t)
+            : "rgba(" + t.r + "," + t.g + "," + t.b + "," + t.a + ")"
+          : "transparent";
+      }
+      function _t(t) {
         return t ? "url(#" + t + ")" : "none";
       }
-      var _t = {
+      var At = {
           f: null,
-          i: V,
+          i: G,
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("rx", pt(r.x)), t.setAttribute("ry", pt(r.y));
+              t.setAttribute("rx", mt(r.x)), t.setAttribute("ry", mt(r.y));
             };
           },
         },
-        At = {
+        xt = {
           f: null,
           i: function (t, e, n) {
             return 0 === t
@@ -1577,15 +1637,15 @@ export default function DevDesktop() {
               : 1 === t
               ? n
               : {
-                  width: C(t, e.width, n.width),
-                  height: C(t, e.height, n.height),
+                  width: q(t, e.width, n.width),
+                  height: q(t, e.height, n.height),
                 };
           },
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("width", pt(r.width)),
-                t.setAttribute("height", pt(r.height));
+              t.setAttribute("width", mt(r.width)),
+                t.setAttribute("height", mt(r.height));
             };
           },
         };
@@ -1601,9 +1661,9 @@ export default function DevDesktop() {
         S: 4,
         A: 7,
       });
-      var xt = {},
+      var St = {},
         Ot = null;
-      function St(t) {
+      function Et(t) {
         var e = (function () {
           if (Ot) return Ot;
           if (
@@ -1638,10 +1698,10 @@ export default function DevDesktop() {
           return { x: e.x, y: e.y };
         };
       }
-      function Et(t) {
-        return xt[t] ? xt[t] : (xt[t] = St(t));
+      function jt(t) {
+        return St[t] ? St[t] : (St[t] = Et(t));
       }
-      function jt(t, e, n, r) {
+      function Mt(t, e, n, r) {
         if (!t || !r) return !1;
         var i = ["M", t.x, t.y];
         if (
@@ -1655,48 +1715,48 @@ export default function DevDesktop() {
         }
         return e || n || i.push("L"), i.push(r.x), i.push(r.y), i.join(" ");
       }
-      function Mt(t, e, n, r) {
+      function Pt(t, e, n, r) {
         var i =
             arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          o = jt(t, e, n, r),
-          u = Et(o);
+          o = Mt(t, e, n, r),
+          u = jt(o);
         try {
           return u(i);
         } catch (t) {
           return null;
         }
       }
-      function Pt(t, e, n) {
+      function Bt(t, e, n) {
         return t + (e - t) * n;
       }
-      function Bt(t, e, n) {
+      function It(t, e, n) {
         var r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          i = { x: Pt(t.x, e.x, n), y: Pt(t.y, e.y, n) };
-        return r && (i.a = It(t, e)), i;
+          i = { x: Bt(t.x, e.x, n), y: Bt(t.y, e.y, n) };
+        return r && (i.a = Tt(t, e)), i;
       }
-      function It(t, e) {
+      function Tt(t, e) {
         return Math.atan2(e.y - t.y, e.x - t.x);
       }
-      function Tt(t, e, n, r) {
+      function Nt(t, e, n, r) {
         var i = 1 - r;
         return i * i * t + 2 * i * r * e + r * r * n;
       }
-      function Nt(t, e, n, r) {
+      function Rt(t, e, n, r) {
         return 2 * (1 - r) * (e - t) + 2 * r * (n - e);
       }
-      function Rt(t, e, n, r) {
+      function Ft(t, e, n, r) {
         var i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          o = Mt(t, e, null, n, r);
+          o = Pt(t, e, null, n, r);
         return (
-          o || (o = { x: Tt(t.x, e.x, n.x, r), y: Tt(t.y, e.y, n.y, r) }),
-          i && (o.a = Ft(t, e, n, r)),
+          o || (o = { x: Nt(t.x, e.x, n.x, r), y: Nt(t.y, e.y, n.y, r) }),
+          i && (o.a = Dt(t, e, n, r)),
           o
         );
       }
-      function Ft(t, e, n, r) {
-        return Math.atan2(Nt(t.y, e.y, n.y, r), Nt(t.x, e.x, n.x, r));
+      function Dt(t, e, n, r) {
+        return Math.atan2(Rt(t.y, e.y, n.y, r), Rt(t.x, e.x, n.x, r));
       }
-      function Dt(t, e, n, r, i) {
+      function Ct(t, e, n, r, i) {
         var o = i * i;
         return (
           i * o * (r - t + 3 * (e - n)) +
@@ -1705,66 +1765,67 @@ export default function DevDesktop() {
           t
         );
       }
-      function Ct(t, e, n, r, i) {
+      function qt(t, e, n, r, i) {
         var o = 1 - i;
         return 3 * (o * o * (e - t) + 2 * o * i * (n - e) + i * i * (r - n));
       }
-      function qt(t, e, n, r, i) {
+      function Lt(t, e, n, r, i) {
         var o = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          u = Mt(t, e, n, r, i);
+          u = Pt(t, e, n, r, i);
         return (
           u ||
             (u = {
-              x: Dt(t.x, e.x, n.x, r.x, i),
-              y: Dt(t.y, e.y, n.y, r.y, i),
+              x: Ct(t.x, e.x, n.x, r.x, i),
+              y: Ct(t.y, e.y, n.y, r.y, i),
             }),
-          o && (u.a = Lt(t, e, n, r, i)),
+          o && (u.a = Vt(t, e, n, r, i)),
           u
         );
       }
-      function Lt(t, e, n, r, i) {
-        return Math.atan2(Ct(t.y, e.y, n.y, r.y, i), Ct(t.x, e.x, n.x, r.x, i));
-      }
-      function Vt(t, e, n) {
-        var r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (zt(e)) {
-          if (Yt(n)) return Rt(e, n.start, n, t, r);
-        } else if (zt(n)) {
-          if (Ut(e)) return Rt(e, e.end, n, t, r);
-        } else {
-          if (Ut(e))
-            return Yt(n)
-              ? qt(e, e.end, n.start, n, t, r)
-              : Rt(e, e.end, n, t, r);
-          if (Yt(n)) return Rt(e, n.start, n, t, r);
-        }
-        return Bt(e, n, t, r);
+      function Vt(t, e, n, r, i) {
+        return Math.atan2(qt(t.y, e.y, n.y, r.y, i), qt(t.x, e.x, n.x, r.x, i));
       }
       function Gt(t, e, n) {
-        var r = Vt(t, e, n, !0);
+        var r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (Yt(e)) {
+          if (Ut(n)) return Ft(e, n.start, n, t, r);
+        } else if (Yt(n)) {
+          if (Wt(e)) return Ft(e, e.end, n, t, r);
+        } else {
+          if (Wt(e))
+            return Ut(n)
+              ? Lt(e, e.end, n.start, n, t, r)
+              : Ft(e, e.end, n, t, r);
+          if (Ut(n)) return Ft(e, n.start, n, t, r);
+        }
+        return It(e, n, t, r);
+      }
+      function zt(t, e, n) {
+        var r = Gt(t, e, n, !0);
         return (
-          (r.a =
+          (r.a = k(
             (function (t) {
               return arguments.length > 1 &&
                 void 0 !== arguments[1] &&
                 arguments[1]
                 ? t + Math.PI
                 : t;
-            })(r.a) / b),
+            })(r.a)
+          )),
           r
         );
       }
-      function zt(t) {
+      function Yt(t) {
         return !t.type || "corner" === t.type;
       }
-      function Yt(t) {
-        return null != t.start && !zt(t);
-      }
       function Ut(t) {
-        return null != t.end && !zt(t);
+        return null != t.start && !Yt(t);
       }
-      var Wt = new R();
-      var $t = {
+      function Wt(t) {
+        return null != t.end && !Yt(t);
+      }
+      var $t = new R();
+      var Ht = {
           f: function (t) {
             return t ? t.join(" ") : "";
           },
@@ -1772,34 +1833,34 @@ export default function DevDesktop() {
             if (0 === t) return e;
             if (1 === t) return r;
             var i = e.length;
-            if (i !== r.length) return F(t, e, r);
+            if (i !== r.length) return D(t, e, r);
             for (var o, u = new Array(i), a = 0; a < i; a++) {
-              if ((o = n(e[a])) !== n(r[a])) return F(t, e, r);
-              if ("number" === o) u[a] = D(t, e[a], r[a]);
+              if ((o = n(e[a])) !== n(r[a])) return D(t, e, r);
+              if ("number" === o) u[a] = C(t, e[a], r[a]);
               else {
-                if (e[a] !== r[a]) return F(t, e, r);
+                if (e[a] !== r[a]) return D(t, e, r);
                 u[a] = e[a];
               }
             }
             return u;
           },
         },
-        Ht = {
+        Qt = {
           f: null,
-          i: Y,
+          i: U,
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("x1", pt(r[0])),
-                t.setAttribute("y1", pt(r[1])),
-                t.setAttribute("x2", pt(r[2])),
-                t.setAttribute("y2", pt(r[3]));
+              t.setAttribute("x1", mt(r[0])),
+                t.setAttribute("y1", mt(r[1])),
+                t.setAttribute("x2", mt(r[2])),
+                t.setAttribute("y2", mt(r[3]));
             };
           },
         },
-        Qt = { f: pt, i: D },
-        Xt = { f: pt, i: q },
-        Jt = {
+        Xt = { f: mt, i: C },
+        Jt = { f: mt, i: L },
+        Kt = {
           f: function (t) {
             var e =
               arguments.length > 1 && void 0 !== arguments[1]
@@ -1811,7 +1872,7 @@ export default function DevDesktop() {
                 (t = t.map(function (t) {
                   return p(t, 4);
                 })),
-              mt(t, e)
+              bt(t, e)
             );
           },
           i: function (t, e, n) {
@@ -1821,8 +1882,8 @@ export default function DevDesktop() {
               u = e.length,
               a = n.length;
             if (u !== a)
-              if (0 === u) e = U((u = a), 0);
-              else if (0 === a) (a = u), (n = U(u, 0));
+              if (0 === u) e = W((u = a), 0);
+              else if (0 === a) (a = u), (n = W(u, 0));
               else {
                 var l =
                   (o =
@@ -1833,15 +1894,15 @@ export default function DevDesktop() {
                     })(r, i)) < 0
                     ? -o
                     : o;
-                (e = W(e, Math.floor(l / u))),
-                  (n = W(n, Math.floor(l / a))),
+                (e = $(e, Math.floor(l / u))),
+                  (n = $(n, Math.floor(l / a))),
                   (u = a = l);
               }
-            for (var s = [], f = 0; f < u; f++) s.push(p(C(t, e[f], n[f])));
+            for (var s = [], f = 0; f < u; f++) s.push(p(q(t, e[f], n[f])));
             return s;
           },
         };
-      function Kt(t, e, n) {
+      function Zt(t, e, n) {
         return t.map(function (t) {
           return (function (t, e, n) {
             var r = t.v;
@@ -1859,16 +1920,16 @@ export default function DevDesktop() {
           })(t, 0, n);
         });
       }
-      var Zt = {
+      var te = {
         gt: "gradientTransform",
         c: { x: "cx", y: "cy" },
         rd: "r",
         f: { x: "x1", y: "y1" },
         to: { x: "x2", y: "y2" },
       };
-      function te(t, e, r, i, o, u, a, l) {
+      function ee(t, e, r, i, o, u, a, l) {
         return (
-          Kt(t, 0, l),
+          Zt(t, 0, l),
           (e = (function (t, e, n) {
             for (var r, i, o, u = t.length - 1, a = {}, l = 0; l <= u; l++)
               (r = t[l]).e && (r.e = e(r.e)),
@@ -1880,27 +1941,27 @@ export default function DevDesktop() {
             return a;
           })(t, i, l)),
           function (i) {
-            var o = r(i, t, ee);
+            var o = r(i, t, ne);
             if (!o) return "none";
-            if ("c" === o.t) return wt(o.v);
+            if ("c" === o.t) return kt(o.v);
             if ("g" === o.t) {
-              if (!e[o.r]) return kt(o.r);
+              if (!e[o.r]) return _t(o.r);
               var u = e[o.r];
               return (
                 (function (t, e) {
                   for (var n = t.s, r = n.length; r < e.length; r++) {
                     var i = n[n.length - 1].cloneNode();
-                    (i.id = ie(i.id)),
+                    (i.id = oe(i.id)),
                       t.e.appendChild(i),
                       (n = t.s = t.e.querySelectorAll("stop"));
                   }
                   for (var o = 0, u = n.length, a = e.length - 1; o < u; o++)
-                    n[o].setAttribute("stop-color", wt(e[Math.min(o, a)].c)),
+                    n[o].setAttribute("stop-color", kt(e[Math.min(o, a)].c)),
                       n[o].setAttribute("offset", e[Math.min(o, a)].o);
                 })(u, o.s),
-                Object.keys(Zt).forEach(function (t) {
+                Object.keys(te).forEach(function (t) {
                   if (void 0 !== o[t])
-                    if ("object" !== n(Zt[t])) {
+                    if ("object" !== n(te[t])) {
                       var e,
                         r =
                           "gt" === t
@@ -1909,25 +1970,25 @@ export default function DevDesktop() {
                                 ? "matrix(" + e.join(" ") + ")"
                                 : "")
                             : o[t],
-                        i = Zt[t];
+                        i = te[t];
                       u.e.setAttribute(i, r);
                     } else
-                      Object.keys(Zt[t]).forEach(function (e) {
+                      Object.keys(te[t]).forEach(function (e) {
                         if (void 0 !== o[t][e]) {
                           var n = o[t][e],
-                            r = Zt[t][e];
+                            r = te[t][e];
                           u.e.setAttribute(r, n);
                         }
                       });
                 }),
-                kt(o.r)
+                _t(o.r)
               );
             }
             return "none";
           }
         );
       }
-      function ee(t, n, r) {
+      function ne(t, n, r) {
         if (0 === t) return n;
         if (1 === t) return r;
         if (n && r) {
@@ -1935,16 +1996,16 @@ export default function DevDesktop() {
           if (i === r.t)
             switch (n.t) {
               case "c":
-                return { t: i, v: z(t, n.v, r.v) };
+                return { t: i, v: Y(t, n.v, r.v) };
               case "g":
                 if (n.r === r.r) {
-                  var o = { t: i, s: ne(t, n.s, r.s), r: n.r };
+                  var o = { t: i, s: re(t, n.s, r.s), r: n.r };
                   return (
-                    n.gt && r.gt && (o.gt = Y(t, n.gt, r.gt)),
+                    n.gt && r.gt && (o.gt = U(t, n.gt, r.gt)),
                     n.c
-                      ? ((o.c = L(t, n.c, r.c)), (o.rd = C(t, n.rd, r.rd)))
+                      ? ((o.c = V(t, n.c, r.c)), (o.rd = q(t, n.rd, r.rd)))
                       : n.f &&
-                        ((o.f = L(t, n.f, r.f)), (o.to = L(t, n.to, r.to))),
+                        ((o.f = V(t, n.f, r.f)), (o.to = V(t, n.to, r.to))),
                     o
                   );
                 }
@@ -1955,18 +2016,18 @@ export default function DevDesktop() {
               l = a.s.map(function (t) {
                 return { c: u.v, o: t.o };
               });
-            return (a.s = "c" === n.t ? ne(t, l, a.s) : ne(t, a.s, l)), a;
+            return (a.s = "c" === n.t ? re(t, l, a.s) : re(t, a.s, l)), a;
           }
         }
-        return F(t, n, r);
+        return D(t, n, r);
       }
-      function ne(t, e, n) {
+      function re(t, e, n) {
         if (e.length === n.length)
           return e.map(function (e, r) {
-            return re(t, e, n[r]);
+            return ie(t, e, n[r]);
           });
         for (var r = Math.max(e.length, n.length), i = [], o = 0; o < r; o++) {
-          var u = re(
+          var u = ie(
             t,
             e[Math.min(o, e.length - 1)],
             n[Math.min(o, n.length - 1)]
@@ -1975,62 +2036,62 @@ export default function DevDesktop() {
         }
         return i;
       }
-      function re(t, e, n) {
-        return { o: q(t, e.o, n.o || 0), c: z(t, e.c, n.c || {}) };
+      function ie(t, e, n) {
+        return { o: L(t, e.o, n.o || 0), c: Y(t, e.c, n.c || {}) };
       }
-      function ie(t) {
+      function oe(t) {
         return t.replace(/-fill-([0-9]+)$/, function (t, e) {
           return "-fill-" + (+e + 1);
         });
       }
-      function oe(t, e, n) {
+      function ue(t, e, n) {
         return 0 === t
           ? e
           : 1 === t
           ? n
           : {
-              blur: V(t, e.blur, n.blur),
-              offset: L(t, e.offset, n.offset),
-              color: z(t, e.color, n.color),
+              blur: G(t, e.blur, n.blur),
+              offset: V(t, e.offset, n.offset),
+              color: Y(t, e.color, n.color),
             };
       }
-      var ue = {
-        blur: V,
-        brightness: C,
-        contrast: C,
-        "drop-shadow": oe,
-        "inner-shadow": oe,
-        grayscale: C,
-        "hue-rotate": D,
-        invert: C,
-        opacity: C,
-        saturate: C,
-        sepia: C,
+      var ae = {
+        blur: G,
+        brightness: q,
+        contrast: q,
+        "drop-shadow": ue,
+        "inner-shadow": ue,
+        grayscale: q,
+        "hue-rotate": C,
+        invert: q,
+        opacity: q,
+        saturate: q,
+        sepia: q,
       };
-      function ae(t, e, n) {
+      function le(t, e, n) {
         if (0 === t) return e;
         if (1 === t) return n;
         var r = e.length;
-        if (r !== n.length) return F(t, e, n);
+        if (r !== n.length) return D(t, e, n);
         for (var i, o = [], u = 0; u < r; u++) {
           if (e[u].type !== n[u].type) return e;
-          if (!(i = ue[e[u].type])) return F(t, e, n);
+          if (!(i = ae[e[u].type])) return D(t, e, n);
           o.push({ type: e.type, value: i(t, e[u].value, n[u].value) });
         }
         return o;
       }
-      var le = {
+      var se = {
         blur: function (t) {
           return t
             ? function (e) {
-                t.setAttribute("stdDeviation", bt(e));
+                t.setAttribute("stdDeviation", wt(e));
               }
             : null;
         },
         brightness: function (t, e, n) {
-          return (t = fe(n, e))
+          return (t = ce(n, e))
             ? function (e) {
-                (e = pt(e)),
+                (e = mt(e)),
                   t.map(function (t) {
                     return t.setAttribute("slope", e);
                   });
@@ -2038,10 +2099,10 @@ export default function DevDesktop() {
             : null;
         },
         contrast: function (t, e, n) {
-          return (t = fe(n, e))
+          return (t = ce(n, e))
             ? function (e) {
-                var n = pt((1 - e) / 2);
-                (e = pt(e)),
+                var n = mt((1 - e) / 2);
+                (e = mt(e)),
                   t.map(function (t) {
                     t.setAttribute("slope", e), t.setAttribute("intercept", n);
                   });
@@ -2056,10 +2117,10 @@ export default function DevDesktop() {
           var o = n.getElementById(e + "-flood");
           return o
             ? function (t) {
-                r.setAttribute("stdDeviation", bt(t.blur)),
-                  i.setAttribute("dx", pt(t.offset.x)),
-                  i.setAttribute("dy", pt(t.offset.y)),
-                  o.setAttribute("flood-color", wt(t.color));
+                r.setAttribute("stdDeviation", wt(t.blur)),
+                  i.setAttribute("dx", mt(t.offset.x)),
+                  i.setAttribute("dy", mt(t.offset.y)),
+                  o.setAttribute("flood-color", kt(t.color));
               }
             : null;
         },
@@ -2071,9 +2132,9 @@ export default function DevDesktop() {
           var o = n.getElementById(e + "-color-matrix");
           return o
             ? function (t) {
-                r.setAttribute("stdDeviation", bt(t.blur)),
-                  i.setAttribute("dx", pt(t.offset.x)),
-                  i.setAttribute("dy", pt(t.offset.y));
+                r.setAttribute("stdDeviation", wt(t.blur)),
+                  i.setAttribute("dx", mt(t.offset.x)),
+                  i.setAttribute("dy", mt(t.offset.y));
                 var e = [
                   0,
                   0,
@@ -2096,7 +2157,7 @@ export default function DevDesktop() {
                   t.color.a,
                   0,
                 ];
-                o.setAttribute("values", mt(e));
+                o.setAttribute("values", bt(e));
               }
             : null;
         },
@@ -2105,7 +2166,7 @@ export default function DevDesktop() {
             ? function (e) {
                 t.setAttribute(
                   "values",
-                  mt(
+                  bt(
                     (function (t) {
                       return [
                         0.2126 + 0.7874 * (t = 1 - t),
@@ -2138,14 +2199,14 @@ export default function DevDesktop() {
         "hue-rotate": function (t) {
           return t
             ? function (e) {
-                return t.setAttribute("values", pt(e));
+                return t.setAttribute("values", mt(e));
               }
             : null;
         },
         invert: function (t, e, n) {
-          return (t = fe(n, e))
+          return (t = ce(n, e))
             ? function (e) {
-                (e = pt(e) + " " + pt(1 - e)),
+                (e = mt(e) + " " + mt(1 - e)),
                   t.map(function (t) {
                     return t.setAttribute("tableValues", e);
                   });
@@ -2155,14 +2216,14 @@ export default function DevDesktop() {
         opacity: function (t, e, n) {
           return (t = n.getElementById(e + "-A"))
             ? function (e) {
-                return t.setAttribute("tableValues", "0 " + pt(e));
+                return t.setAttribute("tableValues", "0 " + mt(e));
               }
             : null;
         },
         saturate: function (t) {
           return t
             ? function (e) {
-                return t.setAttribute("values", pt(e));
+                return t.setAttribute("values", mt(e));
               }
             : null;
         },
@@ -2171,7 +2232,7 @@ export default function DevDesktop() {
             ? function (e) {
                 return t.setAttribute(
                   "values",
-                  mt(
+                  bt(
                     (function (t) {
                       return [
                         0.393 + 0.607 * (t = 1 - t),
@@ -2202,22 +2263,22 @@ export default function DevDesktop() {
             : null;
         },
       };
-      var se = ["R", "G", "B"];
-      function fe(t, e) {
-        var n = se.map(function (n) {
+      var fe = ["R", "G", "B"];
+      function ce(t, e) {
+        var n = fe.map(function (n) {
           return t.getElementById(e + "-" + n) || null;
         });
         return -1 !== n.indexOf(null) ? null : n;
       }
-      var ce = {
-          fill: te,
-          "fill-opacity": Xt,
-          stroke: te,
-          "stroke-opacity": Xt,
-          "stroke-width": Qt,
-          "stroke-dashoffset": { f: pt, i: D },
-          "stroke-dasharray": Jt,
-          opacity: Xt,
+      var he = {
+          fill: ee,
+          "fill-opacity": Jt,
+          stroke: ee,
+          "stroke-opacity": Jt,
+          "stroke-width": Xt,
+          "stroke-dashoffset": { f: mt, i: C },
+          "stroke-dasharray": Kt,
+          opacity: Jt,
           transform: function (t, e, r, i) {
             if (
               !(t = (function (t, e) {
@@ -2244,32 +2305,36 @@ export default function DevDesktop() {
             };
             return e && e.a && t.o
               ? function (e) {
-                  var n = r(e, t.o, Gt);
-                  return Wt.recomposeSelf(
-                    n,
-                    o("r", e, D, 0) + n.a,
-                    o("k", e, L),
-                    o("s", e, L),
-                    o("t", e, L)
-                  ).toString();
+                  var n = r(e, t.o, zt);
+                  return $t
+                    .recomposeSelf(
+                      n,
+                      o("r", e, C, 0) + n.a,
+                      o("k", e, V),
+                      o("s", e, V),
+                      o("t", e, V)
+                    )
+                    .toString();
                 }
               : function (t) {
-                  return Wt.recomposeSelf(
-                    o("o", t, Vt, null),
-                    o("r", t, D, 0),
-                    o("k", t, L),
-                    o("s", t, L),
-                    o("t", t, L)
-                  ).toString();
+                  return $t
+                    .recomposeSelf(
+                      o("o", t, Gt, null),
+                      o("r", t, C, 0),
+                      o("k", t, V),
+                      o("s", t, V),
+                      o("t", t, V)
+                    )
+                    .toString();
                 };
           },
           "#filter": function (t, e, n, r, i, o, u, a) {
             if (!e.items || !t || !t.length) return null;
             var l = (function (t, e) {
               var n = (t = t.map(function (t) {
-                return t && le[t[0]]
+                return t && se[t[0]]
                   ? (e.getElementById(t[1]),
-                    le[t[0]](e.getElementById(t[1]), t[1], e))
+                    se[t[0]](e.getElementById(t[1]), t[1], e))
                   : null;
               })).length;
               return function (e) {
@@ -2283,23 +2348,23 @@ export default function DevDesktop() {
                   });
                 })(t, r)),
                 function (e) {
-                  l(n(e, t, ae));
+                  l(n(e, t, le));
                 })
               : null;
           },
-          "#line": Ht,
-          points: { f: mt, i: Y },
-          d: $t,
-          r: Qt,
-          "#size": At,
-          "#radius": _t,
+          "#line": Qt,
+          points: { f: bt, i: U },
+          d: Ht,
+          r: Xt,
+          "#size": xt,
+          "#radius": At,
           _: function (t, e) {
             if (Array.isArray(t))
               for (var n = 0; n < t.length; n++) this[t[n]] = e;
             else this[t] = e;
           },
         },
-        he = {
+        ve = {
           currentTime: "offset",
           duration: "duration",
           hasEnded: function () {
@@ -2333,15 +2398,15 @@ export default function DevDesktop() {
           speed: "speed",
           fps: "fps",
         },
-        ve = {
+        de = {
           destruct: "destruct",
           pause: "pause",
           play: function (t, e) {
-            return de(t, e.hasEnded ? "restart" : "play", e);
+            return ye(t, e.hasEnded ? "restart" : "play", e);
           },
           restart: "restart",
           reverse: function (t, e) {
-            return de(t, "reverse", e, [!0]);
+            return ye(t, "reverse", e, [!0]);
           },
           seek: "seek",
           seekBy: "seekBy",
@@ -2351,7 +2416,7 @@ export default function DevDesktop() {
           togglePlay: "toggle",
           set: "set",
         };
-      function de(t, e, n) {
+      function ye(t, e, n) {
         var r =
           arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
         return function () {
@@ -2364,20 +2429,20 @@ export default function DevDesktop() {
           );
         };
       }
-      var ye = function t(e) {
+      var ge = function t(e) {
         r(this, t);
         var n = {},
           i = ["on", "off"],
           o = {
             get: function (t, e, r) {
-              return he[e]
-                ? "function" == typeof he[e]
-                  ? he[e].call(t, t, r)
-                  : t[he[e]]
-                : ve[e]
+              return ve[e]
                 ? "function" == typeof ve[e]
                   ? ve[e].call(t, t, r)
-                  : de(t, ve[e], r)
+                  : t[ve[e]]
+                : de[e]
+                ? "function" == typeof de[e]
+                  ? de[e].call(t, t, r)
+                  : ye(t, de[e], r)
                 : -1 !== i.indexOf(e)
                 ? n[e]
                 : "ready" === e
@@ -2390,14 +2455,14 @@ export default function DevDesktop() {
               return -1 !== i.indexOf(e) && (n[e] = r);
             },
             ownKeys: function (t) {
-              return Object.keys(he);
+              return Object.keys(ve);
             },
             has: function (t, e) {
-              return void 0 !== he[e];
+              return void 0 !== ve[e];
             },
           };
         if ("function" == typeof Proxy) return new Proxy(e, o);
-        var u = Object.keys(he).concat(Object.keys(ve)).concat(i),
+        var u = Object.keys(ve).concat(Object.keys(de)).concat(i),
           a = {};
         return (
           u.forEach(function (t) {
@@ -2417,7 +2482,7 @@ export default function DevDesktop() {
           a
         );
       };
-      function ge(t) {
+      function pe(t) {
         t || (t = this);
         var e = {};
         (this.on = function (t, n) {
@@ -2455,9 +2520,9 @@ export default function DevDesktop() {
             return n;
           });
       }
-      var pe = !0,
-        me = ["iterations", "speed", "fps", "direction", "fill", "alternate"],
-        be = (function (t) {
+      var me = !0,
+        be = ["iterations", "speed", "fps", "direction", "fill", "alternate"],
+        we = (function (t) {
           !(function (t, e) {
             if ("function" != typeof e && null !== e)
               throw new TypeError(
@@ -2548,9 +2613,9 @@ export default function DevDesktop() {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
                           ? arguments[0]
-                          : pe,
+                          : me,
                       e = h(a(u.prototype), "play", this).call(this);
-                    return t === pe && this.trigger("play", this.offset), e;
+                    return t === me && this.trigger("play", this.offset), e;
                   },
                 },
                 {
@@ -2563,10 +2628,10 @@ export default function DevDesktop() {
                       e =
                         arguments.length > 1 && void 0 !== arguments[1]
                           ? arguments[1]
-                          : pe,
+                          : me,
                       n = h(a(u.prototype), "pause", this).call(this);
                     return (
-                      e === pe &&
+                      e === me &&
                         this.trigger(t ? "end" : "pause", this.offset),
                       n
                     );
@@ -2585,9 +2650,9 @@ export default function DevDesktop() {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
                           ? arguments[0]
-                          : pe,
+                          : me,
                       e = h(a(u.prototype), "stop", this).call(this);
-                    return t === pe && this.trigger("stop", this.offset), e;
+                    return t === me && this.trigger("stop", this.offset), e;
                   },
                 },
                 {
@@ -2597,9 +2662,9 @@ export default function DevDesktop() {
                       n =
                         arguments.length > 2 && void 0 !== arguments[2]
                           ? arguments[2]
-                          : pe,
+                          : me,
                       r = h(a(u.prototype), "_apply", this).call(this, t);
-                    if (n === pe) {
+                    if (n === me) {
                       var i = function () {
                         return e.trigger("keyframe", t);
                       };
@@ -2654,7 +2719,7 @@ export default function DevDesktop() {
                 {
                   key: "set",
                   value: function (t, e) {
-                    if (me.includes(t)) {
+                    if (be.includes(t)) {
                       var n = this._running;
                       n && this.pause(!1, !1),
                         (this._settings[t] = e),
@@ -2687,13 +2752,13 @@ export default function DevDesktop() {
                 {
                   key: "build",
                   value: function (t) {
-                    var e = h(a(u), "build", this).call(this, t, ce);
+                    var e = h(a(u), "build", this).call(this, t, he);
                     if (!e) return null;
                     var n = e.el,
                       r = e.options,
                       i = e.player,
-                      o = new ye(i),
-                      l = new ge(o);
+                      o = new ge(i),
+                      l = new pe(o);
                     (o.on = l.on), (o.off = l.off), (i.trigger = l.trigger);
                     var s =
                       n.svgatorPlayer &&
@@ -2797,7 +2862,7 @@ export default function DevDesktop() {
                           );
                         }
                         if ("scroll" === n.start) {
-                          var u = new gt(e, n.scroll || 25, function (e) {
+                          var u = new pt(e, n.scroll || 25, function (e) {
                             e
                               ? t.reachedToEnd()
                                 ? t.restart()
@@ -2833,8 +2898,8 @@ export default function DevDesktop() {
             ),
             u
           );
-        })(yt);
-      return be.init(), be;
+        })(gt);
+      return we.init(), we;
     });
     (function (s, i, o, w, d, a, b) {
       (a =
@@ -2854,12 +2919,12 @@ export default function DevDesktop() {
     })(
       "91c80d77",
       {
-        root: "ejzrbFDun4V1",
+        root: "esnjhoDV8OL1",
         version: "2022-05-04",
         animations: [
           {
             elements: {
-              ejzrbFDun4V32: {
+              esnjhoDV8OL32: {
                 opacity: [
                   { t: 0, v: 1, e: [1, 0] },
                   { t: 500, v: 0, e: [1, 0] },
@@ -2869,7 +2934,7 @@ export default function DevDesktop() {
                   { t: 2500, v: 0, e: [1, 0] },
                 ],
               },
-              ejzrbFDun4V89: {
+              esnjhoDV8OL93: {
                 d: [
                   {
                     t: 0,
@@ -3028,7 +3093,7 @@ export default function DevDesktop() {
                   },
                 ],
               },
-              ejzrbFDun4V90: {
+              esnjhoDV8OL94: {
                 transform: {
                   data: {
                     o: { x: 660.803238, y: 444.48378, type: "corner" },
@@ -3045,117 +3110,117 @@ export default function DevDesktop() {
                   },
                 },
               },
-              ejzrbFDun4V109: {
+              esnjhoDV8OL113: {
                 "stroke-dashoffset": [
                   { t: 0, v: 101.68 },
                   { t: 300, v: 0 },
                 ],
               },
-              ejzrbFDun4V110: {
+              esnjhoDV8OL114: {
                 "stroke-dashoffset": [
                   { t: 100, v: 101.68 },
                   { t: 400, v: 0 },
                 ],
               },
-              ejzrbFDun4V111: {
+              esnjhoDV8OL115: {
                 "stroke-dashoffset": [
                   { t: 200, v: 104.4 },
                   { t: 500, v: 0 },
                 ],
               },
-              ejzrbFDun4V112: {
+              esnjhoDV8OL116: {
                 "stroke-dashoffset": [
                   { t: 300, v: 97.21 },
                   { t: 600, v: 0 },
                 ],
               },
-              ejzrbFDun4V113: {
+              esnjhoDV8OL117: {
                 "stroke-dashoffset": [
                   { t: 600, v: 97.21 },
                   { t: 900, v: 0 },
                 ],
               },
-              ejzrbFDun4V114: {
+              esnjhoDV8OL118: {
                 "stroke-dashoffset": [
                   { t: 700, v: 97.21 },
                   { t: 1000, v: 0 },
                 ],
               },
-              ejzrbFDun4V115: {
+              esnjhoDV8OL119: {
                 "stroke-dashoffset": [
                   { t: 800, v: 97.21 },
                   { t: 1100, v: 0 },
                 ],
               },
-              ejzrbFDun4V116: {
+              esnjhoDV8OL120: {
                 "stroke-dashoffset": [
                   { t: 1100, v: 97.21 },
                   { t: 1400, v: 0 },
                 ],
               },
-              ejzrbFDun4V117: {
+              esnjhoDV8OL121: {
                 "stroke-dashoffset": [
                   { t: 1200, v: 97.21 },
                   { t: 1500, v: 0 },
                 ],
               },
-              ejzrbFDun4V118: {
+              esnjhoDV8OL122: {
                 "stroke-dashoffset": [
                   { t: 1300, v: 97.21 },
                   { t: 1600, v: 0 },
                 ],
               },
-              ejzrbFDun4V119: {
+              esnjhoDV8OL123: {
                 "stroke-dashoffset": [
                   { t: 1400, v: 97.21 },
                   { t: 1700, v: 0 },
                 ],
               },
-              ejzrbFDun4V120: {
+              esnjhoDV8OL124: {
                 "stroke-dashoffset": [
                   { t: 1500, v: 97.21 },
                   { t: 1800, v: 0 },
                 ],
               },
-              ejzrbFDun4V121: {
+              esnjhoDV8OL125: {
                 "stroke-dashoffset": [
                   { t: 1800, v: 97.21 },
                   { t: 2100, v: 0 },
                 ],
               },
-              ejzrbFDun4V122: {
+              esnjhoDV8OL126: {
                 "stroke-dashoffset": [
                   { t: 1900, v: 97.21 },
                   { t: 2200, v: 0 },
                 ],
               },
-              ejzrbFDun4V123: {
+              esnjhoDV8OL127: {
                 "stroke-dashoffset": [
                   { t: 2000, v: 97.21 },
                   { t: 2300, v: 0 },
                 ],
               },
-              ejzrbFDun4V124: {
+              esnjhoDV8OL128: {
                 "stroke-dashoffset": [
                   { t: 2100, v: 97.21 },
                   { t: 2400, v: 0 },
                 ],
               },
-              ejzrbFDun4V130: {
+              esnjhoDV8OL134: {
                 "stroke-dashoffset": [
                   { t: 0, v: 68.49 },
                   { t: 700, v: 0 },
                   { t: 1600, v: -68.49 },
                 ],
               },
-              ejzrbFDun4V131: {
+              esnjhoDV8OL135: {
                 "stroke-dashoffset": [
                   { t: 1300, v: 68.49 },
                   { t: 2100, v: 0 },
                   { t: 2900, v: -68.49 },
                 ],
               },
-              ejzrbFDun4V132: {
+              esnjhoDV8OL136: {
                 "stroke-dashoffset": [
                   { t: 500, v: 68.49 },
                   { t: 1500, v: 0 },
@@ -3163,10 +3228,10 @@ export default function DevDesktop() {
                 ],
               },
             },
-            s: "MDGA1ZmNmNzZiOCGM5YzZiNWM4LYmRjM2MyNzZVZOGU4NjhkODBQ4NDgwNzZiOGGJkYzZiOWI3EYzhiZFZjM2MRyUTc2OGU4NTDgwNzZiZGM4YUjljNlRiNWM4KYmRjM2MyYzcX3NjhlODQ4MDEc2YmFiZGMwYGzA3NjhlODVILODA3NmI1YzBTjOGI5YzZjMmYI1YzhiOTc2OGGViYUhiNUFjAMGM3Yjk4MDcS2YzdjNGI5YjJliODc2OGU4NEDgyOGM4MDc2FYmFjNGM3NzYV4ZTg1Rjg0ODJRJZDE/",
+            s: "MDMA1ZjgyMjk2YYjdjNzk2ODdiANzA3Njc1MjkF0MTM5NDAzNzVM3MzMyOTZiNPzA3OTZjNmE3XYjcwNzY3NTIU5NDEzOFYzMzPI5QjcwN2I2YOzc5Njg3YjcwWNzZDNzU3YTIA5NDEzNzMzQTNI5NmQ3MDczNMzMyOTQxMzgzHMzI5QjY4NzMM3YjZjNzk3NTMY4N2I2Y04yOLTQxNmQ2ODczYN2E2YzMzMjkU3YTc3NmM2YzMZiMjk0MTM3MGzUzZjMzMjk2FZDc3N2EyOTQVxMzgzNzM3ODBQ/",
           },
         ],
-        options: "MDNAxMDgyMjk3YBTdiNjg3OTdiPMjk0MTI5NzMD3NjY4NmIyOTKg0",
+        options: "MDAAxMDgyMjk3YBTdiUDY4Nzk3SYjI5NDEyOTcUzNzY2OE82YjEI5ODQ/",
       },
       "__SVGATOR_PLAYER__",
       window,
