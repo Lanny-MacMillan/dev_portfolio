@@ -62,7 +62,7 @@ const Skills = ({ skills, largeScreen }) => {
               </HTMLSnippet>
               <Description>
                 Software Dev, functional and OOP programming, Javascript, C#,
-                Typescript, Python
+                Typescript, and Python
               </Description>
             </DescriptionBody>
           </Skills0>
@@ -88,7 +88,8 @@ const Skills = ({ skills, largeScreen }) => {
                 />{" "}
               </HTMLSnippet>
               <Description>
-                HTML, CSS, JS, React, Express. Mobile first development mindset
+                HTML, CSS, JS, React, and Express. Mobile first development
+                mindset
               </Description>
             </DescriptionBody>
           </Skills1>
@@ -143,7 +144,7 @@ const Skills = ({ skills, largeScreen }) => {
               </HTMLSnippet>
               <Description>
                 {largeScreen
-                  ? "Using the Unity game engine, C# and Object Oriented Programming to adeptly design and code captivating 2D games,ensuring optimal performance and engaging player experiences!"
+                  ? "Using the Unity game engine, C# and Object Oriented Programming to adeptly design and code captivating 2D games,ensuring optimal performance, and engaging player experiences!"
                   : "Using C# and OOP to adeptly design and create 2D games"}
               </Description>
             </DescriptionBody>
