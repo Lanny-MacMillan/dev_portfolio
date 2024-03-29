@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -308,10 +309,10 @@ export const CardFooter = styled.div`
 export const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
-  align-self: flex-end;
-
+  justify-content: space-around;
+  width: 50%;
+  align-content: center;
+  width: 200px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 
@@ -328,9 +329,6 @@ export const Footer = styled.div`
   justify-content: center;
   height: 80vh;
   background-color: #68717d;
-  /* background: #109494; */
-
-  /* background: #699298; */
   border-top: 2px solid white;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
@@ -426,11 +424,10 @@ export const ConnectBody = styled.div`
     padding: 20px;
   }
 `;
-export const IconDiv = styled.div`
+export const FooterCenter = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* border: 1px solid red; */
   margin: 150px 0 30px 0;
   width: 70%;
   max-width: 500px;
@@ -451,7 +448,7 @@ export const ButtonContainer = styled.div`
   /* display: flex; */
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(motion.button)`
   display: flex;
   width: fit-content;
   padding: 15px 30px 15px 30px;
@@ -473,4 +470,10 @@ export const StyledButton = styled.button`
 export const SmallText = styled.div`
   font-size: 0.8em;
   text-align: center;
+`;
+export const InfoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: "200px";
 `;

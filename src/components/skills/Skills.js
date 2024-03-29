@@ -32,7 +32,8 @@ import {
 } from "./Skills.styles.js";
 
 const Skills = ({ skills, largeScreen }) => {
-  // add video on hover, icon changes to color and rotates
+  // const style = "linear-gradient(to left, #1a6dff,#c822ff);";
+  // const style2 = "linear-gradient(to left, #c822ff,#6dc7ff);";
   return (
     <>
       <SkillsContainer>
