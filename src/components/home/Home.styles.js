@@ -259,8 +259,8 @@ export const LowerDiv = styled.div`
   max-width: 1600px;
   height: 40vh;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    width: 99%;
-    height: 30vh;
+    width: 80%;
+    height: 20vh;
     border: 1px solid blue;
   }
 
