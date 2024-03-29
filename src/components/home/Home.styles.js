@@ -259,7 +259,7 @@ export const LowerDiv = styled.div`
   height: 40vh;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    display: none;
+    /* display: none; */
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
