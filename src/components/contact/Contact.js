@@ -7,33 +7,22 @@ import {
   GitHubIcon,
   CalendlyIcon,
 } from "../assets/icons.js";
+import { motion } from "framer-motion";
 import { mobileDev } from "../assets/constants.js";
-import { SelfIconLarge } from "../assets/icons.js";
 import Blinking from "../assets/anim/blinking/Blinking.js";
-import { InlineWidget, PopupModal } from "react-calendly";
-import curlyArrow from "../assets/img/curlyArrow.png";
-// import { Input, Button } from '@lanny-macmillan/thequickstop'
+import { PopupModal } from "react-calendly";
 import {
   ContactContainer,
-  ContactDiv,
-  ShowDiv1,
-  ShowDiv2,
-  PaddedDiv,
-  Header,
-  CardHeader,
-  CardSubHeader,
-  CardForm,
   Footer,
-  CardFooter,
   IconsDiv,
-  Container,
   StartProject,
   CalendlyLink,
   ConnectHeader,
   ConnectBody,
   ButtonContainer,
   StyledButton,
-  IconDiv,
+  FooterCenter,
+  InfoDiv,
   SmallText,
 } from "./Contact.styles.js";
 
@@ -76,6 +65,11 @@ const Contact = ({ contact, largeScreen }) => {
     <>
       <ButtonContainer>
         <StyledButton
+          whileHover={{
+            scale: 1.1,
+          }}
+          transition={{ type: "spring", stiffness: 300 }}
+          whileTap={{ scale: 2.5 }}
           onClick={() => setIsOpen(true)}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
@@ -108,34 +102,49 @@ const Contact = ({ contact, largeScreen }) => {
           <CalendlyLink>{renderCalendlyPopupModal}</CalendlyLink>
         </StartProject>
         <Footer>
-          <IconDiv>
+          <FooterCenter>
             <Blinking />
-            <div>
+            <InfoDiv>
               <IconsDiv>
-                <a
+                <motion.a
+                  whileHover={{
+                    scale: 1.4,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  whileTap={{ scale: 2.5 }}
                   href="https://www.linkedin.com/in/lanny-macmillan/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <LinkedInIcon height={iconSize} width={iconSize} />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  whileHover={{
+                    scale: 1.4,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  whileTap={{ scale: 2.5 }}
                   href="mailto:lanny.macmillan.dev@gmail.com"
                   rel="noopener noreferrer"
                 >
                   <GmailIcon height={iconSize} width={iconSize} />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                  whileHover={{
+                    scale: 1.4,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  whileTap={{ scale: 2.5 }}
                   href="https://github.com/Lanny-MacMillan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <GitHubIcon height={iconSize} width={iconSize} />
-                </a>
+                </motion.a>
               </IconsDiv>
               <SmallText>Created by Lanny MacMillan 2024</SmallText>
-            </div>
-          </IconDiv>
+            </InfoDiv>
+          </FooterCenter>
         </Footer>
       </ContactContainer>
     </>

@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 3em;
   background-color: #c4cbca;
-
+  cursor: default;
   /* background-color: #141c3a; */
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
