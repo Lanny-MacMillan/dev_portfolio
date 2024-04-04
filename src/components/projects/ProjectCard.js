@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
+import { useNavigate } from "react-router-dom";
+
 import {
   ProjectCardContainer,
   ProjectCardContainerWide,
@@ -17,16 +19,19 @@ import {
   ColorAccentWide,
   ColorAccentLarge,
   Icons,
-  StyledLink,
+  Button,
 } from "./Projects.styles";
 
 const ProjectCard = ({
   nameText,
   img,
+  link,
+  liveLink,
+  devType,
   description,
+  fullDescription,
   icons,
   iconsLarge,
-  link,
   height,
   imgHeight,
   margin,
@@ -36,14 +41,29 @@ const ProjectCard = ({
   colorSplashPosition,
   type,
   largeScreen,
+  status,
 }) => {
   const [hoverState, setHoverState] = useState(false);
 
+  const navigate = useNavigate();
   const hoverStyle = {
     transform: "scale(1.05)",
     transformOrigin: "50% 50%",
   };
 
+  const formattedName = nameText.replace(/\s/g, "");
+  const data = {
+    nameText,
+    img,
+    description,
+    fullDescription,
+    link,
+    liveLink,
+    colorSplash,
+    devType,
+    status,
+  };
+  console.log("devType", devType);
   const renderProjectCard = !type && (
     <ProjectCardContainer
       onMouseEnter={() => setHoverState(true)}
@@ -73,9 +93,15 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
-                View project code
-              </StyledLink>
+              <Button
+                onClick={() => {
+                  navigate(`/${formattedName}`, { state: data });
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Show_Project
+              </Button>
             </Transition>
           ) : (
             <Transition
@@ -130,9 +156,15 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
-                View Project
-              </StyledLink>
+              <Button
+                onClick={() => {
+                  navigate(`/${formattedName}`, { state: data });
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Show_Project
+              </Button>
             </Transition>
           ) : (
             <Transition
@@ -144,7 +176,8 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
+              <Button>Show_Project</Button>
+              {/* <Icons>{largeScreen ? iconsLarge : icons}</Icons> */}
             </Transition>
           )}
         </Stack>
@@ -186,9 +219,15 @@ const ProjectCard = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <StyledLink href={link} target="_blank" rel="noopener noreferrer">
-                View Project
-              </StyledLink>
+              <Button
+                onClick={() => {
+                  navigate(`/${formattedName}`, { state: data });
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Show_Project
+              </Button>
             </Transition>
           ) : (
             <Transition

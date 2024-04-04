@@ -1,12 +1,7 @@
 import React from "react";
 import Main from "./components/Main.js";
 import { Route, Routes } from "react-router";
-import Quickstop from "./components/views/Quickstop.js";
-import TheAdventure from "./components/views/TheAdventure.js";
-import TetrisReact from "./components/views/TetrisReact.js";
-import CrappyBird from "./components/views/CrappyBird.js";
-import Nightmare from "./components/views/Nightmare.js";
-import GeoDash from "./components/views/GeoDash.js";
+import ViewPage from "./components/views/ViewPage.js";
 
 function App() {
   // const [largeScreen, setLargeScreen] = useState(false);
@@ -28,14 +23,14 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/VacationApp" element={<Main />} />
-        <Route path="/TheQuickStopLibrary" element={<Quickstop />} />
-        <Route path="/TheAdventure" element={<TheAdventure />} />
-        <Route path="/AmiiboApp" element={<Main />} />
-        <Route path="/CrappyBird" element={<CrappyBird />} />
-        <Route path="/2dNightmare" element={<Nightmare />} />
-        <Route path="/TetrisReact" element={<TetrisReact />} />
-        <Route path="/GeometryDash" element={<GeoDash />} />
+        <Route path="/VacationApp" element={<ViewPage />} />
+        <Route path="/TheQuickStopLibrary" element={<ViewPage />} />
+        <Route path="/TheAdventure" element={<ViewPage />} />
+        <Route path="/AmiiboApp" element={<ViewPage />} />
+        <Route path="/CrappyBird" element={<ViewPage />} />
+        <Route path="/2dNightmare" element={<ViewPage />} />
+        <Route path="/TetrisReact" element={<ViewPage />} />
+        <Route path="/GeometryDash" element={<ViewPage />} />
       </Routes>
     </>
   );
