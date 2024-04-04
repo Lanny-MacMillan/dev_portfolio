@@ -1,88 +1,43 @@
-import React, { useRef, useEffect, useState } from "react";
-import Home from "./components/home/Home";
-import Skills from "./components/skills/Skills.js";
-import Projects from "./projects/Projects.js";
-import Work from "./work/Work.js";
-import Contact from "./components/contact/Contact";
-import ScrollToTop from "./components/util/ScrollToTop.js";
-import CursorDrift from "./components/assets/Tools/CursorDrift.jsx";
-import {
-  HeaderContainer,
-  OurHerosName,
-  ShortText,
-  HeaderLinksDiv,
-  LinksContent,
-  Links,
-  PageRefIcon,
-} from "./components/home/Home.styles.js";
+import React from "react";
+import Main from "./components/Main.js";
+import { Route, Routes } from "react-router";
+import Quickstop from "./components/views/Quickstop.js";
+import TheAdventure from "./components/views/TheAdventure.js";
+import TetrisReact from "./components/views/TetrisReact.js";
+import CrappyBird from "./components/views/CrappyBird.js";
+import Nightmare from "./components/views/Nightmare.js";
+import GeoDash from "./components/views/GeoDash.js";
 
 function App() {
-  const [largeScreen, setLargeScreen] = useState(false);
+  // const [largeScreen, setLargeScreen] = useState(false);
 
-  const pages = [
-    "// home",
-    "// skills",
-    "// projects",
-    "// work",
-    "// contact",
-  ];
-
-  const pageRef = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-  ];
-
-  const scrollToRef = (ref) => {
-    pageRef[ref].current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 750) {
-        setLargeScreen(true);
-      } else {
-        setLargeScreen(false);
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth > 750) {
+  //       setLargeScreen(true);
+  //     } else {
+  //       setLargeScreen(false);
+  //     }
+  //   };
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        maxWidth: "100vw",
-        overflow: "hidden",
-      }}
-    >
-      <HeaderContainer>
-        <OurHerosName>Lanny_MacMillan</OurHerosName>
-        <ShortText>LM</ShortText>
-        <HeaderLinksDiv>
-          {pages.map((page, pageRef) => (
-            <LinksContent key={page} onClick={() => scrollToRef(pageRef)}>
-              <PageRefIcon>0{pageRef}</PageRefIcon>
-              <Links>{page}</Links>
-            </LinksContent>
-          ))}
-        </HeaderLinksDiv>
-      </HeaderContainer>
-      <ScrollToTop />
-      <CursorDrift />
-      <Home home={pageRef[0]} largeScreen={largeScreen} />
-      <Skills skills={pageRef[1]} largeScreen={largeScreen} />
-      <Projects projects={pageRef[2]} largeScreen={largeScreen} />
-      <Work work={pageRef[3]} largeScreen={largeScreen} />
-      <Contact contact={pageRef[4]} largeScreen={largeScreen} />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/VacationApp" element={<Main />} />
+        <Route path="/TheQuickStopLibrary" element={<Quickstop />} />
+        <Route path="/TheAdventure" element={<TheAdventure />} />
+        <Route path="/AmiiboApp" element={<Main />} />
+        <Route path="/CrappyBird" element={<CrappyBird />} />
+        <Route path="/2dNightmare" element={<Nightmare />} />
+        <Route path="/TetrisReact" element={<TetrisReact />} />
+        <Route path="/GeometryDash" element={<GeoDash />} />
+      </Routes>
+    </>
   );
 }
 

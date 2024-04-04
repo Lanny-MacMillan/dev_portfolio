@@ -1,18 +1,14 @@
 import React from "react";
-import theAdventureImg from "../components/assets/img/theAdventure.png";
-import tetrisReact from "../components/assets/img/tetrisReact.png";
-import amiiboAppImg from "../components/assets/img/amiibo.png";
-import vacationImg from "../components/assets/img/vacation.png";
-import geoDashImg from "../components/assets/img/geoDash.png";
-import crappyBirdImg from "../components/assets/img/crappyBird.png";
-import nightmareImg from "../components/assets/img/nightmare.png";
-import storybookImg from "../components/assets/img/storybook.png";
+import theAdventureImg from "../assets/img/theAdventure.png";
+import tetrisReact from "../assets/img/tetrisReact.png";
+import amiiboAppImg from "../assets/img/amiibo.png";
+import vacationImg from "../assets/img/vacation.png";
+import geoDashImg from "../assets/img/geoDash.png";
+import crappyBirdImg from "../assets/img/crappyBird.png";
+import nightmareImg from "../assets/img/nightmare.png";
+import storybookImg from "../assets/img/storybook.png";
 import ProjectCard from "./ProjectCard";
-import {
-  frontendDev,
-  gameDev,
-  softwareDev,
-} from "../components/assets/constants";
+import { frontendDev, gameDev, softwareDev } from "../assets/constants";
 
 import {
   UnityIcon,
@@ -27,7 +23,7 @@ import {
   NodeJSIcon,
   PythonIcon,
   DjangoIcon,
-} from "../components/assets/icons";
+} from "../assets/icons";
 
 import {
   ProjectsContainer,
@@ -79,6 +75,7 @@ const Projects = ({ projects, largeScreen }) => {
     image: tetrisReact,
     description: "A clone of the original Tetris, done with React.",
     link: "https://github.com/Lanny-MacMillan/tetrisClone",
+    liveLink: "https://main.d2hd3lchmxht8m.amplifyapp.com/",
     icons: [<ReactIconColor width={30} height={30} />],
     iconsLarge: [<ReactIconColor width={40} height={40} />],
   };

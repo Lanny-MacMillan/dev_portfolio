@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { gameDev } from "../components/assets/constants.js";
+import { gameDev } from "../assets/constants.js";
 
 export const ExperienceContainer = styled.div`
   display: flex;
