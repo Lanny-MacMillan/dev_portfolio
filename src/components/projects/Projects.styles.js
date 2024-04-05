@@ -538,12 +538,17 @@ export const Icons = styled.div`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
 `;
-export const StyledLink = styled.a`
-  text-decoration: none;
+
+export const Button = styled.button`
   font-size: 1em;
   font-family: "DM Sans", sans-serif;
   font-weight: 800;
   color: #4fecec;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  text-decoration: none;
+  cursor: pointer;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 

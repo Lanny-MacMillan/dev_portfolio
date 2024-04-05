@@ -1944,6 +1944,7 @@ export const SelfIconSmall = ({ width, height }) => (
     </a>
   </svg>
 );
+
 export const SelfIconLarge = ({ width, height }) => (
   <svg
     cache-id="4c9ed7f35cff4cc39b2da1b4f508f440"
