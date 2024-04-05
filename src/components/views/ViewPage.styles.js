@@ -21,9 +21,11 @@ export const InnerContainer = styled.div`
     font-size: 3em;
     /* border: 1px solid orange; */
   }
+  h2 {
+    color: #4fecec;
+  }
   span {
     color: #4fecec;
-    font-weight: 800;
   }
   p {
     font-size: 1.2emm;
@@ -105,4 +107,16 @@ export const RightDiv = styled.a`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     align-items: flex-start;
   }
+`;
+
+export const Button = styled.button`
+  font-size: 1em;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  color: #4fecec;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  text-decoration: none;
+  cursor: pointer;
 `;

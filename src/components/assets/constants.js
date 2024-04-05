@@ -46,12 +46,14 @@ export const teal = "#5be9b9";
 export const darkPurple = "#141c3a";
 
 export const theAdventure = {
-  nameText: "TheAdventure",
+  nameText: "The Adventure",
+  nameTextExpanded: "Unite with the Magi. Save Discordia.",
   colorSplash: gameDev,
   image: theAdventureImg,
   description:
-    "An sidescrolling RPG platformer. Can you discover whats destroying the land, unite the magi and bring a stop to it?",
-  fullDescription: "",
+    "A sidescrolling RPG platformer. Can you discover whats destroying the land, unite with the magi and bring a stop to it?",
+  fullDescription:
+    "This game was created using the unity Engine and C#. In this game we tackle a more robust inventory system, player levels, talent tree, crafting and equipment. In this side scrolling RPG you will face against an evil unseen in thousands of years, you will have to discover whats destroying the land, unite with the magi and bring a stop to it. Will you be able to complete your adventure?",
   link: "https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes",
   devType: "Game_Development",
   status: "In_Development",

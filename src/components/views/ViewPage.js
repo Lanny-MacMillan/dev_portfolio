@@ -8,6 +8,7 @@ import {
   LowerDiv,
   LeftDiv,
   RightDiv,
+  Button,
 } from "./ViewPage.styles";
 import Main from "../Main";
 
@@ -27,7 +28,7 @@ const ViewPage = () => {
     liveLink,
     link,
     devType,
-    // status,
+    status,
     // colorSplash,
   } = location.state;
 
@@ -41,16 +42,23 @@ const ViewPage = () => {
         <h1>{nameText}</h1>
         <h2>{nameTextExpanded}</h2>
         <Image src={img} />
-        {/* <h3>{description}</h3> */}
         <LowerDiv>
           <LeftDiv>
             <h3>{fullDescription}</h3>
           </LeftDiv>
           <RightDiv>
             {" "}
-            <Link href={link}>Source Code</Link>
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              Source_Code
+            </Link>
             <br />
-            <Link href={liveLink}>Open Project</Link>
+            {status === "In_Development" ? (
+              <Button>{status}</Button>
+            ) : (
+              <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+                Open_Project
+              </Link>
+            )}
           </RightDiv>
         </LowerDiv>
       </InnerContainer>
