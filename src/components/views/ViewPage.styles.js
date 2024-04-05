@@ -7,7 +7,6 @@ export const Container = styled.div`
   background: linear-gradient(#141c3a, #0a0f1e);
   color: white;
   display: flex;
-
   /* justify-content: center;
   align-items: center; */
   flex-direction: column;
@@ -47,6 +46,19 @@ export const InnerContainer = styled.div`
     width: 60vw;
     letter-spacing: 1px;
   }
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    margin: 0 1em 0 1em;
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    p {
+      font-size: 0.8emm;
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
 
   @media only screen and (min-width: 1500px) {
     height: auto;
@@ -64,6 +76,20 @@ export const Image = styled.img`
   object-fit: cover;
   /* object-fit: contain; */
   border: 3px solid white;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    /* object-fit: contain; */
+  }
+`;
+export const Header = styled.h1`
+  margin: 0;
+  font-size: 2em;
+`;
+
+export const SubHeader = styled.h2`
+  color: #4fecec;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    font-size: 1em;
+  }
 `;
 
 export const Link = styled.a`
@@ -85,6 +111,18 @@ export const LowerDiv = styled.a`
   height: 15vh;
   width: 100%;
   align-items: center;
+  @media only screen and (min-width: 320px) and (max-width: 1000px) {
+    flex-direction: column;
+    margin: 1em 0 0 0;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  }
+
+  @media only screen and (min-width: 1193px) and (max-width: 3500px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const BlueSpan = styled.span`
@@ -99,6 +137,12 @@ export const LeftDiv = styled.a`
   display: flex;
   width: auto;
   font-size: 1.2em;
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    font-size: 1em;
+  }
+  @media only screen and (min-width: 601px) and (max-width: 800px) {
+    font-size: 1em;
+  }
 `;
 
 export const RightDiv = styled.a`
@@ -108,10 +152,6 @@ export const RightDiv = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  /* span {
-    color: #4fecec;
-  } */
-
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     align-items: flex-start;
   }

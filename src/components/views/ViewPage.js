@@ -10,6 +10,8 @@ import {
   RightDiv,
   BlueSpan,
   WhiteSpan,
+  Header,
+  SubHeader,
 } from "./ViewPage.styles";
 import Main from "../Main";
 
@@ -72,8 +74,8 @@ const ViewPage = () => {
           {devTypeTwoofTwo}
           <BlueSpan>.</BlueSpan>
         </p>
-        <h1>{nameText}</h1>
-        <h2>{nameTextExpanded}</h2>
+        <Header>{nameText}</Header>
+        <SubHeader>{nameTextExpanded}</SubHeader>
         <Image src={img} />
         <LowerDiv>
           <LeftDiv>
