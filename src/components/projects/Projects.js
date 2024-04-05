@@ -80,6 +80,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={theQuickStop.nameText}
+            nameTextExpanded={theQuickStop.nameTextExpanded}
             img={theQuickStop.image}
             description={theQuickStop.description}
             fullDescription={theQuickStop.fullDescription}
@@ -112,6 +113,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={theAdventure.nameText}
+            nameTextExpanded={theAdventure.nameTextExpanded}
             img={theAdventure.image}
             description={theAdventure.description}
             fullDescription={theAdventure.fullDescription}
@@ -169,6 +171,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={tetris.nameText}
+            nameTextExpanded={tetris.nameTextExpanded}
             img={tetris.image}
             description={tetris.description}
             fullDescription={tetris.fullDescription}
@@ -200,6 +203,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={twoDudesNightmare.nameText}
+            nameTextExpanded={twoDudesNightmare.nameTextExpanded}
             img={twoDudesNightmare.image}
             description={twoDudesNightmare.description}
             fullDescription={twoDudesNightmare.fullDescription}
@@ -231,6 +235,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={crappyBird.nameText}
+            nameTextExpanded={crappyBird.nameTextExpanded}
             img={crappyBird.image}
             description={crappyBird.description}
             fullDescription={crappyBird.fullDescription}
@@ -262,6 +267,7 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={geoDash.nameText}
+            nameTextExpanded={geoDash.nameTextExpanded}
             img={geoDash.image}
             description={geoDash.description}
             fullDescription={geoDash.fullDescription}

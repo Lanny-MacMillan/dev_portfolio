@@ -31,6 +31,7 @@ function App() {
         <Route path="/2dNightmare" element={<ViewPage />} />
         <Route path="/TetrisReact" element={<ViewPage />} />
         <Route path="/GeometryDash" element={<ViewPage />} />
+        <Route path="*" element={<Main />} />
       </Routes>
     </>
   );

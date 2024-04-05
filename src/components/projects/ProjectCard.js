@@ -24,6 +24,7 @@ import {
 
 const ProjectCard = ({
   nameText,
+  nameTextExpanded,
   img,
   link,
   liveLink,
@@ -52,8 +53,10 @@ const ProjectCard = ({
   };
 
   const formattedName = nameText.replace(/\s/g, "");
+
   const data = {
     nameText,
+    nameTextExpanded,
     img,
     description,
     fullDescription,

@@ -77,6 +77,7 @@ export const theAdventure = {
 
 export const tetris = {
   nameText: "Tetris React",
+  nameTextExpanded: "Tetris.",
   image: tetrisReact,
   description: "A clone of the original Tetris, done with React.",
   fullDescription: "",
@@ -90,11 +91,13 @@ export const tetris = {
 
 export const theQuickStop = {
   nameText: "The Quickstop Library",
+  nameTextExpanded: "Download. Import. Build.",
   colorSplash: softwareDev,
   image: storybookImg,
   description:
     "A personal component library for all my building needs. Brings speed and ease with reusable components.",
-  fullDescription: "",
+  fullDescription:
+    "A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components.",
   link: "https://github.com/Lanny-MacMillan/TheQuickStop",
   devType: "Web_Development",
   status: "Live",
