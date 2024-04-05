@@ -60,7 +60,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplash={vacationApp.colorSplash}
             colorSplashWidth={"135px"}
             status={vacationApp.status}
-            devType={vacationApp.devType}
+            devTypeOneofTwo={vacationApp.devTypeOneofTwo}
+            devTypeTwoofTwo={vacationApp.devTypeTwoofTwo}
           />
         </ProjectOne>
         <ProjectTwo
@@ -93,7 +94,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"230px"}
             margin={"none"}
             type={"wide"}
-            devType={theQuickStop.devType}
+            devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
+            devTypeTwoofTwo={theQuickStop.devTypeTwoofTwo}
           />
         </ProjectTwo>
         <ProjectThree
@@ -125,7 +127,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"140px"}
             type={"wide"}
             status={theAdventure.status}
-            devType={theAdventure.devType}
+            devTypeOneofTwo={theAdventure.devTypeOneofTwo}
+            devTypeTwoofTwo={theAdventure.devTypeTwoofTwo}
           />
         </ProjectThree>
         <ProjectFour
@@ -145,13 +148,18 @@ const Projects = ({ projects, largeScreen }) => {
           <ProjectCard
             largeScreen={largeScreen}
             nameText={amiiboApp.nameText}
+            nameTextExpanded={amiiboApp.nameTextExpanded}
             img={amiiboApp.image}
             description={amiiboApp.description}
+            fullDescription={amiiboApp.fullDescription}
             icons={amiiboApp.icons}
             iconsLarge={amiiboApp.iconsLarge}
             link={amiiboApp.link}
+            liveLink={amiiboApp.liveLink}
             colorSplash={amiiboApp.colorSplash}
             colorSplashWidth={"120px"}
+            devTypeOneofTwo={amiiboApp.devTypeOneofTwo}
+            devTypeTwoofTwo={amiiboApp.devTypeTwoofTwo}
           />
         </ProjectFour>
         <ProjectFive
@@ -183,7 +191,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"120px"}
             margin={"none"}
             status={tetris.status}
-            devType={tetris.devType}
+            devTypeOneofTwo={tetris.devTypeOneofTwo}
+            devTypeTwoofTwo={tetris.devTypeTwoofTwo}
           />
         </ProjectFive>
         <ProjectSix
@@ -215,7 +224,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"140px"}
             margin={"none"}
             status={twoDudesNightmare.status}
-            devType={twoDudesNightmare.devType}
+            devTypeOneofTwo={twoDudesNightmare.devTypeOneofTwo}
+            devTypeTwoofTwo={twoDudesNightmare.devTypeTwoofTwo}
           />
         </ProjectSix>
         <ProjectSeven
@@ -247,7 +257,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplashWidth={"125px"}
             margin={"none"}
             status={crappyBird.status}
-            devType={crappyBird.devType}
+            devTypeOneofTwo={crappyBird.devTypeOneofTwo}
+            devTypeTwoofTwo={crappyBird.devTypeTwoofTwo}
           />
         </ProjectSeven>
         <ProjectEight
@@ -278,7 +289,8 @@ const Projects = ({ projects, largeScreen }) => {
             colorSplash={geoDash.colorSplash}
             colorSplashWidth={"155px"}
             status={geoDash.status}
-            devType={geoDash.devType}
+            devTypeOneofTwo={geoDash.devTypeOneofTwo}
+            devTypeTwoofTwo={geoDash.devTypeTwoofTwo}
           />
         </ProjectEight>
       </Container>

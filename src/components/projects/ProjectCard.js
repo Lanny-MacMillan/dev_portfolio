@@ -28,7 +28,8 @@ const ProjectCard = ({
   img,
   link,
   liveLink,
-  devType,
+  devTypeOneofTwo,
+  devTypeTwoofTwo,
   description,
   fullDescription,
   icons,
@@ -63,10 +64,11 @@ const ProjectCard = ({
     link,
     liveLink,
     colorSplash,
-    devType,
+    devTypeOneofTwo,
+    devTypeTwoofTwo,
     status,
   };
-  console.log("devType", devType);
+
   const renderProjectCard = !type && (
     <ProjectCardContainer
       onMouseEnter={() => setHoverState(true)}

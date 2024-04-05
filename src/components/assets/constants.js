@@ -53,9 +53,11 @@ export const theAdventure = {
   description:
     "A sidescrolling RPG platformer. Can you discover whats destroying the land, unite with the magi and bring a stop to it?",
   fullDescription:
-    "This game was created using the unity Engine and C#. In this game we tackle a more robust inventory system, player levels, talent tree, crafting and equipment. In this side scrolling RPG you will face against an evil unseen in thousands of years, you will have to discover whats destroying the land, unite with the magi and bring a stop to it. Will you be able to complete your adventure?",
+    "This game was created using the unity Engine and C#. In this game we tackle a more robust inventory system, player levels, talent tree, crafting and equipment. In this side scrolling RPG you will face against an evil unseen in thousands of years, you will have to discover whats destroying the land, unite with the magi and bring a stop to it",
   link: "https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes",
-  devType: "Game_Development",
+  liveLink: null,
+  devTypeOneofTwo: "Game",
+  devTypeTwoofTwo: "Development",
   status: "In_Development",
   icons: [
     <UnityIcon
@@ -79,13 +81,15 @@ export const theAdventure = {
 
 export const tetris = {
   nameText: "Tetris React",
-  nameTextExpanded: "Tetris.",
+  nameTextExpanded: "It's Tetris. In React.",
   image: tetrisReact,
   description: "A clone of the original Tetris, done with React.",
-  fullDescription: "",
+  fullDescription:
+    "This was created using React, with no state management like redux or backend. The player input is handled by an autofocused input field thats been removed from view. Creating the tetronimoes by class and shape then handling the board using CssGrid, React hooks and timed intervals to control the location, rotation, and drop rate while playing",
   link: "https://github.com/Lanny-MacMillan/tetrisClone",
   liveLink: "https://main.d2hd3lchmxht8m.amplifyapp.com/",
-  devType: "Web_Development",
+  devTypeOneofTwo: "Web",
+  devTypeTwoofTwo: "Development",
   status: "Live",
   icons: [<ReactIconColor width={30} height={30} />],
   iconsLarge: [<ReactIconColor width={40} height={40} />],
@@ -99,9 +103,11 @@ export const theQuickStop = {
   description:
     "A personal component library for all my building needs. Brings speed and ease with reusable components.",
   fullDescription:
-    "A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components.",
+    "A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components",
   link: "https://github.com/Lanny-MacMillan/TheQuickStop",
-  devType: "Web_Development",
+  liveLink: null,
+  devTypeOneofTwo: "Web",
+  devTypeTwoofTwo: "Development",
   status: "Live",
   icons: [
     <ReactIconColor width={30} height={30} />,
@@ -122,9 +128,12 @@ export const amiiboApp = {
   colorSplash: frontendDev,
   image: amiiboAppImg,
   description: "A Full Stack Nintendo Amiibos App for collectors.",
-  fullDescription: "",
+  fullDescription:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   link: "https://github.com/Lanny-MacMillan/Project2",
-  devType: "Web_Development",
+  liveLink: "",
+  devTypeOneofTwo: "Web",
+  devTypeTwoofTwo: "Development",
   status: "Live",
   icons: [
     <ExpressIcon width={30} height={30} />,
@@ -145,9 +154,12 @@ export const vacationApp = {
   colorSplash: frontendDev,
   image: vacationImg,
   description: "Full stack application that helps users while vacationing. ",
-  fullDescription: "",
+  fullDescription:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   link: "https://github.com/Lanny-MacMillan/capstone_frontend",
-  devType: "Web_Development",
+  liveLink: null,
+  devTypeOneofTwo: "Web",
+  devTypeTwoofTwo: "Development",
   status: "Live",
   icons: [
     <ReactIconColor width={30} height={30} />,
@@ -167,13 +179,16 @@ export const vacationApp = {
 
 export const crappyBird = {
   nameText: "Crappy Bird",
+  nameTextExpanded: "Flap. Drop. Avoid Pipes.",
   colorSplash: gameDev,
   image: crappyBirdImg,
   description: "A clone of the popular flappy bird",
-  fullDescription: "",
+  fullDescription:
+    "This game was created using the unity Engine and C#. This was my first game created in Unity. The clouds and pipes are instantiated randomly within rulesets, just outside of the camera to allow a more random level expirience with each play. I would still like to add wings to the bird and some hazards to the level as you progress",
   link: "https://github.com/Lanny-MacMillan/flappyBirdClone",
-  liveLink: null,
-  devType: "Game_Development",
+  liveLink: "https://lannymacmillan.itch.io/crappy-bird",
+  devTypeOneofTwo: "Game",
+  devTypeTwoofTwo: "Development",
   status: "Live",
   icons: [
     <UnityIcon
@@ -200,9 +215,12 @@ export const geoDash = {
   colorSplash: gameDev,
   image: geoDashImg,
   description: "Geo Dash with some twists",
-  fullDescription: "",
+  fullDescription:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   link: "https://github.com/Lanny-MacMillan/GeometryDash",
-  devType: "Game_Development",
+  liveLink: null,
+  devTypeOneofTwo: "Game",
+  devTypeTwoofTwo: "Development",
   status: "In_Development",
   icons: [
     <UnityIcon
@@ -227,12 +245,16 @@ export const geoDash = {
 
 export const twoDudesNightmare = {
   nameText: "2D Nightmare",
+  nameTextExpanded: "Survive the evil. Escape the woods.",
   colorSplash: gameDev,
   image: nightmareImg,
   description: "A sidescrolling platformer created in Unity ",
-  fullDescription: "",
+  fullDescription:
+    "This game was created using the unity Engine and C#. In this game we find Two Dudes who come across a remote cabin in the woods. With the only bridge down, and no where to go, these two dudes must find another way out of the woods and back to safety. But theres more in these woods than just trees. Survive the evil and escape the woods",
   link: "https://github.com/Lanny-MacMillan/Unity_Game_Two_Dudes",
-  devType: "Game_Development",
+  liveLink: null,
+  devTypeOneofTwo: "Game",
+  devTypeTwoofTwo: "Development",
   status: "In_Development",
   icons: [
     <UnityIcon

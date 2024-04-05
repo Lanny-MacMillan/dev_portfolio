@@ -8,7 +8,6 @@ import {
   LowerDiv,
   LeftDiv,
   RightDiv,
-  Button,
 } from "./ViewPage.styles";
 import Main from "../Main";
 
@@ -27,16 +26,48 @@ const ViewPage = () => {
     // description,
     liveLink,
     link,
-    devType,
+    devTypeOneofTwo,
+    devTypeTwoofTwo,
     status,
     // colorSplash,
   } = location.state;
 
+  const inDevelopment = status === "In_Development";
+  const projectAvailable = liveLink != null;
+
+  const ProjectLink = () => {
+    return projectAvailable ? (
+      <Link href={liveLink} target="_blank" rel="noopener noreferrer">
+        Open_Project
+      </Link>
+    ) : (
+      <p>
+        Link
+        <span>_</span>
+        Unavailable
+        <span>.</span>
+      </p>
+    );
+  };
+  const ProjectDetails = () => {
+    return inDevelopment ? (
+      <p>
+        In
+        <span>_</span>
+        Development
+        <span>.</span>
+      </p>
+    ) : (
+      <ProjectLink />
+    );
+  };
   return (
     <Container>
       <InnerContainer>
         <p>
-          {devType}
+          {devTypeOneofTwo}
+          <span>_</span>
+          {devTypeTwoofTwo}
           <span>.</span>
         </p>
         <h1>{nameText}</h1>
@@ -44,21 +75,16 @@ const ViewPage = () => {
         <Image src={img} />
         <LowerDiv>
           <LeftDiv>
-            <h3>{fullDescription}</h3>
+            <p>
+              {fullDescription} <span>.</span>
+            </p>
           </LeftDiv>
           <RightDiv>
-            {" "}
             <Link href={link} target="_blank" rel="noopener noreferrer">
               Source_Code
             </Link>
             <br />
-            {status === "In_Development" ? (
-              <Button>{status}</Button>
-            ) : (
-              <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-                Open_Project
-              </Link>
-            )}
+            <ProjectDetails />
           </RightDiv>
         </LowerDiv>
       </InnerContainer>
