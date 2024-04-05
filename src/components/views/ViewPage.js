@@ -8,6 +8,8 @@ import {
   LowerDiv,
   LeftDiv,
   RightDiv,
+  BlueSpan,
+  WhiteSpan,
 } from "./ViewPage.styles";
 import Main from "../Main";
 
@@ -38,14 +40,14 @@ const ViewPage = () => {
   const ProjectLink = () => {
     return projectAvailable ? (
       <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-        Open_Project
+        Open<WhiteSpan>_</WhiteSpan>Project<WhiteSpan>.</WhiteSpan>
       </Link>
     ) : (
       <p>
         Link
-        <span>_</span>
+        <BlueSpan>_</BlueSpan>
         Unavailable
-        <span>.</span>
+        <BlueSpan>.</BlueSpan>
       </p>
     );
   };
@@ -53,9 +55,9 @@ const ViewPage = () => {
     return inDevelopment ? (
       <p>
         In
-        <span>_</span>
+        <BlueSpan>_</BlueSpan>
         Development
-        <span>.</span>
+        <BlueSpan>.</BlueSpan>
       </p>
     ) : (
       <ProjectLink />
@@ -66,9 +68,9 @@ const ViewPage = () => {
       <InnerContainer>
         <p>
           {devTypeOneofTwo}
-          <span>_</span>
+          <BlueSpan>_</BlueSpan>
           {devTypeTwoofTwo}
-          <span>.</span>
+          <BlueSpan>.</BlueSpan>
         </p>
         <h1>{nameText}</h1>
         <h2>{nameTextExpanded}</h2>
@@ -76,15 +78,19 @@ const ViewPage = () => {
         <LowerDiv>
           <LeftDiv>
             <p>
-              {fullDescription} <span>.</span>
+              {fullDescription} <BlueSpan>.</BlueSpan>
             </p>
           </LeftDiv>
           <RightDiv>
-            <Link href={link} target="_blank" rel="noopener noreferrer">
-              Source_Code
-            </Link>
-            <br />
-            <ProjectDetails />
+            <div>
+              <Link href={link} target="_blank" rel="noopener noreferrer">
+                Source
+                <WhiteSpan>_</WhiteSpan>Code
+              </Link>
+              <WhiteSpan>.</WhiteSpan>
+              <br />
+              <ProjectDetails />
+            </div>
           </RightDiv>
         </LowerDiv>
       </InnerContainer>

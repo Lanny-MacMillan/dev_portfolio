@@ -212,6 +212,7 @@ export const crappyBird = {
 
 export const geoDash = {
   nameText: "Geometry Dash",
+  nameTextExpanded: "A learning project.",
   colorSplash: gameDev,
   image: geoDashImg,
   description: "Geo Dash with some twists",

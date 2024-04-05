@@ -40,9 +40,6 @@ export const InnerContainer = styled.div`
   h2 {
     color: #4fecec;
   }
-  span {
-    color: #4fecec;
-  }
   p {
     font-size: 1.2emm;
   }
@@ -66,7 +63,7 @@ export const Image = styled.img`
   overflow: hidden;
   object-fit: cover;
   /* object-fit: contain; */
-  /* border: 3px solid white; */
+  border: 3px solid white;
 `;
 
 export const Link = styled.a`
@@ -90,6 +87,14 @@ export const LowerDiv = styled.a`
   align-items: center;
 `;
 
+export const BlueSpan = styled.span`
+  color: #4fecec;
+`;
+
+export const WhiteSpan = styled.span`
+  color: #ffffff;
+`;
+
 export const LeftDiv = styled.a`
   display: flex;
   width: auto;
@@ -102,10 +107,10 @@ export const RightDiv = styled.a`
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  span {
+  align-items: end;
+  /* span {
     color: #4fecec;
-  }
+  } */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     align-items: flex-start;
