@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center; */
   flex-direction: column;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
+    min-height: 110vh;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
