@@ -104,7 +104,7 @@ export const theQuickStop = {
     "A personal component library for all my building needs. Brings speed and ease with reusable components.",
   fullDescription:
     "A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components",
-  link: "https://github.com/Lanny-MacMillan/TheQuickStop",
+  link: null,
   liveLink: null,
   devTypeOneofTwo: "Web",
   devTypeTwoofTwo: "Development",
@@ -131,7 +131,7 @@ export const amiiboApp = {
   fullDescription:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   link: "https://github.com/Lanny-MacMillan/Project2",
-  liveLink: "",
+  liveLink: null,
   devTypeOneofTwo: "Web",
   devTypeTwoofTwo: "Development",
   status: "Live",
