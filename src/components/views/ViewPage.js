@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import ShowCursor from "../assets/Tools/ShowCursor";
 import {
   Container,
   InnerContainer,
@@ -27,7 +28,6 @@ const ViewPage = () => {
     nameTextExpanded,
     img,
     fullDescription,
-    // description,
     liveLink,
     link,
     devTypeOneofTwo,
@@ -38,35 +38,54 @@ const ViewPage = () => {
 
   const inDevelopment = status === "In_Development";
   const projectAvailable = liveLink != null;
+  const repoAvailable = link != null;
 
-  const ProjectLink = () => {
-    return projectAvailable ? (
+  const projectLink = projectAvailable ? (
+    <p>
       <Link href={liveLink} target="_blank" rel="noopener noreferrer">
         Open<WhiteSpan>_</WhiteSpan>Project<WhiteSpan>.</WhiteSpan>
       </Link>
-    ) : (
-      <p>
-        Link
-        <BlueSpan>_</BlueSpan>
-        Unavailable
-        <BlueSpan>.</BlueSpan>
-      </p>
-    );
-  };
-  const ProjectDetails = () => {
-    return inDevelopment ? (
-      <p>
-        In
-        <BlueSpan>_</BlueSpan>
-        Development
-        <BlueSpan>.</BlueSpan>
-      </p>
-    ) : (
-      <ProjectLink />
-    );
-  };
+    </p>
+  ) : (
+    <p>
+      Link
+      <BlueSpan>_</BlueSpan>
+      Unavailable
+      <BlueSpan>.</BlueSpan>
+    </p>
+  );
+
+  const projectDetails = inDevelopment ? (
+    <p>
+      In
+      <BlueSpan>_</BlueSpan>
+      Development
+      <BlueSpan>.</BlueSpan>
+    </p>
+  ) : (
+    projectLink
+  );
+
+  const repoDetails = repoAvailable ? (
+    <p>
+      <Link href={link} target="_blank" rel="noopener noreferrer">
+        Source
+        <WhiteSpan>_</WhiteSpan>Code
+      </Link>
+      <WhiteSpan>.</WhiteSpan>
+    </p>
+  ) : (
+    <p>
+      Private
+      <BlueSpan>_</BlueSpan>
+      Repo
+      <BlueSpan>.</BlueSpan>
+    </p>
+  );
+
   return (
     <Container>
+      <ShowCursor />
       <InnerContainer>
         <p>
           {devTypeOneofTwo}
@@ -85,13 +104,8 @@ const ViewPage = () => {
           </LeftDiv>
           <RightDiv>
             <div>
-              <Link href={link} target="_blank" rel="noopener noreferrer">
-                Source
-                <WhiteSpan>_</WhiteSpan>Code
-              </Link>
-              <WhiteSpan>.</WhiteSpan>
-              <br />
-              <ProjectDetails />
+              {repoDetails}
+              {projectDetails}
             </div>
           </RightDiv>
         </LowerDiv>

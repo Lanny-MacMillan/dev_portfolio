@@ -32,6 +32,7 @@ export const InnerContainer = styled.div`
   font-weight: 800;
   font-family: "DM Sans", sans-serif;
   max-width: 1500px;
+  /* max-width: 1270px; */
 
   h1 {
     margin: 0;
@@ -67,6 +68,7 @@ export const InnerContainer = styled.div`
 `;
 
 export const Image = styled.img`
+  // this image container is 1270 x 425px  on laptop
   display: block;
   /* max-width: 95%; */
   width: auto;
