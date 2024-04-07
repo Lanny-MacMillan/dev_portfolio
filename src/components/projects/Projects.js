@@ -26,8 +26,8 @@ import {
 } from "./Projects.styles";
 
 const Projects = ({ projects, largeScreen }) => {
-  const xVarNegative = largeScreen ? -150 : -75;
-  const xVarPositive = largeScreen ? 150 : 75;
+  const xVarNegative = largeScreen ? -150 : -55;
+  const xVarPositive = largeScreen ? 150 : 55;
 
   return (
     <ProjectsContainer ref={projects}>

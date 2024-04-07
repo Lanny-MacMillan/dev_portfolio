@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import ShowCursor from "../assets/Tools/ShowCursor";
 import {
   Container,
@@ -86,30 +87,55 @@ const ViewPage = () => {
   return (
     <Container>
       <ShowCursor />
-      <InnerContainer>
-        <p>
-          {devTypeOneofTwo}
-          <BlueSpan>_</BlueSpan>
-          {devTypeTwoofTwo}
-          <BlueSpan>.</BlueSpan>
-        </p>
-        <Header>{nameText}</Header>
-        <SubHeader>{nameTextExpanded}</SubHeader>
-        <Image src={img} />
-        <LowerDiv>
-          <LeftDiv>
-            <p>
-              {fullDescription} <BlueSpan>.</BlueSpan>
-            </p>
-          </LeftDiv>
-          <RightDiv>
-            <div>
-              {repoDetails}
-              {projectDetails}
-            </div>
-          </RightDiv>
-        </LowerDiv>
-      </InnerContainer>
+      <AnimatePresence>
+        <InnerContainer>
+          <motion.div
+            style={{ marginTop: "1em" }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
+            {devTypeOneofTwo}
+            <BlueSpan>_</BlueSpan>
+            {devTypeTwoofTwo}
+            <BlueSpan>.</BlueSpan>
+          </motion.div>
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
+            transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
+          >
+            <Header>{nameText}</Header>
+            <SubHeader>{nameTextExpanded}</SubHeader>
+          </motion.div>
+          <Image src={img} />{" "}
+          <LowerDiv>
+            <LeftDiv>
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 20, opacity: 0 }}
+                transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
+              >
+                {fullDescription} <BlueSpan>.</BlueSpan>
+              </motion.div>
+            </LeftDiv>
+            <RightDiv>
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 20, opacity: 0 }}
+                transition={{ ease: "easeInOut", duration: 1, delay: 2.5 }}
+              >
+                {repoDetails}
+                {projectDetails}
+              </motion.div>
+            </RightDiv>
+          </LowerDiv>
+        </InnerContainer>
+      </AnimatePresence>
     </Container>
   );
 };

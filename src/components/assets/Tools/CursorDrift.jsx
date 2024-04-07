@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const CursorDrift = () => {
   const cursorRef = useRef(null);
@@ -8,7 +9,7 @@ const CursorDrift = () => {
     "undefined" != typeof document.documentElement.ontouchstart
   );
 
-  useEffect(() => {
+  useGSAP(() => {
     const cursor = cursorRef.current;
     if (isTouch || !cursor) {
       return;
