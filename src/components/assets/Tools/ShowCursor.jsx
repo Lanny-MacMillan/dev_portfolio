@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ShowCursor = () => {
   const cursorRef = useRef(null);
@@ -9,7 +10,7 @@ const ShowCursor = () => {
     "undefined" != typeof document.documentElement.ontouchstart
   );
 
-  useEffect(() => {
+  useGSAP(() => {
     const cursor = cursorRef.current;
     if (isTouch || !cursor) {
       return;
@@ -20,7 +21,7 @@ const ShowCursor = () => {
 
       const isTargetLinkOrBtn =
         target?.closest("a") || target?.closest("button");
-
+      // controls mouse follow
       gsap.to(cursor, {
         x: x + -19,
         y: y + -19,
@@ -28,6 +29,7 @@ const ShowCursor = () => {
         ease: "power4.out",
         opacity: isTargetLinkOrBtn ? 0.6 : 1,
       });
+      // controls rotation
       gsap.to(cursor, {
         rotation: "+=360",
         transformOrigin: "50% 50%",
@@ -45,7 +47,7 @@ const ShowCursor = () => {
     });
   }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     const pointer = pointerRef.current;
     if (isTouch || !pointer) {
       return;
@@ -56,7 +58,7 @@ const ShowCursor = () => {
 
       const isTargetLinkOrBtn =
         target?.closest("a") || target?.closest("button");
-
+      // controls mouse follow
       gsap.to(pointer, {
         x: x + -12,
         y: y + -12,
@@ -64,6 +66,7 @@ const ShowCursor = () => {
         ease: "power4.out",
         opacity: isTargetLinkOrBtn ? 0.6 : 1,
       });
+      // controls rotation
       gsap.to(pointer, {
         rotation: "-=360",
         transformOrigin: "50% 50%",
@@ -105,13 +108,11 @@ const ShowCursor = () => {
             ref={pointerRef}
             style={{
               border: "3px solid #c4cbca",
-              // background: "#4fecec",
               width: "15px",
               height: "15px",
               position: "fixed",
               top: "0",
               left: "0",
-              // borderRadius: "100%",
               zIndex: "10000",
               userSelect: "none",
               pointerEvents: "none",
