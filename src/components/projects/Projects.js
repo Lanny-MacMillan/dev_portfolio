@@ -1,15 +1,16 @@
-import React from "react";
-import ProjectCard from "./ProjectCard";
+import React from 'react';
+import ProjectCard from './ProjectCard';
 import {
   theAdventure,
   tetris,
   theQuickStop,
   amiiboApp,
-  vacationApp,
+  // vacationApp,
   crappyBird,
   geoDash,
   twoDudesNightmare,
-} from "../assets/constants";
+  aiToolbox,
+} from '../assets/constants';
 
 import {
   ProjectsContainer,
@@ -23,7 +24,7 @@ import {
   ProjectSeven,
   ProjectEight,
   Header,
-} from "./Projects.styles";
+} from './Projects.styles';
 
 const Projects = ({ projects, largeScreen }) => {
   const xVarNegative = largeScreen ? -150 : -55;
@@ -49,19 +50,20 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={vacationApp.nameText}
-            img={vacationApp.image}
-            description={vacationApp.description}
-            fullDescription={vacationApp.fullDescription}
-            icons={vacationApp.icons}
-            iconsLarge={vacationApp.iconsLarge}
-            link={vacationApp.link}
-            liveLink={vacationApp.liveLink}
-            colorSplash={vacationApp.colorSplash}
-            colorSplashWidth={"135px"}
-            status={vacationApp.status}
-            devTypeOneofTwo={vacationApp.devTypeOneofTwo}
-            devTypeTwoofTwo={vacationApp.devTypeTwoofTwo}
+            nameText={aiToolbox.nameText}
+            nameTextExpanded={aiToolbox.nameTextExpanded}
+            img={aiToolbox.image}
+            description={aiToolbox.description}
+            fullDescription={aiToolbox.fullDescription}
+            icons={aiToolbox.icons}
+            iconsLarge={aiToolbox.iconsLarge}
+            link={aiToolbox.link}
+            liveLink={aiToolbox.liveLink}
+            colorSplash={aiToolbox.colorSplash}
+            colorSplashWidth={'110px'}
+            status={aiToolbox.status}
+            devTypeOneofTwo={aiToolbox.devTypeOneofTwo}
+            devTypeTwoofTwo={aiToolbox.devTypeTwoofTwo}
           />
         </ProjectOne>
         <ProjectTwo
@@ -91,9 +93,9 @@ const Projects = ({ projects, largeScreen }) => {
             liveLink={theQuickStop.liveLink}
             colorSplash={theQuickStop.colorSplash}
             status={theQuickStop.status}
-            colorSplashWidth={"230px"}
-            margin={"none"}
-            type={"wide"}
+            colorSplashWidth={'230px'}
+            margin={'none'}
+            type={'wide'}
             devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
             devTypeTwoofTwo={theQuickStop.devTypeTwoofTwo}
           />
@@ -124,8 +126,8 @@ const Projects = ({ projects, largeScreen }) => {
             link={theAdventure.link}
             liveLink={theAdventure.liveLink}
             colorSplash={theAdventure.colorSplash}
-            colorSplashWidth={"140px"}
-            type={"wide"}
+            colorSplashWidth={'140px'}
+            type={'wide'}
             status={theAdventure.status}
             devTypeOneofTwo={theAdventure.devTypeOneofTwo}
             devTypeTwoofTwo={theAdventure.devTypeTwoofTwo}
@@ -157,7 +159,7 @@ const Projects = ({ projects, largeScreen }) => {
             link={amiiboApp.link}
             liveLink={amiiboApp.liveLink}
             colorSplash={amiiboApp.colorSplash}
-            colorSplashWidth={"120px"}
+            colorSplashWidth={'120px'}
             devTypeOneofTwo={amiiboApp.devTypeOneofTwo}
             devTypeTwoofTwo={amiiboApp.devTypeTwoofTwo}
           />
@@ -188,8 +190,8 @@ const Projects = ({ projects, largeScreen }) => {
             link={tetris.link}
             liveLink={tetris.liveLink}
             colorSplash={tetris.colorSplash}
-            colorSplashWidth={"120px"}
-            margin={"none"}
+            colorSplashWidth={'120px'}
+            margin={'none'}
             status={tetris.status}
             devTypeOneofTwo={tetris.devTypeOneofTwo}
             devTypeTwoofTwo={tetris.devTypeTwoofTwo}
@@ -221,8 +223,8 @@ const Projects = ({ projects, largeScreen }) => {
             link={twoDudesNightmare.link}
             liveLink={twoDudesNightmare.liveLink}
             colorSplash={twoDudesNightmare.colorSplash}
-            colorSplashWidth={"140px"}
-            margin={"none"}
+            colorSplashWidth={'140px'}
+            margin={'none'}
             status={twoDudesNightmare.status}
             devTypeOneofTwo={twoDudesNightmare.devTypeOneofTwo}
             devTypeTwoofTwo={twoDudesNightmare.devTypeTwoofTwo}
@@ -254,8 +256,8 @@ const Projects = ({ projects, largeScreen }) => {
             link={crappyBird.link}
             liveLink={crappyBird.liveLink}
             colorSplash={crappyBird.colorSplash}
-            colorSplashWidth={"125px"}
-            margin={"none"}
+            colorSplashWidth={'125px'}
+            margin={'none'}
             status={crappyBird.status}
             devTypeOneofTwo={crappyBird.devTypeOneofTwo}
             devTypeTwoofTwo={crappyBird.devTypeTwoofTwo}
@@ -287,7 +289,7 @@ const Projects = ({ projects, largeScreen }) => {
             link={geoDash.link}
             liveLink={geoDash.liveLink}
             colorSplash={geoDash.colorSplash}
-            colorSplashWidth={"155px"}
+            colorSplashWidth={'155px'}
             status={geoDash.status}
             devTypeOneofTwo={geoDash.devTypeOneofTwo}
             devTypeTwoofTwo={geoDash.devTypeTwoofTwo}

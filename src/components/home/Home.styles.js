@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ export const OurHerosName = styled.div`
   font-size: 24px;
   font-weight: 800;
   margin-left: 2em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: #141c3a;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -50,7 +50,7 @@ export const ShortText = styled.div`
   justify-content: center;
   font-size: 1.8em;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 
   /* color: white; */
   color: #141c3a;
@@ -103,7 +103,7 @@ export const PageRefIcon = styled.div`
   justify-content: flex-end;
   font-size: 12px;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   /* color: white; */
   color: #141c3a;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -121,7 +121,7 @@ export const Links = styled.div`
   display: flex;
   font-size: 18px;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 
   /* color: white; */
   color: #141c3a;
@@ -274,7 +274,7 @@ export const ChatDiv = styled.div`
   position: relative;
   /* width: 100%; */
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1em;
   height: auto;
   background-color: #141c3a;
@@ -301,7 +301,7 @@ export const TalkText = styled.div`
   line-height: 1.5em;
   color: white;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.2em;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -320,7 +320,7 @@ export const ChatArrow = styled.div`
   text-align: left;
   line-height: 1.5em;
   &:before {
-    content: " ";
+    content: ' ';
     position: absolute;
     width: 0;
     height: 0;
@@ -332,7 +332,7 @@ export const ChatArrow = styled.div`
     border-color: #4fecec transparent transparent transparent;
   }
   &:after {
-    content: " ";
+    content: ' ';
     position: absolute;
     width: 0;
     height: 0;
@@ -370,7 +370,7 @@ export const Cursor = styled.div`
 `;
 
 export const BorderBlinkDiv = styled.div`
-  width: ${(props) => (props.width ? props.width : "500px")};
+  width: ${(props) => (props.width ? props.width : '500px')};
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     margin-top: 2.5em;
     width: 225px;

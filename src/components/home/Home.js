@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   BodyContainer,
   IconContainer,
@@ -11,12 +11,12 @@ import {
   ChatArrow,
   CenteredDiv,
   BorderBlinkDiv,
-} from "./Home.styles.js";
-import BorderBlink from "../assets/anim/borderBlink/BorderBlink.js";
-import DevDesktop from "../assets/anim/devDesktop/DevDesktop.js";
+} from './Home.styles.js';
+import BorderBlink from '../assets/anim/borderBlink/BorderBlink.js';
+import DevDesktop from '../assets/anim/devDesktop/DevDesktop.js';
 
 const Home = ({ home, largeScreen }) => {
-  const width = largeScreen ? "500px" : "225px";
+  const width = largeScreen ? '500px' : '225px';
 
   return (
     <BodyContainer>
@@ -31,11 +31,10 @@ const Home = ({ home, largeScreen }) => {
                 <ChatArrow />
                 <TalkText>
                   I'm Lanny,
-                  <br />A software/web developer, indie gamemaker and designer.
-                  I'm also a highly organized and creative problem solver with a
-                  passion for providing well crafted solutions. I love to
-                  collaborate on projects and thrive solving front and back end
-                  challenges.
+                  <br />A software/web developer, indie gamemaker and designer. I'm
+                  also a highly organized and creative problem solver with a passion
+                  for providing well crafted solutions. I love to collaborate on
+                  projects and thrive solving front and back end challenges.
                 </TalkText>
               </ChatDiv>
             </HeroHeader>

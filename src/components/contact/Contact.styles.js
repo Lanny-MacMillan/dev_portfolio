@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ export const Container = styled.div`
   /* justify-content: center; */
   color: white;
   background: #1a191d;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   min-width: 100%;
   /* border: 3px solid purple; */
 
@@ -91,13 +91,11 @@ export const ShowDiv1 = styled.div`
   width: 30%;
   height: 70%;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
     width: auto;
@@ -132,13 +130,11 @@ export const ShowDiv2 = styled.div`
   height: 70%;
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
 
   bottom: 60%;
   position: relative;
@@ -183,7 +179,7 @@ export const Header = styled.div`
   /* justify-content: center; */
   /* align-items: center; */
   font-size: 4.5em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -204,7 +200,7 @@ export const CardHeader = styled.div`
   display: flex;
   justify-content: center;
   font-size: 1.3em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -229,7 +225,7 @@ export const CardSubHeader = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.9em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -281,7 +277,7 @@ export const CardFooter = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.9em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -355,8 +351,8 @@ export const StartProject = styled.div`
   top: 125px;
   border: 2px solid white;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   max-width: 1400px;
 
   @media only screen and (min-width: 320px) and (max-width: 800px) {
@@ -389,7 +385,7 @@ export const CalendlyLink = styled.div`
 export const ConnectHeader = styled.div`
   align-self: center;
   font-size: 2em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -407,7 +403,7 @@ export const ConnectHeader = styled.div`
 export const ConnectBody = styled.div`
   align-self: center;
   font-size: 1em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -475,5 +471,5 @@ export const InfoDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: "200px";
+  width: '200px';
 `;

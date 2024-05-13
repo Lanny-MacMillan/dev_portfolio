@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+'use client';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const BlurryCursor = ({ isActive }) => {
   const mouse = useRef({ x: 0, y: 0 });
@@ -20,7 +20,7 @@ const BlurryCursor = ({ isActive }) => {
       x: clientX,
       y: clientY,
       duration: 0.7,
-      ease: "power4",
+      ease: 'power4',
     };
   };
 
@@ -43,10 +43,10 @@ const BlurryCursor = ({ isActive }) => {
 
   useEffect(() => {
     animate();
-    window.addEventListener("mousemove", manageMouseMove);
+    window.addEventListener('mousemove', manageMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", manageMouseMove);
+      window.removeEventListener('mousemove', manageMouseMove);
       window.cancelAnimationFrame(rafId.current);
     };
   }, [isActive]);
@@ -55,16 +55,16 @@ const BlurryCursor = ({ isActive }) => {
     <div
       ref={circle}
       style={{
-        border: "3px solid #4fecec",
+        border: '3px solid #4fecec',
         width: size,
         height: size,
-        position: "fixed",
-        top: "0",
-        left: "0",
-        borderRadius: "100%",
-        zIndex: "10000",
-        userSelect: "none",
-        pointerEvents: "none",
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        borderRadius: '100%',
+        zIndex: '10000',
+        userSelect: 'none',
+        pointerEvents: 'none',
       }}
     />
   );

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -30,7 +30,7 @@ export const InnerContainer = styled.div`
   margin: 0 6em 0 6em;
   letter-spacing: 1px;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   max-width: 1500px;
   /* max-width: 1270px; */
 
@@ -97,7 +97,7 @@ export const SubHeader = styled.h2`
 
 export const Link = styled.a`
   font-size: 1em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   color: #4fecec;
   background: none !important;

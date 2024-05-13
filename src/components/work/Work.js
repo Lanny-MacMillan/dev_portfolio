@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // import {
 //   ReactIconColor,
 //   JavascriptIcon,
@@ -17,7 +17,7 @@ import {
   Info,
   Title,
   JobTitle,
-} from "./Work.styles.js";
+} from './Work.styles.js';
 
 const Work = ({ work, largeScreen }) => {
   const Timeline = () => {
@@ -58,9 +58,9 @@ const Work = ({ work, largeScreen }) => {
               <JobTitle>Indie Game Developer</JobTitle>
               <Smalltext>December 2023 - current</Smalltext>
               <p>
-                Using the Unity game engine, C# and Object Oriented Programming
-                to adeptly design and code captivating 2D games, ensuring
-                optimal performance and engaging player experiences!
+                Using the Unity game engine, C# and Object Oriented Programming to
+                adeptly design and code captivating 2D games, ensuring optimal
+                performance and engaging player experiences!
               </p>
               {/* <ul>
                 <li>MC to market and global expansion.</li>
@@ -86,17 +86,12 @@ const Work = ({ work, largeScreen }) => {
               <Smalltext>March 2018 - March 2022</Smalltext>
               <ul>
                 <li>
-                  Managed and facilitated the installation and completion of
-                  projects in the million dollar range by leading teams,
-                  collaborating and delivering an MVP on time and under budget
-                  to our end users.
+                  Managed and facilitated the installation and completion of projects
+                  in the million dollar range by leading teams, collaborating and
+                  delivering an MVP on time and under budget to our end users.
                 </li>
-                <li>
-                  Contribution to the design and creation of many projects
-                </li>
-                <li>
-                  Managed multiple teams, team schedules, project scheduling.
-                </li>
+                <li>Contribution to the design and creation of many projects</li>
+                <li>Managed multiple teams, team schedules, project scheduling.</li>
                 <li>Exceeded 2021 expected profit margins by 40%.</li>
               </ul>
             </Info>

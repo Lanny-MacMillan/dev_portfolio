@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useState } from "react";
-import Home from "./home/Home";
-import Skills from "./skills/Skills.js";
-import Projects from "./projects/Projects.js";
-import Work from "./work/Work.js";
-import Contact from "./contact/Contact";
-import ScrollToTop from "./util/ScrollToTop.js";
-import CursorDrift from "./assets/Tools/CursorDrift.jsx";
+import React, { useRef, useEffect, useState } from 'react';
+import Home from './home/Home';
+import Skills from './skills/Skills.js';
+import Projects from './projects/Projects.js';
+import Work from './work/Work.js';
+import Contact from './contact/Contact';
+import ScrollToTop from './util/ScrollToTop.js';
+import CursorDrift from './assets/Tools/CursorDrift.jsx';
 import {
   HeaderContainer,
   OurHerosName,
@@ -14,18 +14,12 @@ import {
   LinksContent,
   Links,
   PageRefIcon,
-} from "./home/Home.styles.js";
+} from './home/Home.styles.js';
 
 function Main() {
   const [largeScreen, setLargeScreen] = useState(false);
 
-  const pages = [
-    "// home",
-    "// skills",
-    "// projects",
-    "// work",
-    "// contact",
-  ];
+  const pages = ['// home', '// skills', '// projects', '// work', '// contact'];
 
   const pageRef = [
     useRef(null),
@@ -37,7 +31,7 @@ function Main() {
 
   const scrollToRef = (ref) => {
     pageRef[ref].current.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -50,17 +44,17 @@ function Main() {
       }
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        maxWidth: "100vw",
-        overflow: "hidden",
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '100vw',
+        overflow: 'hidden',
       }}
     >
       <HeaderContainer>

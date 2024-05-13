@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Transition } from "@headlessui/react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { Transition } from '@headlessui/react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   ProjectCardContainer,
@@ -20,7 +20,7 @@ import {
   ColorAccentLarge,
   Icons,
   Button,
-} from "./Projects.styles";
+} from './Projects.styles';
 
 const ProjectCard = ({
   nameText,
@@ -49,11 +49,11 @@ const ProjectCard = ({
 
   const navigate = useNavigate();
   const hoverStyle = {
-    transform: "scale(1.05)",
-    transformOrigin: "50% 50%",
+    transform: 'scale(1.05)',
+    transformOrigin: '50% 50%',
   };
 
-  const formattedName = nameText.replace(/\s/g, "");
+  const formattedName = nameText.replace(/\s/g, '');
 
   const data = {
     nameText,
@@ -126,7 +126,7 @@ const ProjectCard = ({
     </ProjectCardContainer>
   );
 
-  const renderProjectCardLarge = type === "large" && (
+  const renderProjectCardLarge = type === 'large' && (
     <ProjectCardContainerLarge
       height={height}
       onMouseEnter={() => setHoverState(true)}
@@ -190,7 +190,7 @@ const ProjectCard = ({
     </ProjectCardContainerLarge>
   );
 
-  const renderProjectCardWide = type === "wide" && (
+  const renderProjectCardWide = type === 'wide' && (
     <ProjectCardContainerWide
       height={height}
       onMouseEnter={() => setHoverState(true)}

@@ -1,7 +1,7 @@
-import React from "react";
-import Main from "./components/Main.js";
-import { Route, Routes } from "react-router";
-import ViewPage from "./components/views/ViewPage.js";
+import React from 'react';
+import Main from './components/Main.js';
+import { Route, Routes } from 'react-router';
+import ViewPage from './components/views/ViewPage.js';
 
 function App() {
   // const [largeScreen, setLargeScreen] = useState(false);
@@ -23,7 +23,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/VacationApp" element={<ViewPage />} />
+        <Route path="/AiToolbox" element={<ViewPage />} />
         <Route path="/TheQuickStopLibrary" element={<ViewPage />} />
         <Route path="/TheAdventure" element={<ViewPage />} />
         <Route path="/AmiiboApp" element={<ViewPage />} />

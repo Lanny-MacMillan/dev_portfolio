@@ -1,22 +1,22 @@
 /* eslint-disable */
 
-import { useEffect } from "react";
-import { ReactComponent as Svg } from "./devDesktop.svg";
+import { useEffect } from 'react';
+import { ReactComponent as Svg } from './devDesktop.svg';
 
 export default function DevDesktop() {
   useEffect(() => {
     !(function (t, e) {
-      "object" == typeof exports && "undefined" != typeof module
+      'object' == typeof exports && 'undefined' != typeof module
         ? (module.exports = e())
-        : "function" == typeof __SVGATOR_DEFINE__ && __SVGATOR_DEFINE__.amd
+        : 'function' == typeof __SVGATOR_DEFINE__ && __SVGATOR_DEFINE__.amd
         ? __SVGATOR_DEFINE__(e)
         : (((t =
-            "undefined" != typeof globalThis
+            'undefined' != typeof globalThis
               ? globalThis
               : t || self).__SVGATOR_PLAYER__ = t.__SVGATOR_PLAYER__ || {}),
-          (t.__SVGATOR_PLAYER__["91c80d77"] = e()));
+          (t.__SVGATOR_PLAYER__['91c80d77'] = e()));
     })(this, function () {
-      "use strict";
+      'use strict';
       function t(t, e) {
         var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
@@ -39,40 +39,36 @@ export default function DevDesktop() {
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
             : t(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t)
-                );
+                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               });
         }
         return e;
       }
       function n(t) {
         return (n =
-          "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+          'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (t) {
                 return typeof t;
               }
             : function (t) {
                 return t &&
-                  "function" == typeof Symbol &&
+                  'function' == typeof Symbol &&
                   t.constructor === Symbol &&
                   t !== Symbol.prototype
-                  ? "symbol"
+                  ? 'symbol'
                   : typeof t;
               })(t);
       }
       function r(t, e) {
         if (!(t instanceof e))
-          throw new TypeError("Cannot call a class as a function");
+          throw new TypeError('Cannot call a class as a function');
       }
       function i(t, e) {
         for (var n = 0; n < e.length; n++) {
           var r = e[n];
           (r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
-            "value" in r && (r.writable = !0),
+            'value' in r && (r.writable = !0),
             Object.defineProperty(t, r.key, r);
         }
       }
@@ -107,13 +103,13 @@ export default function DevDesktop() {
           })(t, e);
       }
       function s() {
-        if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+        if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
-        if ("function" == typeof Proxy) return !0;
+        if ('function' == typeof Proxy) return !0;
         try {
           return (
             Boolean.prototype.valueOf.call(
-              Reflect.construct(Boolean, [], function () {})
+              Reflect.construct(Boolean, [], function () {}),
             ),
             !0
           );
@@ -132,22 +128,22 @@ export default function DevDesktop() {
             }).apply(null, arguments);
       }
       function c(t, e) {
-        if (e && ("object" == typeof e || "function" == typeof e)) return e;
+        if (e && ('object' == typeof e || 'function' == typeof e)) return e;
         if (void 0 !== e)
           throw new TypeError(
-            "Derived constructors may only return object or undefined"
+            'Derived constructors may only return object or undefined',
           );
         return (function (t) {
           if (void 0 === t)
             throw new ReferenceError(
-              "this hasn't been initialised - super() hasn't been called"
+              "this hasn't been initialised - super() hasn't been called",
             );
           return t;
         })(t);
       }
       function h(t, e, n) {
         return (h =
-          "undefined" != typeof Reflect && Reflect.get
+          'undefined' != typeof Reflect && Reflect.get
             ? Reflect.get
             : function (t, e, n) {
                 var r = (function (t, e) {
@@ -172,26 +168,26 @@ export default function DevDesktop() {
           })(t) ||
           (function (t) {
             if (
-              ("undefined" != typeof Symbol && null != t[Symbol.iterator]) ||
-              null != t["@@iterator"]
+              ('undefined' != typeof Symbol && null != t[Symbol.iterator]) ||
+              null != t['@@iterator']
             )
               return Array.from(t);
           })(t) ||
           (function (t, e) {
             if (!t) return;
-            if ("string" == typeof t) return d(t, e);
+            if ('string' == typeof t) return d(t, e);
             var n = Object.prototype.toString.call(t).slice(8, -1);
-            "Object" === n && t.constructor && (n = t.constructor.name);
-            if ("Map" === n || "Set" === n) return Array.from(t);
+            'Object' === n && t.constructor && (n = t.constructor.name);
+            if ('Map' === n || 'Set' === n) return Array.from(t);
             if (
-              "Arguments" === n ||
+              'Arguments' === n ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
             )
               return d(t, e);
           })(t) ||
           (function () {
             throw new TypeError(
-              "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+              'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
             );
           })()
         );
@@ -208,18 +204,16 @@ export default function DevDesktop() {
       }
       Number.isInteger ||
         (Number.isInteger = function (t) {
-          return "number" == typeof t && isFinite(t) && Math.floor(t) === t;
+          return 'number' == typeof t && isFinite(t) && Math.floor(t) === t;
         }),
         Number.EPSILON || (Number.EPSILON = 2220446049250313e-31);
       var g = p(Math.pow(10, -6));
       function p(t) {
-        var e =
-          arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        return y(t, e, "round");
+        var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        return y(t, e, 'round');
       }
       function m(t, e) {
-        var n =
-          arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g;
+        var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g;
         return Math.abs(t - e) < n;
       }
       p(Math.pow(10, -2)), p(Math.pow(10, -4));
@@ -238,14 +232,10 @@ export default function DevDesktop() {
         return 3 * n * r * (t * r + e * n) + n * n * n;
       }
       function x() {
-        var t =
-            arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          e =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          n =
-            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          r =
-            arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
         return t < 0 || t > 1 || n < 0 || n > 1
           ? null
           : m(t, e) && m(n, r)
@@ -274,10 +264,8 @@ export default function DevDesktop() {
         return 1 === t ? 1 : 0;
       }
       function E() {
-        var t =
-            arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          e =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (1 === t) {
           if (0 === e) return O;
           if (1 === e) return S;
@@ -297,29 +285,12 @@ export default function DevDesktop() {
         R = (function () {
           function t() {
             var e =
-                arguments.length > 0 && void 0 !== arguments[0]
-                  ? arguments[0]
-                  : 1,
-              n =
-                arguments.length > 1 && void 0 !== arguments[1]
-                  ? arguments[1]
-                  : 0,
-              i =
-                arguments.length > 2 && void 0 !== arguments[2]
-                  ? arguments[2]
-                  : 0,
-              o =
-                arguments.length > 3 && void 0 !== arguments[3]
-                  ? arguments[3]
-                  : 1,
-              u =
-                arguments.length > 4 && void 0 !== arguments[4]
-                  ? arguments[4]
-                  : 0,
-              a =
-                arguments.length > 5 && void 0 !== arguments[5]
-                  ? arguments[5]
-                  : 0;
+                arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+              n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+              i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+              o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+              u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+              a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
             r(this, t),
               (this.m = [e, n, i, o, u, a]),
               (this.i = null),
@@ -331,14 +302,14 @@ export default function DevDesktop() {
               t,
               [
                 {
-                  key: "determinant",
+                  key: 'determinant',
                   get: function () {
                     var t = this.m;
                     return t[0] * t[3] - t[1] * t[2];
                   },
                 },
                 {
-                  key: "isIdentity",
+                  key: 'isIdentity',
                   get: function () {
                     if (null === this.i) {
                       var t = this.m;
@@ -354,7 +325,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "point",
+                  key: 'point',
                   value: function (t, e) {
                     var n = this.m;
                     return {
@@ -364,7 +335,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "translateSelf",
+                  key: 'translateSelf',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
@@ -385,7 +356,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "rotateSelf",
+                  key: 'rotateSelf',
                   value: function () {
                     var t =
                       arguments.length > 0 && void 0 !== arguments[0]
@@ -408,7 +379,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "scaleSelf",
+                  key: 'scaleSelf',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
@@ -430,7 +401,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "skewSelf",
+                  key: 'skewSelf',
                   value: function (t, e) {
                     if (((e %= 360), (t %= 360) || e)) {
                       var n = this.m,
@@ -446,7 +417,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "resetSelf",
+                  key: 'resetSelf',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
@@ -486,7 +457,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "recomposeSelf",
+                  key: 'recomposeSelf',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
@@ -513,18 +484,15 @@ export default function DevDesktop() {
                       t && (t.x || t.y) && this.translateSelf(t.x, t.y),
                       e && this.rotateSelf(e),
                       n &&
-                        (n.x && this.skewSelf(n.x, 0),
-                        n.y && this.skewSelf(0, n.y)),
-                      !r ||
-                        (1 === r.x && 1 === r.y) ||
-                        this.scaleSelf(r.x, r.y),
+                        (n.x && this.skewSelf(n.x, 0), n.y && this.skewSelf(0, n.y)),
+                      !r || (1 === r.x && 1 === r.y) || this.scaleSelf(r.x, r.y),
                       i && (i.x || i.y) && this.translateSelf(i.x, i.y),
                       this
                     );
                   },
                 },
                 {
-                  key: "decompose",
+                  key: 'decompose',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
@@ -583,19 +551,19 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "multiply",
+                  key: 'multiply',
                   value: function (t) {
                     return this.clone().multiplySelf(t);
                   },
                 },
                 {
-                  key: "preMultiply",
+                  key: 'preMultiply',
                   value: function (t) {
                     return t.multiply(this);
                   },
                 },
                 {
-                  key: "multiplySelf",
+                  key: 'multiplySelf',
                   value: function (t) {
                     var e = F(this.m, t.m),
                       n = e.a,
@@ -608,7 +576,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "preMultiplySelf",
+                  key: 'preMultiplySelf',
                   value: function (t) {
                     var e = F(t.m, this.m),
                       n = e.a,
@@ -621,33 +589,26 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "clone",
+                  key: 'clone',
                   value: function () {
                     var t = this.m;
-                    return new this.constructor(
-                      t[0],
-                      t[1],
-                      t[2],
-                      t[3],
-                      t[4],
-                      t[5]
-                    );
+                    return new this.constructor(t[0], t[1], t[2], t[3], t[4], t[5]);
                   },
                 },
                 {
-                  key: "toString",
+                  key: 'toString',
                   value: function () {
                     var t =
                       arguments.length > 0 && void 0 !== arguments[0]
                         ? arguments[0]
-                        : " ";
+                        : ' ';
                     if (null === this.s) {
                       var e = this.m.map(function (t) {
                         return p(t);
                       });
                       1 === e[0] && 0 === e[1] && 0 === e[2] && 1 === e[3]
-                        ? (this.s = "translate(" + e[4] + t + e[5] + ")")
-                        : (this.s = "matrix(" + e.join(t) + ")");
+                        ? (this.s = 'translate(' + e[4] + t + e[5] + ')')
+                        : (this.s = 'matrix(' + e.join(t) + ')');
                     }
                     return this.s;
                   },
@@ -655,7 +616,7 @@ export default function DevDesktop() {
               ],
               [
                 {
-                  key: "create",
+                  key: 'create',
                   value: function (t) {
                     return t
                       ? Array.isArray(t)
@@ -667,12 +628,12 @@ export default function DevDesktop() {
                             t.rotate,
                             t.skew,
                             t.scale,
-                            t.translate
+                            t.translate,
                           )
                       : new this();
                   },
                 },
-              ]
+              ],
             ),
             t
           );
@@ -702,18 +663,10 @@ export default function DevDesktop() {
         return r <= 0 ? 0 : r >= 1 ? 1 : r;
       }
       function V(t, e, n) {
-        return 0 === t
-          ? e
-          : 1 === t
-          ? n
-          : { x: C(t, e.x, n.x), y: C(t, e.y, n.y) };
+        return 0 === t ? e : 1 === t ? n : { x: C(t, e.x, n.x), y: C(t, e.y, n.y) };
       }
       function G(t, e, n) {
-        return 0 === t
-          ? e
-          : 1 === t
-          ? n
-          : { x: q(t, e.x, n.x), y: q(t, e.y, n.y) };
+        return 0 === t ? e : 1 === t ? n : { x: q(t, e.x, n.x), y: q(t, e.y, n.y) };
       }
       function z(t, e, n) {
         var r = (function (t, e, n) {
@@ -759,21 +712,21 @@ export default function DevDesktop() {
           return (
             o(t, [
               {
-                key: "setAttribute",
+                key: 'setAttribute',
                 value: function (t, e) {
                   for (var n = this.list, r = 0; r < this.length; r++)
                     n[r].setAttribute(t, e);
                 },
               },
               {
-                key: "removeAttribute",
+                key: 'removeAttribute',
                 value: function (t) {
                   for (var e = this.list, n = 0; n < this.length; n++)
                     e[n].removeAttribute(t);
                 },
               },
               {
-                key: "style",
+                key: 'style',
                 value: function (t, e) {
                   for (var n = this.list, r = 0; r < this.length; r++)
                     n[r].style[t] = e;
@@ -788,18 +741,16 @@ export default function DevDesktop() {
           return e.toUpperCase();
         };
       function K(t) {
-        return "function" == typeof t ? t : D;
+        return 'function' == typeof t ? t : D;
       }
       function Z(t) {
         return t
-          ? "function" == typeof t
+          ? 'function' == typeof t
             ? t
             : Array.isArray(t)
             ? (function (t) {
                 var e =
-                  arguments.length > 1 && void 0 !== arguments[1]
-                    ? arguments[1]
-                    : _;
+                  arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _;
                 if (!Array.isArray(t)) return e;
                 switch (t.length) {
                   case 1:
@@ -813,16 +764,14 @@ export default function DevDesktop() {
               })(t, null)
             : (function (t, e) {
                 var n =
-                  arguments.length > 2 && void 0 !== arguments[2]
-                    ? arguments[2]
-                    : _;
+                  arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
                 switch (t) {
-                  case "linear":
+                  case 'linear':
                     return _;
-                  case "steps":
+                  case 'steps':
                     return E(e.steps || 1, e.jump || 0) || n;
-                  case "bezier":
-                  case "cubic-bezier":
+                  case 'bezier':
+                  case 'cubic-bezier':
                     return x(e.x1 || 0, e.y1 || 0, e.x2 || 0, e.y2 || 0) || n;
                 }
                 return n;
@@ -860,9 +809,9 @@ export default function DevDesktop() {
         var n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         return t && t.length
-          ? "function" != typeof e
+          ? 'function' != typeof e
             ? null
-            : ("function" != typeof n && (n = null),
+            : ('function' != typeof n && (n = null),
               function (r) {
                 var i = tt(r, t, e);
                 return null != i && n && (i = n(i)), i;
@@ -874,33 +823,27 @@ export default function DevDesktop() {
       }
       function rt(t, e, r, i, o) {
         var u,
-          a = "@" === r[0],
-          l = "#" === r[0],
+          a = '@' === r[0],
+          l = '#' === r[0],
           s = H[r],
           f = D;
         switch (
-          (a
-            ? ((u = r.substr(1)), (r = u.replace(X, J)))
-            : l && (r = r.substr(1)),
+          (a ? ((u = r.substr(1)), (r = u.replace(X, J))) : l && (r = r.substr(1)),
           n(s))
         ) {
-          case "function":
+          case 'function':
             if (((f = s(i, o, tt, Z, r, a, e, t)), l)) return f;
             break;
-          case "string":
+          case 'string':
             f = et(i, K(s));
             break;
-          case "object":
-            if ((f = et(i, K(s.i), s.f)) && "function" == typeof s.u)
+          case 'object':
+            if ((f = et(i, K(s.i), s.f)) && 'function' == typeof s.u)
               return s.u(e, f, r, a, t);
         }
         return f
           ? (function (t, e, n) {
-              if (
-                arguments.length > 3 &&
-                void 0 !== arguments[3] &&
-                arguments[3]
-              )
+              if (arguments.length > 3 && void 0 !== arguments[3] && arguments[3])
                 return t instanceof Q
                   ? function (r) {
                       return t.style(e, n(r));
@@ -912,8 +855,7 @@ export default function DevDesktop() {
                 var r = e.length;
                 return function (i) {
                   var o = n(i);
-                  if (null == o)
-                    for (var u = 0; u < r; u++) t[u].removeAttribute(e);
+                  if (null == o) for (var u = 0; u < r; u++) t[u].removeAttribute(e);
                   else for (var a = 0; a < r; a++) t[a].setAttribute(e, o);
                 };
               }
@@ -925,15 +867,14 @@ export default function DevDesktop() {
           : null;
       }
       function it(t, e, r, i) {
-        if (!i || "object" !== n(i)) return null;
+        if (!i || 'object' !== n(i)) return null;
         var o = null,
           u = null;
         return (
           Array.isArray(i)
             ? (u = (function (t) {
                 if (!t || !t.length) return null;
-                for (var e = 0; e < t.length; e++)
-                  t[e].e && (t[e].e = Z(t[e].e));
+                for (var e = 0; e < t.length; e++) t[e].e && (t[e].e = Z(t[e].e));
                 return t.sort(nt);
               })(i))
             : ((u = i.keys), (o = i.data || null)),
@@ -965,11 +906,11 @@ export default function DevDesktop() {
                 var o = e[i];
                 if (2 === o.length) {
                   var u = null;
-                  if ("string" == typeof o[0]) u = t.getElementById(o[0]);
+                  if ('string' == typeof o[0]) u = t.getElementById(o[0]);
                   else if (Array.isArray(o[0])) {
                     u = [];
                     for (var a = 0; a < o[0].length; a++)
-                      if ("string" == typeof o[0][a]) {
+                      if ('string' == typeof o[0][a]) {
                         var l = t.getElementById(o[0][a]);
                         l && u.push(l);
                       }
@@ -1006,9 +947,7 @@ export default function DevDesktop() {
               (e *= r.direction), r.alternate && f % 2 == 0 && (e = -e);
               var c = !1;
               if (f > a)
-                (s = l),
-                  (c = !0),
-                  -1 === r.fill && (s = r.direction > 0 ? 0 : i);
+                (s = l), (c = !0), -1 === r.fill && (s = r.direction > 0 ? 0 : i);
               else if ((e < 0 && (s = i - s), s === u)) return !1;
               u = s;
               for (var h = 0; h < o; h++) n[h](s);
@@ -1017,7 +956,7 @@ export default function DevDesktop() {
           : null;
       }
       function at(t, e) {
-        for (var n = e.querySelectorAll("svg"), r = 0; r < n.length; r++)
+        for (var n = e.querySelectorAll('svg'), r = 0; r < n.length; r++)
           if (n[r].id === t.root && !n[r].svgatorAnimation)
             return (n[r].svgatorAnimation = !0), n[r];
         return null;
@@ -1029,37 +968,37 @@ export default function DevDesktop() {
         return document
           ? Array.from(
               t.querySelectorAll(
-                ":not(" +
+                ':not(' +
                   [
-                    "a",
-                    "area",
-                    "audio",
-                    "br",
-                    "canvas",
-                    "circle",
-                    "datalist",
-                    "embed",
-                    "g",
-                    "head",
-                    "hr",
-                    "iframe",
-                    "img",
-                    "input",
-                    "link",
-                    "object",
-                    "path",
-                    "polygon",
-                    "rect",
-                    "script",
-                    "source",
-                    "style",
-                    "svg",
-                    "title",
-                    "track",
-                    "video",
+                    'a',
+                    'area',
+                    'audio',
+                    'br',
+                    'canvas',
+                    'circle',
+                    'datalist',
+                    'embed',
+                    'g',
+                    'head',
+                    'hr',
+                    'iframe',
+                    'img',
+                    'input',
+                    'link',
+                    'object',
+                    'path',
+                    'polygon',
+                    'rect',
+                    'script',
+                    'source',
+                    'style',
+                    'svg',
+                    'title',
+                    'track',
+                    'video',
                   ].join() +
-                  ")"
-              )
+                  ')',
+              ),
             )
               .filter(e)
               .map(e)
@@ -1070,8 +1009,7 @@ export default function DevDesktop() {
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : document,
-          n =
-            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
           r = at(t, e);
         if (r) return r;
         if (n >= 20) return null;
@@ -1082,8 +1020,7 @@ export default function DevDesktop() {
         return null;
       }
       function ft(t, e) {
-        if (((H = e), !t || !t.root || !Array.isArray(t.animations)))
-          return null;
+        if (((H = e), !t || !t.root || !Array.isArray(t.animations))) return null;
         var n = st(t);
         if (!n) return null;
         var r = t.animations
@@ -1104,18 +1041,14 @@ export default function DevDesktop() {
       }
       function ct(t) {
         var e =
-            arguments.length > 1 && void 0 !== arguments[1]
-              ? arguments[1]
-              : null,
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
           n =
-            arguments.length > 2 && void 0 !== arguments[2]
-              ? arguments[2]
-              : Number,
+            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number,
           r =
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
-              : "undefined" != typeof BigInt && BigInt,
-          i = "0x" + (t.replace(/[^0-9a-fA-F]+/g, "") || 27);
+              : 'undefined' != typeof BigInt && BigInt,
+          i = '0x' + (t.replace(/[^0-9a-fA-F]+/g, '') || 27);
         return e && r && n.isSafeInteger && !n.isSafeInteger(+i)
           ? (n(r(i)) % e) + e
           : +i;
@@ -1126,8 +1059,7 @@ export default function DevDesktop() {
           : t.substring(0, e) + ht(t.substring(e + 1), n, n);
       }
       function vt(t) {
-        var e =
-          arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 27;
+        var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 27;
         return !t || t % e ? t % e : [0, 1].includes(e) ? e : vt(t / e, e);
       }
       function dt(t, e, n) {
@@ -1136,35 +1068,35 @@ export default function DevDesktop() {
             i = vt(r) + 5,
             o = ht(t, vt(r, 5), i);
           return (
-            (o = o.replace(/\x7c$/g, "==").replace(/\x2f$/g, "=")),
+            (o = o.replace(/\x7c$/g, '==').replace(/\x2f$/g, '=')),
             (o = (function (t, e, n) {
-              var r = +("0x" + t.substring(0, 4));
+              var r = +('0x' + t.substring(0, 4));
               t = t.substring(4);
               for (
                 var i = (ct(e, r) % r) + (n % 27), o = [], u = 0;
                 u < t.length;
                 u += 2
               )
-                if ("|" !== t[u]) {
-                  var a = +("0x" + t[u] + t[u + 1]) - i;
+                if ('|' !== t[u]) {
+                  var a = +('0x' + t[u] + t[u + 1]) - i;
                   o.push(a);
                 } else {
-                  var l = +("0x" + t.substring(u + 1, u + 1 + 4)) - i;
+                  var l = +('0x' + t.substring(u + 1, u + 1 + 4)) - i;
                   (u += 3), o.push(l);
                 }
               return String.fromCharCode.apply(String, o);
-            })((o = (o = atob(o)).replace(/[\x41-\x5A]/g, "")), e, r)),
+            })((o = (o = atob(o)).replace(/[\x41-\x5A]/g, '')), e, r)),
             (o = JSON.parse(o))
           );
         }
       }
       var yt = [
-          { key: "alternate", def: !1 },
-          { key: "fill", def: 1 },
-          { key: "iterations", def: 0 },
-          { key: "direction", def: 1 },
-          { key: "speed", def: 1 },
-          { key: "fps", def: 100 },
+          { key: 'alternate', def: !1 },
+          { key: 'fill', def: 1 },
+          { key: 'iterations', def: 0 },
+          { key: 'direction', def: 1 },
+          { key: 'speed', def: 1 },
+          { key: 'fps', def: 100 },
         ],
         gt = (function () {
           function t(e, n) {
@@ -1179,7 +1111,7 @@ export default function DevDesktop() {
               (this._rollingBack = !1),
               (this._animations = e),
               (this._settings = n),
-              (!o || o < "2022-05-02") && delete this._settings.speed,
+              (!o || o < '2022-05-02') && delete this._settings.speed,
               yt.forEach(function (t) {
                 i._settings[t.key] = i._settings[t.key] || t.def;
               }),
@@ -1192,43 +1124,43 @@ export default function DevDesktop() {
               t,
               [
                 {
-                  key: "alternate",
+                  key: 'alternate',
                   get: function () {
                     return this._settings.alternate;
                   },
                 },
                 {
-                  key: "fill",
+                  key: 'fill',
                   get: function () {
                     return this._settings.fill;
                   },
                 },
                 {
-                  key: "iterations",
+                  key: 'iterations',
                   get: function () {
                     return this._settings.iterations;
                   },
                 },
                 {
-                  key: "direction",
+                  key: 'direction',
                   get: function () {
                     return this._settings.direction;
                   },
                 },
                 {
-                  key: "speed",
+                  key: 'speed',
                   get: function () {
                     return this._settings.speed;
                   },
                 },
                 {
-                  key: "fps",
+                  key: 'fps',
                   get: function () {
                     return this._settings.fps;
                   },
                 },
                 {
-                  key: "maxFiniteDuration",
+                  key: 'maxFiniteDuration',
                   get: function () {
                     return this.iterations > 0
                       ? this.iterations * this.duration
@@ -1236,7 +1168,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "_apply",
+                  key: '_apply',
                   value: function (t) {
                     for (
                       var e =
@@ -1255,7 +1187,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "_rollback",
+                  key: '_rollback',
                   value: function (t) {
                     var e = this,
                       n = 1 / 0,
@@ -1286,7 +1218,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "_start",
+                  key: '_start',
                   value: function () {
                     var t = this,
                       e =
@@ -1315,14 +1247,14 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "_pause",
+                  key: '_pause',
                   value: function () {
                     this._id && window.cancelAnimationFrame(this._id),
                       (this._running = !1);
                   },
                 },
                 {
-                  key: "play",
+                  key: 'play',
                   value: function () {
                     if (!this._running)
                       return this._rollingBack
@@ -1331,7 +1263,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "stop",
+                  key: 'stop',
                   value: function () {
                     this._pause(),
                       (this.offset = 0),
@@ -1341,7 +1273,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "reachedToEnd",
+                  key: 'reachedToEnd',
                   value: function () {
                     return (
                       this.iterations > 0 &&
@@ -1350,7 +1282,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "restart",
+                  key: 'restart',
                   value: function () {
                     var t =
                       arguments.length > 0 &&
@@ -1360,13 +1292,13 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "pause",
+                  key: 'pause',
                   value: function () {
                     this._pause();
                   },
                 },
                 {
-                  key: "reverse",
+                  key: 'reverse',
                   value: function () {
                     this.direction = -this.direction;
                   },
@@ -1374,15 +1306,14 @@ export default function DevDesktop() {
               ],
               [
                 {
-                  key: "build",
+                  key: 'build',
                   value: function (t, e) {
                     delete t.animationSettings,
-                      (t.options = dt(t.options, t.root, "91c80d77")),
+                      (t.options = dt(t.options, t.root, '91c80d77')),
                       t.animations.map(function (e) {
-                        (e.settings = dt(e.s, t.root, "91c80d77")),
+                        (e.settings = dt(e.s, t.root, '91c80d77')),
                           delete e.s,
-                          t.animationSettings ||
-                            (t.animationSettings = e.settings);
+                          t.animationSettings || (t.animationSettings = e.settings);
                       });
                     var n = t.version;
                     if (!(t = ft(t, e))) return null;
@@ -1392,40 +1323,39 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "push",
+                  key: 'push',
                   value: function (t) {
                     return this.build(t);
                   },
                 },
                 {
-                  key: "init",
+                  key: 'init',
                   value: function () {
                     var t = this,
                       e =
                         window.__SVGATOR_PLAYER__ &&
-                        window.__SVGATOR_PLAYER__["91c80d77"];
+                        window.__SVGATOR_PLAYER__['91c80d77'];
                     Array.isArray(e) &&
                       e.splice(0).forEach(function (e) {
                         return t.build(e);
                       });
                   },
                 },
-              ]
+              ],
             ),
             t
           );
         })();
       !(function () {
         for (
-          var t = 0, e = ["ms", "moz", "webkit", "o"], n = 0;
+          var t = 0, e = ['ms', 'moz', 'webkit', 'o'], n = 0;
           n < e.length && !window.requestAnimationFrame;
           ++n
         )
-          (window.requestAnimationFrame =
-            window[e[n] + "RequestAnimationFrame"]),
+          (window.requestAnimationFrame = window[e[n] + 'RequestAnimationFrame']),
             (window.cancelAnimationFrame =
-              window[e[n] + "CancelAnimationFrame"] ||
-              window[e[n] + "CancelRequestAnimationFrame"]);
+              window[e[n] + 'CancelAnimationFrame'] ||
+              window[e[n] + 'CancelRequestAnimationFrame']);
         window.requestAnimationFrame ||
           ((window.requestAnimationFrame = function (e) {
             var n = Date.now(),
@@ -1464,11 +1394,9 @@ export default function DevDesktop() {
             return (
               (o.window = window.parent),
               (o.el =
-                Array.from(r.querySelectorAll("iframe,object")).filter(
-                  function (t) {
-                    return t.contentWindow === window;
-                  }
-                )[0] || o.el),
+                Array.from(r.querySelectorAll('iframe,object')).filter(function (t) {
+                  return t.contentWindow === window;
+                })[0] || o.el),
               o
             );
           })(e);
@@ -1481,9 +1409,7 @@ export default function DevDesktop() {
             (this.currentVisibility = null),
             (this.visibilityCalculator = (function (t, e) {
               var n =
-                  arguments.length > 2 && void 0 !== arguments[2]
-                    ? arguments[2]
-                    : n,
+                  arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n,
                 r = !1,
                 i = null,
                 o = function () {
@@ -1497,16 +1423,12 @@ export default function DevDesktop() {
 
                   ) {
                     var f = n.getComputedStyle(s);
-                    if (
-                      "visible" !== f.overflowY ||
-                      "visible" !== f.overflowX
-                    ) {
+                    if ('visible' !== f.overflowY || 'visible' !== f.overflowX) {
                       var c = s.getBoundingClientRect();
-                      "visible" !== f.overflowY &&
+                      'visible' !== f.overflowY &&
                         ((o = Math.max(o, c.top)), (u = Math.min(u, c.bottom))),
-                        "visible" !== f.overflowX &&
-                          ((a = Math.max(a, c.left)),
-                          (l = Math.min(l, c.right)));
+                        'visible' !== f.overflowX &&
+                          ((a = Math.max(a, c.left)), (l = Math.min(l, c.right)));
                     }
                     if (s === s.parentNode) break;
                     s = s.parentNode;
@@ -1535,17 +1457,17 @@ export default function DevDesktop() {
         return (
           o(t, [
             {
-              key: "bindScrollWatchers",
+              key: 'bindScrollWatchers',
               value: function () {
                 for (
                   var t = this.el.parentNode;
                   t &&
                   (this._handlers.push({
                     element: t,
-                    event: "scroll",
+                    event: 'scroll',
                     handler: this.visibilityCalculator,
                   }),
-                  t.addEventListener("scroll", this.visibilityCalculator),
+                  t.addEventListener('scroll', this.visibilityCalculator),
                   t !== t.parentNode && t !== document);
 
                 )
@@ -1553,7 +1475,7 @@ export default function DevDesktop() {
               },
             },
             {
-              key: "onVisibilityUpdate",
+              key: 'onVisibilityUpdate',
               value: function (t) {
                 var e = this.currentVisibility >= this.thresholdPercent,
                   n = t >= this.thresholdPercent;
@@ -1565,7 +1487,7 @@ export default function DevDesktop() {
               },
             },
             {
-              key: "destruct",
+              key: 'destruct',
               value: function () {
                 this._handlers.forEach(function (t) {
                   t.element.removeEventListener(t.event, t.handler);
@@ -1577,47 +1499,46 @@ export default function DevDesktop() {
         );
       })();
       function mt(t) {
-        return p(t) + "";
+        return p(t) + '';
       }
       function bt(t) {
-        var e =
-          arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : " ";
-        return t && t.length ? t.map(mt).join(e) : "";
+        var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ' ';
+        return t && t.length ? t.map(mt).join(e) : '';
       }
       function wt(t) {
-        return mt(t.x) + "," + mt(t.y);
+        return mt(t.x) + ',' + mt(t.y);
       }
       function kt(t) {
         return t
           ? null == t.a || t.a >= 1
             ? (function (t) {
-                if (!t) return "transparent";
+                if (!t) return 'transparent';
                 var e = function (t) {
-                  return parseInt(t).toString(16).padStart(2, "0");
+                  return parseInt(t).toString(16).padStart(2, '0');
                 };
                 return (function (t) {
                   for (
-                    var e = [], n = "#" === t[0] ? e.push("#") : 0;
+                    var e = [], n = '#' === t[0] ? e.push('#') : 0;
                     n < t.length;
                     n += 2
                   ) {
                     if (t[n] !== t[n + 1]) return t;
                     e.push(t[n]);
                   }
-                  return e.join("");
+                  return e.join('');
                 })(
-                  "#" +
+                  '#' +
                     e(t.r) +
                     e(t.g) +
                     e(t.b) +
-                    (null == t.a || t.a >= 1 ? "" : e(255 * t.a))
+                    (null == t.a || t.a >= 1 ? '' : e(255 * t.a)),
                 );
               })(t)
-            : "rgba(" + t.r + "," + t.g + "," + t.b + "," + t.a + ")"
-          : "transparent";
+            : 'rgba(' + t.r + ',' + t.g + ',' + t.b + ',' + t.a + ')'
+          : 'transparent';
       }
       function _t(t) {
-        return t ? "url(#" + t + ")" : "none";
+        return t ? 'url(#' + t + ')' : 'none';
       }
       var At = {
           f: null,
@@ -1625,7 +1546,7 @@ export default function DevDesktop() {
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("rx", mt(r.x)), t.setAttribute("ry", mt(r.y));
+              t.setAttribute('rx', mt(r.x)), t.setAttribute('ry', mt(r.y));
             };
           },
         },
@@ -1644,8 +1565,8 @@ export default function DevDesktop() {
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("width", mt(r.width)),
-                t.setAttribute("height", mt(r.height));
+              t.setAttribute('width', mt(r.width)),
+                t.setAttribute('height', mt(r.height));
             };
           },
         };
@@ -1667,19 +1588,19 @@ export default function DevDesktop() {
         var e = (function () {
           if (Ot) return Ot;
           if (
-            "object" !==
-              ("undefined" == typeof document ? "undefined" : n(document)) ||
+            'object' !==
+              ('undefined' == typeof document ? 'undefined' : n(document)) ||
             !document.createElementNS
           )
             return {};
-          var t = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          var t = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
           return t && t.style
-            ? ((t.style.position = "absolute"),
-              (t.style.opacity = "0.01"),
-              (t.style.zIndex = "-9999"),
-              (t.style.left = "-9999px"),
-              (t.style.width = "1px"),
-              (t.style.height = "1px"),
+            ? ((t.style.position = 'absolute'),
+              (t.style.opacity = '0.01'),
+              (t.style.zIndex = '-9999'),
+              (t.style.left = '-9999px'),
+              (t.style.width = '1px'),
+              (t.style.height = '1px'),
               (Ot = { svg: t }))
             : {};
         })().svg;
@@ -1687,10 +1608,10 @@ export default function DevDesktop() {
           return function (t) {
             return null;
           };
-        var r = document.createElementNS(e.namespaceURI, "path");
-        r.setAttributeNS(null, "d", t),
-          r.setAttributeNS(null, "fill", "none"),
-          r.setAttributeNS(null, "stroke", "none"),
+        var r = document.createElementNS(e.namespaceURI, 'path');
+        r.setAttributeNS(null, 'd', t),
+          r.setAttributeNS(null, 'fill', 'none'),
+          r.setAttributeNS(null, 'stroke', 'none'),
           e.appendChild(r);
         var i = r.getTotalLength();
         return function (t) {
@@ -1703,21 +1624,20 @@ export default function DevDesktop() {
       }
       function Mt(t, e, n, r) {
         if (!t || !r) return !1;
-        var i = ["M", t.x, t.y];
+        var i = ['M', t.x, t.y];
         if (
           (e &&
             n &&
-            (i.push("C"), i.push(e.x), i.push(e.y), i.push(n.x), i.push(n.y)),
+            (i.push('C'), i.push(e.x), i.push(e.y), i.push(n.x), i.push(n.y)),
           e ? !n : n)
         ) {
           var o = e || n;
-          i.push("Q"), i.push(o.x), i.push(o.y);
+          i.push('Q'), i.push(o.x), i.push(o.y);
         }
-        return e || n || i.push("L"), i.push(r.x), i.push(r.y), i.join(" ");
+        return e || n || i.push('L'), i.push(r.x), i.push(r.y), i.join(' ');
       }
       function Pt(t, e, n, r) {
-        var i =
-            arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
           o = Mt(t, e, n, r),
           u = jt(o);
         try {
@@ -1793,9 +1713,7 @@ export default function DevDesktop() {
           if (Wt(e)) return Ft(e, e.end, n, t, r);
         } else {
           if (Wt(e))
-            return Ut(n)
-              ? Lt(e, e.end, n.start, n, t, r)
-              : Ft(e, e.end, n, t, r);
+            return Ut(n) ? Lt(e, e.end, n.start, n, t, r) : Ft(e, e.end, n, t, r);
           if (Ut(n)) return Ft(e, n.start, n, t, r);
         }
         return It(e, n, t, r);
@@ -1805,18 +1723,16 @@ export default function DevDesktop() {
         return (
           (r.a = k(
             (function (t) {
-              return arguments.length > 1 &&
-                void 0 !== arguments[1] &&
-                arguments[1]
+              return arguments.length > 1 && void 0 !== arguments[1] && arguments[1]
                 ? t + Math.PI
                 : t;
-            })(r.a)
+            })(r.a),
           )),
           r
         );
       }
       function Yt(t) {
-        return !t.type || "corner" === t.type;
+        return !t.type || 'corner' === t.type;
       }
       function Ut(t) {
         return null != t.start && !Yt(t);
@@ -1827,7 +1743,7 @@ export default function DevDesktop() {
       var $t = new R();
       var Ht = {
           f: function (t) {
-            return t ? t.join(" ") : "";
+            return t ? t.join(' ') : '';
           },
           i: function (t, e, r) {
             if (0 === t) return e;
@@ -1836,7 +1752,7 @@ export default function DevDesktop() {
             if (i !== r.length) return D(t, e, r);
             for (var o, u = new Array(i), a = 0; a < i; a++) {
               if ((o = n(e[a])) !== n(r[a])) return D(t, e, r);
-              if ("number" === o) u[a] = C(t, e[a], r[a]);
+              if ('number' === o) u[a] = C(t, e[a], r[a]);
               else {
                 if (e[a] !== r[a]) return D(t, e, r);
                 u[a] = e[a];
@@ -1851,10 +1767,10 @@ export default function DevDesktop() {
           u: function (t, e) {
             return function (n) {
               var r = e(n);
-              t.setAttribute("x1", mt(r[0])),
-                t.setAttribute("y1", mt(r[1])),
-                t.setAttribute("x2", mt(r[2])),
-                t.setAttribute("y2", mt(r[3]));
+              t.setAttribute('x1', mt(r[0])),
+                t.setAttribute('y1', mt(r[1])),
+                t.setAttribute('x2', mt(r[2])),
+                t.setAttribute('y2', mt(r[3]));
             };
           },
         },
@@ -1863,9 +1779,7 @@ export default function DevDesktop() {
         Kt = {
           f: function (t) {
             var e =
-              arguments.length > 1 && void 0 !== arguments[1]
-                ? arguments[1]
-                : " ";
+              arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ' ';
             return (
               t &&
                 t.length > 0 &&
@@ -1906,12 +1820,12 @@ export default function DevDesktop() {
         return t.map(function (t) {
           return (function (t, e, n) {
             var r = t.v;
-            if (!r || "g" !== r.t || r.s || !r.v || !r.r) return t;
+            if (!r || 'g' !== r.t || r.s || !r.v || !r.r) return t;
             var i = n.getElementById(r.r),
-              o = (i && i.querySelectorAll("stop")) || [];
+              o = (i && i.querySelectorAll('stop')) || [];
             return (
               (r.s = r.v.map(function (t, e) {
-                var n = o[e] && o[e].getAttribute("offset");
+                var n = o[e] && o[e].getAttribute('offset');
                 return { c: t, o: (n = p(parseInt(n) / 100)) };
               })),
               delete r.v,
@@ -1921,11 +1835,11 @@ export default function DevDesktop() {
         });
       }
       var te = {
-        gt: "gradientTransform",
-        c: { x: "cx", y: "cy" },
-        rd: "r",
-        f: { x: "x1", y: "y1" },
-        to: { x: "x2", y: "y2" },
+        gt: 'gradientTransform',
+        c: { x: 'cx', y: 'cy' },
+        rd: 'r',
+        f: { x: 'x1', y: 'y1' },
+        to: { x: 'x2', y: 'y2' },
       };
       function ee(t, e, r, i, o, u, a, l) {
         return (
@@ -1934,17 +1848,17 @@ export default function DevDesktop() {
             for (var r, i, o, u = t.length - 1, a = {}, l = 0; l <= u; l++)
               (r = t[l]).e && (r.e = e(r.e)),
                 r.v &&
-                  "g" === (i = r.v).t &&
+                  'g' === (i = r.v).t &&
                   i.r &&
                   (o = n.getElementById(i.r)) &&
-                  (a[i.r] = { e: o, s: o.querySelectorAll("stop") });
+                  (a[i.r] = { e: o, s: o.querySelectorAll('stop') });
             return a;
           })(t, i, l)),
           function (i) {
             var o = r(i, t, ne);
-            if (!o) return "none";
-            if ("c" === o.t) return kt(o.v);
-            if ("g" === o.t) {
+            if (!o) return 'none';
+            if ('c' === o.t) return kt(o.v);
+            if ('g' === o.t) {
               if (!e[o.r]) return _t(o.r);
               var u = e[o.r];
               return (
@@ -1953,22 +1867,20 @@ export default function DevDesktop() {
                     var i = n[n.length - 1].cloneNode();
                     (i.id = oe(i.id)),
                       t.e.appendChild(i),
-                      (n = t.s = t.e.querySelectorAll("stop"));
+                      (n = t.s = t.e.querySelectorAll('stop'));
                   }
                   for (var o = 0, u = n.length, a = e.length - 1; o < u; o++)
-                    n[o].setAttribute("stop-color", kt(e[Math.min(o, a)].c)),
-                      n[o].setAttribute("offset", e[Math.min(o, a)].o);
+                    n[o].setAttribute('stop-color', kt(e[Math.min(o, a)].c)),
+                      n[o].setAttribute('offset', e[Math.min(o, a)].o);
                 })(u, o.s),
                 Object.keys(te).forEach(function (t) {
                   if (void 0 !== o[t])
-                    if ("object" !== n(te[t])) {
+                    if ('object' !== n(te[t])) {
                       var e,
                         r =
-                          "gt" === t
+                          'gt' === t
                             ? ((e = o[t]),
-                              Array.isArray(e)
-                                ? "matrix(" + e.join(" ") + ")"
-                                : "")
+                              Array.isArray(e) ? 'matrix(' + e.join(' ') + ')' : '')
                             : o[t],
                         i = te[t];
                       u.e.setAttribute(i, r);
@@ -1984,7 +1896,7 @@ export default function DevDesktop() {
                 _t(o.r)
               );
             }
-            return "none";
+            return 'none';
           }
         );
       }
@@ -1995,28 +1907,27 @@ export default function DevDesktop() {
           var i = n.t;
           if (i === r.t)
             switch (n.t) {
-              case "c":
+              case 'c':
                 return { t: i, v: Y(t, n.v, r.v) };
-              case "g":
+              case 'g':
                 if (n.r === r.r) {
                   var o = { t: i, s: re(t, n.s, r.s), r: n.r };
                   return (
                     n.gt && r.gt && (o.gt = U(t, n.gt, r.gt)),
                     n.c
                       ? ((o.c = V(t, n.c, r.c)), (o.rd = q(t, n.rd, r.rd)))
-                      : n.f &&
-                        ((o.f = V(t, n.f, r.f)), (o.to = V(t, n.to, r.to))),
+                      : n.f && ((o.f = V(t, n.f, r.f)), (o.to = V(t, n.to, r.to))),
                     o
                   );
                 }
             }
-          if (("c" === n.t && "g" === r.t) || ("c" === r.t && "g" === n.t)) {
-            var u = "c" === n.t ? n : r,
-              a = "g" === n.t ? e({}, n) : e({}, r),
+          if (('c' === n.t && 'g' === r.t) || ('c' === r.t && 'g' === n.t)) {
+            var u = 'c' === n.t ? n : r,
+              a = 'g' === n.t ? e({}, n) : e({}, r),
               l = a.s.map(function (t) {
                 return { c: u.v, o: t.o };
               });
-            return (a.s = "c" === n.t ? re(t, l, a.s) : re(t, a.s, l)), a;
+            return (a.s = 'c' === n.t ? re(t, l, a.s) : re(t, a.s, l)), a;
           }
         }
         return D(t, n, r);
@@ -2027,11 +1938,7 @@ export default function DevDesktop() {
             return ie(t, e, n[r]);
           });
         for (var r = Math.max(e.length, n.length), i = [], o = 0; o < r; o++) {
-          var u = ie(
-            t,
-            e[Math.min(o, e.length - 1)],
-            n[Math.min(o, n.length - 1)]
-          );
+          var u = ie(t, e[Math.min(o, e.length - 1)], n[Math.min(o, n.length - 1)]);
           i.push(u);
         }
         return i;
@@ -2041,7 +1948,7 @@ export default function DevDesktop() {
       }
       function oe(t) {
         return t.replace(/-fill-([0-9]+)$/, function (t, e) {
-          return "-fill-" + (+e + 1);
+          return '-fill-' + (+e + 1);
         });
       }
       function ue(t, e, n) {
@@ -2059,10 +1966,10 @@ export default function DevDesktop() {
         blur: G,
         brightness: q,
         contrast: q,
-        "drop-shadow": ue,
-        "inner-shadow": ue,
+        'drop-shadow': ue,
+        'inner-shadow': ue,
         grayscale: q,
-        "hue-rotate": C,
+        'hue-rotate': C,
         invert: q,
         opacity: q,
         saturate: q,
@@ -2084,7 +1991,7 @@ export default function DevDesktop() {
         blur: function (t) {
           return t
             ? function (e) {
-                t.setAttribute("stdDeviation", wt(e));
+                t.setAttribute('stdDeviation', wt(e));
               }
             : null;
         },
@@ -2093,7 +2000,7 @@ export default function DevDesktop() {
             ? function (e) {
                 (e = mt(e)),
                   t.map(function (t) {
-                    return t.setAttribute("slope", e);
+                    return t.setAttribute('slope', e);
                   });
               }
             : null;
@@ -2104,37 +2011,37 @@ export default function DevDesktop() {
                 var n = mt((1 - e) / 2);
                 (e = mt(e)),
                   t.map(function (t) {
-                    t.setAttribute("slope", e), t.setAttribute("intercept", n);
+                    t.setAttribute('slope', e), t.setAttribute('intercept', n);
                   });
               }
             : null;
         },
-        "drop-shadow": function (t, e, n) {
-          var r = n.getElementById(e + "-blur");
+        'drop-shadow': function (t, e, n) {
+          var r = n.getElementById(e + '-blur');
           if (!r) return null;
-          var i = n.getElementById(e + "-offset");
+          var i = n.getElementById(e + '-offset');
           if (!i) return null;
-          var o = n.getElementById(e + "-flood");
+          var o = n.getElementById(e + '-flood');
           return o
             ? function (t) {
-                r.setAttribute("stdDeviation", wt(t.blur)),
-                  i.setAttribute("dx", mt(t.offset.x)),
-                  i.setAttribute("dy", mt(t.offset.y)),
-                  o.setAttribute("flood-color", kt(t.color));
+                r.setAttribute('stdDeviation', wt(t.blur)),
+                  i.setAttribute('dx', mt(t.offset.x)),
+                  i.setAttribute('dy', mt(t.offset.y)),
+                  o.setAttribute('flood-color', kt(t.color));
               }
             : null;
         },
-        "inner-shadow": function (t, e, n) {
-          var r = n.getElementById(e + "-blur");
+        'inner-shadow': function (t, e, n) {
+          var r = n.getElementById(e + '-blur');
           if (!r) return null;
-          var i = n.getElementById(e + "-offset");
+          var i = n.getElementById(e + '-offset');
           if (!i) return null;
-          var o = n.getElementById(e + "-color-matrix");
+          var o = n.getElementById(e + '-color-matrix');
           return o
             ? function (t) {
-                r.setAttribute("stdDeviation", wt(t.blur)),
-                  i.setAttribute("dx", mt(t.offset.x)),
-                  i.setAttribute("dy", mt(t.offset.y));
+                r.setAttribute('stdDeviation', wt(t.blur)),
+                  i.setAttribute('dx', mt(t.offset.x)),
+                  i.setAttribute('dy', mt(t.offset.y));
                 var e = [
                   0,
                   0,
@@ -2157,7 +2064,7 @@ export default function DevDesktop() {
                   t.color.a,
                   0,
                 ];
-                o.setAttribute("values", bt(e));
+                o.setAttribute('values', bt(e));
               }
             : null;
         },
@@ -2165,7 +2072,7 @@ export default function DevDesktop() {
           return t
             ? function (e) {
                 t.setAttribute(
-                  "values",
+                  'values',
                   bt(
                     (function (t) {
                       return [
@@ -2190,40 +2097,40 @@ export default function DevDesktop() {
                         1,
                         0,
                       ];
-                    })(e)
-                  )
+                    })(e),
+                  ),
                 );
               }
             : null;
         },
-        "hue-rotate": function (t) {
+        'hue-rotate': function (t) {
           return t
             ? function (e) {
-                return t.setAttribute("values", mt(e));
+                return t.setAttribute('values', mt(e));
               }
             : null;
         },
         invert: function (t, e, n) {
           return (t = ce(n, e))
             ? function (e) {
-                (e = mt(e) + " " + mt(1 - e)),
+                (e = mt(e) + ' ' + mt(1 - e)),
                   t.map(function (t) {
-                    return t.setAttribute("tableValues", e);
+                    return t.setAttribute('tableValues', e);
                   });
               }
             : null;
         },
         opacity: function (t, e, n) {
-          return (t = n.getElementById(e + "-A"))
+          return (t = n.getElementById(e + '-A'))
             ? function (e) {
-                return t.setAttribute("tableValues", "0 " + mt(e));
+                return t.setAttribute('tableValues', '0 ' + mt(e));
               }
             : null;
         },
         saturate: function (t) {
           return t
             ? function (e) {
-                return t.setAttribute("values", mt(e));
+                return t.setAttribute('values', mt(e));
               }
             : null;
         },
@@ -2231,7 +2138,7 @@ export default function DevDesktop() {
           return t
             ? function (e) {
                 return t.setAttribute(
-                  "values",
+                  'values',
                   bt(
                     (function (t) {
                       return [
@@ -2256,33 +2163,33 @@ export default function DevDesktop() {
                         1,
                         0,
                       ];
-                    })(e)
-                  )
+                    })(e),
+                  ),
                 );
               }
             : null;
         },
       };
-      var fe = ["R", "G", "B"];
+      var fe = ['R', 'G', 'B'];
       function ce(t, e) {
         var n = fe.map(function (n) {
-          return t.getElementById(e + "-" + n) || null;
+          return t.getElementById(e + '-' + n) || null;
         });
         return -1 !== n.indexOf(null) ? null : n;
       }
       var he = {
           fill: ee,
-          "fill-opacity": Jt,
+          'fill-opacity': Jt,
           stroke: ee,
-          "stroke-opacity": Jt,
-          "stroke-width": Xt,
-          "stroke-dashoffset": { f: mt, i: C },
-          "stroke-dasharray": Kt,
+          'stroke-opacity': Jt,
+          'stroke-width': Xt,
+          'stroke-dashoffset': { f: mt, i: C },
+          'stroke-dasharray': Kt,
           opacity: Jt,
           transform: function (t, e, r, i) {
             if (
               !(t = (function (t, e) {
-                if (!t || "object" !== n(t)) return null;
+                if (!t || 'object' !== n(t)) return null;
                 var r = !1;
                 for (var i in t)
                   t.hasOwnProperty(i) &&
@@ -2309,26 +2216,26 @@ export default function DevDesktop() {
                   return $t
                     .recomposeSelf(
                       n,
-                      o("r", e, C, 0) + n.a,
-                      o("k", e, V),
-                      o("s", e, V),
-                      o("t", e, V)
+                      o('r', e, C, 0) + n.a,
+                      o('k', e, V),
+                      o('s', e, V),
+                      o('t', e, V),
                     )
                     .toString();
                 }
               : function (t) {
                   return $t
                     .recomposeSelf(
-                      o("o", t, Gt, null),
-                      o("r", t, C, 0),
-                      o("k", t, V),
-                      o("s", t, V),
-                      o("t", t, V)
+                      o('o', t, Gt, null),
+                      o('r', t, C, 0),
+                      o('k', t, V),
+                      o('s', t, V),
+                      o('t', t, V),
                     )
                     .toString();
                 };
           },
-          "#filter": function (t, e, n, r, i, o, u, a) {
+          '#filter': function (t, e, n, r, i, o, u, a) {
             if (!e.items || !t || !t.length) return null;
             var l = (function (t, e) {
               var n = (t = t.map(function (t) {
@@ -2352,40 +2259,39 @@ export default function DevDesktop() {
                 })
               : null;
           },
-          "#line": Qt,
+          '#line': Qt,
           points: { f: bt, i: U },
           d: Ht,
           r: Xt,
-          "#size": xt,
-          "#radius": At,
+          '#size': xt,
+          '#radius': At,
           _: function (t, e) {
-            if (Array.isArray(t))
-              for (var n = 0; n < t.length; n++) this[t[n]] = e;
+            if (Array.isArray(t)) for (var n = 0; n < t.length; n++) this[t[n]] = e;
             else this[t] = e;
           },
         },
         ve = {
-          currentTime: "offset",
-          duration: "duration",
+          currentTime: 'offset',
+          duration: 'duration',
           hasEnded: function () {
             return this.reachedToEnd();
           },
-          isAlternate: "alternate",
-          isPlaying: "_running",
-          isRollingBack: "_rollingBack",
+          isAlternate: 'alternate',
+          isPlaying: '_running',
+          isRollingBack: '_rollingBack',
           state: function (t, e) {
             return e.isPlaying
               ? e.isRollingBack
-                ? "rollback"
-                : "playing"
+                ? 'rollback'
+                : 'playing'
               : e.hasEnded
-              ? "ended"
-              : "paused";
+              ? 'ended'
+              : 'paused';
           },
-          totalTime: "maxFiniteDuration",
-          iterations: "iterations",
-          direction: "direction",
-          fill: "fill",
+          totalTime: 'maxFiniteDuration',
+          iterations: 'iterations',
+          direction: 'direction',
+          fill: 'fill',
           isReversed: function (t, e) {
             return -1 === e.direction;
           },
@@ -2395,57 +2301,54 @@ export default function DevDesktop() {
           isInfinite: function (t, e) {
             return 0 === e.iterations;
           },
-          speed: "speed",
-          fps: "fps",
+          speed: 'speed',
+          fps: 'fps',
         },
         de = {
-          destruct: "destruct",
-          pause: "pause",
+          destruct: 'destruct',
+          pause: 'pause',
           play: function (t, e) {
-            return ye(t, e.hasEnded ? "restart" : "play", e);
+            return ye(t, e.hasEnded ? 'restart' : 'play', e);
           },
-          restart: "restart",
+          restart: 'restart',
           reverse: function (t, e) {
-            return ye(t, "reverse", e, [!0]);
+            return ye(t, 'reverse', e, [!0]);
           },
-          seek: "seek",
-          seekBy: "seekBy",
-          seekTo: "seekTo",
-          stop: "stop",
-          toggle: "toggle",
-          togglePlay: "toggle",
-          set: "set",
+          seek: 'seek',
+          seekBy: 'seekBy',
+          seekTo: 'seekTo',
+          stop: 'stop',
+          toggle: 'toggle',
+          togglePlay: 'toggle',
+          set: 'set',
         };
       function ye(t, e, n) {
-        var r =
-          arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
+        var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
         return function () {
           var i,
             o = Array.prototype.slice.call(arguments);
           return (
-            o.unshift.apply(o, v(r)),
-            (i = t[e]).call.apply(i, [t].concat(v(o))),
-            n
+            o.unshift.apply(o, v(r)), (i = t[e]).call.apply(i, [t].concat(v(o))), n
           );
         };
       }
       var ge = function t(e) {
         r(this, t);
         var n = {},
-          i = ["on", "off"],
+          i = ['on', 'off'],
           o = {
             get: function (t, e, r) {
               return ve[e]
-                ? "function" == typeof ve[e]
+                ? 'function' == typeof ve[e]
                   ? ve[e].call(t, t, r)
                   : t[ve[e]]
                 : de[e]
-                ? "function" == typeof de[e]
+                ? 'function' == typeof de[e]
                   ? de[e].call(t, t, r)
                   : ye(t, de[e], r)
                 : -1 !== i.indexOf(e)
                 ? n[e]
-                : "ready" === e
+                : 'ready' === e
                 ? function (t) {
                     return t && t.call(r, r), r;
                   }
@@ -2461,7 +2364,7 @@ export default function DevDesktop() {
               return void 0 !== ve[e];
             },
           };
-        if ("function" == typeof Proxy) return new Proxy(e, o);
+        if ('function' == typeof Proxy) return new Proxy(e, o);
         var u = Object.keys(ve).concat(Object.keys(de)).concat(i),
           a = {};
         return (
@@ -2486,10 +2389,9 @@ export default function DevDesktop() {
         t || (t = this);
         var e = {};
         (this.on = function (t, n) {
-          var r =
-            arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          var r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           return (
-            "function" == typeof n &&
+            'function' == typeof n &&
             (t.split(/[, ]+/g).forEach(function (t) {
               return (e[t] = e[t] || []), r ? e[t].unshift(n) : e[t].push(n);
             }),
@@ -2513,7 +2415,7 @@ export default function DevDesktop() {
               if (
                 e.hasOwnProperty(u) &&
                 e[u] &&
-                (u === i || u.substr(0, i.length + 1) === i + ".")
+                (u === i || u.substr(0, i.length + 1) === i + '.')
               )
                 for (var a = 0; a < (e[u] || []).length; a++)
                   if (e[u][a] && !1 === (n = e[u][a].apply(t, o))) break t;
@@ -2521,12 +2423,12 @@ export default function DevDesktop() {
           });
       }
       var me = !0,
-        be = ["iterations", "speed", "fps", "direction", "fill", "alternate"],
+        be = ['iterations', 'speed', 'fps', 'direction', 'fill', 'alternate'],
         we = (function (t) {
           !(function (t, e) {
-            if ("function" != typeof e && null !== e)
+            if ('function' != typeof e && null !== e)
               throw new TypeError(
-                "Super expression must either be null or a function"
+                'Super expression must either be null or a function',
               );
             (t.prototype = Object.create(e && e.prototype, {
               constructor: { value: t, writable: !0, configurable: !0 },
@@ -2560,7 +2462,7 @@ export default function DevDesktop() {
               u,
               [
                 {
-                  key: "_adjustOffset",
+                  key: '_adjustOffset',
                   value: function () {
                     var t =
                         arguments.length > 0 &&
@@ -2570,16 +2472,11 @@ export default function DevDesktop() {
                     if (t) {
                       if (!this._rollingBack && 0 === this.offset)
                         return void (this.offset = e);
-                      this._rollingBack &&
-                        (this.offset, this.maxFiniteDuration);
+                      this._rollingBack && (this.offset, this.maxFiniteDuration);
                     }
-                    !this._rollingBack ||
-                    this.rollbackStartOffset <= this.duration
+                    !this._rollingBack || this.rollbackStartOffset <= this.duration
                       ? 0 !== this.iterations &&
-                        (this.offset = Math.min(
-                          this.offset,
-                          this.maxFiniteDuration
-                        ))
+                        (this.offset = Math.min(this.offset, this.maxFiniteDuration))
                       : ((this.offset =
                           this.rollbackStartOffset -
                           ((this.rollbackStartOffset - this.offset) % e)),
@@ -2587,7 +2484,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "reverse",
+                  key: 'reverse',
                   value: function () {
                     var t =
                       arguments.length > 0 &&
@@ -2598,28 +2495,28 @@ export default function DevDesktop() {
                         this._adjustOffset(t),
                         (this._rollingBack = !this._rollingBack),
                         t && this.play(!1),
-                        void this.trigger("reverse", this.offset)
+                        void this.trigger('reverse', this.offset)
                       );
                     this.pause(!1, !1),
                       this._adjustOffset(),
                       (this._rollingBack = !this._rollingBack),
                       this.play(!1),
-                      this.trigger("reverse", this.offset);
+                      this.trigger('reverse', this.offset);
                   },
                 },
                 {
-                  key: "play",
+                  key: 'play',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
                           ? arguments[0]
                           : me,
-                      e = h(a(u.prototype), "play", this).call(this);
-                    return t === me && this.trigger("play", this.offset), e;
+                      e = h(a(u.prototype), 'play', this).call(this);
+                    return t === me && this.trigger('play', this.offset), e;
                   },
                 },
                 {
-                  key: "pause",
+                  key: 'pause',
                   value: function () {
                     var t =
                         arguments.length > 0 &&
@@ -2629,44 +2526,42 @@ export default function DevDesktop() {
                         arguments.length > 1 && void 0 !== arguments[1]
                           ? arguments[1]
                           : me,
-                      n = h(a(u.prototype), "pause", this).call(this);
+                      n = h(a(u.prototype), 'pause', this).call(this);
                     return (
-                      e === me &&
-                        this.trigger(t ? "end" : "pause", this.offset),
-                      n
+                      e === me && this.trigger(t ? 'end' : 'pause', this.offset), n
                     );
                   },
                 },
                 {
-                  key: "restart",
+                  key: 'restart',
                   value: function () {
-                    var t = h(a(u.prototype), "restart", this).call(this, !1);
-                    return this.trigger("restart", this.offset), t;
+                    var t = h(a(u.prototype), 'restart', this).call(this, !1);
+                    return this.trigger('restart', this.offset), t;
                   },
                 },
                 {
-                  key: "stop",
+                  key: 'stop',
                   value: function () {
                     var t =
                         arguments.length > 0 && void 0 !== arguments[0]
                           ? arguments[0]
                           : me,
-                      e = h(a(u.prototype), "stop", this).call(this);
-                    return t === me && this.trigger("stop", this.offset), e;
+                      e = h(a(u.prototype), 'stop', this).call(this);
+                    return t === me && this.trigger('stop', this.offset), e;
                   },
                 },
                 {
-                  key: "_apply",
+                  key: '_apply',
                   value: function (t) {
                     var e = this,
                       n =
                         arguments.length > 2 && void 0 !== arguments[2]
                           ? arguments[2]
                           : me,
-                      r = h(a(u.prototype), "_apply", this).call(this, t);
+                      r = h(a(u.prototype), '_apply', this).call(this, t);
                     if (n === me) {
                       var i = function () {
-                        return e.trigger("keyframe", t);
+                        return e.trigger('keyframe', t);
                       };
                       window.requestAnimationFrame(i);
                     }
@@ -2674,7 +2569,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "seekTo",
+                  key: 'seekTo',
                   value: function (t) {
                     var e,
                       n,
@@ -2693,21 +2588,21 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "seek",
+                  key: 'seek',
                   value: function (t) {
                     return this.seekTo(
-                      Math.round((t / 100) * this.maxFiniteDuration)
+                      Math.round((t / 100) * this.maxFiniteDuration),
                     );
                   },
                 },
                 {
-                  key: "seekBy",
+                  key: 'seekBy',
                   value: function (t) {
                     return this.seekTo(this.offset + t);
                   },
                 },
                 {
-                  key: "toggle",
+                  key: 'toggle',
                   value: function () {
                     return this._running
                       ? this.pause()
@@ -2717,7 +2612,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "set",
+                  key: 'set',
                   value: function (t, e) {
                     if (be.includes(t)) {
                       var n = this._running;
@@ -2728,7 +2623,7 @@ export default function DevDesktop() {
                   },
                 },
                 {
-                  key: "destruct",
+                  key: 'destruct',
                   value: function () {
                     var t = this;
                     this.stop(),
@@ -2738,21 +2633,19 @@ export default function DevDesktop() {
                           : t.callback && t.callback.call && t.callback.call();
                       });
                     var e = function () {},
-                      n = Object.getOwnPropertyNames(
-                        Object.getPrototypeOf(this)
-                      );
+                      n = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
                     n.push.apply(n, v(Object.getOwnPropertyNames(this))),
                       n.forEach(function (n) {
-                        "function" == typeof t[n] ? (t[n] = e) : delete t[n];
+                        'function' == typeof t[n] ? (t[n] = e) : delete t[n];
                       });
                   },
                 },
               ],
               [
                 {
-                  key: "build",
+                  key: 'build',
                   value: function (t) {
-                    var e = h(a(u), "build", this).call(this, t, he);
+                    var e = h(a(u), 'build', this).call(this, t, he);
                     if (!e) return null;
                     var n = e.el,
                       r = e.options,
@@ -2783,23 +2676,23 @@ export default function DevDesktop() {
                         if (
                           !r ||
                           !i ||
-                          "a" !== i.tagName ||
-                          i.getAttribute("target")
+                          'a' !== i.tagName ||
+                          i.getAttribute('target')
                         )
                           return;
-                        i.setAttributeNS(null, "target", "_parent");
+                        i.setAttributeNS(null, 'target', '_parent');
                       })(n),
                       (function (t, e, n) {
-                        if ("click" === n.start) {
+                        if ('click' === n.start) {
                           var r = function () {
                             switch (n.click) {
-                              case "freeze":
+                              case 'freeze':
                                 return !t._running && t.reachedToEnd()
                                   ? t.restart()
                                   : t.toggle();
-                              case "restart":
+                              case 'restart':
                                 return t.offset > 0 ? t.restart() : t.play();
-                              case "reverse":
+                              case 'reverse':
                                 return t._running
                                   ? t.reverse()
                                   : t.reachedToEnd()
@@ -2807,24 +2700,22 @@ export default function DevDesktop() {
                                     ? t.reverse(!0)
                                     : t.restart()
                                   : t.play();
-                              case "none":
+                              case 'none':
                               default:
                                 if (t._running) return;
-                                return t.reachedToEnd()
-                                  ? t.restart()
-                                  : t.play();
+                                return t.reachedToEnd() ? t.restart() : t.play();
                             }
                           };
                           return (
                             t._handlers.push({
                               element: e,
-                              event: "click",
+                              event: 'click',
                               handler: r,
                             }),
-                            void e.addEventListener("click", r)
+                            void e.addEventListener('click', r)
                           );
                         }
-                        if ("hover" === n.start) {
+                        if ('hover' === n.start) {
                           var i = function () {
                             return t.reachedToEnd()
                               ? t.restart()
@@ -2834,20 +2725,20 @@ export default function DevDesktop() {
                           };
                           t._handlers.push({
                             element: e,
-                            event: "mouseenter",
+                            event: 'mouseenter',
                             handler: i,
                           }),
-                            e.addEventListener("mouseenter", i);
+                            e.addEventListener('mouseenter', i);
                           var o = function () {
                             switch (n.hover) {
-                              case "freeze":
+                              case 'freeze':
                                 return t.pause();
-                              case "reset":
+                              case 'reset':
                                 return t.stop();
-                              case "reverse":
+                              case 'reverse':
                                 if ((t.reverse(), t._running)) return;
                                 return t.play();
-                              case "none":
+                              case 'none':
                               default:
                                 return;
                             }
@@ -2855,13 +2746,13 @@ export default function DevDesktop() {
                           return (
                             t._handlers.push({
                               element: e,
-                              event: "mouseleave",
+                              event: 'mouseleave',
                               handler: o,
                             }),
-                            void e.addEventListener("mouseleave", o)
+                            void e.addEventListener('mouseleave', o)
                           );
                         }
-                        if ("scroll" === n.start) {
+                        if ('scroll' === n.start) {
                           var u = new pt(e, n.scroll || 25, function (e) {
                             e
                               ? t.reachedToEnd()
@@ -2875,17 +2766,17 @@ export default function DevDesktop() {
                             },
                           });
                         }
-                        if ("programmatic" === n.start) return;
+                        if ('programmatic' === n.start) return;
                         t.play();
                       })(i, n, r),
                       (function (t, e, n) {
                         var r;
-                        "function" == typeof Event
-                          ? (r = new Event("ready"))
-                          : (r = document.createEvent("Event")).initEvent(
-                              "ready",
+                        'function' == typeof Event
+                          ? (r = new Event('ready'))
+                          : (r = document.createEvent('Event')).initEvent(
+                              'ready',
                               !0,
-                              !0
+                              !0,
                             );
                         if ((t.dispatchEvent(r), !n || !n.length)) return;
                         n.forEach(function (t) {
@@ -2894,7 +2785,7 @@ export default function DevDesktop() {
                       })(n, n.svgatorPlayer, s);
                   },
                 },
-              ]
+              ],
             ),
             u
           );
@@ -2903,8 +2794,8 @@ export default function DevDesktop() {
     });
     (function (s, i, o, w, d, a, b) {
       (a =
-        Array.from(d.querySelectorAll("svg#" + i.root)).filter(
-          (n) => !n.svgatorPlayer
+        Array.from(d.querySelectorAll('svg#' + i.root)).filter(
+          (n) => !n.svgatorPlayer,
         )[0] || {}).svgatorPlayer = {
         ready: (function (a) {
           b = [];
@@ -2917,10 +2808,10 @@ export default function DevDesktop() {
       w[o][s] = w[o][s] || [];
       w[o][s].push(i);
     })(
-      "91c80d77",
+      '91c80d77',
       {
-        root: "esnjhoDV8OL1",
-        version: "2022-05-04",
+        root: 'esnjhoDV8OL1',
+        version: '2022-05-04',
         animations: [
           {
             elements: {
@@ -2939,156 +2830,156 @@ export default function DevDesktop() {
                   {
                     t: 0,
                     v: [
-                      "M",
+                      'M',
                       0,
                       0,
-                      "C",
+                      'C',
                       55.133575,
                       100.21631,
                       65.133575,
                       -97.175511,
                       96.53091,
                       0,
-                      "C",
+                      'C',
                       96.53091,
                       0,
                       96.449257,
                       54.913866,
                       96.449257,
                       54.913866,
-                      "L",
+                      'L',
                       0,
                       54.965633,
-                      "Q",
+                      'Q',
                       0,
                       5.496563,
                       0,
                       0,
-                      "Z",
+                      'Z',
                     ],
                   },
                   {
                     t: 1000,
                     v: [
-                      "M",
+                      'M',
                       0,
                       0,
-                      "C",
+                      'C',
                       24.652671,
                       -87.706883,
                       39.796007,
                       124.308095,
                       96.53091,
                       0,
-                      "C",
+                      'C',
                       96.53091,
                       0,
                       96.449257,
                       54.913866,
                       96.449257,
                       54.913866,
-                      "L",
+                      'L',
                       0,
                       54.965633,
-                      "Q",
+                      'Q',
                       0,
                       5.496563,
                       0,
                       0,
-                      "Z",
+                      'Z',
                     ],
                   },
                   {
                     t: 1500,
                     v: [
-                      "M",
+                      'M',
                       0,
                       0,
-                      "C",
+                      'C',
                       27.861026,
                       -26.62027,
                       53.788169,
                       -34.042277,
                       96.53091,
                       0,
-                      "C",
+                      'C',
                       96.53091,
                       0,
                       96.449257,
                       54.913866,
                       96.449257,
                       54.913866,
-                      "L",
+                      'L',
                       0,
                       54.965633,
-                      "Q",
+                      'Q',
                       0,
                       5.496563,
                       0,
                       0,
-                      "Z",
+                      'Z',
                     ],
                   },
                   {
                     t: 2000,
                     v: [
-                      "M",
+                      'M',
                       0,
                       0,
-                      "C",
+                      'C',
                       39.796007,
                       25.299315,
                       39.796007,
                       -7.524302,
                       96.53091,
                       0,
-                      "C",
+                      'C',
                       96.53091,
                       0,
                       96.449257,
                       54.913866,
                       96.449257,
                       54.913866,
-                      "L",
+                      'L',
                       0,
                       54.965633,
-                      "Q",
+                      'Q',
                       0,
                       5.496563,
                       0,
                       0,
-                      "Z",
+                      'Z',
                     ],
                   },
                   {
                     t: 2900,
                     v: [
-                      "M",
+                      'M',
                       0,
                       0,
-                      "C",
+                      'C',
                       55.133575,
                       100.21631,
                       65.133575,
                       -97.175511,
                       96.53091,
                       0,
-                      "C",
+                      'C',
                       96.53091,
                       0,
                       96.449257,
                       54.913866,
                       96.449257,
                       54.913866,
-                      "L",
+                      'L',
                       0,
                       54.965633,
-                      "Q",
+                      'Q',
                       0,
                       5.496563,
                       0,
                       0,
-                      "Z",
+                      'Z',
                     ],
                   },
                 ],
@@ -3096,7 +2987,7 @@ export default function DevDesktop() {
               esnjhoDV8OL94: {
                 transform: {
                   data: {
-                    o: { x: 660.803238, y: 444.48378, type: "corner" },
+                    o: { x: 660.803238, y: 444.48378, type: 'corner' },
                     t: { x: -660.803238, y: -444.48378 },
                   },
                   keys: {
@@ -3111,131 +3002,131 @@ export default function DevDesktop() {
                 },
               },
               esnjhoDV8OL113: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 0, v: 101.68 },
                   { t: 300, v: 0 },
                 ],
               },
               esnjhoDV8OL114: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 100, v: 101.68 },
                   { t: 400, v: 0 },
                 ],
               },
               esnjhoDV8OL115: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 200, v: 104.4 },
                   { t: 500, v: 0 },
                 ],
               },
               esnjhoDV8OL116: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 300, v: 97.21 },
                   { t: 600, v: 0 },
                 ],
               },
               esnjhoDV8OL117: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 600, v: 97.21 },
                   { t: 900, v: 0 },
                 ],
               },
               esnjhoDV8OL118: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 700, v: 97.21 },
                   { t: 1000, v: 0 },
                 ],
               },
               esnjhoDV8OL119: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 800, v: 97.21 },
                   { t: 1100, v: 0 },
                 ],
               },
               esnjhoDV8OL120: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1100, v: 97.21 },
                   { t: 1400, v: 0 },
                 ],
               },
               esnjhoDV8OL121: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1200, v: 97.21 },
                   { t: 1500, v: 0 },
                 ],
               },
               esnjhoDV8OL122: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1300, v: 97.21 },
                   { t: 1600, v: 0 },
                 ],
               },
               esnjhoDV8OL123: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1400, v: 97.21 },
                   { t: 1700, v: 0 },
                 ],
               },
               esnjhoDV8OL124: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1500, v: 97.21 },
                   { t: 1800, v: 0 },
                 ],
               },
               esnjhoDV8OL125: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1800, v: 97.21 },
                   { t: 2100, v: 0 },
                 ],
               },
               esnjhoDV8OL126: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1900, v: 97.21 },
                   { t: 2200, v: 0 },
                 ],
               },
               esnjhoDV8OL127: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 2000, v: 97.21 },
                   { t: 2300, v: 0 },
                 ],
               },
               esnjhoDV8OL128: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 2100, v: 97.21 },
                   { t: 2400, v: 0 },
                 ],
               },
               esnjhoDV8OL134: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 0, v: 68.49 },
                   { t: 700, v: 0 },
                   { t: 1600, v: -68.49 },
                 ],
               },
               esnjhoDV8OL135: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 1300, v: 68.49 },
                   { t: 2100, v: 0 },
                   { t: 2900, v: -68.49 },
                 ],
               },
               esnjhoDV8OL136: {
-                "stroke-dashoffset": [
+                'stroke-dashoffset': [
                   { t: 500, v: 68.49 },
                   { t: 1500, v: 0 },
                   { t: 2600, v: -68.49 },
                 ],
               },
             },
-            s: "MDMA1ZjgyMjk2YYjdjNzk2ODdiANzA3Njc1MjkF0MTM5NDAzNzVM3MzMyOTZiNPzA3OTZjNmE3XYjcwNzY3NTIU5NDEzOFYzMzPI5QjcwN2I2YOzc5Njg3YjcwWNzZDNzU3YTIA5NDEzNzMzQTNI5NmQ3MDczNMzMyOTQxMzgzHMzI5QjY4NzMM3YjZjNzk3NTMY4N2I2Y04yOLTQxNmQ2ODczYN2E2YzMzMjkU3YTc3NmM2YzMZiMjk0MTM3MGzUzZjMzMjk2FZDc3N2EyOTQVxMzgzNzM3ODBQ/",
+            s: 'MDMA1ZjgyMjk2YYjdjNzk2ODdiANzA3Njc1MjkF0MTM5NDAzNzVM3MzMyOTZiNPzA3OTZjNmE3XYjcwNzY3NTIU5NDEzOFYzMzPI5QjcwN2I2YOzc5Njg3YjcwWNzZDNzU3YTIA5NDEzNzMzQTNI5NmQ3MDczNMzMyOTQxMzgzHMzI5QjY4NzMM3YjZjNzk3NTMY4N2I2Y04yOLTQxNmQ2ODczYN2E2YzMzMjkU3YTc3NmM2YzMZiMjk0MTM3MGzUzZjMzMjk2FZDc3N2EyOTQVxMzgzNzM3ODBQ/',
           },
         ],
-        options: "MDAAxMDgyMjk3YBTdiUDY4Nzk3SYjI5NDEyOTcUzNzY2OE82YjEI5ODQ/",
+        options: 'MDAAxMDgyMjk3YBTdiUDY4Nzk3SYjI5NDEyOTcUzNzY2OE82YjEI5ODQ/',
       },
-      "__SVGATOR_PLAYER__",
+      '__SVGATOR_PLAYER__',
       window,
-      document
+      document,
     );
   }, []);
   return <Svg />;
