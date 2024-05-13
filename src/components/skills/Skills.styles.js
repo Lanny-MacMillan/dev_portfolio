@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
   display: flex;
@@ -18,24 +18,24 @@ export const SkillsContainer = styled.div`
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . . ."
-    ". header header header ."
-    ". skills0 skills1 skills2 ."
-    ". skills3 skills3 skills3 ."
-    ". . . . .";
+    '. . . . .'
+    '. header header header .'
+    '. skills0 skills1 skills2 .'
+    '. skills3 skills3 skills3 .'
+    '. . . . .';
 
   @media only screen and (min-width: 320px) and (max-width: 520px) {
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.3fr;
     grid-template-areas:
-      ". "
-      "header"
-      "skills0"
-      "skills1"
-      "skills2"
-      "skills3"
-      ".";
+      '. '
+      'header'
+      'skills0'
+      'skills1'
+      'skills2'
+      'skills3'
+      '.';
   }
 
   @media only screen and (min-width: 520px) and (max-width: 992px) {
@@ -44,13 +44,13 @@ export const SkillsContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
     grid-template-areas:
-      ". "
-      "header"
-      "skills0"
-      "skills1"
-      "skills2"
-      "skills3"
-      ".";
+      '. '
+      'header'
+      'skills0'
+      'skills1'
+      'skills2'
+      'skills3'
+      '.';
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -60,11 +60,11 @@ export const SkillsContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.7fr;
     grid-template-areas:
-      ". . "
-      "header header"
-      "skills0 skills1"
-      "skills2 skills3"
-      ". .";
+      '. . '
+      'header header'
+      'skills0 skills1'
+      'skills2 skills3'
+      '. .';
   }
 `;
 
@@ -75,7 +75,7 @@ export const Header = styled.div`
   align-items: center;
   font-size: 4em;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   padding-bottom: 30px;
@@ -94,7 +94,7 @@ export const Header = styled.div`
 export const Skills0 = styled.div`
   grid-area: skills0;
   padding: 60px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -143,8 +143,8 @@ export const ColorAccent = styled.div`
   position: absolute;
   margin-bottom: 18px;
   z-index: -1;
-  width: ${(props) => (props.width ? props.width : "125px")};
-  background: ${(props) => (props.background ? props.background : "red")};
+  width: ${(props) => (props.width ? props.width : '125px')};
+  background: ${(props) => (props.background ? props.background : 'red')};
   height: 10px;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
   }
@@ -190,15 +190,15 @@ export const HTMLSnippet = styled.div`
 `;
 
 export const VertLine = styled.div`
-  color: ${(props) => (props.color ? props.color : "white")};
+  color: ${(props) => (props.color ? props.color : 'white')};
   border: 1px dashed #00ddff;
-  border-color: ${(props) => (props.borderColor ? props.borderColor : "white")};
-  height: ${(props) => (props.height ? props.height : "50px")};
+  border-color: ${(props) => (props.borderColor ? props.borderColor : 'white')};
+  height: ${(props) => (props.height ? props.height : '50px')};
 `;
 export const Skills1 = styled.div`
   grid-area: skills1;
   padding: 60px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -223,7 +223,7 @@ export const Skills1 = styled.div`
 export const Skills2 = styled.div`
   grid-area: skills2;
   padding: 60px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -253,7 +253,7 @@ export const Skills2 = styled.div`
 export const Skills3 = styled.div`
   grid-area: skills3;
   padding: 60px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;

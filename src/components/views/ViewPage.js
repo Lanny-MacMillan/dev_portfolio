@@ -1,7 +1,7 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import ShowCursor from "../assets/Tools/ShowCursor";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import ShowCursor from '../assets/Tools/ShowCursor';
 import {
   Container,
   InnerContainer,
@@ -14,8 +14,8 @@ import {
   WhiteSpan,
   Header,
   SubHeader,
-} from "./ViewPage.styles";
-import Main from "../Main";
+} from './ViewPage.styles';
+import Main from '../Main';
 
 const ViewPage = () => {
   const location = useLocation();
@@ -37,10 +37,10 @@ const ViewPage = () => {
     // colorSplash,
   } = location.state;
 
-  const inDevelopment = status === "In_Development";
+  const inDevelopment = status === 'In_Development';
   const projectAvailable = liveLink != null;
   const repoAvailable = link != null;
-
+  console.log('nameTextExpanded', nameTextExpanded);
   const projectLink = projectAvailable ? (
     <p>
       <Link href={liveLink} target="_blank" rel="noopener noreferrer">
@@ -90,11 +90,11 @@ const ViewPage = () => {
       <AnimatePresence>
         <InnerContainer>
           <motion.div
-            style={{ marginTop: "1em" }}
+            style={{ marginTop: '1em' }}
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
-            transition={{ ease: "easeInOut", duration: 1 }}
+            transition={{ ease: 'easeInOut', duration: 1 }}
           >
             {devTypeOneofTwo}
             <BlueSpan>_</BlueSpan>
@@ -105,19 +105,19 @@ const ViewPage = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
+            transition={{ ease: 'easeInOut', duration: 1, delay: 1 }}
           >
             <Header>{nameText}</Header>
             <SubHeader>{nameTextExpanded}</SubHeader>
           </motion.div>
-          <Image src={img} />{" "}
+          <Image src={img} />{' '}
           <LowerDiv>
             <LeftDiv>
               <motion.div
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
-                transition={{ ease: "easeInOut", duration: 1, delay: 2 }}
+                transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
               >
                 {fullDescription} <BlueSpan>.</BlueSpan>
               </motion.div>
@@ -127,7 +127,7 @@ const ViewPage = () => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
-                transition={{ ease: "easeInOut", duration: 1, delay: 2.5 }}
+                transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
               >
                 {repoDetails}
                 {projectDetails}

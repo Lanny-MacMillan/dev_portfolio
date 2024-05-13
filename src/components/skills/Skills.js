@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   ReactIcon,
   MobileIcon,
@@ -6,13 +6,13 @@ import {
   UnityIcon2,
   Ptag,
   ClosingPtag,
-} from "../assets/icons.js";
+} from '../assets/icons.js';
 import {
   softwareDev,
   frontendDev,
   mobileDev,
   gameDev,
-} from "../assets/constants.js";
+} from '../assets/constants.js';
 import {
   SkillsContainer,
   Header,
@@ -29,7 +29,7 @@ import {
   Skills3,
   Container,
   VertLine,
-} from "./Skills.styles.js";
+} from './Skills.styles.js';
 
 const Skills = ({ skills, largeScreen }) => {
   // const style = "linear-gradient(to left, #1a6dff,#c822ff);";
@@ -41,20 +41,20 @@ const Skills = ({ skills, largeScreen }) => {
         <Skills0>
           <SkillsHeader>
             <Icon>
-              <SoftwareIcon height={60} width={60} />{" "}
+              <SoftwareIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
               <ColorAccent background={softwareDev} />
               Software <br />
-              Development{" "}
+              Development{' '}
             </Title>
           </SkillsHeader>
           <DescriptionBody>
             <HTMLSnippet>
-              {" "}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
-              <VertLine borderColor={mobileDev} height={"75px"} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{" "}
+              {' '}
+              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
+              <VertLine borderColor={mobileDev} height={'75px'} />
+              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
               Software Dev, functional and OOP programming, Javascript, C#,
@@ -65,43 +65,42 @@ const Skills = ({ skills, largeScreen }) => {
         <Skills1>
           <SkillsHeader>
             <Icon>
-              <ReactIcon height={60} width={60} />{" "}
+              <ReactIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={frontendDev} width={"126px"} />
+              <ColorAccent background={frontendDev} width={'126px'} />
               Frontend <br />
-              Development{" "}
+              Development{' '}
             </Title>
           </SkillsHeader>
           <DescriptionBody>
             <HTMLSnippet>
-              <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
-              <VertLine borderColor={mobileDev} height={"60px"} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{" "}
+              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
+              <VertLine borderColor={mobileDev} height={'60px'} />
+              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
-              HTML, CSS, JS, React, and Express. Mobile first development
-              mindset
+              HTML, CSS, JS, React, and Express. Mobile first development mindset
             </Description>
           </DescriptionBody>
         </Skills1>
         <Skills2>
           <SkillsHeader>
             <Icon>
-              <MobileIcon height={60} width={60} />{" "}
+              <MobileIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={mobileDev} width={"95px"} />
+              <ColorAccent background={mobileDev} width={'95px'} />
               Mobile <br />
-              Development{" "}
+              Development{' '}
             </Title>
           </SkillsHeader>
           <DescriptionBody>
             <HTMLSnippet>
-              {" "}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+              {' '}
+              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
               <VertLine borderColor={mobileDev} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{" "}
+              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
               React Native mobile development for iOS, and Android
@@ -111,25 +110,25 @@ const Skills = ({ skills, largeScreen }) => {
         <Skills3>
           <SkillsHeader>
             <Icon>
-              <UnityIcon2 height={60} width={60} />{" "}
+              <UnityIcon2 height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={gameDev} width={"85px"} />
+              <ColorAccent background={gameDev} width={'85px'} />
               Game <br />
-              Development{" "}
+              Development{' '}
             </Title>
           </SkillsHeader>
           <DescriptionBody>
             <HTMLSnippet>
-              {" "}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{" "}
+              {' '}
+              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
               <VertLine borderColor={mobileDev} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{" "}
+              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
               {largeScreen
-                ? "Using the Unity game engine, C# and Object Oriented Programming to adeptly design and code captivating 2D games,ensuring optimal performance, and engaging player experiences!"
-                : "Using C# and OOP to adeptly design and create 2D games"}
+                ? 'Using the Unity game engine, C# and Object Oriented Programming to adeptly design and code captivating 2D games,ensuring optimal performance, and engaging player experiences!'
+                : 'Using C# and OOP to adeptly design and create 2D games'}
             </Description>
           </DescriptionBody>
         </Skills3>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { gameDev } from "../assets/constants.js";
+import styled from 'styled-components';
+import { gameDev } from '../assets/constants.js';
 
 export const ExperienceContainer = styled.div`
   display: flex;
@@ -28,11 +28,11 @@ export const Container = styled.div`
   grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    ". . . ."
-    ". header header ."
-    ". experienceDiv experienceDiv ."
-    ". experienceDiv experienceDiv ."
-    ". . . .";
+    '. . . .'
+    '. header header .'
+    '. experienceDiv experienceDiv .'
+    '. experienceDiv experienceDiv .'
+    '. . . .';
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     height: 100vh;
@@ -41,11 +41,11 @@ export const Container = styled.div`
     gap: 0px 0px;
 
     grid-template-areas:
-      ". . . ."
-      ". header header ."
-      ". experienceDiv experienceDiv ."
-      ". experienceDiv experienceDiv ."
-      ". . . .";
+      '. . . .'
+      '. header header .'
+      '. experienceDiv experienceDiv .'
+      '. experienceDiv experienceDiv .'
+      '. . . .';
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -66,7 +66,7 @@ export const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 4.5em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -164,7 +164,7 @@ export const TimeLine = styled.div`
 
 export const Outer = styled.div`
   border-left: 4px solid white;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   margin: 50px 0 50px 0;
 `;
 
@@ -191,7 +191,7 @@ export const Title = styled.div`
   position: relative;
   font-weight: 800;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 10px;
     height: 10px;

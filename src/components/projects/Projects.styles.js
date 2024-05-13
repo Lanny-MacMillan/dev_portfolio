@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const ProjectsContainer = styled.div`
   font: 1em/1.618 Inter, sans-serif;
@@ -28,10 +28,10 @@ export const Container = styled.div`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 60px 60px;
   grid-template-areas:
-    ". projectOne projectTwo projectTwo ."
-    ". projectThree projectThree projectFour ."
-    ". projectSeven projectSix projectSix ."
-    ".  projectFive projectFive projectEight .";
+    '. projectOne projectTwo projectTwo .'
+    '. projectThree projectThree projectFour .'
+    '. projectSeven projectSix projectSix .'
+    '.  projectFive projectFive projectEight .';
   max-width: 1500px;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -40,14 +40,14 @@ export const Container = styled.div`
 
     gap: 30px 30px;
     grid-template-areas:
-      "projectOne"
-      "projectTwo"
-      "projectThree"
-      "projectFour"
-      "projectFive"
-      "projectSix"
-      "projectSeven"
-      "projectEight";
+      'projectOne'
+      'projectTwo'
+      'projectThree'
+      'projectFour'
+      'projectFive'
+      'projectSix'
+      'projectSeven'
+      'projectEight';
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -56,14 +56,14 @@ export const Container = styled.div`
 
     gap: 30px 30px;
     grid-template-areas:
-      "projectOne"
-      "projectTwo"
-      "projectThree"
-      "projectFour"
-      "projectFive"
-      "projectSix"
-      "projectSeven"
-      "projectEight";
+      'projectOne'
+      'projectTwo'
+      'projectThree'
+      'projectFour'
+      'projectFive'
+      'projectSix'
+      'projectSeven'
+      'projectEight';
   }
 
   @media only screen and (min-width: 1400px) {
@@ -103,8 +103,8 @@ export const ProjectCard2 = styled.div`
   min-width: 320px;
   height: 440px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 0 30px 0 30px;
   transition: 0.5s;
@@ -124,7 +124,7 @@ export const Box = styled.div`
   overflow: hidden;
   transition: 0.5s;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -204,7 +204,7 @@ export const Header = styled.div`
   align-items: center;
   font-size: 4.5em;
   font-weight: 800;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   padding-bottom: 30px;
@@ -228,12 +228,12 @@ export const ProjectCardContainer = styled.div`
   border: 2px solid white;
 
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-  height: ${(props) => (props.height ? props.height : "440px")};
+  height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
 export const ProjectCardContainerWide = styled.div`
@@ -243,12 +243,12 @@ export const ProjectCardContainerWide = styled.div`
   border: 2px solid white;
 
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-  height: ${(props) => (props.height ? props.height : "440px")};
+  height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
 export const ProjectCardContainerLarge = styled.div`
@@ -258,12 +258,12 @@ export const ProjectCardContainerLarge = styled.div`
   border: 2px solid white;
 
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-  height: ${(props) => (props.height ? props.height : "440px")};
+  height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
 export const ImageMobile = styled.img`
@@ -279,25 +279,25 @@ export const Image = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
-  height: ${(props) => (props.height ? props.height : "60%")};
+  /* margin: ${(props) => (props.margin ? props.margin : 'auto')}; */
+  height: ${(props) => (props.height ? props.height : '60%')};
   /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   object-fit: cover;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
     object-fit: cover;
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
     object-fit: cover;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
     object-fit: cover;
   }
 `;
@@ -306,23 +306,23 @@ export const ImageWide = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
-  height: ${(props) => (props.height ? props.height : "60%")};
+  /* margin: ${(props) => (props.margin ? props.margin : 'auto')}; */
+  height: ${(props) => (props.height ? props.height : '60%')};
   /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   object-fit: fill;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
   }
 `;
 
@@ -331,8 +331,8 @@ export const ImageLarge = styled.img`
   display: block;
   max-width: 100%;
   z-index: 10;
-  /* margin: ${(props) => (props.margin ? props.margin : "auto")}; */
-  height: ${(props) => (props.height ? props.height : "100%")};
+  /* margin: ${(props) => (props.margin ? props.margin : 'auto')}; */
+  height: ${(props) => (props.height ? props.height : '100%')};
   /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -342,13 +342,13 @@ export const ImageLarge = styled.img`
   /* object-fit: scale-down; */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    /* bottom: ${(props) => (props.bottom ? props.bottom : "152px")}; */
+    /* bottom: ${(props) => (props.bottom ? props.bottom : '152px')}; */
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    height: ${(props) => (props.height ? props.height : "100%")};
+    height: ${(props) => (props.height ? props.height : '100%')};
   }
 `;
 
@@ -357,7 +357,7 @@ export const Footer = styled.div`
   height: 40%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid blue; */
@@ -375,7 +375,7 @@ export const FooterWide = styled.div`
   z-index: 1;
   height: 40%;
   background: rgba(0, 0, 0, 0.5);
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   border-radius: 0px 0px 15px 15px;
   /* border: 1px solid red; */
@@ -393,7 +393,7 @@ export const FooterLarge = styled.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 15px 15px;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   // border: 1px solid blue;
   height: 65%;
@@ -410,7 +410,7 @@ export const Title = styled.div`
   padding: 10px 30px 0px 30px;
   // padding: 10px 30px 0px 30px;
   color: white;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   align-items: center;
 
@@ -457,71 +457,71 @@ export const Stack = styled.div`
 export const ColorAccent = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
+  bottom: ${(props) => (props.bottom ? props.bottom : '140px')};
   left: 25px;
   z-index: -1;
-  width: ${(props) => (props.width ? props.width : "125px")};
-  background: ${(props) => (props.background ? props.background : "red")};
+  width: ${(props) => (props.width ? props.width : '125px')};
+  background: ${(props) => (props.background ? props.background : 'red')};
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 601px) {
-    width: ${(props) => (props.width ? props.width : "105px")};
-    bottom: ${(props) => (props.bottom ? props.bottom : "93px")};
+    width: ${(props) => (props.width ? props.width : '105px')};
+    bottom: ${(props) => (props.bottom ? props.bottom : '93px')};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    width: ${(props) => (props.width ? props.width : "105px")};
-    bottom: ${(props) => (props.bottom ? props.bottom : "110px")};
+    width: ${(props) => (props.width ? props.width : '105px')};
+    bottom: ${(props) => (props.bottom ? props.bottom : '110px')};
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    width: ${(props) => (props.width ? props.width : "105px")};
-    bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
+    width: ${(props) => (props.width ? props.width : '105px')};
+    bottom: ${(props) => (props.bottom ? props.bottom : '103px')};
   }
 `;
 
 export const ColorAccentWide = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
+  bottom: ${(props) => (props.bottom ? props.bottom : '140px')};
   left: 25px;
   z-index: -1;
-  width: ${(props) => (props.width ? props.width : "325px")};
-  background: ${(props) => (props.background ? props.background : "red")};
+  width: ${(props) => (props.width ? props.width : '325px')};
+  background: ${(props) => (props.background ? props.background : 'red')};
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "95px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '95px')};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "94px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '94px')};
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '103px')};
   }
 `;
 
 export const ColorAccentLarge = styled.div`
   position: absolute;
   // style set for 1200 ss
-  bottom: ${(props) => (props.bottom ? props.bottom : "140px")};
+  bottom: ${(props) => (props.bottom ? props.bottom : '140px')};
   left: 25px;
   z-index: -1;
-  width: ${(props) => (props.width ? props.width : "125px")};
-  background: ${(props) => (props.background ? props.background : "red")};
+  width: ${(props) => (props.width ? props.width : '125px')};
+  background: ${(props) => (props.background ? props.background : 'red')};
   height: 10px;
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "136px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '136px')};
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "107px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '107px')};
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    bottom: ${(props) => (props.bottom ? props.bottom : "103px")};
+    bottom: ${(props) => (props.bottom ? props.bottom : '103px')};
   }
 `;
 
@@ -541,7 +541,7 @@ export const Icons = styled.div`
 
 export const Button = styled.button`
   font-size: 1em;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   color: #4fecec;
   background: none !important;

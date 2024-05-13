@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from 'react';
 import {
   LinkedInIcon,
   GmailIcon,
   GitHubIcon,
   CalendlyIcon,
-} from "../assets/icons.js";
-import { motion } from "framer-motion";
-import { mobileDev } from "../assets/constants.js";
-import Blinking from "../assets/anim/blinking/Blinking.js";
-import { PopupModal } from "react-calendly";
+} from '../assets/icons.js';
+import { motion } from 'framer-motion';
+import { mobileDev } from '../assets/constants.js';
+import Blinking from '../assets/anim/blinking/Blinking.js';
+import { PopupModal } from 'react-calendly';
 import {
   ContactContainer,
   Footer,
@@ -24,14 +24,14 @@ import {
   FooterCenter,
   InfoDiv,
   SmallText,
-} from "./Contact.styles.js";
+} from './Contact.styles.js';
 
 const Contact = ({ contact, largeScreen }) => {
   const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [nameValid, setNameValid] = useState(true);
   const [emailValid, setEmailValid] = useState(true);
@@ -59,7 +59,7 @@ const Contact = ({ contact, largeScreen }) => {
     setIsSubmitting(true);
     // some call to send email
   };
-  const iconSize = largeScreen ? "50px" : "40px";
+  const iconSize = largeScreen ? '50px' : '40px';
 
   const renderCalendlyPopupModal = (
     <>
@@ -68,15 +68,15 @@ const Contact = ({ contact, largeScreen }) => {
           whileHover={{
             scale: 1.1,
           }}
-          transition={{ type: "spring", stiffness: 300 }}
+          transition={{ type: 'spring', stiffness: 300 }}
           whileTap={{ scale: 2.5 }}
           onClick={() => setIsOpen(true)}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           <CalendlyIcon
-            letterFill={hover ? "white" : null}
-            logoFillBG={hover ? "white" : null}
+            letterFill={hover ? 'white' : null}
+            logoFillBG={hover ? 'white' : null}
           />
         </StyledButton>
       </ButtonContainer>
@@ -84,7 +84,7 @@ const Contact = ({ contact, largeScreen }) => {
         url="https://calendly.com/lanny-macmillan-dev/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
-        rootElement={document.getElementById("root")}
+        rootElement={document.getElementById('root')}
       />
     </>
   );
@@ -110,7 +110,7 @@ const Contact = ({ contact, largeScreen }) => {
                   whileHover={{
                     scale: 1.4,
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 2.5 }}
                   href="https://www.linkedin.com/in/lanny-macmillan/"
                   target="_blank"
@@ -122,7 +122,7 @@ const Contact = ({ contact, largeScreen }) => {
                   whileHover={{
                     scale: 1.4,
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 2.5 }}
                   href="mailto:lanny.macmillan.dev@gmail.com"
                   rel="noopener noreferrer"
@@ -133,7 +133,7 @@ const Contact = ({ contact, largeScreen }) => {
                   whileHover={{
                     scale: 1.4,
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 2.5 }}
                   href="https://github.com/Lanny-MacMillan"
                   target="_blank"
