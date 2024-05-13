@@ -4,8 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ShowCursor from '../assets/Tools/ShowCursor';
 import {
   Container,
+  GamePlayImage,
+  GamePlayImageTwo,
   InnerContainer,
-  Image,
+  ShowImageContainer,
+  ShowImageColumn,
+  ShowImage,
   Link,
   LowerDiv,
   LeftDiv,
@@ -28,6 +32,8 @@ const ViewPage = () => {
     nameText,
     nameTextExpanded,
     img,
+    gameplayImage,
+    gameplayImageTwo,
     fullDescription,
     liveLink,
     link,
@@ -110,7 +116,13 @@ const ViewPage = () => {
             <Header>{nameText}</Header>
             <SubHeader>{nameTextExpanded}</SubHeader>
           </motion.div>
-          <Image src={img} />{' '}
+          <ShowImageContainer>
+            <ShowImage src={img} />{' '}
+            <ShowImageColumn>
+              <GamePlayImage src={gameplayImage} />
+              <GamePlayImageTwo src={gameplayImageTwo} />
+            </ShowImageColumn>
+          </ShowImageContainer>
           <LowerDiv>
             <LeftDiv>
               <motion.div

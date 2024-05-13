@@ -5,7 +5,6 @@ import {
   tetris,
   theQuickStop,
   amiiboApp,
-  // vacationApp,
   crappyBird,
   geoDash,
   twoDudesNightmare,
@@ -53,6 +52,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={aiToolbox.nameText}
             nameTextExpanded={aiToolbox.nameTextExpanded}
             img={aiToolbox.image}
+            gameplayImage={aiToolbox.gameplayImage}
+            gameplayImageTwo={aiToolbox.gameplayImageTwo}
             description={aiToolbox.description}
             fullDescription={aiToolbox.fullDescription}
             icons={aiToolbox.icons}
@@ -85,6 +86,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={theQuickStop.nameText}
             nameTextExpanded={theQuickStop.nameTextExpanded}
             img={theQuickStop.image}
+            gameplayImage={theQuickStop.gameplayImage}
+            gameplayImageTwo={theQuickStop.gameplayImageTwo}
             description={theQuickStop.description}
             fullDescription={theQuickStop.fullDescription}
             icons={theQuickStop.icons}
@@ -119,6 +122,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={theAdventure.nameText}
             nameTextExpanded={theAdventure.nameTextExpanded}
             img={theAdventure.image}
+            gameplayImage={theAdventure.gameplayImage}
+            gameplayImageTwo={theAdventure.gameplayImageTwo}
             description={theAdventure.description}
             fullDescription={theAdventure.fullDescription}
             icons={theAdventure.icons}
@@ -152,6 +157,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={amiiboApp.nameText}
             nameTextExpanded={amiiboApp.nameTextExpanded}
             img={amiiboApp.image}
+            gameplayImage={amiiboApp.gameplayImage}
+            gameplayImageTwo={amiiboApp.gameplayImageTwo}
             description={amiiboApp.description}
             fullDescription={amiiboApp.fullDescription}
             icons={amiiboApp.icons}
@@ -183,6 +190,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={tetris.nameText}
             nameTextExpanded={tetris.nameTextExpanded}
             img={tetris.image}
+            gameplayImage={tetris.gameplayImage}
+            gameplayImageTwo={tetris.gameplayImageTwo}
             description={tetris.description}
             fullDescription={tetris.fullDescription}
             icons={tetris.icons}
@@ -216,6 +225,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={twoDudesNightmare.nameText}
             nameTextExpanded={twoDudesNightmare.nameTextExpanded}
             img={twoDudesNightmare.image}
+            gameplayImage={twoDudesNightmare.gameplayImage}
+            gameplayImageTwo={twoDudesNightmare.gameplayImageTwo}
             description={twoDudesNightmare.description}
             fullDescription={twoDudesNightmare.fullDescription}
             icons={twoDudesNightmare.icons}
@@ -249,6 +260,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={crappyBird.nameText}
             nameTextExpanded={crappyBird.nameTextExpanded}
             img={crappyBird.image}
+            gameplayImage={crappyBird.gameplayImage}
+            gameplayImageTwo={crappyBird.gameplayImageTwo}
             description={crappyBird.description}
             fullDescription={crappyBird.fullDescription}
             icons={crappyBird.icons}
@@ -282,6 +295,8 @@ const Projects = ({ projects, largeScreen }) => {
             nameText={geoDash.nameText}
             nameTextExpanded={geoDash.nameTextExpanded}
             img={geoDash.image}
+            gameplayImage={geoDash.gameplayImage}
+            gameplayImageTwo={geoDash.gameplayImageTwo}
             description={geoDash.description}
             fullDescription={geoDash.fullDescription}
             icons={geoDash.icons}
@@ -296,25 +311,6 @@ const Projects = ({ projects, largeScreen }) => {
           />
         </ProjectEight>
       </Container>
-      {/* Card Two - Nuemorphism UI Design */}
-      {/* <ProjectCard2>
-        <Box>
-          <Content>
-            <ContentH2>Tetris</ContentH2>
-            <ContentH3>React JS</ContentH3>
-            <ContentP>
-              A clone of the original Tetris, done with React.
-            </ContentP>
-
-            <ContentA href="#">Read More</ContentA>
-            <SkillsDiv>
-              <ReactIconColor />
-              <JavascriptIcon logoFill={"black"} backgroundFill={"yellow"} />
-            </SkillsDiv>
-          </Content>
-        </Box>
-      </ProjectCard2> */}
-      {/* Card Three - Nuemorphism UI Design */}
     </ProjectsContainer>
   );
 };
