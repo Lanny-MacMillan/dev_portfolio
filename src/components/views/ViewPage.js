@@ -116,20 +116,29 @@ const ViewPage = () => {
             <Header>{nameText}</Header>
             <SubHeader>{nameTextExpanded}</SubHeader>
           </motion.div>
-          <ShowImageContainer>
-            <ShowImage src={img} />{' '}
-            <ShowImageColumn>
-              <GamePlayImage src={gameplayImage} />
-              <GamePlayImageTwo src={gameplayImageTwo} />
-            </ShowImageColumn>
-          </ShowImageContainer>
+
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
+            transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
+          >
+            <ShowImageContainer>
+              <ShowImage src={img} />{' '}
+              <ShowImageColumn>
+                <GamePlayImage src={gameplayImage} />
+                <GamePlayImageTwo src={gameplayImageTwo} />
+              </ShowImageColumn>
+            </ShowImageContainer>
+          </motion.div>
+
           <LowerDiv>
             <LeftDiv>
               <motion.div
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
-                transition={{ ease: 'easeInOut', duration: 1, delay: 2 }}
+                transition={{ ease: 'easeInOut', duration: 1, delay: 3 }}
               >
                 {fullDescription} <BlueSpan>.</BlueSpan>
               </motion.div>
@@ -139,7 +148,7 @@ const ViewPage = () => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
-                transition={{ ease: 'easeInOut', duration: 1, delay: 2.5 }}
+                transition={{ ease: 'easeInOut', duration: 1, delay: 3.5 }}
               >
                 {repoDetails}
                 {projectDetails}
