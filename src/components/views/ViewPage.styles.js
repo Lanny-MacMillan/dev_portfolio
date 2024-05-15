@@ -10,8 +10,9 @@ export const Container = styled.div`
   /* justify-content: center;
   align-items: center; */
   flex-direction: column;
+  overflow: auto;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    min-height: 110vh;
+    /* min-height: 110vh; */
   }
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -158,4 +159,56 @@ export const RightDiv = styled.a`
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     align-items: flex-start;
   }
+`;
+
+export const ShowImageContainer = styled.div`
+  display: flex;
+  height: 50vh;
+  width: auto;
+  border: 3px solid white;
+`;
+
+export const ShowImageColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 30%;
+  @media only screen and (min-width: 320px) and (max-width: 750px) {
+    display: none;
+  }
+  /* border: 2px solid orange; */
+`;
+
+export const ShowImage = styled.img`
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  /* object-fit: contain; */
+  @media only screen and (min-width: 320px) and (max-width: 750px) {
+    width: 100%;
+
+    /* object-fit: contain; */
+  }
+`;
+
+export const GamePlayImage = styled.img`
+  width: auto;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  /* object-fit: contain; */
+  border-left: 3px solid white;
+`;
+
+export const GamePlayImageTwo = styled.img`
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  /* object-fit: contain; */
+  border-left: 3px solid white;
+  border-top: 3px solid white;
 `;

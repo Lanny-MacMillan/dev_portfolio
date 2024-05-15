@@ -4,21 +4,6 @@ import { Route, Routes } from 'react-router';
 import ViewPage from './components/views/ViewPage.js';
 
 function App() {
-  // const [largeScreen, setLargeScreen] = useState(false);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth > 750) {
-  //       setLargeScreen(true);
-  //     } else {
-  //       setLargeScreen(false);
-  //     }
-  //   };
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
-
   return (
     <>
       <Routes>

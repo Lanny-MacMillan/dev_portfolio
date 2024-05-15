@@ -1,12 +1,31 @@
 import theAdventureImg from './img/theAdventure.png';
+import theAdventureGameplay from './img/theAdventureGameplay.png';
+import theAdventureGameplayAlt from './img/theAdventureGameplayAlt.png';
+
 import tetrisReact from './img/tetrisReact.png';
+import tetrisGameplay from './img/tetrisGameplay.png';
+import tetrisGameplayAlt from './img/tetrisGameplayAlt.png';
+
 import amiiboAppImg from './img/amiibo.png';
 import vacationImg from './img/vacation.png';
 import geoDashImg from './img/geoDash.png';
-import crappyBirdImg from './img/crappyBird.png';
-import nightmareImg from './img/nightmare.png';
-import storybookImg from './img/storybook.png';
+
+import crappyBirdImg from './img/crappyBirdTitle.png';
+import crappyBirdGameplay from './img/crappyBirdGameplay.png';
+import crappyBirdGameplayAlt from './img/crappyBird.png';
+
+import nightmareImg from './img/nightmareGameplay.png';
+import nightmareGameplayAlt from './img/nightmareGameplayAlt.png';
+import nightmareGameplayAltTwo from './img/nightmareGameplayAltTwo.png';
+
+import quickstopImg from './img/quickStopButtons.png';
+import quickStopTooltip from './img/quickStopTooltip.png';
+import quickStopInputs from './img/quickStopInputs.png';
+
 import aiToolboxImg from './img/aiToolboxImg.png';
+import chatImg from './img/gpt4.png';
+import dalle3Img from './img/dalle3.png';
+
 import {
   UnityIcon,
   CSharpIcon,
@@ -21,7 +40,7 @@ import {
   PythonIcon,
   DjangoIcon,
   NextJSIcon,
-  NextJSColorIcon,
+  // NextJSColorIcon,
 } from './icons';
 
 export const softwareDev = 'red';
@@ -53,6 +72,8 @@ export const theAdventure = {
   nameTextExpanded: 'Unite with the Magi. Save Discordia.',
   colorSplash: gameDev,
   image: theAdventureImg,
+  gameplayImage: theAdventureGameplay,
+  gameplayImageTwo: theAdventureGameplayAlt,
   description:
     'A sidescrolling RPG platformer. Can you discover whats destroying the land, unite with the magi and bring a stop to it?',
   fullDescription:
@@ -86,6 +107,8 @@ export const tetris = {
   nameText: 'Tetris React',
   nameTextExpanded: "It's Tetris. In React.",
   image: tetrisReact,
+  gameplayImage: tetrisGameplay,
+  gameplayImageTwo: tetrisGameplayAlt,
   description: 'A clone of the original Tetris, done with React.',
   fullDescription:
     'This was created using React, with no state management like redux or backend. The player input is handled by an autofocused input field thats been removed from view. Creating the tetronimoes by class and shape then handling the board using CssGrid, React hooks and timed intervals to control the location, rotation, and drop rate while playing',
@@ -102,7 +125,9 @@ export const theQuickStop = {
   nameText: 'The Quickstop Library',
   nameTextExpanded: 'Download. Import. Build.',
   colorSplash: softwareDev,
-  image: storybookImg,
+  image: quickstopImg,
+  gameplayImage: quickStopTooltip,
+  gameplayImageTwo: quickStopInputs,
   description:
     'A personal component library for all my building needs. Brings speed and ease with reusable components.',
   fullDescription:
@@ -130,6 +155,8 @@ export const amiiboApp = {
   nameText: 'Amiibo App',
   colorSplash: frontendDev,
   image: amiiboAppImg,
+  gameplayImage: amiiboAppImg,
+  gameplayImageTwo: amiiboAppImg,
   description: 'A Full Stack Nintendo Amiibos App for collectors.',
   fullDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -156,6 +183,8 @@ export const vacationApp = {
   nameText: 'Vacation App',
   colorSplash: frontendDev,
   image: vacationImg,
+  gameplayImage: vacationImg,
+  gameplayImageTwo: vacationImg,
   description: 'Full stack application that helps users while vacationing. ',
   fullDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -185,6 +214,8 @@ export const crappyBird = {
   nameTextExpanded: 'Flap. Drop. Avoid Pipes.',
   colorSplash: gameDev,
   image: crappyBirdImg,
+  gameplayImage: crappyBirdGameplayAlt,
+  gameplayImageTwo: crappyBirdGameplay,
   description: 'A clone of the popular flappy bird',
   fullDescription:
     'This game was created using the unity Engine and C#. This was my first game created in Unity. The clouds and pipes are instantiated randomly within rulesets, just outside of the camera to allow a more random level expirience with each play. I would still like to add wings to the bird and some hazards to the level as you progress',
@@ -218,6 +249,8 @@ export const geoDash = {
   nameTextExpanded: 'A learning project.',
   colorSplash: gameDev,
   image: geoDashImg,
+  gameplayImage: geoDashImg,
+  gameplayImageTwo: geoDashImg,
   description: 'Geo Dash with some twists',
   fullDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -251,7 +284,9 @@ export const twoDudesNightmare = {
   nameText: '2D Nightmare',
   nameTextExpanded: 'Survive the evil. Escape the woods.',
   colorSplash: gameDev,
-  image: nightmareImg,
+  image: nightmareGameplayAlt,
+  gameplayImage: nightmareGameplayAltTwo,
+  gameplayImageTwo: nightmareImg,
   description: 'A sidescrolling platformer created in Unity ',
   fullDescription:
     'This game was created using the unity Engine and C#. In this game we find Two Dudes who come across a remote cabin in the woods. With the only bridge down, and no where to go, these two dudes must find another way out of the woods and back to safety. But theres more in these woods than just trees. Survive the evil and escape the woods',
@@ -268,7 +303,6 @@ export const twoDudesNightmare = {
       backgroundFill={'#262626'}
     />,
     <CSharpIcon width={30} height={30} logoFill={'#FFFFFF'} />,
-    // Aesprite Icon
   ],
   iconsLarge: [
     <UnityIcon
@@ -286,9 +320,11 @@ export const aiToolbox = {
   nameTextExpanded: 'Ai Powered Solutions. In one place',
   colorSplash: frontendDev,
   image: aiToolboxImg,
+  gameplayImage: chatImg,
+  gameplayImageTwo: dalle3Img,
   description: 'Ai powered solutions to transform your approach',
   fullDescription:
-    'This was created using NextJS and Typescript, and is my first step into Server-Side-Rendering with NextJS. This app takes 4 of the OpenAi models: GPT-4 (chat), Dalle-3 (image generator), Vision (image analysis), and TTS-1 (text-to-speech) and allows the user to transform the way they approach everyday tasks.',
+    'This was created using NextJS and Typescript, and is my first step into Server-Side-Rendering with NextJS. This app takes 4 of the OpenAi models: GPT-4 (chat), Dalle-3 (image generator), Vision (image analysis), and TTS-1 (text-to-speech) and allows the user to transform the way they approach everyday tasks',
   link: 'https://github.com/Lanny-MacMillan/AI_Chatbot',
   liveLink: 'https://main.ddsa0s723exxk.amplifyapp.com/',
   devTypeOneofTwo: 'Web',
