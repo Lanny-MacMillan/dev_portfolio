@@ -6,7 +6,10 @@ import tetrisReact from './img/tetrisReact.png';
 import tetrisGameplay from './img/tetrisGameplay.png';
 import tetrisGameplayAlt from './img/tetrisGameplayAlt.png';
 
-import amiiboAppImg from './img/amiibo.png';
+import thryv from './img/thryv.png';
+import thryvAlt1 from './img/thryvAlt1.png';
+import thryvAlt2 from './img/thryvAlt2.png';
+
 import vacationImg from './img/vacation.png';
 import geoDashImg from './img/geoDash.png';
 
@@ -33,14 +36,12 @@ import {
   TypescriptIcon,
   JavascriptIcon,
   StorybookIcon,
-  MongoDBIcon,
   ExpressIcon,
   PostregSQLIcon,
   NodeJSIcon,
   PythonIcon,
   DjangoIcon,
   NextJSIcon,
-  // NextJSColorIcon,
 } from './icons';
 
 export const softwareDev = 'red';
@@ -106,6 +107,7 @@ export const theAdventure = {
 export const tetris = {
   nameText: 'Tetris React',
   nameTextExpanded: "It's Tetris. In React.",
+  colorSplash: frontendDev,
   image: tetrisReact,
   gameplayImage: tetrisGameplay,
   gameplayImageTwo: tetrisGameplayAlt,
@@ -151,30 +153,32 @@ export const theQuickStop = {
   ],
 };
 
-export const amiiboApp = {
-  nameText: 'Amiibo App',
-  colorSplash: frontendDev,
-  image: amiiboAppImg,
-  gameplayImage: amiiboAppImg,
-  gameplayImageTwo: amiiboAppImg,
-  description: 'A Full Stack Nintendo Amiibos App for collectors.',
+export const thryvInc = {
+  nameText: 'Thryv',
+  nameTextExpanded: 'Do-it-all small business software.',
+  colorSplash: softwareDev,
+  image: thryv,
+  gameplayImage: thryvAlt1,
+  gameplayImageTwo: thryvAlt2,
+  description:
+    'A comprehensive platform for customer relationship management, marketing automation, and business management solutions.',
   fullDescription:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  link: 'https://github.com/Lanny-MacMillan/Project2',
-  liveLink: null,
-  devTypeOneofTwo: 'Web',
+    'Thryv Inc. is a software company that provides businesses with customer relationship management (CRM) tools, marketing automation, and business management solutions. Thryvs platform is designed to help businesses streamline their operations, improve customer engagement, and grow their business. With a range of services including online presence management, customer communication tools, appointment scheduling, payment processing, and more.',
+  link: null,
+  liveLink: 'https://www.thryv.com/',
+  devTypeOneofTwo: 'Software',
   devTypeTwoofTwo: 'Development',
   status: 'Live',
   icons: [
-    <ExpressIcon width={30} height={30} />,
+    <ReactIconColor width={30} height={30} />,
     <JavascriptIcon width={30} height={30} />,
-    <MongoDBIcon width={30} height={30} />,
+    <ExpressIcon width={30} height={30} />,
     <NodeJSIcon width={30} height={30} />,
   ],
   iconsLarge: [
-    <ExpressIcon width={40} height={40} />,
+    <ReactIconColor width={40} height={40} />,
     <JavascriptIcon width={40} height={40} />,
-    <MongoDBIcon width={40} height={40} />,
+    <ExpressIcon width={40} height={40} />,
     <NodeJSIcon width={40} height={40} />,
   ],
 };

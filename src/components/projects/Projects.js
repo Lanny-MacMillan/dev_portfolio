@@ -4,7 +4,7 @@ import {
   theAdventure,
   tetris,
   theQuickStop,
-  amiiboApp,
+  thryvInc,
   crappyBird,
   geoDash,
   twoDudesNightmare,
@@ -119,62 +119,29 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={theAdventure.nameText}
-            nameTextExpanded={theAdventure.nameTextExpanded}
-            img={theAdventure.image}
-            gameplayImage={theAdventure.gameplayImage}
-            gameplayImageTwo={theAdventure.gameplayImageTwo}
-            description={theAdventure.description}
-            fullDescription={theAdventure.fullDescription}
-            icons={theAdventure.icons}
-            iconsLarge={theAdventure.iconsLarge}
-            link={theAdventure.link}
-            liveLink={theAdventure.liveLink}
-            colorSplash={theAdventure.colorSplash}
-            colorSplashWidth={'140px'}
-            type={'wide'}
-            status={theAdventure.status}
-            devTypeOneofTwo={theAdventure.devTypeOneofTwo}
-            devTypeTwoofTwo={theAdventure.devTypeTwoofTwo}
+            nameText={thryvInc.nameText}
+            nameTextExpanded={thryvInc.nameTextExpanded}
+            img={thryvInc.image}
+            gameplayImage={thryvInc.gameplayImage}
+            gameplayImageTwo={thryvInc.gameplayImageTwo}
+            description={thryvInc.description}
+            fullDescription={thryvInc.fullDescription}
+            icons={thryvInc.icons}
+            iconsLarge={thryvInc.iconsLarge}
+            link={thryvInc.link}
+            liveLink={thryvInc.liveLink}
+            colorSplash={thryvInc.colorSplash}
+            colorSplashWidth={'65px'}
+            margin={'none'}
+            status={thryvInc.status}
+            devTypeOneofTwo={thryvInc.devTypeOneofTwo}
+            devTypeTwoofTwo={thryvInc.devTypeTwoofTwo}
           />
         </ProjectThree>
         <ProjectFour
           initial={{
             opacity: 0,
             x: xVarPositive,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={amiiboApp.nameText}
-            nameTextExpanded={amiiboApp.nameTextExpanded}
-            img={amiiboApp.image}
-            gameplayImage={amiiboApp.gameplayImage}
-            gameplayImageTwo={amiiboApp.gameplayImageTwo}
-            description={amiiboApp.description}
-            fullDescription={amiiboApp.fullDescription}
-            icons={amiiboApp.icons}
-            iconsLarge={amiiboApp.iconsLarge}
-            link={amiiboApp.link}
-            liveLink={amiiboApp.liveLink}
-            colorSplash={amiiboApp.colorSplash}
-            colorSplashWidth={'120px'}
-            devTypeOneofTwo={amiiboApp.devTypeOneofTwo}
-            devTypeTwoofTwo={amiiboApp.devTypeTwoofTwo}
-          />
-        </ProjectFour>
-        <ProjectFive
-          initial={{
-            opacity: 0,
-            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
@@ -205,11 +172,11 @@ const Projects = ({ projects, largeScreen }) => {
             devTypeOneofTwo={tetris.devTypeOneofTwo}
             devTypeTwoofTwo={tetris.devTypeTwoofTwo}
           />
-        </ProjectFive>
-        <ProjectSix
+        </ProjectFour>
+        <ProjectFive
           initial={{
             opacity: 0,
-            x: xVarPositive,
+            x: xVarNegative,
           }}
           whileInView={{
             opacity: 1,
@@ -239,6 +206,41 @@ const Projects = ({ projects, largeScreen }) => {
             status={twoDudesNightmare.status}
             devTypeOneofTwo={twoDudesNightmare.devTypeOneofTwo}
             devTypeTwoofTwo={twoDudesNightmare.devTypeTwoofTwo}
+          />
+        </ProjectFive>
+        <ProjectSix
+          initial={{
+            opacity: 0,
+            x: xVarPositive,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+        >
+          <ProjectCard
+            largeScreen={largeScreen}
+            nameText={theAdventure.nameText}
+            nameTextExpanded={theAdventure.nameTextExpanded}
+            img={theAdventure.image}
+            gameplayImage={theAdventure.gameplayImage}
+            gameplayImageTwo={theAdventure.gameplayImageTwo}
+            description={theAdventure.description}
+            fullDescription={theAdventure.fullDescription}
+            icons={theAdventure.icons}
+            iconsLarge={theAdventure.iconsLarge}
+            link={theAdventure.link}
+            liveLink={theAdventure.liveLink}
+            colorSplash={theAdventure.colorSplash}
+            colorSplashWidth={'140px'}
+            type={'wide'}
+            status={theAdventure.status}
+            devTypeOneofTwo={theAdventure.devTypeOneofTwo}
+            devTypeTwoofTwo={theAdventure.devTypeTwoofTwo}
           />
         </ProjectSix>
         <ProjectSeven

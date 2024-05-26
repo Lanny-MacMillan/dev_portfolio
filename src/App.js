@@ -11,7 +11,7 @@ function App() {
         <Route path="/AiToolbox" element={<ViewPage />} />
         <Route path="/TheQuickStopLibrary" element={<ViewPage />} />
         <Route path="/TheAdventure" element={<ViewPage />} />
-        <Route path="/AmiiboApp" element={<ViewPage />} />
+        <Route path="/Thryv" element={<ViewPage />} />
         <Route path="/CrappyBird" element={<ViewPage />} />
         <Route path="/2dNightmare" element={<ViewPage />} />
         <Route path="/TetrisReact" element={<ViewPage />} />

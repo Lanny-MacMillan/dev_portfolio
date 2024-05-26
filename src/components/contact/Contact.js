@@ -55,10 +55,6 @@ const Contact = ({ contact, largeScreen }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = () => {
-    setIsSubmitting(true);
-    // some call to send email
-  };
   const iconSize = largeScreen ? '50px' : '40px';
 
   const renderCalendlyPopupModal = (
@@ -69,7 +65,7 @@ const Contact = ({ contact, largeScreen }) => {
             scale: 1.1,
           }}
           transition={{ type: 'spring', stiffness: 300 }}
-          whileTap={{ scale: 2.5 }}
+          whileTap={{ scale: 1.3 }}
           onClick={() => setIsOpen(true)}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
@@ -111,7 +107,7 @@ const Contact = ({ contact, largeScreen }) => {
                     scale: 1.4,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 2.5 }}
+                  whileTap={{ scale: 1.5 }}
                   href="https://www.linkedin.com/in/lanny-macmillan/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -123,7 +119,7 @@ const Contact = ({ contact, largeScreen }) => {
                     scale: 1.4,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 2.5 }}
+                  whileTap={{ scale: 1.5 }}
                   href="mailto:lanny.macmillan.dev@gmail.com"
                   rel="noopener noreferrer"
                 >
@@ -134,7 +130,7 @@ const Contact = ({ contact, largeScreen }) => {
                     scale: 1.4,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 2.5 }}
+                  whileTap={{ scale: 1.5 }}
                   href="https://github.com/Lanny-MacMillan"
                   target="_blank"
                   rel="noopener noreferrer"
