@@ -104,7 +104,7 @@ const Contact = ({ contact, largeScreen }) => {
               <IconsDiv>
                 <motion.a
                   whileHover={{
-                    scale: 1.4,
+                    scale: 1.2,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 1.5 }}
@@ -116,7 +116,7 @@ const Contact = ({ contact, largeScreen }) => {
                 </motion.a>
                 <motion.a
                   whileHover={{
-                    scale: 1.4,
+                    scale: 1.2,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 1.5 }}
@@ -127,7 +127,7 @@ const Contact = ({ contact, largeScreen }) => {
                 </motion.a>
                 <motion.a
                   whileHover={{
-                    scale: 1.4,
+                    scale: 1.2,
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
                   whileTap={{ scale: 1.5 }}

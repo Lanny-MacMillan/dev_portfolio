@@ -96,7 +96,7 @@ const Projects = ({ projects, largeScreen }) => {
             liveLink={theQuickStop.liveLink}
             colorSplash={theQuickStop.colorSplash}
             status={theQuickStop.status}
-            colorSplashWidth={'230px'}
+            colorSplashWidth={'220px'}
             margin={'none'}
             type={'wide'}
             devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
@@ -236,7 +236,7 @@ const Projects = ({ projects, largeScreen }) => {
             link={theAdventure.link}
             liveLink={theAdventure.liveLink}
             colorSplash={theAdventure.colorSplash}
-            colorSplashWidth={'140px'}
+            colorSplashWidth={'148px'}
             type={'wide'}
             status={theAdventure.status}
             devTypeOneofTwo={theAdventure.devTypeOneofTwo}
