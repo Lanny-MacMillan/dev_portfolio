@@ -18,4 +18,5 @@
 <div align="center">
 
 # LiveLink
-<a href='https://develop.d341ahk13w5309.amplifyapp.com/' target="_blank" rel="noopener"/>
+
+https://develop.d341ahk13w5309.amplifyapp.com/
