@@ -311,7 +311,10 @@ export const ImageWide = styled.img`
   /* border-radius: 15px 15px 0px 0px; */
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  object-fit: fill;
+  /* object-fit: fill; */
+  /* object-fit: cover; */
+  /* object-fit: contain; */
+  /* object-fit: scale-down; */
 
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     height: ${(props) => (props.height ? props.height : '100%')};
@@ -427,7 +430,25 @@ export const Description = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-  /* border: 1px solid orange; */
+  @media only screen and (min-width: 320px) and (max-width: 992px) {
+    display: none;
+  }
+`;
+
+export const MobileDescription = styled.div`
+  font-size: 0.8em;
+
+  display: flex;
+  height: 40%;
+  color: white;
+  padding: 0px 10px 0px 20px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  @media only screen and (min-width: 993px) {
+    display: none;
+  }
 `;
 export const Stack = styled.div`
   font-size: 14px;

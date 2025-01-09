@@ -13,6 +13,10 @@ import thryvAlt2 from './img/thryvAlt2.png';
 import vacationImg from './img/vacation.png';
 import geoDashImg from './img/geoDash.png';
 
+import planEatRepeatImg from './img/planEatRepeat.png';
+import planEatRepeatAlt1 from './img/planEatRepeatAlt1.png';
+import planEatRepeatAlt2 from './img/planEatRepeatAlt2.png';
+
 import crappyBirdImg from './img/crappyBirdTitle.png';
 import crappyBirdGameplay from './img/crappyBirdGameplay.png';
 import crappyBirdGameplayAlt from './img/crappyBird.png';
@@ -77,6 +81,9 @@ export const theAdventure = {
   gameplayImageTwo: theAdventureGameplayAlt,
   description:
     'A sidescrolling RPG platformer. Can you discover whats destroying the land, unite with the magi and bring a stop to it?',
+  mobileDescription:
+    'This side scrolling adventure platformer was created using the unity Engine and C#.',
+
   fullDescription:
     'This game was created using the unity Engine and C#. In this game we tackle a more robust inventory system, player levels, talent tree, crafting and equipment. In this side scrolling RPG you will face against an evil unseen in thousands of years, you will have to discover whats destroying the land, unite with the magi and bring a stop to it',
   link: 'https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes',
@@ -112,6 +119,9 @@ export const tetris = {
   gameplayImage: tetrisGameplay,
   gameplayImageTwo: tetrisGameplayAlt,
   description: 'A clone of the original Tetris, done with React.',
+  mobileDescription:
+    'This is a React created Tetris game, just like the original on Nintendo.',
+
   fullDescription:
     'This was created using React, with no state management like redux or backend. The player input is handled by an autofocused input field thats been removed from view. Creating the tetronimoes by class and shape then handling the board using CssGrid, React hooks and timed intervals to control the location, rotation, and drop rate while playing',
   link: 'https://github.com/Lanny-MacMillan/tetrisClone',
@@ -132,6 +142,8 @@ export const theQuickStop = {
   gameplayImageTwo: quickStopInputs,
   description:
     'A personal component library for all my building needs. Brings speed and ease with reusable components.',
+  mobileDescription: 'A personal component library with reusable components',
+
   fullDescription:
     'A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components',
   link: null,
@@ -162,6 +174,8 @@ export const thryvInc = {
   gameplayImageTwo: thryvAlt2,
   description:
     'A comprehensive platform for customer relationship management, marketing automation, and business management solutions.',
+  mobileDescription: 'A comprehensive all-in-one business management platform.',
+
   fullDescription:
     'Thryv Inc. is a software company that provides businesses with customer relationship management (CRM) tools, marketing automation, and business management solutions. Thryvs platform is designed to help businesses streamline their operations, improve customer engagement, and grow their business. With a range of services including online presence management, customer communication tools, appointment scheduling, payment processing, and more.',
   link: null,
@@ -190,6 +204,8 @@ export const vacationApp = {
   gameplayImage: vacationImg,
   gameplayImageTwo: vacationImg,
   description: 'Full stack application that helps users while vacationing. ',
+  mobileDescription: 'Mobie info goes here.',
+
   fullDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   link: 'https://github.com/Lanny-MacMillan/capstone_frontend',
@@ -221,6 +237,9 @@ export const crappyBird = {
   gameplayImage: crappyBirdGameplayAlt,
   gameplayImageTwo: crappyBirdGameplay,
   description: 'A clone of the popular flappy bird',
+  mobileDescription:
+    'This game was created using the unity Engine and C#. A remake of the original Flappy Bird game.',
+
   fullDescription:
     'This game was created using the unity Engine and C#. This was my first game created in Unity. The clouds and pipes are instantiated randomly within rulesets, just outside of the camera to allow a more random level expirience with each play. I would still like to add wings to the bird and some hazards to the level as you progress',
   link: 'https://github.com/Lanny-MacMillan/flappyBirdClone',
@@ -256,6 +275,8 @@ export const geoDash = {
   gameplayImage: geoDashImg,
   gameplayImageTwo: geoDashImg,
   description: 'Geo Dash with some twists',
+  mobileDescription: 'This game was created using the unity Engine and C#.',
+
   fullDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   link: 'https://github.com/Lanny-MacMillan/GeometryDash',
@@ -292,6 +313,8 @@ export const twoDudesNightmare = {
   gameplayImage: nightmareGameplayAltTwo,
   gameplayImageTwo: nightmareImg,
   description: 'A sidescrolling platformer created in Unity ',
+  mobileDescription: 'This game was created using the unity Engine and C#.',
+
   fullDescription:
     'This game was created using the unity Engine and C#. In this game we find Two Dudes who come across a remote cabin in the woods. With the only bridge down, and no where to go, these two dudes must find another way out of the woods and back to safety. But theres more in these woods than just trees. Survive the evil and escape the woods',
   link: 'https://github.com/Lanny-MacMillan/Unity_Game_Two_Dudes',
@@ -327,6 +350,8 @@ export const aiToolbox = {
   gameplayImage: chatImg,
   gameplayImageTwo: dalle3Img,
   description: 'Ai powered solutions to transform your approach',
+  mobileDescription:
+    'This was created using NextJS and Typescript, my first step into Server-Side-Rendering.',
   fullDescription:
     'This was created using NextJS and Typescript, and is my first step into Server-Side-Rendering with NextJS. This app takes 4 of the OpenAi models: GPT-4 (chat), Dalle-3 (image generator), Vision (image analysis), and TTS-1 (text-to-speech) and allows the user to transform the way they approach everyday tasks',
   link: 'https://github.com/Lanny-MacMillan/AI_Chatbot',
@@ -341,5 +366,37 @@ export const aiToolbox = {
   iconsLarge: [
     <NextJSIcon width={40} height={40} />,
     <TypescriptIcon width={40} height={40} />,
+  ],
+};
+export const planEatRepeat = {
+  nameText: 'Plan.Eat.Repeat.',
+  nameTextExpanded: 'All your meal options. In one place',
+  colorSplash: softwareDev,
+  image: planEatRepeatImg,
+  gameplayImage: planEatRepeatAlt1,
+  gameplayImageTwo: planEatRepeatAlt2,
+  description:
+    'Transform your familys dining experience with effortless meal planning, collaboration, and organization. Easily invite loved ones, assign meals, and track progress—all in one place. With Plan.Eat.Repeat., you’re in control of every step of your mealtime journey.',
+  mobileDescription:
+    'Transform your dining experience with effortless meal planning, collaboration, and organization.',
+
+  link: 'https://github.com/qodebros/plan-eat-repeat-frontend',
+  fullDescription:
+    'This app is a fun and interactive meal planning and preparation platform designed for friends and family, bringing everything you need into one convenient place. Built with a modern tech stack, we used React for a dynamic user interface, Node.js and Express for a robust backend, and Auth0 for secure authentication. The app is containerized with Docker for scalable deployment, and integrated with analytics tools to track and enhance user engagement. We also applied a thoughtfully chosen theme to ensure a visually appealing and user-friendly experience. Whether you are planning meals, sharing recipes, or prepping together, our app makes it easy and enjoyable!',
+  liveLink: null,
+  devTypeOneofTwo: 'Web',
+  devTypeTwoofTwo: 'Development',
+  status: 'In_Development',
+  icons: [
+    <ReactIconColor width={30} height={30} />,
+    <JavascriptIcon width={30} height={30} />,
+    <ExpressIcon width={30} height={30} />,
+    <NodeJSIcon width={30} height={30} />,
+  ],
+  iconsLarge: [
+    <ReactIconColor width={40} height={40} />,
+    <JavascriptIcon width={40} height={40} />,
+    <ExpressIcon width={40} height={40} />,
+    <NodeJSIcon width={40} height={40} />,
   ],
 };
