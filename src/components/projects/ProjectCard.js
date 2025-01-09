@@ -13,6 +13,7 @@ import {
   ImageWide,
   ImageLarge,
   Description,
+  MobileDescription,
   Title,
   Stack,
   ColorAccent,
@@ -33,6 +34,7 @@ const ProjectCard = ({
   devTypeOneofTwo,
   devTypeTwoofTwo,
   description,
+  mobileDescription,
   fullDescription,
   icons,
   iconsLarge,
@@ -64,6 +66,7 @@ const ProjectCard = ({
     gameplayImage,
     gameplayImageTwo,
     description,
+    mobileDescription,
     fullDescription,
     link,
     liveLink,
@@ -91,6 +94,8 @@ const ProjectCard = ({
         </Title>
 
         <Description>{description}</Description>
+        <MobileDescription>{mobileDescription}</MobileDescription>
+
         <Stack>
           {hoverState ? (
             <Transition
@@ -154,6 +159,8 @@ const ProjectCard = ({
         </Title>
 
         <Description>{description}</Description>
+        <MobileDescription>{mobileDescription}</MobileDescription>
+
         <Stack>
           {hoverState ? (
             <Transition
@@ -217,6 +224,7 @@ const ProjectCard = ({
         </Title>
 
         <Description>{description}</Description>
+        <MobileDescription>{mobileDescription}</MobileDescription>
         <Stack>
           {hoverState ? (
             <Transition

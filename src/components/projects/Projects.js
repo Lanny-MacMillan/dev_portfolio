@@ -6,9 +6,9 @@ import {
   theQuickStop,
   thryvInc,
   crappyBird,
-  geoDash,
   twoDudesNightmare,
   aiToolbox,
+  planEatRepeat,
 } from '../assets/constants';
 
 import {
@@ -55,6 +55,7 @@ const Projects = ({ projects, largeScreen }) => {
             gameplayImage={aiToolbox.gameplayImage}
             gameplayImageTwo={aiToolbox.gameplayImageTwo}
             description={aiToolbox.description}
+            mobileDescription={aiToolbox.mobileDescription}
             fullDescription={aiToolbox.fullDescription}
             icons={aiToolbox.icons}
             iconsLarge={aiToolbox.iconsLarge}
@@ -83,24 +84,25 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={theQuickStop.nameText}
-            nameTextExpanded={theQuickStop.nameTextExpanded}
-            img={theQuickStop.image}
-            gameplayImage={theQuickStop.gameplayImage}
-            gameplayImageTwo={theQuickStop.gameplayImageTwo}
-            description={theQuickStop.description}
-            fullDescription={theQuickStop.fullDescription}
-            icons={theQuickStop.icons}
-            iconsLarge={theQuickStop.iconsLarge}
-            link={theQuickStop.link}
-            liveLink={theQuickStop.liveLink}
-            colorSplash={theQuickStop.colorSplash}
-            status={theQuickStop.status}
-            colorSplashWidth={'220px'}
+            nameText={planEatRepeat.nameText}
+            nameTextExpanded={planEatRepeat.nameTextExpanded}
+            img={planEatRepeat.image}
+            gameplayImage={planEatRepeat.gameplayImage}
+            gameplayImageTwo={planEatRepeat.gameplayImageTwo}
+            description={planEatRepeat.description}
+            mobileDescription={planEatRepeat.mobileDescription}
+            fullDescription={planEatRepeat.fullDescription}
+            icons={planEatRepeat.icons}
+            iconsLarge={planEatRepeat.iconsLarge}
+            link={planEatRepeat.link}
+            liveLink={planEatRepeat.liveLink}
+            colorSplash={planEatRepeat.colorSplash}
+            status={planEatRepeat.status}
+            colorSplashWidth={'165px'}
             margin={'none'}
             type={'wide'}
-            devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
-            devTypeTwoofTwo={theQuickStop.devTypeTwoofTwo}
+            devTypeOneofTwo={planEatRepeat.devTypeOneofTwo}
+            devTypeTwoofTwo={planEatRepeat.devTypeTwoofTwo}
           />
         </ProjectTwo>
         <ProjectThree
@@ -125,6 +127,7 @@ const Projects = ({ projects, largeScreen }) => {
             gameplayImage={thryvInc.gameplayImage}
             gameplayImageTwo={thryvInc.gameplayImageTwo}
             description={thryvInc.description}
+            mobileDescription={thryvInc.mobileDescription}
             fullDescription={thryvInc.fullDescription}
             icons={thryvInc.icons}
             iconsLarge={thryvInc.iconsLarge}
@@ -154,23 +157,25 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={tetris.nameText}
-            nameTextExpanded={tetris.nameTextExpanded}
-            img={tetris.image}
-            gameplayImage={tetris.gameplayImage}
-            gameplayImageTwo={tetris.gameplayImageTwo}
-            description={tetris.description}
-            fullDescription={tetris.fullDescription}
-            icons={tetris.icons}
-            iconsLarge={tetris.iconsLarge}
-            link={tetris.link}
-            liveLink={tetris.liveLink}
-            colorSplash={tetris.colorSplash}
-            colorSplashWidth={'120px'}
+            nameText={theQuickStop.nameText}
+            nameTextExpanded={theQuickStop.nameTextExpanded}
+            img={theQuickStop.image}
+            gameplayImage={theQuickStop.gameplayImage}
+            gameplayImageTwo={theQuickStop.gameplayImageTwo}
+            description={theQuickStop.description}
+            mobileDescription={theQuickStop.mobileDescription}
+            fullDescription={theQuickStop.fullDescription}
+            icons={theQuickStop.icons}
+            iconsLarge={theQuickStop.iconsLarge}
+            link={theQuickStop.link}
+            liveLink={theQuickStop.liveLink}
+            colorSplash={theQuickStop.colorSplash}
+            status={theQuickStop.status}
+            colorSplashWidth={'220px'}
             margin={'none'}
-            status={tetris.status}
-            devTypeOneofTwo={tetris.devTypeOneofTwo}
-            devTypeTwoofTwo={tetris.devTypeTwoofTwo}
+            type={'wide'}
+            devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
+            devTypeTwoofTwo={theQuickStop.devTypeTwoofTwo}
           />
         </ProjectFour>
         <ProjectFive
@@ -195,6 +200,7 @@ const Projects = ({ projects, largeScreen }) => {
             gameplayImage={twoDudesNightmare.gameplayImage}
             gameplayImageTwo={twoDudesNightmare.gameplayImageTwo}
             description={twoDudesNightmare.description}
+            mobileDescription={twoDudesNightmare.mobileDescription}
             fullDescription={twoDudesNightmare.fullDescription}
             icons={twoDudesNightmare.icons}
             iconsLarge={twoDudesNightmare.iconsLarge}
@@ -230,6 +236,7 @@ const Projects = ({ projects, largeScreen }) => {
             gameplayImage={theAdventure.gameplayImage}
             gameplayImageTwo={theAdventure.gameplayImageTwo}
             description={theAdventure.description}
+            mobileDescription={theAdventure.mobileDescription}
             fullDescription={theAdventure.fullDescription}
             icons={theAdventure.icons}
             iconsLarge={theAdventure.iconsLarge}
@@ -259,23 +266,24 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={crappyBird.nameText}
-            nameTextExpanded={crappyBird.nameTextExpanded}
-            img={crappyBird.image}
-            gameplayImage={crappyBird.gameplayImage}
-            gameplayImageTwo={crappyBird.gameplayImageTwo}
-            description={crappyBird.description}
-            fullDescription={crappyBird.fullDescription}
-            icons={crappyBird.icons}
-            iconsLarge={crappyBird.iconsLarge}
-            link={crappyBird.link}
-            liveLink={crappyBird.liveLink}
-            colorSplash={crappyBird.colorSplash}
-            colorSplashWidth={'125px'}
+            nameText={tetris.nameText}
+            nameTextExpanded={tetris.nameTextExpanded}
+            img={tetris.image}
+            gameplayImage={tetris.gameplayImage}
+            gameplayImageTwo={tetris.gameplayImageTwo}
+            description={tetris.description}
+            mobileDescription={tetris.mobileDescription}
+            fullDescription={tetris.fullDescription}
+            icons={tetris.icons}
+            iconsLarge={tetris.iconsLarge}
+            link={tetris.link}
+            liveLink={tetris.liveLink}
+            colorSplash={tetris.colorSplash}
+            colorSplashWidth={'120px'}
             margin={'none'}
-            status={crappyBird.status}
-            devTypeOneofTwo={crappyBird.devTypeOneofTwo}
-            devTypeTwoofTwo={crappyBird.devTypeTwoofTwo}
+            status={tetris.status}
+            devTypeOneofTwo={tetris.devTypeOneofTwo}
+            devTypeTwoofTwo={tetris.devTypeTwoofTwo}
           />
         </ProjectSeven>
         <ProjectEight
@@ -294,22 +302,24 @@ const Projects = ({ projects, largeScreen }) => {
         >
           <ProjectCard
             largeScreen={largeScreen}
-            nameText={geoDash.nameText}
-            nameTextExpanded={geoDash.nameTextExpanded}
-            img={geoDash.image}
-            gameplayImage={geoDash.gameplayImage}
-            gameplayImageTwo={geoDash.gameplayImageTwo}
-            description={geoDash.description}
-            fullDescription={geoDash.fullDescription}
-            icons={geoDash.icons}
-            iconsLarge={geoDash.iconsLarge}
-            link={geoDash.link}
-            liveLink={geoDash.liveLink}
-            colorSplash={geoDash.colorSplash}
-            colorSplashWidth={'155px'}
-            status={geoDash.status}
-            devTypeOneofTwo={geoDash.devTypeOneofTwo}
-            devTypeTwoofTwo={geoDash.devTypeTwoofTwo}
+            nameText={crappyBird.nameText}
+            nameTextExpanded={crappyBird.nameTextExpanded}
+            img={crappyBird.image}
+            gameplayImage={crappyBird.gameplayImage}
+            gameplayImageTwo={crappyBird.gameplayImageTwo}
+            description={crappyBird.description}
+            mobileDescription={crappyBird.mobileDescription}
+            fullDescription={crappyBird.fullDescription}
+            icons={crappyBird.icons}
+            iconsLarge={crappyBird.iconsLarge}
+            link={crappyBird.link}
+            liveLink={crappyBird.liveLink}
+            colorSplash={crappyBird.colorSplash}
+            colorSplashWidth={'125px'}
+            margin={'none'}
+            status={crappyBird.status}
+            devTypeOneofTwo={crappyBird.devTypeOneofTwo}
+            devTypeTwoofTwo={crappyBird.devTypeTwoofTwo}
           />
         </ProjectEight>
       </Container>
