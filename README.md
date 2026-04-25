@@ -19,4 +19,4 @@
 
 # LiveLink
 
-https://develop.d341ahk13w5309.amplifyapp.com/
+www.lanny-macmillan.com
