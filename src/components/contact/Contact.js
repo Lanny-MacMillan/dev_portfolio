@@ -77,7 +77,7 @@ const Contact = ({ contact, largeScreen }) => {
         </StyledButton>
       </ButtonContainer>
       <PopupModal
-        url="https://calendly.com/lanny-macmillan-dev/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff"
+        url="https://calendly.com/lannymacmillan/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.getElementById('root')}
