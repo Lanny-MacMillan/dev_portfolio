@@ -1,327 +1,89 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import OtherProjectsCard from './OtherProjectsCard';
 import {
-  theAdventure,
-  tetris,
-  theQuickStop,
-  thryvInc,
-  crappyBird,
-  twoDudesNightmare,
-  aiToolbox,
+  nextHoliday,
   planEatRepeat,
+  thryvInc,
+  theQuickStop,
+  macsArcade,
+  terminalQuest,
+  theAdventure,
+  sseNotifications,
 } from '../assets/constants';
 
 import {
   ProjectsContainer,
   Container,
-  ProjectOne,
-  ProjectTwo,
-  ProjectThree,
-  ProjectFour,
-  ProjectFive,
-  ProjectSix,
-  ProjectSeven,
-  ProjectEight,
+  ProjectItem,
   Header,
 } from './Projects.styles';
+
+// Cards in display order, left to right, top to bottom. span is the number of
+// the three grid columns a card covers; type picks the card/image variant.
+const cards = [
+  { project: sseNotifications, span: 1, splash: '175px' },
+  { project: nextHoliday, span: 2, splash: '125px' },
+  { project: thryvInc, span: 2, splash: '65px' },
+  { project: theQuickStop, span: 1, splash: '220px', type: 'wide' },
+  { project: terminalQuest, span: 1, splash: '145px' },
+  { project: planEatRepeat, span: 2, splash: '165px', type: 'wide' },
+  { project: theAdventure, span: 2, splash: '148px', type: 'wide' },
+  { project: macsArcade, span: 1, splash: '195px' },
+];
 
 const Projects = ({ projects, largeScreen }) => {
   const xVarNegative = largeScreen ? -150 : -55;
   const xVarPositive = largeScreen ? 150 : 55;
 
+  // Cards slide in from the side they start on; the full-width card rises
+  const slideIn = (x) => ({
+    initial: { opacity: 0, x },
+    whileInView: { opacity: 1, x: 0, transition: { duration: 1 } },
+    viewport: { once: true },
+  });
+
+  // Each row holds three columns (grid columns 2 to 4). A card starts where
+  // the previous cards in its row end, so it starts on the left edge when the
+  // columns used before it divide evenly into rows
+  let used = 0;
+  const placed = cards.map((card) => {
+    const offset = used % 3;
+    used += card.span;
+    return {
+      ...card,
+      col: 2 + offset,
+      x: offset === 0 ? xVarNegative : xVarPositive,
+    };
+  });
+
   return (
     <ProjectsContainer ref={projects}>
       <Header>Projects</Header>
       <Container>
-        <ProjectOne
-          initial={{
-            opacity: 0,
-            x: xVarNegative,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
+        {placed.map(({ project, span, splash, type, col, x }) => (
+          <ProjectItem
+            key={project.nameText}
+            $col={col}
+            $span={span}
+            {...slideIn(x)}
+          >
+            <ProjectCard
+              largeScreen={largeScreen}
+              project={project}
+              type={type}
+              colorSplashWidth={splash}
+            />
+          </ProjectItem>
+        ))}
+        <ProjectItem
+          $span={3}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           viewport={{ once: true }}
         >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={aiToolbox.nameText}
-            nameTextExpanded={aiToolbox.nameTextExpanded}
-            img={aiToolbox.image}
-            gameplayImage={aiToolbox.gameplayImage}
-            gameplayImageTwo={aiToolbox.gameplayImageTwo}
-            description={aiToolbox.description}
-            mobileDescription={aiToolbox.mobileDescription}
-            fullDescription={aiToolbox.fullDescription}
-            icons={aiToolbox.icons}
-            iconsLarge={aiToolbox.iconsLarge}
-            link={aiToolbox.link}
-            liveLink={aiToolbox.liveLink}
-            colorSplash={aiToolbox.colorSplash}
-            colorSplashWidth={'110px'}
-            status={aiToolbox.status}
-            devTypeOneofTwo={aiToolbox.devTypeOneofTwo}
-            devTypeTwoofTwo={aiToolbox.devTypeTwoofTwo}
-          />
-        </ProjectOne>
-        <ProjectTwo
-          initial={{
-            opacity: 0,
-            x: xVarPositive,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={planEatRepeat.nameText}
-            nameTextExpanded={planEatRepeat.nameTextExpanded}
-            img={planEatRepeat.image}
-            gameplayImage={planEatRepeat.gameplayImage}
-            gameplayImageTwo={planEatRepeat.gameplayImageTwo}
-            description={planEatRepeat.description}
-            mobileDescription={planEatRepeat.mobileDescription}
-            fullDescription={planEatRepeat.fullDescription}
-            icons={planEatRepeat.icons}
-            iconsLarge={planEatRepeat.iconsLarge}
-            link={planEatRepeat.link}
-            liveLink={planEatRepeat.liveLink}
-            colorSplash={planEatRepeat.colorSplash}
-            status={planEatRepeat.status}
-            colorSplashWidth={'165px'}
-            margin={'none'}
-            type={'wide'}
-            devTypeOneofTwo={planEatRepeat.devTypeOneofTwo}
-            devTypeTwoofTwo={planEatRepeat.devTypeTwoofTwo}
-          />
-        </ProjectTwo>
-        <ProjectThree
-          initial={{
-            opacity: 0,
-            x: xVarNegative,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={thryvInc.nameText}
-            nameTextExpanded={thryvInc.nameTextExpanded}
-            img={thryvInc.image}
-            gameplayImage={thryvInc.gameplayImage}
-            gameplayImageTwo={thryvInc.gameplayImageTwo}
-            description={thryvInc.description}
-            mobileDescription={thryvInc.mobileDescription}
-            fullDescription={thryvInc.fullDescription}
-            icons={thryvInc.icons}
-            iconsLarge={thryvInc.iconsLarge}
-            link={thryvInc.link}
-            liveLink={thryvInc.liveLink}
-            colorSplash={thryvInc.colorSplash}
-            colorSplashWidth={'65px'}
-            margin={'none'}
-            status={thryvInc.status}
-            devTypeOneofTwo={thryvInc.devTypeOneofTwo}
-            devTypeTwoofTwo={thryvInc.devTypeTwoofTwo}
-          />
-        </ProjectThree>
-        <ProjectFour
-          initial={{
-            opacity: 0,
-            x: xVarPositive,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={theQuickStop.nameText}
-            nameTextExpanded={theQuickStop.nameTextExpanded}
-            img={theQuickStop.image}
-            gameplayImage={theQuickStop.gameplayImage}
-            gameplayImageTwo={theQuickStop.gameplayImageTwo}
-            description={theQuickStop.description}
-            mobileDescription={theQuickStop.mobileDescription}
-            fullDescription={theQuickStop.fullDescription}
-            icons={theQuickStop.icons}
-            iconsLarge={theQuickStop.iconsLarge}
-            link={theQuickStop.link}
-            liveLink={theQuickStop.liveLink}
-            colorSplash={theQuickStop.colorSplash}
-            status={theQuickStop.status}
-            colorSplashWidth={'220px'}
-            margin={'none'}
-            type={'wide'}
-            devTypeOneofTwo={theQuickStop.devTypeOneofTwo}
-            devTypeTwoofTwo={theQuickStop.devTypeTwoofTwo}
-          />
-        </ProjectFour>
-        <ProjectFive
-          initial={{
-            opacity: 0,
-            x: xVarNegative,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={twoDudesNightmare.nameText}
-            nameTextExpanded={twoDudesNightmare.nameTextExpanded}
-            img={twoDudesNightmare.image}
-            gameplayImage={twoDudesNightmare.gameplayImage}
-            gameplayImageTwo={twoDudesNightmare.gameplayImageTwo}
-            description={twoDudesNightmare.description}
-            mobileDescription={twoDudesNightmare.mobileDescription}
-            fullDescription={twoDudesNightmare.fullDescription}
-            icons={twoDudesNightmare.icons}
-            iconsLarge={twoDudesNightmare.iconsLarge}
-            link={twoDudesNightmare.link}
-            liveLink={twoDudesNightmare.liveLink}
-            colorSplash={twoDudesNightmare.colorSplash}
-            colorSplashWidth={'140px'}
-            margin={'none'}
-            status={twoDudesNightmare.status}
-            devTypeOneofTwo={twoDudesNightmare.devTypeOneofTwo}
-            devTypeTwoofTwo={twoDudesNightmare.devTypeTwoofTwo}
-          />
-        </ProjectFive>
-        <ProjectSix
-          initial={{
-            opacity: 0,
-            x: xVarPositive,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={theAdventure.nameText}
-            nameTextExpanded={theAdventure.nameTextExpanded}
-            img={theAdventure.image}
-            gameplayImage={theAdventure.gameplayImage}
-            gameplayImageTwo={theAdventure.gameplayImageTwo}
-            description={theAdventure.description}
-            mobileDescription={theAdventure.mobileDescription}
-            fullDescription={theAdventure.fullDescription}
-            icons={theAdventure.icons}
-            iconsLarge={theAdventure.iconsLarge}
-            link={theAdventure.link}
-            liveLink={theAdventure.liveLink}
-            colorSplash={theAdventure.colorSplash}
-            colorSplashWidth={'148px'}
-            type={'wide'}
-            status={theAdventure.status}
-            devTypeOneofTwo={theAdventure.devTypeOneofTwo}
-            devTypeTwoofTwo={theAdventure.devTypeTwoofTwo}
-          />
-        </ProjectSix>
-        <ProjectSeven
-          initial={{
-            opacity: 0,
-            x: xVarNegative,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={tetris.nameText}
-            nameTextExpanded={tetris.nameTextExpanded}
-            img={tetris.image}
-            gameplayImage={tetris.gameplayImage}
-            gameplayImageTwo={tetris.gameplayImageTwo}
-            description={tetris.description}
-            mobileDescription={tetris.mobileDescription}
-            fullDescription={tetris.fullDescription}
-            icons={tetris.icons}
-            iconsLarge={tetris.iconsLarge}
-            link={tetris.link}
-            liveLink={tetris.liveLink}
-            colorSplash={tetris.colorSplash}
-            colorSplashWidth={'120px'}
-            margin={'none'}
-            status={tetris.status}
-            devTypeOneofTwo={tetris.devTypeOneofTwo}
-            devTypeTwoofTwo={tetris.devTypeTwoofTwo}
-          />
-        </ProjectSeven>
-        <ProjectEight
-          initial={{
-            opacity: 0,
-            x: xVarPositive,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
-        >
-          <ProjectCard
-            largeScreen={largeScreen}
-            nameText={crappyBird.nameText}
-            nameTextExpanded={crappyBird.nameTextExpanded}
-            img={crappyBird.image}
-            gameplayImage={crappyBird.gameplayImage}
-            gameplayImageTwo={crappyBird.gameplayImageTwo}
-            description={crappyBird.description}
-            mobileDescription={crappyBird.mobileDescription}
-            fullDescription={crappyBird.fullDescription}
-            icons={crappyBird.icons}
-            iconsLarge={crappyBird.iconsLarge}
-            link={crappyBird.link}
-            liveLink={crappyBird.liveLink}
-            colorSplash={crappyBird.colorSplash}
-            colorSplashWidth={'125px'}
-            margin={'none'}
-            status={crappyBird.status}
-            devTypeOneofTwo={crappyBird.devTypeOneofTwo}
-            devTypeTwoofTwo={crappyBird.devTypeTwoofTwo}
-          />
-        </ProjectEight>
+          <OtherProjectsCard />
+        </ProjectItem>
       </Container>
     </ProjectsContainer>
   );

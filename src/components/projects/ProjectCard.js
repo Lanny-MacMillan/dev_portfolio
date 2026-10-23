@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
+import { projectPath, toViewState } from '../util/projectNav';
 
 import {
   ProjectCardContainer,
@@ -23,253 +24,118 @@ import {
   Button,
 } from './Projects.styles';
 
+const VARIANTS = {
+  default: {
+    Card: ProjectCardContainer,
+    Img: Image,
+    Foot: Footer,
+    Accent: ColorAccent,
+  },
+  wide: {
+    Card: ProjectCardContainerWide,
+    Img: ImageWide,
+    Foot: FooterWide,
+    Accent: ColorAccentWide,
+  },
+  large: {
+    Card: ProjectCardContainerLarge,
+    Img: ImageLarge,
+    Foot: FooterLarge,
+    Accent: ColorAccentLarge,
+  },
+};
+
+const fade = {
+  enter: 'transition-opacity duration-75',
+  enterFrom: 'opacity-0',
+  enterTo: 'opacity-100',
+  leave: 'transition-opacity duration-150',
+  leaveFrom: 'opacity-100',
+  leaveTo: 'opacity-0',
+};
+
 const ProjectCard = ({
-  nameText,
-  nameTextExpanded,
-  img,
-  gameplayImage,
-  gameplayImageTwo,
-  link,
-  liveLink,
-  devTypeOneofTwo,
-  devTypeTwoofTwo,
-  description,
-  mobileDescription,
-  fullDescription,
-  icons,
-  iconsLarge,
-  height,
-  imgHeight,
-  margin,
-  padding,
-  colorSplash,
+  project,
+  type,
   colorSplashWidth,
   colorSplashPosition,
-  type,
+  height,
+  imgHeight,
   largeScreen,
-  status,
 }) => {
   const [hoverState, setHoverState] = useState(false);
-
   const navigate = useNavigate();
+
+  const { Card, Img, Foot, Accent } = VARIANTS[type || 'default'];
   const hoverStyle = {
     transform: 'scale(1.05)',
     transformOrigin: '50% 50%',
   };
 
-  const formattedName = nameText.replace(/\s/g, '');
+  const openProject = () =>
+    navigate(projectPath(project), { state: toViewState(project) });
 
-  const data = {
-    nameText,
-    nameTextExpanded,
-    img,
-    gameplayImage,
-    gameplayImageTwo,
-    description,
-    mobileDescription,
-    fullDescription,
-    link,
-    liveLink,
-    colorSplash,
-    devTypeOneofTwo,
-    devTypeTwoofTwo,
-    status,
+  const onKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openProject();
+    }
   };
 
-  const renderProjectCard = !type && (
-    <ProjectCardContainer
-      onMouseEnter={() => setHoverState(true)}
-      onMouseLeave={() => setHoverState(false)}
-    >
-      <Image
-        style={hoverState ? hoverStyle : null}
-        src={img}
-        height={imgHeight}
-        margin={margin}
-      />
-      <Footer>
-        <Title>
-          <ColorAccent background={colorSplash} width={colorSplashWidth} />
-          {nameText}
-        </Title>
-
-        <Description>{description}</Description>
-        <MobileDescription>{mobileDescription}</MobileDescription>
-
-        <Stack>
-          {hoverState ? (
-            <Transition
-              show={hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Button
-                onClick={() => {
-                  navigate(`/${formattedName}`, { state: data });
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Show_Project
-              </Button>
-            </Transition>
-          ) : (
-            <Transition
-              show={!hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
-            </Transition>
-          )}
-        </Stack>
-      </Footer>
-    </ProjectCardContainer>
-  );
-
-  const renderProjectCardLarge = type === 'large' && (
-    <ProjectCardContainerLarge
-      height={height}
-      onMouseEnter={() => setHoverState(true)}
-      onMouseLeave={() => setHoverState(false)}
-    >
-      <ImageLarge
-        style={hoverState ? hoverStyle : null}
-        src={img}
-        height={imgHeight}
-        margin={margin}
-      />
-
-      <FooterLarge>
-        <Title padding={padding}>
-          <ColorAccentLarge
-            background={colorSplash}
-            width={colorSplashWidth}
-            bottom={colorSplashPosition}
-          />
-          {nameText}
-        </Title>
-
-        <Description>{description}</Description>
-        <MobileDescription>{mobileDescription}</MobileDescription>
-
-        <Stack>
-          {hoverState ? (
-            <Transition
-              show={hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Button
-                onClick={() => {
-                  navigate(`/${formattedName}`, { state: data });
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Show_Project
-              </Button>
-            </Transition>
-          ) : (
-            <Transition
-              show={!hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Button>Show_Project</Button>
-              {/* <Icons>{largeScreen ? iconsLarge : icons}</Icons> */}
-            </Transition>
-          )}
-        </Stack>
-      </FooterLarge>
-    </ProjectCardContainerLarge>
-  );
-
-  const renderProjectCardWide = type === 'wide' && (
-    <ProjectCardContainerWide
-      height={height}
-      onMouseEnter={() => setHoverState(true)}
-      onMouseLeave={() => setHoverState(false)}
-    >
-      <ImageWide
-        style={hoverState ? hoverStyle : null}
-        src={img}
-        height={imgHeight}
-        margin={margin}
-      />
-      <FooterWide>
-        <Title padding={padding}>
-          <ColorAccentWide
-            background={colorSplash}
-            width={colorSplashWidth}
-            bottom={colorSplashPosition}
-          />
-          {nameText}
-        </Title>
-
-        <Description>{description}</Description>
-        <MobileDescription>{mobileDescription}</MobileDescription>
-        <Stack>
-          {hoverState ? (
-            <Transition
-              show={hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Button
-                onClick={() => {
-                  navigate(`/${formattedName}`, { state: data });
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Show_Project
-              </Button>
-            </Transition>
-          ) : (
-            <Transition
-              show={!hoverState}
-              enter="transition-opacity duration-75"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity duration-150"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Icons>{largeScreen ? iconsLarge : icons}</Icons>
-            </Transition>
-          )}
-        </Stack>
-      </FooterWide>
-    </ProjectCardContainerWide>
-  );
+  const icons = largeScreen ? project.iconsLarge : project.icons;
 
   return (
-    <>
-      {renderProjectCard}
-      {renderProjectCardLarge}
-      {renderProjectCardWide}
-    </>
+    <Card
+      role="link"
+      tabIndex={0}
+      aria-label={`View ${project.nameText}`}
+      height={height}
+      onClick={openProject}
+      onKeyDown={onKeyDown}
+      onMouseEnter={() => setHoverState(true)}
+      onMouseLeave={() => setHoverState(false)}
+      onFocus={() => setHoverState(true)}
+      onBlur={() => setHoverState(false)}
+    >
+      <Img
+        style={{
+          ...(hoverState ? hoverStyle : null),
+          objectPosition: project.imagePosition,
+        }}
+        src={project.image}
+        alt=""
+        height={imgHeight}
+      />
+      <Foot>
+        <Title>
+          <Accent
+            background={project.colorSplash}
+            width={colorSplashWidth}
+            bottom={colorSplashPosition}
+          />
+          {project.nameText}
+        </Title>
+
+        <Description>{project.description}</Description>
+        <MobileDescription>{project.mobileDescription}</MobileDescription>
+
+        <Stack>
+          {hoverState ? (
+            <Transition show={hoverState} {...fade}>
+              <Button>Show_Project</Button>
+            </Transition>
+          ) : (
+            <Transition show={!hoverState} {...fade}>
+              {type === 'large' ? (
+                <Button>Show_Project</Button>
+              ) : (
+                <Icons>{icons}</Icons>
+              )}
+            </Transition>
+          )}
+        </Stack>
+      </Foot>
+    </Card>
   );
 };
 

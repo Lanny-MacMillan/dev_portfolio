@@ -1,8 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const ProjectsContainer = styled.div`
-  font: 1em/1.618 Inter, sans-serif;
+  font:
+    1em/1.618 Inter,
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,80 +23,29 @@ export const ProjectsContainer = styled.div`
   // cover no-repeat fixed;
 `;
 
+// Columns 1 and 5 are the side spacers; cards sit in columns 2 to 4. minmax(0, …)
+// stops wide card content from stretching a column
 export const Container = styled.div`
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns:
+    minmax(0, 0.2fr) repeat(3, minmax(0, 1fr))
+    minmax(0, 0.2fr);
   gap: 60px 60px;
-  grid-template-areas:
-    '. projectOne projectTwo projectTwo .'
-    '. projectThree projectThree projectFour .'
-    '. projectSeven projectSix projectSix .'
-    '.  projectFive projectFive projectEight .';
+  width: 100%;
   max-width: 1500px;
 
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: minmax(0, 1fr);
     gap: 30px 30px;
-    grid-template-areas:
-      'projectOne'
-      'projectTwo'
-      'projectThree'
-      'projectFour'
-      'projectFive'
-      'projectSix'
-      'projectSeven'
-      'projectEight';
-  }
-
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    gap: 30px 30px;
-    grid-template-areas:
-      'projectOne'
-      'projectTwo'
-      'projectThree'
-      'projectFour'
-      'projectFive'
-      'projectSix'
-      'projectSeven'
-      'projectEight';
-  }
-
-  @media only screen and (min-width: 1400px) {
-    /* padding: 150px; */
-    /* max-width: 1500px; */
   }
 `;
 
-export const ProjectOne = styled(motion.div)`
-  grid-area: projectOne;
-`;
-export const ProjectTwo = styled(motion.div)`
-  grid-area: projectTwo;
-`;
-export const ProjectThree = styled(motion.div)`
-  grid-area: projectThree;
-`;
-export const ProjectFour = styled(motion.div)`
-  grid-area: projectFour;
-`;
-export const ProjectFive = styled(motion.div)`
-  grid-area: projectFive;
-`;
-export const ProjectSix = styled(motion.div)`
-  grid-area: projectSix;
-`;
-export const ProjectSeven = styled(motion.div)`
-  grid-area: projectSeven;
-`;
-export const ProjectEight = styled(motion.div)`
-  grid-area: projectEight;
+export const ProjectItem = styled(motion.div)`
+  grid-column: ${(props) => props.$col || 2} / span ${(props) => props.$span || 1};
+
+  @media only screen and (max-width: 992px) {
+    grid-column: auto;
+  }
 `;
 
 //  Card Two - Nuemorphism UI Design
@@ -102,8 +53,10 @@ export const ProjectCard2 = styled.div`
   position: relative;
   min-width: 320px;
   height: 440px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 0 30px 0 30px;
@@ -221,48 +174,46 @@ export const Header = styled.div`
   }
 `;
 
-export const ProjectCardContainer = styled.div`
+export const cardShell = css`
   position: relative;
   display: flex;
   flex-direction: column;
   border: 2px solid white;
 
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 7px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+`;
+
+export const clickable = css`
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid #4fecec;
+    outline-offset: 4px;
+  }
+`;
+
+export const ProjectCardContainer = styled.div`
+  ${cardShell}
+  ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
 export const ProjectCardContainerWide = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid white;
-
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
-    -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 7px;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  ${cardShell}
+  ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
 export const ProjectCardContainerLarge = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid white;
-
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
-    -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 7px;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  ${cardShell}
+  ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
 `;
 
@@ -560,16 +511,12 @@ export const Icons = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.span`
   font-size: 1em;
   font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   color: #4fecec;
-  background: none !important;
-  border: none;
-  padding: 0 !important;
   text-decoration: none;
-  cursor: pointer;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
   }
 
