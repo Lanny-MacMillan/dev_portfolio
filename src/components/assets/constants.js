@@ -1,4 +1,4 @@
-import theAdventureImg from './img/theAdventure.png';
+import theAdventureCover from './img/theAdventureCover.png';
 import theAdventureGameplay from './img/theAdventureGameplay.png';
 import theAdventureGameplayAlt from './img/theAdventureGameplayAlt.png';
 
@@ -6,14 +6,14 @@ import tetrisReact from './img/tetrisReact.png';
 import tetrisGameplay from './img/tetrisGameplay.png';
 import tetrisGameplayAlt from './img/tetrisGameplayAlt.png';
 
-import thryv from './img/thryv.png';
+import thryvCover from './img/thryvCover.png';
 import thryvAlt1 from './img/thryvAlt1.png';
 import thryvAlt2 from './img/thryvAlt2.png';
 
 // import vacationImg from './img/vacation.png';
 // import geoDashImg from './img/geoDash.png';
 
-import planEatRepeatImg from './img/planEatRepeat.png';
+import planEatRepeatCover from './img/planEatRepeatCover.png';
 import planEatRepeatAlt1 from './img/planEatRepeatAlt1.png';
 import planEatRepeatAlt2 from './img/planEatRepeatAlt2.png';
 
@@ -25,14 +25,20 @@ import nightmareImg from './img/nightmareGameplay.png';
 import nightmareGameplayAlt from './img/nightmareGameplayAlt.png';
 import nightmareGameplayAltTwo from './img/nightmareGameplayAltTwo.png';
 
-import quickstopImg from './img/quickStopButtons.png';
-import quickStopTooltip from './img/quickStopTooltip.png';
-import quickStopInputs from './img/quickStopInputs.png';
+import quickstopCover from './img/quickstopCover.png';
+import quickstopPanelTop from './img/quickstopPanelTop.png';
+import quickstopPanelBottom from './img/quickstopPanelBottom.png';
 
 import comingSoonImg from './img/comingSoon.svg';
 import nextHolidayImg from './img/nextHoliday.png';
 import nextHolidayGameplay from './img/nextHolidayGameplay.png';
 import nextHolidayGameplayAlt from './img/nextHolidayGameplayAlt.png';
+import macsClassicArcadeCover from './img/macsClassicArcadeCover.png';
+import arcadeScatterTop from './img/arcadeScatterTop.png';
+import arcadeScatterBottom from './img/arcadeScatterBottom.png';
+import terminalQuestCover from './img/terminalQuestCover.png';
+import terminalQuestPanelTop from './img/terminalQuestPanelTop.png';
+import terminalQuestPanelBottom from './img/terminalQuestPanelBottom.png';
 
 import aiToolboxImg from './img/aiToolboxImg.png';
 import chatImg from './img/gpt4.png';
@@ -81,7 +87,8 @@ export const theAdventure = {
   nameText: 'The Adventure',
   nameTextExpanded: 'Unite with the Magi. Save Discordia.',
   colorSplash: gameDev,
-  image: theAdventureImg,
+  image: theAdventureCover,
+  imagePosition: 'center 10%',
   gameplayImage: theAdventureGameplay,
   gameplayImageTwo: theAdventureGameplayAlt,
   description:
@@ -142,9 +149,10 @@ export const theQuickStop = {
   nameText: 'The Quickstop Library',
   nameTextExpanded: 'Download. Import. Build.',
   colorSplash: softwareDev,
-  image: quickstopImg,
-  gameplayImage: quickStopTooltip,
-  gameplayImageTwo: quickStopInputs,
+  image: quickstopCover,
+  imagePosition: 'center 10%',
+  gameplayImage: quickstopPanelTop,
+  gameplayImageTwo: quickstopPanelBottom,
   description:
     'A personal component library for all my building needs. Brings speed and ease with reusable components.',
   mobileDescription: 'A personal component library with reusable components',
@@ -174,7 +182,8 @@ export const thryvInc = {
   nameText: 'Thryv',
   nameTextExpanded: 'Do-it-all small business software.',
   colorSplash: softwareDev,
-  image: thryv,
+  image: thryvCover,
+  imagePosition: 'center 10%',
   gameplayImage: thryvAlt1,
   gameplayImageTwo: thryvAlt2,
   description:
@@ -377,7 +386,8 @@ export const planEatRepeat = {
   nameText: 'Plan.Eat.Repeat.',
   nameTextExpanded: 'All your meal options. In one place',
   colorSplash: softwareDev,
-  image: planEatRepeatImg,
+  image: planEatRepeatCover,
+  imagePosition: 'center 10%',
   gameplayImage: planEatRepeatAlt1,
   gameplayImageTwo: planEatRepeatAlt2,
   description:
@@ -472,9 +482,9 @@ export const macsArcade = {
   nameText: 'Macs Classic Arcade',
   nameTextExpanded: 'Classic games. Zero clutter.',
   colorSplash: gameDev,
-  image: comingSoonImg,
-  gameplayImage: comingSoonImg,
-  gameplayImageTwo: comingSoonImg,
+  image: macsClassicArcadeCover,
+  gameplayImage: arcadeScatterTop,
+  gameplayImageTwo: arcadeScatterBottom,
   description:
     'A retro-inspired browser arcade with 40+ classic games, from Snake and Pong to Chess and Minesweeper, built in vanilla JavaScript.',
   mobileDescription:
@@ -494,9 +504,9 @@ export const terminalQuest = {
   nameText: 'Terminal Quest',
   nameTextExpanded: 'Learn the command line. One quest at a time.',
   colorSplash: gameDev,
-  image: comingSoonImg,
-  gameplayImage: comingSoonImg,
-  gameplayImageTwo: comingSoonImg,
+  image: terminalQuestCover,
+  gameplayImage: terminalQuestPanelTop,
+  gameplayImageTwo: terminalQuestPanelBottom,
   description:
     'A browser-based adventure that teaches real terminal commands through story-driven levels and a simulated file system.',
   mobileDescription:
