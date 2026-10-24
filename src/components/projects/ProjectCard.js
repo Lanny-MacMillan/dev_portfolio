@@ -107,11 +107,7 @@ const ProjectCard = ({
         height={imgHeight}
       />
       <Foot>
-        {/* The covers carry the project name, so the title and colour accent are
-            hidden. To bring them back, restore the Title and Accent imports and
-            VARIANTS entries above, the colorSplash props and the splash widths in
-            Projects.js.
-        <Title>
+        {/* <Title>
           <Accent
             background={project.colorSplash}
             width={colorSplashWidth}

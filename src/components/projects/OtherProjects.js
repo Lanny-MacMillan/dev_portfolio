@@ -14,12 +14,12 @@ import {
   ImageFrame,
   TileImage,
   TileBody,
-  TileTitle,
+  // TileTitle,
   TileDescription,
-  Status,
+  // Status,
   Tech,
-  TileLinks,
-  TileLink,
+  // TileLinks,
+  // TileLink,
 } from './OtherProjects.styles';
 
 const ProjectTile = ({ project }) => {
@@ -53,16 +53,19 @@ const ProjectTile = ({ project }) => {
           <TileImage src={project.image} alt="" $zoom={hoverState} />
         </ImageFrame>
         <TileBody>
-          <TileTitle $color={project.colorSplash}>
+          {/* <TileTitle $color={project.colorSplash}>
             <span>{project.nameText}</span>
           </TileTitle>
+          */}
           <TileDescription>{project.description}</TileDescription>
-          <Status $live={project.status === 'Live'}>
+          {/* <Status $live={project.status === 'Live'}>
             {project.devTypeOneofTwo}_{project.devTypeTwoofTwo} / {project.status}
           </Status>
+          */}
           <Tech>{project.icons}</Tech>
         </TileBody>
       </TileMain>
+      {/*
       <TileLinks>
         {project.liveLink && (
           <TileLink
@@ -79,6 +82,7 @@ const ProjectTile = ({ project }) => {
           </TileLink>
         )}
       </TileLinks>
+      */}
     </Tile>
   );
 };

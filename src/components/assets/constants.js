@@ -1,12 +1,15 @@
 import theAdventureCover from './img/theAdventureCover.png';
+import theAdventureHero from './img/theAdventureHero.png';
 import theAdventurePanelTop from './img/theAdventurePanelTop.png';
 import theAdventurePanelBottom from './img/theAdventurePanelBottom.png';
 
 import tetrisCover from './img/tetrisCover.png';
+import tetrisHero from './img/tetrisHero.png';
 import tetrisPanelTop from './img/tetrisPanelTop.png';
 import tetrisPanelBottom from './img/tetrisPanelBottom.png';
 
 import thryvCover from './img/thryvCover.png';
+import thryvHero from './img/thryvHero.png';
 import thryvAlt1 from './img/thryvAlt1.png';
 import thryvAlt2 from './img/thryvAlt2.png';
 
@@ -14,35 +17,44 @@ import thryvAlt2 from './img/thryvAlt2.png';
 // import geoDashImg from './img/geoDash.png';
 
 import planEatRepeatCover from './img/planEatRepeatCover.png';
+import planEatRepeatHero from './img/planEatRepeatHero.png';
 import planEatRepeatPanelTop from './img/planEatRepeatPanelTop.png';
 import planEatRepeatPanelBottom from './img/planEatRepeatPanelBottom.png';
 
 import crappyBirdCover from './img/crappyBirdCover.png';
+import crappyBirdHero from './img/crappyBirdHero.png';
 import crappyBirdPanelTop from './img/crappyBirdPanelTop.png';
 import crappyBirdPanelBottom from './img/crappyBirdPanelBottom.png';
 
 import nightmareCover from './img/nightmareCover.png';
+import nightmareHero from './img/nightmareHero.png';
 import nightmarePanelTop from './img/nightmarePanelTop.png';
 import nightmarePanelBottom from './img/nightmarePanelBottom.png';
 
 import quickstopCover from './img/quickstopCover.png';
+import quickstopHero from './img/quickstopHero.png';
 import quickstopPanelTop from './img/quickstopPanelTop.png';
 import quickstopPanelBottom from './img/quickstopPanelBottom.png';
 
 import sseCover from './img/sseCover.png';
+import sseHero from './img/sseHero.png';
 import sseTop from './img/sseTop.png';
 import sseBottom from './img/sseBottom.png';
 import nextHolidayImg from './img/nextHoliday.png';
+import nextHolidayHero from './img/nextHolidayHero.png';
 import nextHolidayGameplay from './img/nextHolidayGameplay.png';
 import nextHolidayGameplayAlt from './img/nextHolidayGameplayAlt.png';
 import macsClassicArcadeCover from './img/macsClassicArcadeCover.png';
+import macsClassicArcadeHero from './img/macsClassicArcadeHero.png';
 import arcadeScatterTop from './img/arcadeScatterTop.png';
 import arcadeScatterBottom from './img/arcadeScatterBottom.png';
 import terminalQuestCover from './img/terminalQuestCover.png';
+import terminalQuestHero from './img/terminalQuestHero.png';
 import terminalQuestPanelTop from './img/terminalQuestPanelTop.png';
 import terminalQuestPanelBottom from './img/terminalQuestPanelBottom.png';
 
 import aiToolboxCover from './img/aiToolboxCover.png';
+import aiToolboxHero from './img/aiToolboxHero.png';
 import aiToolboxPanelTop from './img/aiToolboxPanelTop.png';
 import aiToolboxPanelBottom from './img/aiToolboxPanelBottom.png';
 
@@ -90,6 +102,7 @@ export const theAdventure = {
   nameTextExpanded: 'Unite with the Magi. Save Discordia.',
   colorSplash: gameDev,
   image: theAdventureCover,
+  heroImage: theAdventureHero,
   imagePosition: 'center 10%',
   gameplayImage: theAdventurePanelTop,
   gameplayImageTwo: theAdventurePanelBottom,
@@ -130,6 +143,7 @@ export const tetris = {
   nameTextExpanded: 'Stack the blocks. Clear the lines.',
   colorSplash: frontendDev,
   image: tetrisCover,
+  heroImage: tetrisHero,
   imagePosition: 'center 10%',
   gameplayImage: tetrisPanelTop,
   gameplayImageTwo: tetrisPanelBottom,
@@ -153,6 +167,7 @@ export const theQuickStop = {
   nameTextExpanded: 'Download. Import. Build.',
   colorSplash: softwareDev,
   image: quickstopCover,
+  heroImage: quickstopHero,
   imagePosition: 'center 10%',
   gameplayImage: quickstopPanelTop,
   gameplayImageTwo: quickstopPanelBottom,
@@ -186,6 +201,7 @@ export const thryvInc = {
   nameTextExpanded: 'Do-it-all small business software.',
   colorSplash: softwareDev,
   image: thryvCover,
+  heroImage: thryvHero,
   imagePosition: 'center 10%',
   gameplayImage: thryvAlt1,
   gameplayImageTwo: thryvAlt2,
@@ -251,6 +267,7 @@ export const crappyBird = {
   nameTextExpanded: 'Flap through the pipes. Beat your high score.',
   colorSplash: gameDev,
   image: crappyBirdCover,
+  heroImage: crappyBirdHero,
   imagePosition: 'center 10%',
   gameplayImage: crappyBirdPanelTop,
   gameplayImageTwo: crappyBirdPanelBottom,
@@ -328,6 +345,7 @@ export const twoDudesNightmare = {
   nameTextExpanded: 'Survive the night. Fight what waits inside.',
   colorSplash: gameDev,
   image: nightmareCover,
+  heroImage: nightmareHero,
   imagePosition: 'center 10%',
   gameplayImage: nightmarePanelTop,
   gameplayImageTwo: nightmarePanelBottom,
@@ -366,6 +384,7 @@ export const aiToolbox = {
   nameTextExpanded: 'Ai Powered Solutions. In one place',
   colorSplash: frontendDev,
   image: aiToolboxCover,
+  heroImage: aiToolboxHero,
   imagePosition: 'center 10%',
   gameplayImage: aiToolboxPanelTop,
   gameplayImageTwo: aiToolboxPanelBottom,
@@ -393,6 +412,7 @@ export const planEatRepeat = {
   nameTextExpanded: 'All your meal options. In one place',
   colorSplash: softwareDev,
   image: planEatRepeatCover,
+  heroImage: planEatRepeatHero,
   imagePosition: 'center 10%',
   gameplayImage: planEatRepeatPanelTop,
   gameplayImageTwo: planEatRepeatPanelBottom,
@@ -427,6 +447,7 @@ export const nextHoliday = {
   nameTextExpanded: 'Plan every holiday. Together.',
   colorSplash: frontendDev,
   image: nextHolidayImg,
+  heroImage: nextHolidayHero,
   // keeps the title in view when the card crops this image
   imagePosition: 'center 10%',
   gameplayImage: nextHolidayGameplay,
@@ -457,6 +478,7 @@ export const sseNotifications = {
   nameTextExpanded: 'Real-time notifications. As a microservice.',
   colorSplash: softwareDev,
   image: sseCover,
+  heroImage: sseHero,
   imagePosition: 'center 10%',
   gameplayImage: sseTop,
   gameplayImageTwo: sseBottom,
@@ -488,6 +510,7 @@ export const macsArcade = {
   nameTextExpanded: 'Classic games. Zero clutter.',
   colorSplash: gameDev,
   image: macsClassicArcadeCover,
+  heroImage: macsClassicArcadeHero,
   gameplayImage: arcadeScatterTop,
   gameplayImageTwo: arcadeScatterBottom,
   description:
@@ -510,6 +533,7 @@ export const terminalQuest = {
   nameTextExpanded: 'Learn the command line. One quest at a time.',
   colorSplash: gameDev,
   image: terminalQuestCover,
+  heroImage: terminalQuestHero,
   gameplayImage: terminalQuestPanelTop,
   gameplayImageTwo: terminalQuestPanelBottom,
   description:

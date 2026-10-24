@@ -159,7 +159,9 @@ export const Status = styled.div`
 export const Tech = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 4px;
+  padding-bottom: 6px;
 `;
 
 export const TileLinks = styled.div`

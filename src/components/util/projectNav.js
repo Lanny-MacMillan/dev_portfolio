@@ -7,6 +7,7 @@ export const toViewState = ({
   nameText,
   nameTextExpanded,
   image,
+  heroImage,
   gameplayImage,
   gameplayImageTwo,
   description,
@@ -21,7 +22,8 @@ export const toViewState = ({
 }) => ({
   nameText,
   nameTextExpanded,
-  img: image,
+  // Show pages use the text-free art when a project has it
+  img: heroImage || image,
   gameplayImage,
   gameplayImageTwo,
   description,
