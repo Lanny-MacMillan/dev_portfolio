@@ -166,6 +166,9 @@ export const ShowImageContainer = styled.div`
   height: 50vh;
   width: auto;
   border: 3px solid white;
+  @media only screen and (min-width: 320px) and (max-width: 750px) {
+    height: auto;
+  }
 `;
 
 export const ShowImageColumn = styled.div`
@@ -188,6 +191,7 @@ export const ShowImage = styled.img`
   /* object-fit: contain; */
   @media only screen and (min-width: 320px) and (max-width: 750px) {
     width: 100%;
+    aspect-ratio: 2 / 1;
 
     /* object-fit: contain; */
   }
