@@ -61,7 +61,7 @@ const Projects = ({ projects, largeScreen }) => {
     <ProjectsContainer ref={projects}>
       <Header>Projects</Header>
       <Container>
-        {placed.map(({ project, span, splash, type, col, x }) => (
+        {placed.map(({ project, span, type, col, x }) => (
           <ProjectItem
             key={project.nameText}
             $col={col}
@@ -72,7 +72,7 @@ const Projects = ({ projects, largeScreen }) => {
               largeScreen={largeScreen}
               project={project}
               type={type}
-              colorSplashWidth={splash}
+              // colorSplashWidth={splash}
             />
           </ProjectItem>
         ))}

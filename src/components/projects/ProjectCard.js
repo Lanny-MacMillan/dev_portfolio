@@ -15,11 +15,11 @@ import {
   ImageLarge,
   Description,
   MobileDescription,
-  Title,
+  // Title,
   Stack,
-  ColorAccent,
-  ColorAccentWide,
-  ColorAccentLarge,
+  // ColorAccent,
+  // ColorAccentWide,
+  // ColorAccentLarge,
   Icons,
   Button,
 } from './Projects.styles';
@@ -29,19 +29,19 @@ const VARIANTS = {
     Card: ProjectCardContainer,
     Img: Image,
     Foot: Footer,
-    Accent: ColorAccent,
+    // Accent: ColorAccent,
   },
   wide: {
     Card: ProjectCardContainerWide,
     Img: ImageWide,
     Foot: FooterWide,
-    Accent: ColorAccentWide,
+    // Accent: ColorAccentWide,
   },
   large: {
     Card: ProjectCardContainerLarge,
     Img: ImageLarge,
     Foot: FooterLarge,
-    Accent: ColorAccentLarge,
+    // Accent: ColorAccentLarge,
   },
 };
 
@@ -57,8 +57,8 @@ const fade = {
 const ProjectCard = ({
   project,
   type,
-  colorSplashWidth,
-  colorSplashPosition,
+  // colorSplashWidth,
+  // colorSplashPosition,
   height,
   imgHeight,
   largeScreen,
@@ -66,7 +66,7 @@ const ProjectCard = ({
   const [hoverState, setHoverState] = useState(false);
   const navigate = useNavigate();
 
-  const { Card, Img, Foot, Accent } = VARIANTS[type || 'default'];
+  const { Card, Img, Foot } = VARIANTS[type || 'default'];
   const hoverStyle = {
     transform: 'scale(1.05)',
     transformOrigin: '50% 50%',
@@ -107,6 +107,10 @@ const ProjectCard = ({
         height={imgHeight}
       />
       <Foot>
+        {/* The covers carry the project name, so the title and colour accent are
+            hidden. To bring them back, restore the Title and Accent imports and
+            VARIANTS entries above, the colorSplash props and the splash widths in
+            Projects.js.
         <Title>
           <Accent
             background={project.colorSplash}
@@ -115,6 +119,7 @@ const ProjectCard = ({
           />
           {project.nameText}
         </Title>
+        */}
 
         <Description>{project.description}</Description>
         <MobileDescription>{project.mobileDescription}</MobileDescription>

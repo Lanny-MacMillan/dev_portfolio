@@ -199,22 +199,42 @@ export const clickable = css`
   }
 `;
 
+// Below the grid breakpoint the cards size to their content so the 2:1 covers keep
+// their ratio instead of being cropped to a fixed height
+const autoHeightNarrow = css`
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
+`;
+
+const coverNarrow = css`
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+  }
+`;
+
 export const ProjectCardContainer = styled.div`
   ${cardShell}
   ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
+  ${autoHeightNarrow}
 `;
 
 export const ProjectCardContainerWide = styled.div`
   ${cardShell}
   ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
+  ${autoHeightNarrow}
 `;
 
 export const ProjectCardContainerLarge = styled.div`
   ${cardShell}
   ${clickable}
   height: ${(props) => (props.height ? props.height : '440px')};
+  ${autoHeightNarrow}
 `;
 
 export const ImageMobile = styled.img`
@@ -251,6 +271,8 @@ export const Image = styled.img`
     height: ${(props) => (props.height ? props.height : '100%')};
     object-fit: cover;
   }
+
+  ${coverNarrow}
 `;
 
 export const ImageWide = styled.img`
@@ -278,6 +300,8 @@ export const ImageWide = styled.img`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     height: ${(props) => (props.height ? props.height : '100%')};
   }
+
+  ${coverNarrow}
 `;
 
 export const ImageLarge = styled.img`
@@ -304,6 +328,8 @@ export const ImageLarge = styled.img`
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
     height: ${(props) => (props.height ? props.height : '100%')};
   }
+
+  ${coverNarrow}
 `;
 
 export const Footer = styled.div`
@@ -321,6 +347,10 @@ export const Footer = styled.div`
     height: 50%;
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
   }
 `;
 
@@ -340,6 +370,10 @@ export const FooterWide = styled.div`
   }
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
   }
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
 `;
 
 export const FooterLarge = styled.div`
@@ -351,6 +385,10 @@ export const FooterLarge = styled.div`
   font-weight: 800;
   // border: 1px solid blue;
   height: 65%;
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
 `;
 export const Title = styled.div`
   // display: flex;
@@ -375,7 +413,7 @@ export const Description = styled.div`
   font-size: 0.8em;
 
   display: flex;
-  height: 40%;
+  height: 65%;
   color: white;
   padding: 0px 10px 0px 20px;
   align-items: center;
@@ -390,7 +428,7 @@ export const MobileDescription = styled.div`
   font-size: 0.8em;
 
   display: flex;
-  height: 40%;
+  height: 65%;
   color: white;
   padding: 0px 10px 0px 20px;
   align-items: center;
@@ -400,11 +438,16 @@ export const MobileDescription = styled.div`
   @media only screen and (min-width: 993px) {
     display: none;
   }
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+    padding: 16px 20px 6px 20px;
+  }
 `;
 export const Stack = styled.div`
   font-size: 14px;
   display: flex;
-  height: 15%;
+  height: 25%;
   padding: 5px;
   flex-direction: row;
   /* align-items: center; */
@@ -420,6 +463,11 @@ export const Stack = styled.div`
 
   @media only screen and (min-width: 601px) and (max-width: 992px) {
     height: auto;
+  }
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+    padding: 8px 5px 16px 5px;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
