@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  position: relative;
   z-index: 25;
   /* margin-bottom: 2em auto; // for header */
   justify-content: space-between;
@@ -14,6 +16,7 @@ export const HeaderContainer = styled.div`
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     justify-content: space-between;
+    align-items: center;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -73,6 +76,7 @@ export const HeaderLinksDiv = styled.div`
   width: auto;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
+    display: none;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -363,6 +367,14 @@ export const CenteredDiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+
+  /* Safari collapses an svg with only a viewBox to 0x0 as a flex item */
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1286.66 / 380;
+  }
 `;
 export const Cursor = styled.div`
   background-color: #141c3a;
@@ -386,5 +398,81 @@ export const BorderBlinkDiv = styled.div`
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  }
+`;
+
+export const MenuButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 48px;
+    height: 48px;
+    margin-right: 6px;
+  }
+`;
+
+export const MenuBar = styled.span`
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #141c3a;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease;
+
+  ${(props) =>
+    props.$open && props.$index === 0 && 'transform: translateY(8px) rotate(45deg);'}
+  ${(props) => props.$open && props.$index === 1 && 'opacity: 0;'}
+  ${(props) =>
+    props.$open &&
+    props.$index === 2 &&
+    'transform: translateY(-8px) rotate(-45deg);'}
+`;
+
+export const MobileMenu = styled(motion.nav)`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #c4cbca;
+  border-bottom: 2px solid #141c3a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+
+  @media only screen and (min-width: 769px) {
+    display: none;
+  }
+`;
+
+export const MobileLink = styled.button`
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'DM Sans', sans-serif;
+  color: #141c3a;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(20, 28, 58, 0.1);
   }
 `;
