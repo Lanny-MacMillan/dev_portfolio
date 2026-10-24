@@ -144,7 +144,7 @@ export const ColorAccent = styled.div`
   margin-bottom: 18px;
   z-index: -1;
   width: ${(props) => (props.width ? props.width : '125px')};
-  background: ${(props) => (props.background ? props.background : 'red')};
+  background: ${(props) => (props.$background ? props.$background : 'red')};
   height: 10px;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
   }
@@ -192,7 +192,7 @@ export const HTMLSnippet = styled.div`
 export const VertLine = styled.div`
   color: ${(props) => (props.color ? props.color : 'white')};
   border: 1px dashed #00ddff;
-  border-color: ${(props) => (props.borderColor ? props.borderColor : 'white')};
+  border-color: ${(props) => (props.$borderColor ? props.$borderColor : 'white')};
   height: ${(props) => (props.height ? props.height : '50px')};
 `;
 export const Skills1 = styled.div`

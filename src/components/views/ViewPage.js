@@ -46,7 +46,6 @@ const ViewPage = () => {
   const inDevelopment = status === 'In_Development';
   const projectAvailable = liveLink != null;
   const repoAvailable = link != null;
-  console.log('nameTextExpanded', nameTextExpanded);
   const projectLink = projectAvailable ? (
     <p>
       <Link href={liveLink} target="_blank" rel="noopener noreferrer">

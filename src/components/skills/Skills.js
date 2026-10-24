@@ -44,7 +44,7 @@ const Skills = ({ skills, largeScreen }) => {
               <SoftwareIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={softwareDev} />
+              <ColorAccent $background={softwareDev} />
               Software <br />
               Development{' '}
             </Title>
@@ -53,7 +53,7 @@ const Skills = ({ skills, largeScreen }) => {
             <HTMLSnippet>
               {' '}
               <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine borderColor={mobileDev} height={'75px'} />
+              <VertLine $borderColor={mobileDev} height={'75px'} />
               <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
@@ -68,7 +68,7 @@ const Skills = ({ skills, largeScreen }) => {
               <ReactIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={frontendDev} width={'126px'} />
+              <ColorAccent $background={frontendDev} width={'126px'} />
               Frontend <br />
               Development{' '}
             </Title>
@@ -76,7 +76,7 @@ const Skills = ({ skills, largeScreen }) => {
           <DescriptionBody>
             <HTMLSnippet>
               <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine borderColor={mobileDev} height={'60px'} />
+              <VertLine $borderColor={mobileDev} height={'60px'} />
               <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
@@ -90,7 +90,7 @@ const Skills = ({ skills, largeScreen }) => {
               <MobileIcon height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={mobileDev} width={'95px'} />
+              <ColorAccent $background={mobileDev} width={'95px'} />
               Mobile <br />
               Development{' '}
             </Title>
@@ -99,7 +99,7 @@ const Skills = ({ skills, largeScreen }) => {
             <HTMLSnippet>
               {' '}
               <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine borderColor={mobileDev} />
+              <VertLine $borderColor={mobileDev} />
               <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>
@@ -113,7 +113,7 @@ const Skills = ({ skills, largeScreen }) => {
               <UnityIcon2 height={60} width={60} />{' '}
             </Icon>
             <Title>
-              <ColorAccent background={gameDev} width={'85px'} />
+              <ColorAccent $background={gameDev} width={'85px'} />
               Game <br />
               Development{' '}
             </Title>
@@ -122,7 +122,7 @@ const Skills = ({ skills, largeScreen }) => {
             <HTMLSnippet>
               {' '}
               <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine borderColor={mobileDev} />
+              <VertLine $borderColor={mobileDev} />
               <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
             </HTMLSnippet>
             <Description>

@@ -2,6 +2,7 @@ import React from 'react';
 import Main from './components/Main.js';
 import { Route, Routes } from 'react-router';
 import ViewPage from './components/views/ViewPage.js';
+import OtherProjects from './components/projects/OtherProjects.js';
 
 function App() {
   return (
@@ -15,8 +16,13 @@ function App() {
         <Route path="/CrappyBird" element={<ViewPage />} />
         <Route path="/2dNightmare" element={<ViewPage />} />
         <Route path="/TetrisReact" element={<ViewPage />} />
-        <Route path="/GeometryDash" element={<ViewPage />} />
+        {/* <Route path="/GeometryDash" element={<ViewPage />} /> */}
         <Route path="/Plan.Eat.Repeat." element={<ViewPage />} />
+        <Route path="/NextHoliday" element={<ViewPage />} />
+        <Route path="/SSENotifications" element={<ViewPage />} />
+        <Route path="/MacsClassicArcade" element={<ViewPage />} />
+        <Route path="/TerminalQuest" element={<ViewPage />} />
+        <Route path="/OtherProjects" element={<OtherProjects />} />
         <Route path="*" element={<Main />} />
       </Routes>
     </>

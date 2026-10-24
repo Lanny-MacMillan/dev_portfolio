@@ -108,7 +108,7 @@ export const Link = styled.a`
   cursor: pointer;
 `;
 
-export const LowerDiv = styled.a`
+export const LowerDiv = styled.div`
   display: flex;
   flex-direction: row;
   margin: 2em 0 0 0;
@@ -137,7 +137,7 @@ export const WhiteSpan = styled.span`
   color: #ffffff;
 `;
 
-export const LeftDiv = styled.a`
+export const LeftDiv = styled.div`
   display: flex;
   width: auto;
   font-size: 1.2em;
@@ -149,7 +149,7 @@ export const LeftDiv = styled.a`
   }
 `;
 
-export const RightDiv = styled.a`
+export const RightDiv = styled.div`
   display: flex;
   width: 100%;
   height: 100%;

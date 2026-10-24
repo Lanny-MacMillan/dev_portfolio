@@ -29,8 +29,8 @@ export const ReactIconColor = ({ width, height }) => (
       y2="36.722"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#6dc7ff" />
-      <stop offset="1" stop-color="#e6abff" />
+      <stop offset="0" stopColor="#6dc7ff" />
+      <stop offset="1" stopColor="#e6abff" />
     </linearGradient>
     <circle cx="32" cy="32" r="6" fill="url(#9GkdZLxQa1XTDblOFwLcpa)" />
     <linearGradient
@@ -41,8 +41,8 @@ export const ReactIconColor = ({ width, height }) => (
       y2="53.44"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#1a6dff" />
-      <stop offset="1" stop-color="#c822ff" />
+      <stop offset="0" stopColor="#1a6dff" />
+      <stop offset="1" stopColor="#c822ff" />
     </linearGradient>
     <path
       fill="url(#9GkdZLxQa1XTDblOFwLcpb)"
@@ -232,8 +232,8 @@ export const UnityIcon = ({ logoFill, backgroundFill, width, height }) => (
       y2="48.557"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#262626" stop-opacity="0" />
-      <stop offset="1" stop-color="#262626" stop-opacity=".8" />
+      <stop offset="0" stopColor="#262626" stopOpacity="0" />
+      <stop offset="1" stopColor="#262626" stopOpacity=".8" />
     </linearGradient>
     <polygon
       fill={backgroundFill || 'url(#qUxyI3vgFveub1eDoKLJXa)'}
@@ -247,8 +247,8 @@ export const UnityIcon = ({ logoFill, backgroundFill, width, height }) => (
       y2="47.082"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#262626" stop-opacity="0" />
-      <stop offset="1" stop-color="#262626" stop-opacity=".8" />
+      <stop offset="0" stopColor="#262626" stopOpacity="0" />
+      <stop offset="1" stopColor="#262626" stopOpacity=".8" />
     </linearGradient>
     <path
       fill={logoFill || 'url(#qUxyI3vgFveub1eDoKLJXb)'}
@@ -286,8 +286,8 @@ export const UnityIconColor = ({ logoFill, width, height }) => (
       y2="44.334"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#6dc7ff" />
-      <stop offset="1" stop-color="#e6abff" />
+      <stop offset="0" stopColor="#6dc7ff" />
+      <stop offset="1" stopColor="#e6abff" />
     </linearGradient>
     <polygon
       fill="url(#k4Wi0sDN9ImZC~anEGVOCa)"
@@ -301,8 +301,8 @@ export const UnityIconColor = ({ logoFill, width, height }) => (
       y2="44.334"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#6dc7ff" />
-      <stop offset="1" stop-color="#e6abff" />
+      <stop offset="0" stopColor="#6dc7ff" />
+      <stop offset="1" stopColor="#e6abff" />
     </linearGradient>
     <polygon
       fill="url(#k4Wi0sDN9ImZC~anEGVOCb)"
@@ -316,8 +316,8 @@ export const UnityIconColor = ({ logoFill, width, height }) => (
       y2="44.334"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#6dc7ff" />
-      <stop offset="1" stop-color="#e6abff" />
+      <stop offset="0" stopColor="#6dc7ff" />
+      <stop offset="1" stopColor="#e6abff" />
     </linearGradient>
     <polygon
       fill="url(#k4Wi0sDN9ImZC~anEGVOCc)"
@@ -331,8 +331,8 @@ export const UnityIconColor = ({ logoFill, width, height }) => (
       y2="57.379"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#1a6dff" />
-      <stop offset="1" stop-color="#c822ff" />
+      <stop offset="0" stopColor="#1a6dff" />
+      <stop offset="1" stopColor="#c822ff" />
     </linearGradient>
     <path
       fill="url(#k4Wi0sDN9ImZC~anEGVOCd)"
@@ -358,8 +358,8 @@ export const CSharpIcon = ({ width, height }) => (
       gradientTransform="matrix(1 0 0 -1 0 64)"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#8ab4ff" />
-      <stop offset=".699" stop-color="#e492ff" />
+      <stop offset="0" stopColor="#8ab4ff" />
+      <stop offset=".699" stopColor="#e492ff" />
     </linearGradient>
     <path
       fill="url(#dFMIpH0DLBLP_Mye2ctJMa)"
@@ -374,8 +374,8 @@ export const CSharpIcon = ({ width, height }) => (
       gradientTransform="matrix(1 0 0 -1 0 64)"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#8ab4ff" />
-      <stop offset=".699" stop-color="#e492ff" />
+      <stop offset="0" stopColor="#8ab4ff" />
+      <stop offset=".699" stopColor="#e492ff" />
     </linearGradient>
     <path
       fill="url(#dFMIpH0DLBLP_Mye2ctJMb)"
@@ -389,8 +389,8 @@ export const CSharpIcon = ({ width, height }) => (
       y2="35.152"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#8ab4ff" />
-      <stop offset="1" stop-color="#e492ff" />
+      <stop offset="0" stopColor="#8ab4ff" />
+      <stop offset="1" stopColor="#e492ff" />
     </linearGradient>
     <path
       fill="url(#dFMIpH0DLBLP_Mye2ctJMc)"
@@ -404,8 +404,8 @@ export const CSharpIcon = ({ width, height }) => (
       y2="57.784"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#1a6dff" />
-      <stop offset="1" stop-color="#c822ff" />
+      <stop offset="0" stopColor="#1a6dff" />
+      <stop offset="1" stopColor="#c822ff" />
     </linearGradient>
     <path
       fill="url(#dFMIpH0DLBLP_Mye2ctJMd)"
@@ -447,7 +447,7 @@ export const MongoDBIcon = ({ width, height, backgroundFill }) => (
     height={height || '48'}
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-rule="evenodd" fill-rule="evenodd">
+    <g clip-rule="evenodd" fillRule="evenodd">
       <path
         d="m87.259 100.139c.169-.325.331-.612.469-.909.087-.19.221-.228.41-.223 1.133.032 2.266.067 3.4.078.963.01 1.928-.008 2.892-.019 1.086-.013 2.172-.07 3.257-.039 1.445.042 2.853.325 4.16.968 1.561.769 2.742 1.94 3.547 3.483.514.985.812 2.03.931 3.14.172 1.608.059 3.179-.451 4.717-.632 1.906-1.832 3.365-3.499 4.458-1.283.841-2.69 1.338-4.198 1.622-1.596.301-3.197.204-4.798.209-1.756.007-3.511-.031-5.267-.051-.307-.003-.351-.061-.27-.354l.075-.27c.171-.538.263-.562.809-.652.378-.061.77-.203 1.087-.413.184-.122.26-.44.332-.685.062-.214.065-.449.067-.675.025-3.425.051-6.849.065-10.272.003-.865-.017-1.732-.065-2.596-.034-.605-.357-1.019-1.077-1.162-.56-.111-1.124-.197-1.687-.296zm16.076 8.293c-.076-.682-.113-1.37-.235-2.042-.292-1.613-.998-3.018-2.238-4.119-2.005-1.779-4.419-2.053-6.949-1.841-.576.048-.7.245-.709.837-.014.84-.028 1.68-.029 2.52-.004 2.664-.004 5.328 0 7.992.001.758.009 1.516.031 2.272.024.774.305 1.429 1.063 1.729 1.195.473 2.452.529 3.706.336 2.003-.307 3.404-1.474 4.344-3.223.744-1.388.954-2.903 1.016-4.461zm4.869 9.071c-.024-.415.146-.758.356-1.073.057-.085.253-.081.388-.108l1.146-.227c.405-.086.618-.358.675-.755.038-.262.074-.527.077-.792.025-2.097.049-4.194.059-6.291.01-2.1.002-4.2.002-6.3l-.009-.401c-.041-.675-.367-1.025-1.037-1.124l-1.453-.221c-.179-.024-.244-.11-.179-.269.112-.271.219-.552.377-.796.059-.09.258-.125.392-.122.694.01 1.388.062 2.082.061l6.041-.036c1.164-.001 2.288.202 3.332.759 1.149.612 1.792 1.559 1.976 2.849.192 1.355-.219 2.497-1.209 3.404-.407.374-.934.618-1.406.922l-.154.096c.438.161.855.3 1.261.466 1.188.487 2.133 1.248 2.633 2.463.395.959.395 1.959.161 2.953-.364 1.556-1.389 2.591-2.722 3.374-1.251.735-2.605 1.163-4.047 1.235-1.33.067-2.666.042-3.999.057l-.772.004c-1.284-.029-2.569-.062-3.854-.096zm5.537-6.089h.013c0 .658-.009 1.316.003 1.974.008.426-.007.864.085 1.274.138.613.418 1.166 1.106 1.342.929.239 1.878.287 2.818.124 1.177-.205 2.116-.795 2.631-1.916.382-.833.439-1.716.308-2.618-.174-1.188-.805-2.05-1.854-2.615-.688-.371-1.422-.598-2.204-.628-.876-.033-1.753-.035-2.629-.062-.246-.007-.28.118-.279.32.005.934.002 1.869.002 2.805zm1.865-4.475c.479-.024 1.021-.031 1.56-.085 1.032-.103 1.759-.622 2.138-1.609.193-.501.185-1.017.19-1.538.015-1.357-.777-2.469-2.066-2.929-.995-.355-2.021-.361-3.053-.333-.418.011-.605.194-.611.615l-.062 5.489c-.003.218.091.312.303.319z"
         fill="#94795d"
@@ -593,8 +593,8 @@ export const PostregSQLIcon = ({ width, height, logoFill }) => (
         d="M18.983 18.636c.163-1.357.114-1.555 1.124-1.336l.257.023c.777.035 1.793-.125 2.4-.402 1.285-.596 2.047-1.592.78-1.33-2.89.596-3.1-.383-3.1-.383 3.053-4.53 4.33-10.28 3.227-11.687-3.004-3.84-8.205-2.024-8.292-1.976l-.028.005c-.57-.12-1.2-.19-1.93-.2-1.308-.02-2.3.343-3.054.914 0 0-9.277-3.822-8.846 4.807.092 1.836 2.63 13.9 5.66 10.25C8.29 15.987 9.36 14.86 9.36 14.86c.53.353 1.167.533 1.834.468l.052-.044a2.01 2.01 0 0 0 .021.518c-.78.872-.55 1.025-2.11 1.346-1.578.325-.65.904-.046 1.056.734.184 2.432.444 3.58-1.162l-.046.183c.306.245.285 1.76.33 2.842s.116 2.093.337 2.688.48 2.13 2.53 1.7c1.713-.367 3.023-.896 3.143-5.81"
         fill="#000"
         stroke="#000"
-        stroke-linecap="butt"
-        stroke-width="2.149"
+        strokeLinecap="butt"
+        strokeWidth="2.149"
         class="D"
       />
       <path
@@ -610,7 +610,7 @@ export const PostregSQLIcon = ({ width, height, logoFill }) => (
           />
           <path
             d="M20.425 15.17s.2.98 3.1.382c1.267-.262.504.734-.78 1.33-1.054.49-3.418.615-3.457-.06-.1-1.745 1.244-1.215 1.147-1.652-.088-.394-.69-.78-1.086-1.744-.347-.84-4.76-7.29 1.224-6.333.22-.045-1.56-5.7-7.16-5.782S7.99 8.196 7.99 8.196"
-            stroke-linejoin="bevel"
+            strokeLinejoin="bevel"
           />
         </g>
         <g class="C">
@@ -624,11 +624,11 @@ export const PostregSQLIcon = ({ width, height, logoFill }) => (
       <g fill="#fff" class="D">
         <path
           d="M10.322 8.145c-.017.117.215.43.516.472s.558-.202.575-.32-.215-.246-.516-.288-.56.02-.575.136z"
-          stroke-width=".239"
+          strokeWidth=".239"
         />
         <path
           d="M19.486 7.906c.016.117-.215.43-.516.472s-.56-.202-.575-.32.215-.246.516-.288.56.02.575.136z"
-          stroke-width=".119"
+          strokeWidth=".119"
         />
       </g>
       <path
@@ -747,7 +747,7 @@ export const Ptag = ({ width, height, letterFill }) => (
     width={width || '48'}
     height={height || '48'}
     viewBox="0 0 270 129"
-    enable-background="new 0 0 270 129"
+    enableBackground="new 0 0 270 129"
   >
     <path
       fill="#252521" // background
@@ -877,7 +877,7 @@ export const ClosingPtag = ({ width, height, letterFill }) => (
     width={width || '48'}
     height={height || '48'}
     viewBox="0 0 369 153"
-    enable-background="new 0 0 369 153"
+    enableBackground="new 0 0 369 153"
   >
     <path
       fill="#252520"
@@ -1069,7 +1069,7 @@ export const CalendlyIcon = ({
     y="0px"
     width={width || '120px'}
     viewBox="0 0 1511 379"
-    enable-background="new 0 0 1511 379"
+    enableBackground="new 0 0 1511 379"
   >
     <path
       fill="#242424"
@@ -1665,8 +1665,8 @@ export const SelfIconSmall = ({ width, height }) => (
     viewBox="0 0 340 340"
     width={width || '48px'}
     height={height || '48px'}
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
   >
     <a href="https://www.linkedin.com/in/lanny-macmillan/" target="_parent">
       <g transform="translate(-30.851303-26.043648)">
@@ -1675,7 +1675,7 @@ export const SelfIconSmall = ({ width, height }) => (
           ry="141.750934"
           transform="matrix(1.1 0 0 1.1 200.851307 194.244745)"
           fill="#141c3a"
-          stroke-width="15"
+          strokeWidth="15"
         />
         <g>
           <g>
@@ -1705,9 +1705,9 @@ export const SelfIconSmall = ({ width, height }) => (
               d="M169.42,310.87c19.019364,10.559308,42.140636,10.559308,61.16,0"
               fill="none"
               stroke="#4fecec"
-              stroke-width="8.24112"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="8.24112"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <path
               d="M153.8,343.8c-3.250637-.002649-22.614267-3.67864-24.91-5.98s-5.275308-2.019366-5.27-5.27l-22.34-12.08c.090639-26.44996,9.76624-32.268091,35.27-39.28.345476-.093892.701994-.14098,1.06-.14h26c10.267927.011023,18.588977,8.332073,18.6,18.6l.01168,50.520772c.015577.229736.003897-.229736-.01168,0-.177034,2.075374.952897.007537-1.13,0Z"
@@ -1725,9 +1725,9 @@ export const SelfIconSmall = ({ width, height }) => (
               transform="translate(.394903-.394903)"
               fill="none"
               stroke="#202c33"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <path
               d="M254.17,266.24c-.743634,4.862876-4.961114,8.431513-9.88,8.36h-4.37c-12.532075.005295-22.708515,10.128128-22.78,22.66l-.574884,50.41c0,2.761424.04346,4.066603,2.804884,4.066603h2.77c2.761424,0,5.394998-1.305179,5.394998-4.066603L227.66,298.59c.033005-5.819728,4.760179-10.520094,10.58-10.52h18.71c9.361572.000079,16.961452-7.568508,17-16.93l-20.47-9.9c.675201,1.574361.913561,3.30161.69,5Z"
@@ -1741,9 +1741,9 @@ export const SelfIconSmall = ({ width, height }) => (
               d="M160.54,274.66h-4.67c-5.328233-.016471-9.643529-4.331767-9.66-9.66v0c-.001408-1.288388.25708-2.563822.76-3.75"
               fill="none"
               stroke="#68717d"
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <line
               x1="157.05"
@@ -1752,9 +1752,9 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="332.55"
               fill="none"
               stroke="#fff"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <circle r="7.69" transform="translate(156.82 339.75)" fill="#109494" />
             <line
@@ -1764,18 +1764,18 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="332.55"
               fill="none"
               stroke="#fff"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <circle r="7.69" transform="translate(243.41 339.98)" fill="#109494" />
             <path
               d="M239.92,274.66h4.67c5.328233-.016471,9.643529-4.331767,9.66-9.66v0c.001408-1.288388-.25708-2.563822-.76-3.75"
               fill="none"
               stroke="#68717d"
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
           </g>
         </g>
@@ -1785,7 +1785,7 @@ export const SelfIconSmall = ({ width, height }) => (
           transform="matrix(1.1 0 0 1.1 200.851307 194.244745)"
           fill="none"
           stroke="#4fecec"
-          stroke-width="15"
+          strokeWidth="15"
         />
         <g>
           <g>
@@ -1793,8 +1793,8 @@ export const SelfIconSmall = ({ width, height }) => (
               d="M276.38,178v-43.23c-.071297-30.467898-24.732217-55.160091-55.2-55.27h-42.36c-30.467783.109909-55.128703,24.802102-55.2,55.27v43.23"
               fill="none"
               stroke="#109494"
-              stroke-width="14"
-              stroke-miterlimit="10"
+              strokeWidth="14"
+              strokeMiterlimit="10"
             />
             <rect
               width="55.22"
@@ -1811,9 +1811,9 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="196.81"
               fill="none"
               stroke="#4fecec"
-              stroke-width="16"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="16"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <rect
               width="55.22"
@@ -1830,9 +1830,9 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="196.81"
               fill="none"
               stroke="#4fecec"
-              stroke-width="16"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="16"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
           </g>
           <path
@@ -1845,9 +1845,9 @@ export const SelfIconSmall = ({ width, height }) => (
             transform="translate(0-.469462)"
             fill="none"
             stroke="#cf946d"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <path
             d="M184,205.46v.29c0,7.29,5.79,13.82,13.84,14.78c9.74,1.16,18.14-5.7,18.14-14.24v-.83c-.129057-2.260745-2.058426-3.993604-4.32-3.88h-23.33c-2.265381-.1193-4.200992,1.615151-4.33,3.88Z"
@@ -1875,9 +1875,9 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="140.85"
               fill="none"
               stroke="#77655a"
-              stroke-width="12"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="12"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
             <line
               x1="157.83"
@@ -1886,9 +1886,9 @@ export const SelfIconSmall = ({ width, height }) => (
               y2="140.85"
               fill="none"
               stroke="#77655a"
-              stroke-width="12"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
+              strokeWidth="12"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
             />
           </g>
           <g>
@@ -1913,8 +1913,8 @@ export const SelfIconSmall = ({ width, height }) => (
               d="M186.24,237.64h-45.24c-8.836556,0-16-7.163444-16-16v-6.14"
               fill="none"
               stroke="#4fecec"
-              stroke-width="12"
-              stroke-miterlimit="10"
+              strokeWidth="12"
+              strokeMiterlimit="10"
             />
             <rect
               width="21.73"
@@ -1939,8 +1939,8 @@ export const SelfIconLarge = ({ width, height }) => (
     viewBox="0 0 500 500"
     width={width || '48px'}
     height={height || '48px'}
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
   >
     <g transform="translate(52.685838 32.03409)">
       <ellipse
@@ -1949,7 +1949,7 @@ export const SelfIconLarge = ({ width, height }) => (
         transform="matrix(1.1 0 0 1.1 200.851307 194.244745)"
         fill="#141c3a"
         stroke="#4fecec"
-        stroke-width="15"
+        strokeWidth="15"
       />
       <g>
         <g>
@@ -1979,9 +1979,9 @@ export const SelfIconLarge = ({ width, height }) => (
             d="M169.42,310.87c19.019364,10.559308,42.140636,10.559308,61.16,0"
             fill="none"
             stroke="#4fecec"
-            stroke-width="8.24112"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="8.24112"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <path
             d="M105.49,375.27c-3.250637-.002649-6.366937-1.297187-8.66267-3.598547s-3.582638-5.420819-3.57733-8.671453v-25.2c.090639-26.44996,17.79624-49.598091,43.3-56.61.345476-.093892.701994-.14098,1.06-.14h26c10.267927.011023,18.588977,8.332073,18.6,18.6v71.25c.015577.229736.015577.460264,0,.69-.177034,2.075374-1.917103,3.667537-4,3.66Z"
@@ -1998,9 +1998,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="362.86"
             fill="none"
             stroke="#202c33"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <line
             x1="258.07"
@@ -2009,9 +2009,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="362.86"
             fill="none"
             stroke="#202c33"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <path
             d="M254.17,266.24c-.743634,4.862876-4.961114,8.431513-9.88,8.36h-4.37c-12.532075.005295-22.708515,10.128128-22.78,22.66v77.44c0,2.761424,2.238576,5,5,5h.52c2.761424,0,5-2.238576,5-5v-76.11c.033005-5.819728,4.760179-10.520094,10.58-10.52h18.71c9.361572.000079,16.961452-7.568508,17-16.93l-20.47-9.9c.675201,1.574361.913561,3.30161.69,5Z"
@@ -2025,9 +2025,9 @@ export const SelfIconLarge = ({ width, height }) => (
             d="M160.54,274.66h-4.67c-5.328233-.016471-9.643529-4.331767-9.66-9.66v0c-.001408-1.288388.25708-2.563822.76-3.75"
             fill="none"
             stroke="#68717d"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <line
             x1="157.05"
@@ -2036,9 +2036,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="332.55"
             fill="none"
             stroke="#fff"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <circle r="7.69" transform="translate(156.82 339.75)" fill="#109494" />
           <line
@@ -2048,18 +2048,18 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="332.55"
             fill="none"
             stroke="#fff"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <circle r="7.69" transform="translate(243.41 339.98)" fill="#109494" />
           <path
             d="M239.92,274.66h4.67c5.328233-.016471,9.643529-4.331767,9.66-9.66v0c.001408-1.288388-.25708-2.563822-.76-3.75"
             fill="none"
             stroke="#68717d"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
         </g>
       </g>
@@ -2069,8 +2069,8 @@ export const SelfIconLarge = ({ width, height }) => (
             d="M276.38,178v-43.23c-.071297-30.467898-24.732217-55.160091-55.2-55.27h-42.36c-30.467783.109909-55.128703,24.802102-55.2,55.27v43.23"
             fill="none"
             stroke="#109494"
-            stroke-width="14"
-            stroke-miterlimit="10"
+            strokeWidth="14"
+            strokeMiterlimit="10"
           />
           <rect
             width="55.22"
@@ -2087,9 +2087,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="196.81"
             fill="none"
             stroke="#4fecec"
-            stroke-width="16"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="16"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <rect
             width="55.22"
@@ -2106,9 +2106,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="196.81"
             fill="none"
             stroke="#4fecec"
-            stroke-width="16"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="16"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
         </g>
         <path
@@ -2121,9 +2121,9 @@ export const SelfIconLarge = ({ width, height }) => (
           transform="translate(0-.469462)"
           fill="none"
           stroke="#cf946d"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
         />
         <path
           d="M184,205.46v.29c0,7.29,5.79,13.82,13.84,14.78c9.74,1.16,18.14-5.7,18.14-14.24v-.83c-.129057-2.260745-2.058426-3.993604-4.32-3.88h-23.33c-2.265381-.1193-4.200992,1.615151-4.33,3.88Z"
@@ -2151,9 +2151,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="140.85"
             fill="none"
             stroke="#77655a"
-            stroke-width="12"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="12"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
           <line
             x1="157.83"
@@ -2162,9 +2162,9 @@ export const SelfIconLarge = ({ width, height }) => (
             y2="140.85"
             fill="none"
             stroke="#77655a"
-            stroke-width="12"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
+            strokeWidth="12"
+            strokeLinecap="round"
+            strokeMiterlimit="10"
           />
         </g>
         <g>
@@ -2189,8 +2189,8 @@ export const SelfIconLarge = ({ width, height }) => (
             d="M186.24,237.64h-45.24c-8.836556,0-16-7.163444-16-16v-6.14"
             fill="none"
             stroke="#4fecec"
-            stroke-width="12"
-            stroke-miterlimit="10"
+            strokeWidth="12"
+            strokeMiterlimit="10"
           />
           <rect
             width="21.73"
@@ -2222,9 +2222,9 @@ export const NextJSIcon = ({ width, height }) => (
       y2="4.266"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#0a070a" />
-      <stop offset=".465" stop-color="#2b2b2b" />
-      <stop offset="1" stop-color="#4b4b4b" />
+      <stop offset="0" stopColor="#0a070a" />
+      <stop offset=".465" stopColor="#2b2b2b" />
+      <stop offset="1" stopColor="#4b4b4b" />
     </linearGradient>
     <circle cx="24" cy="24" r="19.734" fill="url(#NRNx2IPDe7PJlJvrxOKgWa)" />
     <rect width="3.023" height="15.996" x="15.992" y="16.027" fill="#fff" />
@@ -2236,9 +2236,9 @@ export const NextJSIcon = ({ width, height }) => (
       y2="18.431"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset=".377" stop-color="#fff" stop-opacity="0" />
-      <stop offset=".666" stop-color="#fff" stop-opacity=".3" />
-      <stop offset=".988" stop-color="#fff" />
+      <stop offset=".377" stopColor="#fff" stopOpacity="0" />
+      <stop offset=".666" stopColor="#fff" stopOpacity=".3" />
+      <stop offset=".988" stopColor="#fff" />
     </linearGradient>
     <rect
       width="2.953"
@@ -2255,9 +2255,9 @@ export const NextJSIcon = ({ width, height }) => (
       y2="40.529"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset=".296" stop-color="#fff" />
-      <stop offset=".521" stop-color="#fff" stop-opacity=".5" />
-      <stop offset=".838" stop-color="#fff" stop-opacity="0" />
+      <stop offset=".296" stopColor="#fff" />
+      <stop offset=".521" stopColor="#fff" stopOpacity=".5" />
+      <stop offset=".838" stopColor="#fff" stopOpacity="0" />
     </linearGradient>
     <polygon
       fill="url(#NRNx2IPDe7PJlJvrxOKgWc)"
@@ -2281,8 +2281,8 @@ export const NextJSColorIcon = ({ width, height }) => (
       y2="10"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#e6abff" />
-      <stop offset="1" stop-color="#6dc7ff" />
+      <stop offset="0" stopColor="#e6abff" />
+      <stop offset="1" stopColor="#6dc7ff" />
     </linearGradient>
     <path
       fill="url(#wNc8qMg_PMLZF-NebSkXWa)"
@@ -2296,8 +2296,8 @@ export const NextJSColorIcon = ({ width, height }) => (
       y2="6"
       gradientUnits="userSpaceOnUse"
     >
-      <stop offset="0" stop-color="#c822ff" />
-      <stop offset="1" stop-color="#1a6dff" />
+      <stop offset="0" stopColor="#c822ff" />
+      <stop offset="1" stopColor="#1a6dff" />
     </linearGradient>
     <path
       fill="url(#wNc8qMg_PMLZF-NebSkXWb)"
