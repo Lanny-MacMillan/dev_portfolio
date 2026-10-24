@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Children, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { useNavigate } from 'react-router-dom';
 import { projectPath, toViewState } from '../util/projectNav';
@@ -130,7 +130,7 @@ const ProjectCard = ({
               {type === 'large' ? (
                 <Button>Show_Project</Button>
               ) : (
-                <Icons>{icons}</Icons>
+                <Icons>{Children.toArray(icons)}</Icons>
               )}
             </Transition>
           )}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Children, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { otherProjects } from '../assets/constants';
 import { projectPath, toViewState } from '../util/projectNav';
@@ -62,7 +62,7 @@ const ProjectTile = ({ project }) => {
             {project.devTypeOneofTwo}_{project.devTypeTwoofTwo} / {project.status}
           </Status>
           */}
-          <Tech>{project.icons}</Tech>
+          <Tech>{Children.toArray(project.icons)}</Tech>
         </TileBody>
       </TileMain>
       {/*
