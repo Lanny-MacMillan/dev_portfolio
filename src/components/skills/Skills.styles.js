@@ -27,7 +27,7 @@ export const SkillsContainer = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 520px) {
     height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 1.5em auto auto auto auto auto 1.5em;
     grid-template-areas:
       '. '
       'header'
@@ -42,7 +42,7 @@ export const SkillsContainer = styled.div`
     height: auto;
     padding: 0 20px 0 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.7fr;
+    grid-template-rows: 1.5em auto auto auto auto auto 1.5em;
     grid-template-areas:
       '. '
       'header'

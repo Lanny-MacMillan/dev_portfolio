@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Home from './home/Home';
 import Skills from './skills/Skills.js';
 import Projects from './projects/Projects.js';
@@ -14,10 +15,15 @@ import {
   LinksContent,
   Links,
   PageRefIcon,
+  MenuButton,
+  MenuBar,
+  MobileMenu,
+  MobileLink,
 } from './home/Home.styles.js';
 
 function Main() {
   const [largeScreen, setLargeScreen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const pages = ['// home', '// skills', '// projects', '// work', '// contact'];
 
@@ -30,6 +36,7 @@ function Main() {
   ];
 
   const scrollToRef = (ref) => {
+    setMenuOpen(false);
     pageRef[ref].current.scrollIntoView({
       behavior: 'smooth',
     });
@@ -42,10 +49,23 @@ function Main() {
       } else {
         setLargeScreen(false);
       }
+      if (window.innerWidth > 768) {
+        setMenuOpen(false);
+      }
     };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
   return (
@@ -68,6 +88,34 @@ function Main() {
             </LinksContent>
           ))}
         </HeaderLinksDiv>
+        <MenuButton
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <MenuBar $open={menuOpen} $index={0} />
+          <MenuBar $open={menuOpen} $index={1} />
+          <MenuBar $open={menuOpen} $index={2} />
+        </MenuButton>
+        <AnimatePresence>
+          {menuOpen && (
+            <MobileMenu
+              id="mobile-menu"
+              initial={{ y: -12, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -12, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              {pages.map((page, pageRef) => (
+                <MobileLink key={page} onClick={() => scrollToRef(pageRef)}>
+                  {page}
+                </MobileLink>
+              ))}
+            </MobileMenu>
+          )}
+        </AnimatePresence>
       </HeaderContainer>
       <ScrollToTop />
       <CursorDrift />
