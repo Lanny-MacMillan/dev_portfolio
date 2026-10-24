@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { otherProjects } from '../assets/constants';
-import {
-  Banner,
-  Mosaic,
-  MosaicTile,
-  MosaicImage,
-  BannerText,
-  BannerTitle,
-  BannerBody,
-  Cta,
-} from './OtherProjects.styles';
+import otherProjectsCover from '../assets/img/otherProjectsCover.png';
+import { Banner, BannerImage, BannerText, Cta } from './OtherProjects.styles';
 
 const OtherProjectsCard = () => {
   const [hoverState, setHoverState] = useState(false);
@@ -37,21 +29,8 @@ const OtherProjectsCard = () => {
       onFocus={() => setHoverState(true)}
       onBlur={() => setHoverState(false)}
     >
-      <Mosaic>
-        {otherProjects.map((project) => (
-          <MosaicTile key={project.nameText}>
-            <MosaicImage src={project.image} alt="" $zoom={hoverState} />
-          </MosaicTile>
-        ))}
-      </Mosaic>
+      <BannerImage src={otherProjectsCover} alt="" $zoom={hoverState} />
       <BannerText>
-        <BannerTitle $color="#4fecec">
-          <span>Other Projects</span>
-        </BannerTitle>
-        <BannerBody>
-          More of my launched apps and games, from AI tools to a Tetris clone, all in
-          one place.
-        </BannerBody>
         <Cta>{hoverState ? 'View_All' : `${otherProjects.length}_Projects`}</Cta>
       </BannerText>
     </Banner>

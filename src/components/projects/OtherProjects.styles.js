@@ -15,29 +15,13 @@ export const Banner = styled.div`
   background: rgba(0, 0, 0, 0.5);
 `;
 
-// Square tiles in a row; two by two on narrow screens
-export const Mosaic = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2px;
-  overflow: hidden;
-
-  @media only screen and (max-width: 992px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-`;
-
-export const MosaicImage = styled.img`
+export const BannerImage = styled.img`
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2400 / 760;
   object-fit: cover;
   transition: all 0.4s ease-in-out;
-  transform: ${(props) => (props.$zoom ? 'scale(1.05)' : 'none')};
-`;
-
-export const MosaicTile = styled.div`
-  overflow: hidden;
+  transform: ${(props) => (props.$zoom ? 'scale(1.03)' : 'none')};
 `;
 
 export const BannerText = styled.div`
@@ -52,19 +36,6 @@ export const BannerText = styled.div`
   @media only screen and (max-width: 992px) {
     padding: 15px 20px;
   }
-`;
-
-export const BannerTitle = styled.div`
-  font-size: 1.2em;
-  font-weight: 800;
-
-  span {
-    background: ${(props) => splash(props.$color)};
-  }
-`;
-
-export const BannerBody = styled.div`
-  font-size: 0.8em;
 `;
 
 export const Cta = styled.span`

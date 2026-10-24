@@ -1,10 +1,10 @@
 import theAdventureCover from './img/theAdventureCover.png';
-import theAdventureGameplay from './img/theAdventureGameplay.png';
-import theAdventureGameplayAlt from './img/theAdventureGameplayAlt.png';
+import theAdventurePanelTop from './img/theAdventurePanelTop.png';
+import theAdventurePanelBottom from './img/theAdventurePanelBottom.png';
 
-import tetrisReact from './img/tetrisReact.png';
-import tetrisGameplay from './img/tetrisGameplay.png';
-import tetrisGameplayAlt from './img/tetrisGameplayAlt.png';
+import tetrisCover from './img/tetrisCover.png';
+import tetrisPanelTop from './img/tetrisPanelTop.png';
+import tetrisPanelBottom from './img/tetrisPanelBottom.png';
 
 import thryvCover from './img/thryvCover.png';
 import thryvAlt1 from './img/thryvAlt1.png';
@@ -14,22 +14,24 @@ import thryvAlt2 from './img/thryvAlt2.png';
 // import geoDashImg from './img/geoDash.png';
 
 import planEatRepeatCover from './img/planEatRepeatCover.png';
-import planEatRepeatAlt1 from './img/planEatRepeatAlt1.png';
-import planEatRepeatAlt2 from './img/planEatRepeatAlt2.png';
+import planEatRepeatPanelTop from './img/planEatRepeatPanelTop.png';
+import planEatRepeatPanelBottom from './img/planEatRepeatPanelBottom.png';
 
-import crappyBirdImg from './img/crappyBirdTitle.png';
-import crappyBirdGameplay from './img/crappyBirdGameplay.png';
-import crappyBirdGameplayAlt from './img/crappyBird.png';
+import crappyBirdCover from './img/crappyBirdCover.png';
+import crappyBirdPanelTop from './img/crappyBirdPanelTop.png';
+import crappyBirdPanelBottom from './img/crappyBirdPanelBottom.png';
 
-import nightmareImg from './img/nightmareGameplay.png';
-import nightmareGameplayAlt from './img/nightmareGameplayAlt.png';
-import nightmareGameplayAltTwo from './img/nightmareGameplayAltTwo.png';
+import nightmareCover from './img/nightmareCover.png';
+import nightmarePanelTop from './img/nightmarePanelTop.png';
+import nightmarePanelBottom from './img/nightmarePanelBottom.png';
 
 import quickstopCover from './img/quickstopCover.png';
 import quickstopPanelTop from './img/quickstopPanelTop.png';
 import quickstopPanelBottom from './img/quickstopPanelBottom.png';
 
-import comingSoonImg from './img/comingSoon.svg';
+import sseCover from './img/sseCover.png';
+import sseTop from './img/sseTop.png';
+import sseBottom from './img/sseBottom.png';
 import nextHolidayImg from './img/nextHoliday.png';
 import nextHolidayGameplay from './img/nextHolidayGameplay.png';
 import nextHolidayGameplayAlt from './img/nextHolidayGameplayAlt.png';
@@ -40,9 +42,9 @@ import terminalQuestCover from './img/terminalQuestCover.png';
 import terminalQuestPanelTop from './img/terminalQuestPanelTop.png';
 import terminalQuestPanelBottom from './img/terminalQuestPanelBottom.png';
 
-import aiToolboxImg from './img/aiToolboxImg.png';
-import chatImg from './img/gpt4.png';
-import dalle3Img from './img/dalle3.png';
+import aiToolboxCover from './img/aiToolboxCover.png';
+import aiToolboxPanelTop from './img/aiToolboxPanelTop.png';
+import aiToolboxPanelBottom from './img/aiToolboxPanelBottom.png';
 
 import {
   UnityIcon,
@@ -89,8 +91,8 @@ export const theAdventure = {
   colorSplash: gameDev,
   image: theAdventureCover,
   imagePosition: 'center 10%',
-  gameplayImage: theAdventureGameplay,
-  gameplayImageTwo: theAdventureGameplayAlt,
+  gameplayImage: theAdventurePanelTop,
+  gameplayImageTwo: theAdventurePanelBottom,
   description:
     'A sidescrolling RPG platformer. Can you discover whats destroying the land, unite with the magi and bring a stop to it?',
   mobileDescription:
@@ -125,11 +127,12 @@ export const theAdventure = {
 
 export const tetris = {
   nameText: 'Tetris React',
-  nameTextExpanded: "It's Tetris. In React.",
+  nameTextExpanded: 'Stack the blocks. Clear the lines.',
   colorSplash: frontendDev,
-  image: tetrisReact,
-  gameplayImage: tetrisGameplay,
-  gameplayImageTwo: tetrisGameplayAlt,
+  image: tetrisCover,
+  imagePosition: 'center 10%',
+  gameplayImage: tetrisPanelTop,
+  gameplayImageTwo: tetrisPanelBottom,
   description: 'A clone of the original Tetris, done with React.',
   mobileDescription:
     'This is a React created Tetris game, just like the original on Nintendo.',
@@ -245,11 +248,12 @@ export const thryvInc = {
 
 export const crappyBird = {
   nameText: 'Crappy Bird',
-  nameTextExpanded: 'Flap. Drop. Avoid Pipes.',
+  nameTextExpanded: 'Flap through the pipes. Beat your high score.',
   colorSplash: gameDev,
-  image: crappyBirdImg,
-  gameplayImage: crappyBirdGameplayAlt,
-  gameplayImageTwo: crappyBirdGameplay,
+  image: crappyBirdCover,
+  imagePosition: 'center 10%',
+  gameplayImage: crappyBirdPanelTop,
+  gameplayImageTwo: crappyBirdPanelBottom,
   description: 'A clone of the popular flappy bird',
   mobileDescription:
     'This game was created using the unity Engine and C#. A remake of the original Flappy Bird game.',
@@ -321,11 +325,12 @@ export const crappyBird = {
 
 export const twoDudesNightmare = {
   nameText: '2D Nightmare',
-  nameTextExpanded: 'Survive the evil. Escape the woods.',
+  nameTextExpanded: 'Survive the night. Fight what waits inside.',
   colorSplash: gameDev,
-  image: nightmareGameplayAlt,
-  gameplayImage: nightmareGameplayAltTwo,
-  gameplayImageTwo: nightmareImg,
+  image: nightmareCover,
+  imagePosition: 'center 10%',
+  gameplayImage: nightmarePanelTop,
+  gameplayImageTwo: nightmarePanelBottom,
   description: 'A sidescrolling platformer created in Unity ',
   mobileDescription: 'This game was created using the unity Engine and C#.',
 
@@ -360,9 +365,10 @@ export const aiToolbox = {
   nameText: 'Ai Toolbox',
   nameTextExpanded: 'Ai Powered Solutions. In one place',
   colorSplash: frontendDev,
-  image: aiToolboxImg,
-  gameplayImage: chatImg,
-  gameplayImageTwo: dalle3Img,
+  image: aiToolboxCover,
+  imagePosition: 'center 10%',
+  gameplayImage: aiToolboxPanelTop,
+  gameplayImageTwo: aiToolboxPanelBottom,
   description: 'Ai powered solutions to transform your approach',
   mobileDescription:
     'This was created using NextJS and Typescript, my first step into Server-Side-Rendering.',
@@ -388,8 +394,8 @@ export const planEatRepeat = {
   colorSplash: softwareDev,
   image: planEatRepeatCover,
   imagePosition: 'center 10%',
-  gameplayImage: planEatRepeatAlt1,
-  gameplayImageTwo: planEatRepeatAlt2,
+  gameplayImage: planEatRepeatPanelTop,
+  gameplayImageTwo: planEatRepeatPanelBottom,
   description:
     'Transform your familys dining experience with effortless meal planning, collaboration, and organization. Easily invite loved ones, assign meals, and track progress—all in one place. With Plan.Eat.Repeat., you’re in control of every step of your mealtime journey.',
   mobileDescription:
@@ -416,8 +422,6 @@ export const planEatRepeat = {
   ],
 };
 
-// Real screenshots for the projects below that still use comingSoonImg are to come; swap
-// comingSoonImg for the imported file once each image is added to ./img
 export const nextHoliday = {
   nameText: 'Next Holiday',
   nameTextExpanded: 'Plan every holiday. Together.',
@@ -452,17 +456,18 @@ export const sseNotifications = {
   nameText: 'SSE Notifications',
   nameTextExpanded: 'Real-time notifications. As a microservice.',
   colorSplash: softwareDev,
-  image: comingSoonImg,
-  gameplayImage: comingSoonImg,
-  gameplayImageTwo: comingSoonImg,
+  image: sseCover,
+  imagePosition: 'center 10%',
+  gameplayImage: sseTop,
+  gameplayImageTwo: sseBottom,
   description:
     'A Server-Sent Events microservice on AWS EC2 that powers real-time notifications for Next Holiday.',
   mobileDescription:
     'A Server-Sent Events microservice that powers real-time notifications.',
   fullDescription:
-    'A production-ready Server-Sent Events (SSE) microservice that powers real-time notifications for Next Holiday. AWS Amplify’s serverless environment cannot hold persistent connections, so this service runs independently on AWS EC2 under PM2 process management. Built with Node.js, TypeScript, Express and Prisma, it keeps persistent SSE connections open to every connected client and stores notification history in the database. The link below opens the service’s live health endpoint',
+    'A production-ready Server-Sent Events (SSE) microservice that powers real-time notifications for Next Holiday. AWS Amplify’s serverless environment cannot hold persistent connections, so this service runs independently on AWS EC2 under PM2 process management. Built with Node.js, TypeScript, Express and Prisma, it keeps persistent SSE connections open to every connected client and stores notification history in the database. The link below opens the service’s live uptime status page',
   link: 'https://github.com/Lanny-MacMillan/sse-notifications',
-  liveLink: 'https://api.sse-notifs.com/health',
+  liveLink: 'https://stats.uptimerobot.com/0oI7RkPCwj/804370224',
   devTypeOneofTwo: 'Software',
   devTypeTwoofTwo: 'Development',
   status: 'Live',
