@@ -31,10 +31,12 @@ const Home = ({ home, largeScreen }) => {
                 <ChatArrow />
                 <TalkText>
                   I'm Lanny,
-                  <br />A software/web developer, indie gamemaker and designer. I'm
-                  also a highly organized and creative problem solver with a passion
-                  for providing well crafted solutions. I love to collaborate on
-                  projects and thrive solving front and back end challenges.
+                  <br />A full-stack developer who designs, builds and ships
+                  production software, from React and Next.js front ends to Node
+                  services, databases and AWS infrastructure. I'm comfortable owning
+                  a feature end to end, including integrations, deployment and the
+                  details that keep it running. Outside of work, I build indie games
+                  and side projects that catch my interest.
                 </TalkText>
               </ChatDiv>
             </HeroHeader>

@@ -146,7 +146,9 @@ export const BodyContainer = styled.div`
   /* background: linear-gradient(#c4cbca, #141c3a); */
   /* border-bottom: 3px solid white; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    height: 100vh;
+    height: auto;
+    min-height: calc(100vh - 3em);
+    min-height: calc(100svh - 3em);
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -163,6 +165,7 @@ export const IconContainer = styled.div`
 
   /* border: 1px solid red; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
+    flex: 1;
     /* margin-top: 3em; */
   }
 
@@ -221,7 +224,7 @@ export const UpperRow = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    height: auto;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -259,7 +262,9 @@ export const LowerDiv = styled.div`
   height: 40vh;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    display: none;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -286,6 +291,7 @@ export const ChatDiv = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: auto;
     font-size: 1.2em;
+    margin: clamp(12px, 2.5vh, 40px) 40px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -305,7 +311,7 @@ export const TalkText = styled.div`
   font-size: 1.2em;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    padding: 45px 20px 45px 20px;
+    padding: clamp(24px, 4vh, 45px) 20px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -372,8 +378,8 @@ export const Cursor = styled.div`
 export const BorderBlinkDiv = styled.div`
   width: ${(props) => (props.width ? props.width : '500px')};
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    margin-top: 2.5em;
-    width: 225px;
+    margin-top: clamp(0.5em, 2vh, 2.5em);
+    width: clamp(150px, 23vh, 225px);
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
