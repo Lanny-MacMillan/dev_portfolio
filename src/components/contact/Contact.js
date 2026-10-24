@@ -23,7 +23,6 @@ import {
   StyledButton,
   FooterCenter,
   InfoDiv,
-  SmallText,
 } from './Contact.styles.js';
 
 const Contact = ({ contact, largeScreen }) => {
@@ -138,7 +137,6 @@ const Contact = ({ contact, largeScreen }) => {
                   <GitHubIcon height={iconSize} width={iconSize} />
                 </motion.a>
               </IconsDiv>
-              <SmallText>Created by Lanny MacMillan 2024</SmallText>
             </InfoDiv>
           </FooterCenter>
         </Footer>

@@ -463,10 +463,6 @@ export const StyledButton = styled(motion.button)`
   }
 `;
 
-export const SmallText = styled.div`
-  font-size: 0.8em;
-  text-align: center;
-`;
 export const InfoDiv = styled.div`
   display: flex;
   flex-direction: column;
