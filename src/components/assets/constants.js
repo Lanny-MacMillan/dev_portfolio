@@ -16,8 +16,8 @@ import thryvAlt2 from './img/thryvAlt2.png';
 // import vacationImg from './img/vacation.png';
 // import geoDashImg from './img/geoDash.png';
 
-import planEatRepeatCover from './img/planEatRepeatCover.png';
-import planEatRepeatHero from './img/planEatRepeatHero.png';
+import planEatRepeatCover from './img/planEatRepeatCover.jpg';
+import planEatRepeatHero from './img/planEatRepeatHero.jpg';
 import planEatRepeatPanelTop from './img/planEatRepeatPanelTop.png';
 import planEatRepeatPanelBottom from './img/planEatRepeatPanelBottom.png';
 
