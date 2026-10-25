@@ -21,29 +21,46 @@ const Work = ({ work }) => {
           <Card>
             <Info>
               <Title>Thryv Inc.</Title>
-              <JobTitle>Web Developer</JobTitle>
+              <JobTitle>Product Web Developer II</JobTitle>
               <Smalltext>Sept 2022 - current</Smalltext>
               <ul>
                 <li>
-                  Developing and Maintaining scalable, responsive web applications
-                  using React.js and NodeJs
+                  Owned a production data remediation of roughly 49K records end to
+                  end: wrote the audit, rewrite, verify and rollback tooling in
+                  Node.js, defined the decision rules, and reported progress to
+                  stakeholders. About 77% of rows verified correct and about 22% of
+                  obsolete rows removed, with nothing outstanding at close.
                 </li>
                 <li>
-                  Collaborating with cross-functional teams including designers,
-                  product managers, and integrations to deliver high-quality features
-                  on time.
+                  Built safety into every production write: dry-run by default,
+                  environment-gated changes, per-row snapshots, append-only ledgers
+                  and rollback scripts.
                 </li>
                 <li>
-                  Software Developer managing Duda and LaunchDarkly to optimize
-                  development processes and drive feature deployment.
+                  Engineering escalation point for support and fulfillment across US,
+                  AU and NZ accounts. Traced recurring analytics and tagging failures
+                  to root causes and fixed them instead of patching symptoms,
+                  including a batch repair across hundreds of accounts.
                 </li>
                 <li>
-                  Implementing automated testing using tools like Jest and React
-                  Testing Library to ensure robustness.
+                  Shipped features for the SEO/AEO product across React and Node:
+                  purchase and upsell flows, an AI search visibility dashboard,
+                  monthly reports, scoped auth and a Google Search Console
+                  integration.
                 </li>
                 <li>
-                  Troubleshooting and debugging issues to maintain application
-                  stability and user satisfaction.
+                  Introduced LaunchDarkly across five repos and redesigned the
+                  user-plus-company targeting model, replacing Redux conditionals
+                  with feature flags.
+                </li>
+                <li>
+                  Built subscription reactivation for cancelled accounts with a
+                  rate-limited API and a hardened payment form.
+                </li>
+                <li>
+                  Authored 400+ pull requests and reviewed 200+ for teammates. Wrote
+                  runbooks and full-stack flow docs, and expanded Jest and React
+                  Testing Library coverage.
                 </li>
               </ul>
             </Info>
@@ -54,9 +71,9 @@ const Work = ({ work }) => {
               <JobTitle>Indie Game Developer</JobTitle>
               <Smalltext>December 2023 - current</Smalltext>
               <p>
-                Using the Unity game engine, C# and Object Oriented Programming to
-                adeptly design and code captivating 2D games, ensuring optimal
-                performance and engaging player experiences!
+                Designing and building 2D games with Unity and C#, using
+                object-oriented design to keep gameplay systems performant and easy
+                to extend.
               </p>
             </Info>
           </Card>
@@ -67,33 +84,26 @@ const Work = ({ work }) => {
               <Smalltext>March 2018 - March 2022</Smalltext>
               <ul>
                 <li>
-                  Managed and facilitated the installation and completion of projects
-                  in the million dollar range by leading teams, collaborating and
-                  delivering an MVP on time and under budget to our end users.
+                  Led teams and schedules on projects in the million dollar range,
+                  delivering on time and under budget.
                 </li>
-                <li>Contribution to the design and creation of many projects</li>
-                <li>Managed multiple teams, team schedules, project scheduling.</li>
-                <li>Exceeded 2021 expected profit margins by 40%.</li>
+                <li>Contributed to the design and planning of projects.</li>
+                <li>Exceeded 2021 profit margin targets by 40%.</li>
               </ul>
             </Info>
           </Card>
           <Card>
             <Info>
-              <Title>Self Employed</Title>
+              <Title>MacMillan Electric</Title>
               <JobTitle>Owner</JobTitle>
               <Smalltext>January 2016 - March 2018</Smalltext>
               <ul>
                 <li>
-                  Owned and operated business successfully until buyout in 2018
+                  Owned and ran an electrical contracting business, covering daily
+                  operations across multiple projects, until its buyout in 2018.
                 </li>
-                <li>
-                  Mentored several apprentices through career brought to license
-                </li>
-                <li>
-                  Successfully ran daily operations across multiple projects
-                  exceeding end user expectations
-                </li>
-                <li>Increased gross profit by 60% each year in business</li>
+                <li>Grew gross profit 60% each year in business.</li>
+                <li>Mentored several apprentices through to their licenses.</li>
               </ul>
             </Info>
             <JobTitle>Continued in Resume...</JobTitle>
