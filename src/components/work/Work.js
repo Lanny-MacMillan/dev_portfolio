@@ -105,7 +105,10 @@ const Work = ({ work }) => {
                   Owned and ran an electrical contracting business, covering daily
                   operations across multiple projects, until its buyout in 2018.
                 </li>
-                <li>Ran the company day to day alongside a business partner.</li>
+                <li>
+                  Completed subcontract electrical work for a partner company
+                  alongside my own projects.
+                </li>
                 <li>Grew gross profit 60% each year in business.</li>
                 <li>Mentored several apprentices through to their licenses.</li>
               </ul>
