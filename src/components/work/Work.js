@@ -90,7 +90,7 @@ const Work = ({ work }) => {
                   Led teams and schedules on projects in the million dollar range,
                   delivering on time and under budget.
                 </li>
-                <li>Contributed to the design and planning of projects.</li>
+                <li>Contributed to the design and creation of many projects.</li>
                 <li>Exceeded 2021 profit margin targets by 40%.</li>
               </ul>
             </Info>
@@ -105,6 +105,7 @@ const Work = ({ work }) => {
                   Owned and ran an electrical contracting business, covering daily
                   operations across multiple projects, until its buyout in 2018.
                 </li>
+                <li>Ran the company day to day alongside a business partner.</li>
                 <li>Grew gross profit 60% each year in business.</li>
                 <li>Mentored several apprentices through to their licenses.</li>
               </ul>
@@ -117,8 +118,12 @@ const Work = ({ work }) => {
               <Smalltext>February 2011 - January 2016</Smalltext>
               <ul>
                 <li>
-                  Led install crews and handled day-to-day client communication,
-                  delivering projects on time and under budget.
+                  Led install crews on small projects, following engineered plans
+                  from start to finish.
+                </li>
+                <li>
+                  Kept daily communication with clients to maintain the relationship,
+                  and brought projects in on time and under budget.
                 </li>
               </ul>
             </Info>
