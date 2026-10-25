@@ -46,7 +46,8 @@ const Work = ({ work }) => {
                   Shipped features for the SEO/AEO product across React and Node:
                   purchase and upsell flows, an AI search visibility dashboard,
                   monthly reports, scoped auth and a Google Search Console
-                  integration.
+                  integration, with its dev, staging and prod GCP environments
+                  provisioned as code in Terraform.
                 </li>
                 <li>
                   Introduced LaunchDarkly across five repos and redesigned the
@@ -70,11 +71,13 @@ const Work = ({ work }) => {
               <Title>Two Dudes Games</Title>
               <JobTitle>Indie Game Developer</JobTitle>
               <Smalltext>December 2023 - current</Smalltext>
-              <p>
-                Designing and building 2D games with Unity and C#, using
-                object-oriented design to keep gameplay systems performant and easy
-                to extend.
-              </p>
+              <ul>
+                <li>
+                  Designing and building 2D games with Unity and C#, using
+                  object-oriented design to keep gameplay systems performant and easy
+                  to extend.
+                </li>
+              </ul>
             </Info>
           </Card>
           <Card>
