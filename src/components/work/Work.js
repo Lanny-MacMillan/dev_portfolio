@@ -106,6 +106,19 @@ const Work = ({ work }) => {
                 <li>Mentored several apprentices through to their licenses.</li>
               </ul>
             </Info>
+          </Card>
+          <Card>
+            <Info>
+              <Title>Commercial Electrical Solutions</Title>
+              <JobTitle>Project Foreman</JobTitle>
+              <Smalltext>February 2011 - January 2016</Smalltext>
+              <ul>
+                <li>
+                  Led install crews and handled day-to-day client communication,
+                  delivering projects on time and under budget.
+                </li>
+              </ul>
+            </Info>
             <JobTitle>Continued in Resume...</JobTitle>
           </Card>
         </Outer>
