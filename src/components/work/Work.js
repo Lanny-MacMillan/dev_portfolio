@@ -110,7 +110,6 @@ const Work = ({ work }) => {
                   alongside my own projects.
                 </li>
                 <li>Grew gross profit 60% each year in business.</li>
-                <li>Mentored several apprentices through to their licenses.</li>
               </ul>
             </Info>
           </Card>
@@ -127,6 +126,10 @@ const Work = ({ work }) => {
                 <li>
                   Kept daily communication with clients to maintain the relationship,
                   and brought projects in on time and under budget.
+                </li>
+                <li>
+                  Mentored and taught apprentice electricians throughout my
+                  electrical career.
                 </li>
               </ul>
             </Info>
