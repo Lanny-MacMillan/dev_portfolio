@@ -36,8 +36,9 @@ export const OurHerosName = styled.div`
   font-family: 'DM Sans', sans-serif;
   color: #141c3a;
 
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-    display: none;
+  @media only screen and (max-width: 768px) {
+    font-size: clamp(18px, 5.6vw, 24px);
+    margin-left: 20px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -47,28 +48,6 @@ export const OurHerosName = styled.div`
   }
 `;
 
-export const ShortText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.8em;
-  font-weight: 800;
-  font-family: 'DM Sans', sans-serif;
-
-  /* color: white; */
-  color: #141c3a;
-
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-  }
-
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
-    display: none;
-  }
-
-  @media only screen and (min-width: 993px) {
-    display: none;
-  }
-`;
 export const HeaderLinksDiv = styled.div`
   position: relative;
   z-index: 80;
@@ -458,6 +437,15 @@ export const MobileMenu = styled(motion.nav)`
   }
 `;
 
+export const MobileLinkNumber = styled.span`
+  flex: none;
+  width: 2.2em;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(20, 28, 58, 0.6);
+`;
+
 export const MobileLink = styled.button`
   display: flex;
   align-items: center;
@@ -465,12 +453,17 @@ export const MobileLink = styled.button`
   padding: 0 24px;
   background: none;
   border: none;
+  border-top: 1px solid rgba(20, 28, 58, 0.15);
   text-align: left;
   font-size: 20px;
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
   color: #141c3a;
   cursor: pointer;
+
+  &:first-child {
+    border-top: none;
+  }
 
   &:hover,
   &:focus-visible {
