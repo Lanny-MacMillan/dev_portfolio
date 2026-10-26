@@ -1,70 +1,23 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 1500px;
-  color: #224;
-  /* justify-content: center;
-  align-content: center; */
-  background: linear-gradient(#141c3a, #0a0f1e);
-  /* max-width: 1500px; */
   display: grid;
-  height: 100vh;
+  width: 100%;
+  max-width: 1500px;
   color: white;
-
-  grid-template-columns: 0.7fr 1fr 1fr 1fr 0.7fr;
-  grid-template-rows: 0fr 0.5fr 1fr 1fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  background: linear-gradient(#141c3a, #0a0f1e);
+  padding-bottom: 80px;
+  grid-template-columns: 0.7fr 3fr 0.7fr;
   grid-template-areas:
-    '. . . . .'
-    '. header header header .'
-    '. skills0 skills1 skills2 .'
-    '. skills3 skills3 skills3 .'
-    '. . . . .';
+    '. header .'
+    '. grid .';
 
-  @media only screen and (min-width: 320px) and (max-width: 520px) {
-    height: auto;
+  @media only screen and (max-width: 992px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5em auto auto auto auto auto 1.5em;
     grid-template-areas:
-      '. '
       'header'
-      'skills0'
-      'skills1'
-      'skills2'
-      'skills3'
-      '.';
-  }
-
-  @media only screen and (min-width: 520px) and (max-width: 992px) {
-    height: auto;
-    padding: 0 20px 0 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5em auto auto auto auto auto 1.5em;
-    grid-template-areas:
-      '. '
-      'header'
-      'skills0'
-      'skills1'
-      'skills2'
-      'skills3'
-      '.';
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    height: 130vh;
-    padding: 0 20px 0 20px;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.7fr;
-    grid-template-areas:
-      '. . '
-      'header header'
-      'skills0 skills1'
-      'skills2 skills3'
-      '. .';
+      'grid';
+    padding: 0 20px 40px 20px;
   }
 `;
 
@@ -85,30 +38,6 @@ export const Header = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  }
-`;
-
-export const Skills0 = styled.div`
-  grid-area: skills0;
-  padding: 60px;
-  font-family: 'DM Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  border: 2px solid white;
-  border-right: none;
-
-  @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-    border-right: 2px solid white;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    margin: 0 10px 0 10px;
-    border-right: 2px solid white;
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -174,7 +103,7 @@ export const DescriptionBody = styled.div`
 
 export const Description = styled.div`
   /* padding: 10px; */
-  margin-bottom: 12px;
+  padding-bottom: 36px;
   /* border: 1px solid blue; */
 `;
 
@@ -183,6 +112,7 @@ export const HTMLSnippet = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: stretch;
   height: auto;
   color: white;
   // width: 10%;
@@ -193,83 +123,37 @@ export const VertLine = styled.div`
   color: ${(props) => (props.color ? props.color : 'white')};
   border: 1px dashed #00ddff;
   border-color: ${(props) => (props.$borderColor ? props.$borderColor : 'white')};
-  height: ${(props) => (props.height ? props.height : '50px')};
+  flex: 1;
+  min-height: 30px;
 `;
-export const Skills1 = styled.div`
-  grid-area: skills1;
+export const SkillsGrid = styled.div`
+  grid-area: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+
+  @media only screen and (min-width: 601px) and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const SkillCard = styled.div`
+  min-width: 0;
   padding: 60px;
   font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  border: 2px solid white;
-  // outline-style: solid none;
-  // background-color: green;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 
-  @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-    border-top: none;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    margin: 0 10px 0 10px;
-    border-top: none;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  }
-`;
-
-export const Skills2 = styled.div`
-  grid-area: skills2;
-  padding: 60px;
-  font-family: 'DM Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  border: 2px solid white;
-  border-left: none;
-  // background-color: purple;
-
-  @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-    border-left: 2px solid white;
-    border-top: none;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    margin: 0 10px 0 10px;
-    border-left: 2px solid white;
-    border-top: none;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    border-left: 2px solid white;
-    border-right: none;
-    border-top: none;
-  }
-`;
-
-export const Skills3 = styled.div`
-  grid-area: skills3;
-  padding: 60px;
-  font-family: 'DM Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  border: 2px solid white;
-  border-top: none;
-  // background-color: navy;
-
-  @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 0 20px 0 20px;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    margin: 0 10px 0 10px;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  @media only screen and (max-width: 600px) {
+    padding: 40px;
   }
 `;
 

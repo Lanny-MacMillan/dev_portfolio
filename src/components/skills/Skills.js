@@ -1,8 +1,10 @@
 import React from 'react';
 import {
   ReactIcon,
-  MobileIcon,
   SoftwareIcon,
+  CloudIcon,
+  IntegrationsIcon,
+  DatabaseIcon,
   UnityIcon2,
   Ptag,
   ClosingPtag,
@@ -12,11 +14,14 @@ import {
   frontendDev,
   mobileDev,
   gameDev,
+  integrationsDev,
+  dataDev,
 } from '../assets/constants.js';
 import {
   SkillsContainer,
   Header,
-  Skills0,
+  SkillsGrid,
+  SkillCard,
   SkillsHeader,
   ColorAccent,
   Icon,
@@ -24,114 +29,95 @@ import {
   DescriptionBody,
   Description,
   HTMLSnippet,
-  Skills1,
-  Skills2,
-  Skills3,
   Container,
   VertLine,
 } from './Skills.styles.js';
 
 const Skills = ({ skills, largeScreen }) => {
-  // const style = "linear-gradient(to left, #1a6dff,#c822ff);";
-  // const style2 = "linear-gradient(to left, #c822ff,#6dc7ff);";
+  const cards = [
+    {
+      key: 'frontend',
+      icon: <ReactIcon height={60} width={60} />,
+      accent: frontendDev,
+      accentWidth: '4.5em',
+      title: ['Frontend', 'Development'],
+      description:
+        'React, TypeScript, JavaScript, HTML and CSS. Responsive design, tested with Jest and React Testing Library.',
+    },
+    {
+      key: 'backend',
+      icon: <SoftwareIcon height={60} width={60} />,
+      accent: softwareDev,
+      accentWidth: '4em',
+      title: ['Backend', '& APIs'],
+      description: 'Node.js and Express REST APIs, authentication, and MySQL.',
+    },
+    {
+      key: 'cloud',
+      icon: <CloudIcon height={60} width={60} />,
+      accent: mobileDev,
+      accentWidth: '2.85em',
+      title: ['Cloud', '& DevOps'],
+      description:
+        'AWS, GCP and Infrastructure as Code, with CI/CD and GitHub workflows.',
+    },
+    {
+      key: 'integrations',
+      icon: <IntegrationsIcon height={60} width={60} />,
+      accent: integrationsDev,
+      accentWidth: '6.05em',
+      title: ['Integrations', '& Analytics'],
+      description:
+        'Duda, LaunchDarkly, Tray.io, Pendo, Tealium, Lucky Orange, Google Analytics and Search Console.',
+    },
+    {
+      key: 'data',
+      icon: <DatabaseIcon height={60} width={60} />,
+      accent: dataDev,
+      accentWidth: '2.5em',
+      title: ['Data', 'Migration'],
+      description:
+        'Data migration and cleanup, validation, and safe bulk updates with rollback.',
+    },
+    {
+      key: 'game',
+      icon: <UnityIcon2 height={60} width={60} />,
+      accent: gameDev,
+      accentWidth: '3em',
+      title: ['Game', 'Development'],
+      description: largeScreen
+        ? 'Building 2D games with Unity and C#, with hands-on experience in RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
+        : 'Using C# and OOP to adeptly design and create 2D games',
+    },
+  ];
+
   return (
     <Container>
       <SkillsContainer>
         <Header ref={skills}>My Skills</Header>
-        <Skills0>
-          <SkillsHeader>
-            <Icon>
-              <SoftwareIcon height={60} width={60} />{' '}
-            </Icon>
-            <Title>
-              <ColorAccent $background={softwareDev} />
-              Software <br />
-              Development{' '}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet>
-              {' '}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine $borderColor={mobileDev} height={'75px'} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
-            </HTMLSnippet>
-            <Description>
-              Software Dev, functional and OOP programming, Javascript, C#,
-              Typescript, and Python
-            </Description>
-          </DescriptionBody>
-        </Skills0>
-        <Skills1>
-          <SkillsHeader>
-            <Icon>
-              <ReactIcon height={60} width={60} />{' '}
-            </Icon>
-            <Title>
-              <ColorAccent $background={frontendDev} width={'126px'} />
-              Frontend <br />
-              Development{' '}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet>
-              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine $borderColor={mobileDev} height={'60px'} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
-            </HTMLSnippet>
-            <Description>
-              HTML, CSS, JS, React, and Express. Mobile first development mindset
-            </Description>
-          </DescriptionBody>
-        </Skills1>
-        <Skills2>
-          <SkillsHeader>
-            <Icon>
-              <MobileIcon height={60} width={60} />{' '}
-            </Icon>
-            <Title>
-              <ColorAccent $background={mobileDev} width={'95px'} />
-              Mobile <br />
-              Development{' '}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet>
-              {' '}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine $borderColor={mobileDev} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
-            </HTMLSnippet>
-            <Description>
-              React Native mobile development for iOS, and Android
-            </Description>
-          </DescriptionBody>
-        </Skills2>
-        <Skills3>
-          <SkillsHeader>
-            <Icon>
-              <UnityIcon2 height={60} width={60} />{' '}
-            </Icon>
-            <Title>
-              <ColorAccent $background={gameDev} width={'85px'} />
-              Game <br />
-              Development{' '}
-            </Title>
-          </SkillsHeader>
-          <DescriptionBody>
-            <HTMLSnippet>
-              {' '}
-              <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
-              <VertLine $borderColor={mobileDev} />
-              <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
-            </HTMLSnippet>
-            <Description>
-              {largeScreen
-                ? 'Building 2D games with Unity and C#, with hands-on experience in RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
-                : 'Using C# and OOP to adeptly design and create 2D games'}
-            </Description>
-          </DescriptionBody>
-        </Skills3>
+        <SkillsGrid>
+          {cards.map((card) => (
+            <SkillCard key={card.key}>
+              <SkillsHeader>
+                <Icon>{card.icon} </Icon>
+                <Title>
+                  <ColorAccent $background={card.accent} width={card.accentWidth} />
+                  {card.title[0]} <br />
+                  {card.title[1]}{' '}
+                </Title>
+              </SkillsHeader>
+              <DescriptionBody>
+                <HTMLSnippet>
+                  {' '}
+                  <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
+                  <VertLine $borderColor={mobileDev} />
+                  <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
+                </HTMLSnippet>
+                <Description>{card.description}</Description>
+              </DescriptionBody>
+            </SkillCard>
+          ))}
+        </SkillsGrid>
       </SkillsContainer>
     </Container>
   );

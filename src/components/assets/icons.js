@@ -103,6 +103,60 @@ export const LaptopIcon = ({ logoFill, width, height }) => (
   </svg>
 );
 
+export const CloudIcon = ({ logoFill, width, height }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={width || '48'}
+    height={height || '48'}
+    fill="none"
+    stroke={logoFill || '#fff'}
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+  </svg>
+);
+
+export const IntegrationsIcon = ({ logoFill, width, height }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={width || '48'}
+    height={height || '48'}
+    fill="none"
+    stroke={logoFill || '#fff'}
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="18" cy="5" r="3" />
+    <circle cx="6" cy="12" r="3" />
+    <circle cx="18" cy="19" r="3" />
+    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+  </svg>
+);
+
+export const DatabaseIcon = ({ logoFill, width, height }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={width || '48'}
+    height={height || '48'}
+    fill="none"
+    stroke={logoFill || '#fff'}
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <ellipse cx="12" cy="5" rx="9" ry="3" />
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+  </svg>
+);
+
 export const SoftwareIcon = ({ logoFill, width, height }) => (
   <svg
     fill="#000000"
