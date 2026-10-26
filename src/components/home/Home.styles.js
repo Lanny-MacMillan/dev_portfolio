@@ -153,6 +153,7 @@ export const BodyContainer = styled.div`
     height: auto;
     min-height: calc(100vh - 3em);
     min-height: calc(100svh - 3em);
+    min-height: calc(100dvh - 3em);
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
