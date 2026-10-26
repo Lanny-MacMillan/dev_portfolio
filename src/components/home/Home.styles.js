@@ -124,7 +124,7 @@ export const BodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 3em);
   background: linear-gradient(#c4cbca, #1f2c5b);
   /* background: linear-gradient(#c4cbca, #141c3a); */
   /* border-bottom: 3px solid white; */
@@ -144,11 +144,11 @@ export const BodyContainer = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
-    height: 100vh;
+    height: calc(100vh - 3em);
   }
 
   @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    height: 100vh;
+    height: calc(100vh - 3em);
   }
 `;
 export const IconContainer = styled.div`
@@ -210,7 +210,7 @@ export const UpperRow = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60vh;
+  height: calc((100vh - 3em) * 0.6);
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     flex-direction: column;
@@ -251,7 +251,7 @@ export const LowerDiv = styled.div`
   align-items: flex-end;
   width: 80%;
   max-width: 1600px;
-  height: 40vh;
+  height: calc((100vh - 3em) * 0.4);
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     width: 100%;
