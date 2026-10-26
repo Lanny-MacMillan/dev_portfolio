@@ -57,6 +57,13 @@ const Work = ({ work, largeScreen }) => {
                   add-ons across it.
                 </li>
                 <li>
+                  Shipped features for the SEO/AEO product across React and Node:
+                  purchase and upsell flows, an AI search visibility dashboard,
+                  monthly reports, scoped auth and a Google Search Console
+                  integration, with its dev, staging and prod GCP environments
+                  provisioned as code in Terraform.
+                </li>
+                <li>
                   Owned a production data remediation of roughly 49K records end to
                   end: wrote the audit, rewrite, verify and rollback tooling in
                   Node.js, defined the decision rules, and reported progress to
@@ -73,13 +80,6 @@ const Work = ({ work, largeScreen }) => {
                   AU and NZ accounts. Traced recurring analytics and tagging failures
                   to root causes and fixed them instead of patching symptoms,
                   including a batch repair across hundreds of accounts.
-                </li>
-                <li>
-                  Shipped features for the SEO/AEO product across React and Node:
-                  purchase and upsell flows, an AI search visibility dashboard,
-                  monthly reports, scoped auth and a Google Search Console
-                  integration, with its dev, staging and prod GCP environments
-                  provisioned as code in Terraform.
                 </li>
                 <li>
                   Introduced LaunchDarkly across five repos and redesigned the
@@ -133,13 +133,13 @@ const Work = ({ work, largeScreen }) => {
                   and under budget.
                 </li>
                 <li>
+                  Consistently delivered more than the targets set for the team,
+                  including exceeding 2021 profit margin targets by 40%.
+                </li>
+                <li>
                   Built up and led a service division covering on-call service calls,
                   overflow work and support for other crews, and grew its workload
                   year over year.
-                </li>
-                <li>
-                  Consistently delivered more than the targets set for the team,
-                  including exceeding 2021 profit margin targets by 40%.
                 </li>
                 <li>
                   Contributed to the design and delivery of many projects, working
@@ -158,11 +158,11 @@ const Work = ({ work, largeScreen }) => {
                   Owned and ran an electrical contracting business, covering daily
                   operations across multiple projects, until its buyout in 2018.
                 </li>
+                <li>Grew gross profit 60% each year in business.</li>
                 <li>
                   Completed subcontract electrical work for a partner company
                   alongside my own projects.
                 </li>
-                <li>Grew gross profit 60% each year in business.</li>
               </Bullets>
             </Info>
           </Card>
