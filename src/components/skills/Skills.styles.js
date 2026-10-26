@@ -4,9 +4,12 @@ export const SkillsContainer = styled.div`
   display: grid;
   width: 100%;
   max-width: 1500px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  align-content: center;
   color: white;
   background: linear-gradient(#141c3a, #0a0f1e);
-  padding-bottom: 80px;
+  padding-block: 40px;
   grid-template-columns: 0.7fr 3fr 0.7fr;
   grid-template-areas:
     '. header .'
@@ -49,6 +52,9 @@ export const SkillsHeader = styled.div`
   flex-direction: row;
   font-size: 28px;
   font-weight: 900;
+  @media only screen and (min-width: 1201px) and (max-width: 1320px) {
+    font-size: 24px;
+  }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 24px;
   }
@@ -91,6 +97,10 @@ export const DescriptionBody = styled.div`
   flex-direction: column;
   gap: 8px;
   padding-top: 30px;
+
+  @media only screen and (min-width: 1201px) and (max-height: 900px) {
+    padding-top: 18px;
+  }
 `;
 
 export const CodeTag = styled.span`
@@ -149,6 +159,21 @@ export const SkillCard = styled.div`
   font-style: normal;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+
+  @media only screen and (min-width: 1201px) and (max-width: 1500px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media only screen and (min-width: 1201px) and (max-width: 1320px) {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  @media only screen and (min-width: 1201px) and (max-height: 900px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   @media only screen and (max-width: 600px) {
     padding: 40px;
