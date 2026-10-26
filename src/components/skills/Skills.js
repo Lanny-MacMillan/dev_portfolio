@@ -39,7 +39,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'frontend',
       icon: <ReactIcon height={60} width={60} />,
       accent: frontendDev,
-      accentWidth: '4.5em',
       title: ['Frontend', 'Development'],
       description:
         'React, TypeScript, JavaScript, HTML and CSS. Responsive design, tested with Jest and React Testing Library.',
@@ -48,7 +47,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'backend',
       icon: <SoftwareIcon height={60} width={60} />,
       accent: softwareDev,
-      accentWidth: '4em',
       title: ['Backend', '& APIs'],
       description: 'Node.js and Express REST APIs, authentication, and MySQL.',
     },
@@ -56,7 +54,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'cloud',
       icon: <CloudIcon height={60} width={60} />,
       accent: mobileDev,
-      accentWidth: '2.85em',
       title: ['Cloud', '& DevOps'],
       description:
         'AWS, GCP and Infrastructure as Code, with CI/CD and GitHub workflows.',
@@ -65,7 +62,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'integrations',
       icon: <IntegrationsIcon height={60} width={60} />,
       accent: integrationsDev,
-      accentWidth: '6.05em',
       title: ['Integrations', '& Analytics'],
       description:
         'Duda, LaunchDarkly, Tray.io, Pendo, Tealium, Lucky Orange, Google Analytics and Search Console.',
@@ -74,7 +70,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'data',
       icon: <DatabaseIcon height={60} width={60} />,
       accent: dataDev,
-      accentWidth: '2.5em',
       title: ['Data', 'Migration'],
       description:
         'Data migration and cleanup, validation, and safe bulk updates with rollback.',
@@ -83,7 +78,6 @@ const Skills = ({ skills, largeScreen }) => {
       key: 'game',
       icon: <UnityIcon2 height={60} width={60} />,
       accent: gameDev,
-      accentWidth: '3em',
       title: ['Game', 'Development'],
       description: largeScreen
         ? 'C# and Unity: RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
@@ -101,9 +95,13 @@ const Skills = ({ skills, largeScreen }) => {
               <SkillsHeader>
                 <Icon>{card.icon} </Icon>
                 <Title>
-                  <ColorAccent $background={card.accent} width={card.accentWidth} />
-                  {card.title[0]} <br />
-                  {card.title[1]}{' '}
+                  <div>
+                    <ColorAccent $background={card.accent}>
+                      {card.title[0]}
+                    </ColorAccent>
+                    <br />
+                    {card.title[1]}
+                  </div>
                 </Title>
               </SkillsHeader>
               <DescriptionBody>

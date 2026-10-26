@@ -68,21 +68,14 @@ export const Icon = styled.div`
   // border: 1px solid red;
 `;
 
-export const ColorAccent = styled.div`
-  position: absolute;
-  margin-bottom: 18px;
-  z-index: -1;
-  width: ${(props) => (props.width ? props.width : '125px')};
-  background: ${(props) => (props.$background ? props.$background : 'red')};
-  height: 10px;
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-  }
-
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  }
+export const ColorAccent = styled.span`
+  background-image: linear-gradient(
+    ${(props) => (props.$background ? props.$background : 'red')},
+    ${(props) => (props.$background ? props.$background : 'red')}
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.36em;
+  background-position: 0 88%;
 `;
 
 export const Title = styled.div`
