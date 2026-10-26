@@ -9,14 +9,24 @@ export const HeaderContainer = styled.div`
   left: 0;
   z-index: 25;
   box-sizing: border-box;
-  transition: box-shadow 0.2s ease;
-  box-shadow: ${(props) =>
-    props.$scrolled ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none'};
+  --header-bg: ${(props) => (props.$scrolled ? 'rgba(10, 15, 30, 0.72)' : '#c4cbca')};
+  --header-fg: ${(props) => (props.$scrolled ? '#ffffff' : '#141c3a')};
+  --header-fg-muted: ${(props) =>
+    props.$scrolled ? 'rgba(255, 255, 255, 0.65)' : 'rgba(20, 28, 58, 0.6)'};
+  --header-menu-bg: ${(props) =>
+    props.$scrolled ? 'rgba(10, 15, 30, 0.96)' : '#c4cbca'};
+  --header-line: ${(props) =>
+    props.$scrolled ? 'rgba(255, 255, 255, 0.15)' : 'rgba(20, 28, 58, 0.15)'};
+  -webkit-backdrop-filter: ${(props) => (props.$scrolled ? 'blur(10px)' : 'none')};
+  backdrop-filter: ${(props) => (props.$scrolled ? 'blur(10px)' : 'none')};
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
   /* margin-bottom: 2em auto; // for header */
   justify-content: space-between;
   width: 100%;
   height: 3em;
-  background-color: #c4cbca;
+  background-color: var(--header-bg);
   cursor: default;
   /* background-color: #141c3a; */
 
@@ -40,7 +50,7 @@ export const OurHerosName = styled.div`
   font-weight: 800;
   margin-left: 2em;
   font-family: 'DM Sans', sans-serif;
-  color: #141c3a;
+  color: var(--header-fg);
 
   @media only screen and (max-width: 768px) {
     font-size: clamp(18px, 5.6vw, 24px);
@@ -94,7 +104,7 @@ export const PageRefIcon = styled.div`
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
   /* color: white; */
-  color: #141c3a;
+  color: var(--header-fg);
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
@@ -113,7 +123,7 @@ export const Links = styled.div`
   font-family: 'DM Sans', sans-serif;
 
   /* color: white; */
-  color: #141c3a;
+  color: var(--header-fg);
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 16px;
@@ -419,7 +429,7 @@ export const MenuBar = styled.span`
   width: 24px;
   height: 3px;
   border-radius: 2px;
-  background: #141c3a;
+  background: var(--header-fg);
   transition:
     transform 0.3s ease,
     opacity 0.2s ease;
@@ -442,8 +452,8 @@ export const MobileMenu = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #c4cbca;
-  border-bottom: 2px solid #141c3a;
+  background-color: var(--header-menu-bg);
+  border-bottom: 2px solid var(--header-fg);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 
   @media only screen and (min-width: 769px) {
@@ -457,7 +467,7 @@ export const MobileLinkNumber = styled.span`
   font-family: 'DM Mono', monospace;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(20, 28, 58, 0.6);
+  color: var(--header-fg-muted);
 `;
 
 export const MobileLink = styled.button`
@@ -467,12 +477,12 @@ export const MobileLink = styled.button`
   padding: 0 24px;
   background: none;
   border: none;
-  border-top: 1px solid rgba(20, 28, 58, 0.15);
+  border-top: 1px solid var(--header-line);
   text-align: left;
   font-size: 20px;
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
-  color: #141c3a;
+  color: var(--header-fg);
   cursor: pointer;
 
   &:first-child {
@@ -481,6 +491,6 @@ export const MobileLink = styled.button`
 
   &:hover,
   &:focus-visible {
-    background: rgba(20, 28, 58, 0.1);
+    background: rgba(128, 140, 170, 0.18);
   }
 `;
