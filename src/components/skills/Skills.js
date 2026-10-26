@@ -86,7 +86,7 @@ const Skills = ({ skills, largeScreen }) => {
       accentWidth: '3em',
       title: ['Game', 'Development'],
       description: largeScreen
-        ? 'Building 2D games with Unity and C#, with hands-on experience in RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
+        ? 'RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
         : 'Using C# and OOP to adeptly design and create 2D games',
     },
   ];
