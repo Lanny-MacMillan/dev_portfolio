@@ -26,7 +26,8 @@ const Work = ({ work }) => {
               <ul>
                 <li>
                   Helped build and launch Marketing Center, then maintained the
-                  product, managed its analytics and shipped its add-ons.
+                  product, managed its analytics and kept shipping features and
+                  add-ons across it.
                 </li>
                 <li>
                   Owned a production data remediation of roughly 49K records end to
