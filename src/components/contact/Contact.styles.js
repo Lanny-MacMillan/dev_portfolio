@@ -11,7 +11,7 @@ export const ContactContainer = styled.div`
   min-height: 100vh;
   padding: 80px 20px;
   color: white;
-  background: linear-gradient(#141c3a, #0a0f1e);
+  background: linear-gradient(#2f4289, #141c3a 40%, #0a0f1e);
   font-family: 'DM Sans', sans-serif;
   overflow: hidden;
 `;
