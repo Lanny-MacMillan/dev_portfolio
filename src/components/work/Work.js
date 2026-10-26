@@ -59,10 +59,6 @@ const Work = ({ work }) => {
                   with feature flags.
                 </li>
                 <li>
-                  Built subscription reactivation for cancelled accounts with a
-                  rate-limited API and a hardened payment form.
-                </li>
-                <li>
                   Authored 400+ pull requests and reviewed 200+ for teammates. Wrote
                   runbooks and full-stack flow docs, and expanded Jest and React
                   Testing Library coverage.
