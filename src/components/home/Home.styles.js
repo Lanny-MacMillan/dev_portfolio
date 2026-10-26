@@ -35,8 +35,8 @@ export const HeaderContainer = styled.div`
 
   &::before {
     background: var(--header-bg);
-    -webkit-backdrop-filter: blur(14px) saturate(125%);
-    backdrop-filter: blur(14px) saturate(125%);
+    -webkit-backdrop-filter: blur(14px) saturate(110%);
+    backdrop-filter: blur(14px) saturate(110%);
   }
 
   /* a soft shadow fades in once the page has scrolled, with no outline, so the
@@ -472,8 +472,8 @@ export const MobileMenu = styled(motion.nav)`
   flex-direction: column;
   overflow: hidden;
   background-color: var(--header-menu-bg);
-  -webkit-backdrop-filter: blur(14px) saturate(125%);
-  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-backdrop-filter: blur(14px) saturate(110%);
+  backdrop-filter: blur(14px) saturate(110%);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: 769px) {
