@@ -102,10 +102,21 @@ const Work = ({ work }) => {
               <ul>
                 <li>
                   Led teams and schedules on projects in the million dollar range,
-                  delivering on time and under budget.
+                  managing scope, budget and client expectations to deliver on time
+                  and under budget.
                 </li>
-                <li>Contributed to the design and creation of many projects.</li>
-                <li>Exceeded 2021 profit margin targets by 40%.</li>
+                <li>
+                  Built up and led a service team that took on more work and grew
+                  year over year.
+                </li>
+                <li>
+                  Consistently delivered more than the targets set for the team,
+                  including exceeding 2021 profit margin targets by 40%.
+                </li>
+                <li>
+                  Contributed to the design and delivery of many projects, working
+                  with clients and crews from planning through completion.
+                </li>
               </ul>
             </Info>
           </Card>
