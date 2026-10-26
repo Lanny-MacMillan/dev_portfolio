@@ -115,8 +115,8 @@ const Work = ({ work, largeScreen }) => {
                     conditionals with flags.
                   </li>
                   <li>
-                    Set up Jest and React Testing Library and opened up unit testing
-                    for the team.
+                    Helped bring unit testing to a codebase that had none, with Jest
+                    and React Testing Library.
                   </li>
                 </Bullets>
               </Role>
