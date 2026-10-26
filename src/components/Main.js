@@ -37,6 +37,11 @@ function Main() {
 
   const scrollToRef = (ref) => {
     setMenuOpen(false);
+    // home sits below the header, so go to the very top to keep the header in view
+    if (ref === 0) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     pageRef[ref].current.scrollIntoView({
       behavior: 'smooth',
     });
