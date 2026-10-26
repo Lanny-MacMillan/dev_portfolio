@@ -1,147 +1,116 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useMemo } from 'react';
-import {
-  LinkedInIcon,
-  GmailIcon,
-  GitHubIcon,
-  CalendlyIcon,
-} from '../assets/icons.js';
-import { motion } from 'framer-motion';
-import { mobileDev } from '../assets/constants.js';
+import React, { useState } from 'react';
+import { LinkedInIcon, GmailIcon, GitHubIcon } from '../assets/icons.js';
 import Blinking from '../assets/anim/blinking/Blinking.js';
 import { PopupModal } from 'react-calendly';
 import {
   ContactContainer,
-  Footer,
-  IconsDiv,
-  StartProject,
-  CalendlyLink,
-  ConnectHeader,
-  ConnectBody,
-  ButtonContainer,
-  StyledButton,
-  FooterCenter,
-  InfoDiv,
+  ContactInner,
+  AvatarWrap,
+  StatusPill,
+  StatusDot,
+  StatusPlace,
+  ContactHeading,
+  ContactPitch,
+  ActionRow,
+  PrimaryAction,
+  SecondaryAction,
+  AddressRow,
+  EmailText,
+  CopyButton,
+  SocialRow,
+  SocialLink,
+  Copyright,
 } from './Contact.styles.js';
 
-const Contact = ({ contact, largeScreen }) => {
-  const [inputs, setInputs] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [nameValid, setNameValid] = useState(true);
-  const [emailValid, setEmailValid] = useState(true);
-  const [subjectValid, setSubjectValid] = useState(true);
-  const [messageValid, setMessageValid] = useState(true);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [valid, setValid] = useState(false);
+const EMAIL = 'lanny.macmillan.dev@gmail.com';
+
+const Contact = ({ contact }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [hover, setHover] = useState(false);
+  const [copied, setCopied] = useState(false);
 
-  const onChange = (e, setIsStateValidFunction, minCharCount) => {
-    e.preventDefault();
-    const onlyWhiteSpace = /^\s*$/.test(e.target.value);
-
-    if (e.target.value.length >= minCharCount && !onlyWhiteSpace) {
-      setIsStateValidFunction(true);
-    } else {
-      setIsStateValidFunction(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (e) {
+      setCopied(false);
     }
-
-    setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
-  const iconSize = largeScreen ? '50px' : '40px';
-
-  const renderCalendlyPopupModal = (
-    <>
-      <ButtonContainer>
-        <StyledButton
-          whileHover={{
-            scale: 1.1,
-          }}
-          transition={{ type: 'spring', stiffness: 300 }}
-          whileTap={{ scale: 1.3 }}
-          onClick={() => setIsOpen(true)}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          <CalendlyIcon
-            letterFill={hover ? 'white' : null}
-            logoFillBG={hover ? 'white' : null}
-          />
-        </StyledButton>
-      </ButtonContainer>
+  return (
+    <ContactContainer ref={contact}>
+      <ContactInner>
+        <AvatarWrap>
+          <Blinking />
+        </AvatarWrap>
+        <StatusPill>
+          <StatusDot aria-hidden="true" />
+          <span>
+            Open to new opportunities
+            <StatusPlace>Boston / Providence area</StatusPlace>
+          </span>
+        </StatusPill>
+        <ContactHeading>Let's talk</ContactHeading>
+        <ContactPitch>
+          Hiring, or building something? Email me or grab a time on my calendar.
+        </ContactPitch>
+        <ActionRow>
+          <PrimaryAction
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            whileTap={{ scale: 0.97 }}
+            href={`mailto:${EMAIL}`}
+          >
+            <GmailIcon height="24px" width="24px" />
+            Email me
+          </PrimaryAction>
+          <SecondaryAction
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => setIsOpen(true)}
+          >
+            Book a call
+          </SecondaryAction>
+        </ActionRow>
+        <AddressRow>
+          <EmailText>{EMAIL}</EmailText>
+          <CopyButton type="button" onClick={copyEmail} aria-live="polite">
+            {copied ? 'Copied' : 'Copy'}
+          </CopyButton>
+        </AddressRow>
+        <SocialRow>
+          <SocialLink
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            href="https://www.linkedin.com/in/lanny-macmillan/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon height="28px" width="28px" />
+            LinkedIn
+          </SocialLink>
+          <SocialLink
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            href="https://github.com/Lanny-MacMillan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon height="28px" width="28px" logoFill="#fff" />
+            GitHub
+          </SocialLink>
+        </SocialRow>
+        <Copyright>&copy; 2026 Lanny MacMillan &middot; Built with React</Copyright>
+      </ContactInner>
       <PopupModal
         url="https://calendly.com/lannymacmillan/30min?hide_gdpr_banner=1&background_color=000000&text_color=ffffff"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.getElementById('root')}
       />
-    </>
-  );
-
-  return (
-    <>
-      <ContactContainer ref={contact}>
-        <StartProject>
-          <ConnectHeader>Starting A Project?</ConnectHeader>
-          <ConnectBody>
-            Interested in working together? We should set up a time to chat.
-            <br />
-            Coffee is on me
-          </ConnectBody>
-          <CalendlyLink>{renderCalendlyPopupModal}</CalendlyLink>
-        </StartProject>
-        <Footer>
-          <FooterCenter>
-            <Blinking />
-            <InfoDiv>
-              <IconsDiv>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
-                  href="https://www.linkedin.com/in/lanny-macmillan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkedInIcon height={iconSize} width={iconSize} />
-                </motion.a>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
-                  href="mailto:lanny.macmillan.dev@gmail.com"
-                  rel="noopener noreferrer"
-                >
-                  <GmailIcon height={iconSize} width={iconSize} />
-                </motion.a>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
-                  href="https://github.com/Lanny-MacMillan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon height={iconSize} width={iconSize} />
-                </motion.a>
-              </IconsDiv>
-            </InfoDiv>
-          </FooterCenter>
-        </Footer>
-      </ContactContainer>
-    </>
+    </ContactContainer>
   );
 };
 

@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 80px 20px;
   color: white;
-  /* padding: 30px; */
-  margin: 0;
-  background: #c4cbca;
-  background-image: linear-gradient(#2f4289, #c4cbca);
-
-  /* height: 80vh; */
+  background: linear-gradient(#2f4289, #141c3a 40%, #0a0f1e);
+  font-family: 'DM Sans', sans-serif;
   overflow: hidden;
 `;
 
@@ -91,10 +91,16 @@ export const ShowDiv1 = styled.div`
   width: 30%;
   height: 70%;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  -webkit-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
@@ -130,10 +136,16 @@ export const ShowDiv2 = styled.div`
   height: 70%;
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  -webkit-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
 
   bottom: 60%;
@@ -323,7 +335,7 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 80vh;
+  min-height: 80vh;
   background-color: #68717d;
   border-top: 2px solid white;
 
@@ -341,7 +353,7 @@ export const StartProject = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-self: center;
-  height: 20vh;
+  min-height: 20vh;
   width: 90vw;
   /* background: #2a1e5c; */
   background: #141c3a;
@@ -350,13 +362,15 @@ export const StartProject = styled.div`
   position: relative;
   top: 125px;
   border: 2px solid white;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   max-width: 1400px;
 
   @media only screen and (min-width: 320px) and (max-width: 800px) {
-    height: 25vh;
+    min-height: 25vh;
     flex-direction: column;
     top: 145px;
   }
@@ -423,21 +437,15 @@ export const ConnectBody = styled.div`
 export const FooterCenter = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-self: center;
+  gap: 24px;
   margin: 150px 0 30px 0;
-  width: 70%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 860px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 150px 0 50px 0;
-    max-width: 300px;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    max-width: 300px;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1500px) {
-    max-width: 350px;
+    margin: 150px 0 40px 0;
+    max-width: 340px;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -468,4 +476,209 @@ export const InfoDiv = styled.div`
   flex-direction: column;
   align-self: center;
   width: '200px';
+`;
+
+const pulse = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(52, 199, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0);
+  }
+`;
+
+export const ContactInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+`;
+
+export const AvatarWrap = styled.div`
+  width: min(100%, clamp(150px, 14vw, 240px));
+`;
+
+export const StatusPill = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 500;
+  font-size: 0.95em;
+`;
+
+export const StatusDot = styled.span`
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+  background: #34c759;
+  animation: ${pulse} 2s ease-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+`;
+
+export const StatusPlace = styled.span`
+  &::before {
+    content: ' \\00b7\\a0';
+    white-space: pre;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+    &::before {
+      content: none;
+    }
+  }
+`;
+
+export const ContactHeading = styled.h2`
+  margin: 0;
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1.05;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3.5em;
+  }
+`;
+
+export const ContactPitch = styled.p`
+  margin: 0;
+  max-width: 34em;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+`;
+
+export const ActionRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 8px;
+`;
+
+const actionBase = `
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.05em;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
+  }
+`;
+
+export const PrimaryAction = styled(motion.a)`
+  ${actionBase}
+  background: white;
+  color: #141c3a;
+  border: 3px solid white;
+`;
+
+export const SecondaryAction = styled(motion.button)`
+  ${actionBase}
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+`;
+
+export const AddressRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 14px;
+`;
+
+export const EmailText = styled.span`
+  font-weight: 500;
+  font-size: 1.05em;
+  overflow-wrap: anywhere;
+  color: rgba(255, 255, 255, 0.88);
+`;
+
+export const CopyButton = styled.button`
+  padding: 6px 14px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.85em;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
+  }
+`;
+
+export const SocialRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  padding-top: 6px;
+`;
+
+export const SocialLink = styled(motion.a)`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  font-size: 1em;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+`;
+
+export const Copyright = styled.div`
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+
+  @media only screen and (max-width: 600px) {
+    right: 72px;
+  }
 `;
