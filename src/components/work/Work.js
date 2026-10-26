@@ -106,8 +106,9 @@ const Work = ({ work }) => {
                   and under budget.
                 </li>
                 <li>
-                  Built up and led a service team that took on more work and grew
-                  year over year.
+                  Built up and led a service division of crews covering on-call
+                  service calls, overflow work and support for other crews, and grew
+                  its workload year over year.
                 </li>
                 <li>
                   Consistently delivered more than the targets set for the team,
