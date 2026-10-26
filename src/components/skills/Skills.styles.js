@@ -4,9 +4,12 @@ export const SkillsContainer = styled.div`
   display: grid;
   width: 100%;
   max-width: 1500px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  align-content: center;
   color: white;
   background: linear-gradient(#141c3a, #0a0f1e);
-  padding-bottom: 80px;
+  padding-block: 40px;
   grid-template-columns: 0.7fr 3fr 0.7fr;
   grid-template-areas:
     '. header .'
@@ -49,6 +52,9 @@ export const SkillsHeader = styled.div`
   flex-direction: row;
   font-size: 28px;
   font-weight: 900;
+  @media only screen and (min-width: 1201px) and (max-width: 1320px) {
+    font-size: 24px;
+  }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 24px;
   }
@@ -88,35 +94,44 @@ export const Title = styled.div`
 
 export const DescriptionBody = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   padding-top: 30px;
-  /* border: 2px solid yellow; */
+
+  @media only screen and (min-width: 1201px) and (max-height: 900px) {
+    padding-top: 18px;
+  }
+`;
+
+export const CodeTag = styled.span`
+  font-family: 'DM Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #00ddff;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+
+export const CodeRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  padding-left: 6px;
 `;
 
 export const Description = styled.div`
-  /* padding: 10px; */
-  padding-bottom: 36px;
-  /* border: 1px solid blue; */
-`;
-
-export const HTMLSnippet = styled.div`
-  /* padding: 15px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  height: auto;
-  color: white;
-  // width: 10%;
-  /* border: 2px solid yellow; */
+  padding: 4px 0;
 `;
 
 export const VertLine = styled.div`
-  color: ${(props) => (props.color ? props.color : 'white')};
   border: 1px dashed #00ddff;
   border-color: ${(props) => (props.$borderColor ? props.$borderColor : 'white')};
-  flex: 1;
+  flex: none;
+  align-self: stretch;
   min-height: 30px;
 `;
 export const SkillsGrid = styled.div`
@@ -144,6 +159,21 @@ export const SkillCard = styled.div`
   font-style: normal;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+
+  @media only screen and (min-width: 1201px) and (max-width: 1500px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media only screen and (min-width: 1201px) and (max-width: 1320px) {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  @media only screen and (min-width: 1201px) and (max-height: 900px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   @media only screen and (max-width: 600px) {
     padding: 40px;
