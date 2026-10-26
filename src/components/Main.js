@@ -73,13 +73,13 @@ function Main() {
   useEffect(() => {
     // fade the header from the light hero to dark as the first screen scrolls away
     const light = {
-      bg: [196, 203, 202, 0.55],
-      menu: [196, 203, 202, 0.78],
+      bg: [196, 203, 202, 0.3],
+      menu: [196, 203, 202, 0.7],
       line: [20, 28, 58, 0.15],
     };
     const dark = {
-      bg: [10, 15, 30, 0.5],
-      menu: [10, 15, 30, 0.78],
+      bg: [10, 15, 30, 0.22],
+      menu: [10, 15, 30, 0.62],
       line: [255, 255, 255, 0.15],
     };
     const mix = (from, to, t) =>
@@ -96,6 +96,10 @@ function Main() {
       const style = header.style;
       style.setProperty('--header-bg', mix(light.bg, dark.bg, t));
       style.setProperty('--header-menu-bg', mix(light.menu, dark.menu, t));
+      style.setProperty(
+        '--header-text-shadow',
+        t < 0.5 ? 'none' : '0 1px 8px rgba(0, 0, 0, 0.5)',
+      );
       style.setProperty('--header-line', mix(light.line, dark.line, t));
       style.setProperty('--header-fg', t < 0.5 ? '#141c3a' : '#ffffff');
       style.setProperty(

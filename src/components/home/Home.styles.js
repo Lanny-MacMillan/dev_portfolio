@@ -14,8 +14,9 @@ export const HeaderContainer = styled.div`
   height: 3em;
   cursor: default;
   /* Main.js blends these from the light hero to dark as the page scrolls */
-  --header-bg: rgba(196, 203, 202, 0.55);
-  --header-menu-bg: rgba(196, 203, 202, 0.78);
+  --header-bg: rgba(196, 203, 202, 0.3);
+  --header-menu-bg: rgba(196, 203, 202, 0.7);
+  --header-text-shadow: none;
   --header-line: rgba(20, 28, 58, 0.15);
   transition:
     --header-fg 0.2s ease,
@@ -29,8 +30,8 @@ export const HeaderContainer = styled.div`
     inset: 0;
     z-index: -1;
     background: var(--header-bg);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(190%);
+    backdrop-filter: blur(14px) saturate(190%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.35),
@@ -59,6 +60,7 @@ export const OurHerosName = styled.div`
   margin-left: 2em;
   font-family: 'DM Sans', sans-serif;
   color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
 
   @media only screen and (max-width: 768px) {
     font-size: clamp(18px, 5.6vw, 24px);
@@ -113,6 +115,7 @@ export const PageRefIcon = styled.div`
   font-family: 'DM Sans', sans-serif;
   /* color: white; */
   color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
@@ -132,6 +135,7 @@ export const Links = styled.div`
 
   /* color: white; */
   color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 16px;
@@ -461,8 +465,8 @@ export const MobileMenu = styled(motion.nav)`
   flex-direction: column;
   overflow: hidden;
   background-color: var(--header-menu-bg);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(190%);
+  backdrop-filter: blur(14px) saturate(190%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
@@ -493,6 +497,7 @@ export const MobileLink = styled.button`
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
   color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
   cursor: pointer;
 
   &:first-child {
