@@ -113,7 +113,10 @@ const Work = ({ work, largeScreen }) => {
                     the user-plus-company targeting model, replacing Redux
                     conditionals with flags.
                   </li>
-                  <li>Expanded Jest and React Testing Library coverage.</li>
+                  <li>
+                    Introduced unit testing with Jest and React Testing Library,
+                    building coverage up from none.
+                  </li>
                 </Bullets>
               </Role>
             </Info>
