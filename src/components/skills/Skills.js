@@ -127,7 +127,7 @@ const Skills = ({ skills, largeScreen }) => {
             </HTMLSnippet>
             <Description>
               {largeScreen
-                ? 'Using the Unity game engine, C# and Object Oriented Programming to adeptly design and code captivating 2D games,ensuring optimal performance, and engaging player experiences!'
+                ? 'Building 2D games with Unity and C#, with hands-on experience in RPG systems, state-machine enemy behavior, save and load, and sprite animation.'
                 : 'Using C# and OOP to adeptly design and create 2D games'}
             </Description>
           </DescriptionBody>
