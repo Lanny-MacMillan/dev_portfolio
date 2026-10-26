@@ -1,18 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 80px 20px;
   color: white;
-  /* padding: 30px; */
-  margin: 0;
-  background: #c4cbca;
-  background-image: linear-gradient(#2f4289, #c4cbca);
-
-  /* height: 80vh; */
+  background: linear-gradient(#141c3a, #0a0f1e);
+  font-family: 'DM Sans', sans-serif;
   overflow: hidden;
 `;
 
@@ -478,97 +477,199 @@ export const InfoDiv = styled.div`
   width: '200px';
 `;
 
-export const AvatarWrap = styled.div`
-  width: min(100%, 260px);
-  align-self: center;
+const pulse = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(52, 199, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0);
+  }
 `;
 
-export const EmailLink = styled.a`
-  color: white;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.25em;
+export const ContactInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-  &:hover {
-    text-decoration: underline;
+`;
+
+export const AvatarWrap = styled.div`
+  width: min(100%, 150px);
+`;
+
+export const StatusPill = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 500;
+  font-size: 0.95em;
+`;
+
+export const StatusDot = styled.span`
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+  background: #34c759;
+  animation: ${pulse} 2s ease-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+`;
+
+export const StatusPlace = styled.span`
+  &::before {
+    content: ' \\00b7\\a0';
+    white-space: pre;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 1em;
+    display: block;
+    &::before {
+      content: none;
+    }
   }
 `;
 
-export const LinkRow = styled.div`
+export const ContactHeading = styled.h2`
+  margin: 0;
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1.05;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 3.5em;
+  }
+`;
+
+export const ContactPitch = styled.p`
+  margin: 0;
+  max-width: 34em;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+`;
+
+export const ActionRow = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
+  padding-top: 8px;
 `;
 
-export const LinkPill = styled(motion.a)`
-  display: flex;
+const actionBase = `
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 20px 10px 14px;
+  padding: 14px 28px;
   border-radius: 40px;
-  background: white;
-  color: #141c3a;
   font-family: 'DM Sans', sans-serif;
   font-weight: 800;
-  font-size: 1em;
+  font-size: 1.05em;
+  line-height: 1;
   text-decoration: none;
+  cursor: pointer;
   &:focus-visible {
     outline: 3px solid #53ddec;
     outline-offset: 3px;
   }
 `;
 
-export const Facts = styled.div`
+export const PrimaryAction = styled(motion.a)`
+  ${actionBase}
+  background: white;
+  color: #141c3a;
+  border: 3px solid white;
+`;
+
+export const SecondaryAction = styled(motion.button)`
+  ${actionBase}
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+`;
+
+export const AddressRow = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px 36px;
-  padding: 18px 0 26px 0;
+  align-items: center;
+  gap: 10px 14px;
+`;
 
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+export const EmailText = styled.span`
+  font-weight: 500;
+  font-size: 1.05em;
+  overflow-wrap: anywhere;
+  color: rgba(255, 255, 255, 0.88);
+`;
+
+export const CopyButton = styled.button`
+  padding: 6px 14px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.85em;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
   }
 `;
 
-export const Fact = styled.div`
+export const SocialRow = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  padding-top: 6px;
+`;
+
+export const SocialLink = styled(motion.a)`
+  display: inline-flex;
   align-items: center;
-  gap: 2px;
-  text-align: center;
-`;
-
-export const FactLabel = styled.div`
-  color: rgba(255, 255, 255, 0.78);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 0.75em;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-`;
-
-export const FactValue = styled.div`
+  gap: 10px;
   color: white;
-  font-family: 'DM Sans', sans-serif;
   font-weight: 800;
   font-size: 1em;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
 `;
 
 export const Copyright = styled.div`
-  color: rgba(255, 255, 255, 0.78);
-  font-family: 'DM Sans', sans-serif;
+  padding-top: 48px;
   font-size: 0.8em;
-  text-align: center;
-  padding-top: 40px;
+  color: rgba(255, 255, 255, 0.7);
 `;
