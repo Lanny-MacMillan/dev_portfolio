@@ -24,7 +24,6 @@ import {
 function Main() {
   const [largeScreen, setLargeScreen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef(null);
 
   const pages = ['// home', '// skills', '// projects', '// work', '// contact'];
@@ -72,10 +71,52 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
+    // fade the header from the light hero to dark as the first screen scrolls away
+    const light = {
+      bg: [196, 203, 202, 1],
+      menu: [196, 203, 202, 1],
+      line: [20, 28, 58, 0.15],
+    };
+    const dark = {
+      bg: [10, 15, 30, 0.72],
+      menu: [10, 15, 30, 0.96],
+      line: [255, 255, 255, 0.15],
+    };
+    const mix = (from, to, t) =>
+      `rgba(${from
+        .map((value, i) => (value + (to[i] - value) * t).toFixed(i === 3 ? 2 : 0))
+        .join(', ')})`;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const header = headerRef.current;
+      if (!header) return;
+      const range = Math.max(window.innerHeight - header.offsetHeight, 1) * 0.85;
+      const t = Math.min(Math.max(window.scrollY / range, 0), 1);
+      const style = header.style;
+      style.setProperty('--header-bg', mix(light.bg, dark.bg, t));
+      style.setProperty('--header-menu-bg', mix(light.menu, dark.menu, t));
+      style.setProperty('--header-line', mix(light.line, dark.line, t));
+      style.setProperty('--header-fg', t < 0.5 ? '#141c3a' : '#ffffff');
+      style.setProperty(
+        '--header-fg-muted',
+        t < 0.5 ? 'rgba(20, 28, 58, 0.6)' : 'rgba(255, 255, 255, 0.65)',
+      );
+      const blur = t < 0.02 ? 'none' : `blur(${(t * 10).toFixed(1)}px)`;
+      style.backdropFilter = blur;
+      style.webkitBackdropFilter = blur;
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -98,7 +139,7 @@ function Main() {
         paddingTop: '3em',
       }}
     >
-      <HeaderContainer ref={headerRef} $scrolled={scrolled}>
+      <HeaderContainer ref={headerRef}>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
         <HeaderLinksDiv>
           {pages.map((page, pageRef) => (

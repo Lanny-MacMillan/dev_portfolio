@@ -9,19 +9,13 @@ export const HeaderContainer = styled.div`
   left: 0;
   z-index: 25;
   box-sizing: border-box;
-  --header-bg: ${(props) => (props.$scrolled ? 'rgba(10, 15, 30, 0.72)' : '#c4cbca')};
-  --header-fg: ${(props) => (props.$scrolled ? '#ffffff' : '#141c3a')};
-  --header-fg-muted: ${(props) =>
-    props.$scrolled ? 'rgba(255, 255, 255, 0.65)' : 'rgba(20, 28, 58, 0.6)'};
-  --header-menu-bg: ${(props) =>
-    props.$scrolled ? 'rgba(10, 15, 30, 0.96)' : '#c4cbca'};
-  --header-line: ${(props) =>
-    props.$scrolled ? 'rgba(255, 255, 255, 0.15)' : 'rgba(20, 28, 58, 0.15)'};
-  -webkit-backdrop-filter: ${(props) => (props.$scrolled ? 'blur(10px)' : 'none')};
-  backdrop-filter: ${(props) => (props.$scrolled ? 'blur(10px)' : 'none')};
+  /* Main.js blends these from the light hero to dark as the page scrolls */
+  --header-bg: #c4cbca;
+  --header-menu-bg: #c4cbca;
+  --header-line: rgba(20, 28, 58, 0.15);
   transition:
-    background-color 0.25s ease,
-    color 0.25s ease;
+    --header-fg 0.2s ease,
+    --header-fg-muted 0.2s ease;
   /* margin-bottom: 2em auto; // for header */
   justify-content: space-between;
   width: 100%;
