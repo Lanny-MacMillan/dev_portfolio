@@ -98,8 +98,8 @@ const Skills = ({ skills, largeScreen }) => {
 
   return (
     <Container>
-      <SkillsContainer>
-        <Header ref={skills}>My Skills</Header>
+      <SkillsContainer ref={skills}>
+        <Header>My Skills</Header>
         <SkillsGrid>
           {cards.map((card) => (
             <SkillCard key={card.key}>
