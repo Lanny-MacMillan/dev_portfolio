@@ -229,3 +229,13 @@ export const ToggleButton = styled.button`
     border-radius: 4px;
   }
 `;
+
+export const Role = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & + & {
+    margin-top: 16px;
+  }
+`;

@@ -11,6 +11,7 @@ import {
   Title,
   JobTitle,
   ToggleButton,
+  Role,
 } from './Work.styles.js';
 
 const PREVIEW_COUNT = 2;
@@ -48,59 +49,73 @@ const Work = ({ work, largeScreen }) => {
           <Card>
             <Info>
               <Title>Thryv Inc.</Title>
-              <JobTitle>Product Web Developer II</JobTitle>
-              <Smalltext>Sept 2022 - current</Smalltext>
-              <Bullets collapsed={!largeScreen}>
-                <li>
-                  Helped build and launch Marketing Center, then maintained the
-                  product, managed its analytics and kept shipping features and
-                  add-ons across it.
-                </li>
-                <li>
-                  Shipped features for a customer-facing product across React and
-                  Node: purchase and upsell flows, an AI search visibility dashboard,
-                  monthly reports, scoped auth and a Google Search Console
-                  integration, with its dev, staging and prod GCP environments
-                  provisioned as code in Terraform.
-                </li>
-                {/* Original, more specific bullet (restore if the agreement allows):
-                <li>
-                  Shipped features for the SEO/AEO product across React and Node:
-                  purchase and upsell flows, an AI search visibility dashboard,
-                  monthly reports, scoped auth and a Google Search Console
-                  integration, with its dev, staging and prod GCP environments
-                  provisioned as code in Terraform.
-                </li>
-                */}
-                <li>
-                  Owned a production data remediation of roughly 49K records end to
-                  end: wrote the audit, rewrite, verify and rollback tooling in
-                  Node.js, defined the decision rules, and reported progress to
-                  stakeholders. About 77% of rows verified correct and about 22% of
-                  obsolete rows removed, with nothing outstanding at close.
-                </li>
-                <li>
-                  Built safety into every production write: dry-run by default,
-                  environment-gated changes, per-row snapshots, append-only ledgers
-                  and rollback scripts.
-                </li>
-                <li>
-                  Engineering escalation point for support and fulfillment across US,
-                  AU and NZ accounts. Traced recurring analytics and tagging failures
-                  to root causes and fixed them instead of patching symptoms,
-                  including a batch repair across hundreds of accounts.
-                </li>
-                <li>
-                  Introduced LaunchDarkly across five repos and redesigned the
-                  user-plus-company targeting model, replacing Redux conditionals
-                  with feature flags.
-                </li>
-                <li>
-                  Authored 400+ pull requests and reviewed 200+ for teammates. Wrote
-                  runbooks and full-stack flow docs, and expanded Jest and React
-                  Testing Library coverage.
-                </li>
-              </Bullets>
+              <Role>
+                <JobTitle>Product Web Developer II</JobTitle>
+                <Smalltext>Dec 2024 - current</Smalltext>
+                <Bullets collapsed={!largeScreen}>
+                  <li>
+                    Shipped features for a customer-facing product across React and
+                    Node: purchase and upsell flows, an AI search visibility
+                    dashboard, monthly reports, scoped auth and a Google Search
+                    Console integration, with its dev, staging and prod GCP
+                    environments provisioned as code in Terraform.
+                  </li>
+                  {/* Original, more specific bullet (restore if the agreement allows):
+                  <li>
+                    Shipped features for the SEO/AEO product across React and Node:
+                    purchase and upsell flows, an AI search visibility dashboard,
+                    monthly reports, scoped auth and a Google Search Console
+                    integration, with its dev, staging and prod GCP environments
+                    provisioned as code in Terraform.
+                  </li>
+                  */}
+                  <li>
+                    Owned a production data remediation of roughly 49K records end to
+                    end: wrote the audit, rewrite, verify and rollback tooling in
+                    Node.js, defined the decision rules, and reported progress to
+                    stakeholders. About 77% of rows verified correct and about 22% of
+                    obsolete rows removed, with nothing outstanding at close.
+                  </li>
+                  <li>
+                    Built safety into every production write: dry-run by default,
+                    environment-gated changes, per-row snapshots, append-only ledgers
+                    and rollback scripts.
+                  </li>
+                  <li>
+                    Engineering escalation point for support and fulfillment across
+                    US, AU and NZ accounts. Traced recurring analytics and tagging
+                    failures to root causes and fixed them instead of patching
+                    symptoms, including a batch repair across hundreds of accounts.
+                  </li>
+                  <li>
+                    Extended feature flagging from its first two repos to five.
+                  </li>
+                  <li>
+                    Authored 400+ pull requests and reviewed 200+ for teammates.
+                    Wrote runbooks and full-stack flow docs.
+                  </li>
+                </Bullets>
+              </Role>
+              <Role>
+                <JobTitle>Product Web Developer I</JobTitle>
+                <Smalltext>Sept 2022 - Dec 2024</Smalltext>
+                <Bullets collapsed={!largeScreen}>
+                  <li>
+                    Helped build and launch Marketing Center, then maintained the
+                    product and managed its analytics.
+                  </li>
+                  <li>
+                    Kept shipping customer-facing features and add-ons across React
+                    and Node, from onboarding and plan-based access to reporting.
+                  </li>
+                  <li>
+                    Introduced LaunchDarkly feature flags in two repos and redesigned
+                    the user-plus-company targeting model, replacing Redux
+                    conditionals with flags.
+                  </li>
+                  <li>Expanded Jest and React Testing Library coverage.</li>
+                </Bullets>
+              </Role>
             </Info>
           </Card>
           <Card>
