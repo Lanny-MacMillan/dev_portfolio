@@ -24,19 +24,29 @@ export const HeaderContainer = styled.div`
 
   /* the glass lives on a pseudo-element so the mobile menu can blur the page
      behind it on its own instead of inheriting this one's backdrop */
-  &::before {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
     background: var(--header-bg);
     -webkit-backdrop-filter: blur(14px) saturate(190%);
     backdrop-filter: blur(14px) saturate(190%);
+  }
+
+  /* the edge line and shadow only appear once the page has scrolled, so the
+     header reads as part of the page at the top */
+  &::after {
+    opacity: var(--header-edge, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.35),
       0 6px 20px rgba(0, 0, 0, 0.15);
-    pointer-events: none;
   }
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {

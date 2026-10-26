@@ -100,6 +100,10 @@ function Main() {
         '--header-text-shadow',
         t < 0.5 ? 'none' : '0 1px 8px rgba(0, 0, 0, 0.5)',
       );
+      style.setProperty(
+        '--header-edge',
+        Math.min(window.scrollY / (range * 0.25), 1).toFixed(2),
+      );
       style.setProperty('--header-line', mix(light.line, dark.line, t));
       style.setProperty('--header-fg', t < 0.5 ? '#141c3a' : '#ffffff');
       style.setProperty(
