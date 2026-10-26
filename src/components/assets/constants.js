@@ -81,6 +81,10 @@ export const gameDev = '#0703d0';
 
 export const mobileDev = '#00DDFF';
 
+export const integrationsDev = '#ff9500';
+
+export const dataDev = '#34c759';
+
 export const verdigras = '#3CBBB1';
 
 export const silver = '#C4CBCA';
