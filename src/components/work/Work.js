@@ -48,12 +48,21 @@ const Work = ({ work }) => {
                   including a batch repair across hundreds of accounts.
                 </li>
                 <li>
+                  Shipped features for a customer-facing product across React and
+                  Node: purchase and upsell flows, an AI search visibility dashboard,
+                  monthly reports, scoped auth and a Google Search Console
+                  integration, with its dev, staging and prod GCP environments
+                  provisioned as code in Terraform.
+                </li>
+                {/* Original, more specific bullet (restore if the agreement allows):
+                <li>
                   Shipped features for the SEO/AEO product across React and Node:
                   purchase and upsell flows, an AI search visibility dashboard,
                   monthly reports, scoped auth and a Google Search Console
                   integration, with its dev, staging and prod GCP environments
                   provisioned as code in Terraform.
                 </li>
+                */}
                 <li>
                   Introduced LaunchDarkly across five repos and redesigned the
                   user-plus-company targeting model, replacing Redux conditionals
