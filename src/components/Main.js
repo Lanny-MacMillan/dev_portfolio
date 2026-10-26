@@ -10,7 +10,6 @@ import CursorDrift from './assets/Tools/CursorDrift.jsx';
 import {
   HeaderContainer,
   OurHerosName,
-  ShortText,
   HeaderLinksDiv,
   LinksContent,
   Links,
@@ -19,6 +18,7 @@ import {
   MenuBar,
   MobileMenu,
   MobileLink,
+  MobileLinkNumber,
 } from './home/Home.styles.js';
 
 function Main() {
@@ -79,7 +79,6 @@ function Main() {
     >
       <HeaderContainer>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
-        <ShortText>LM</ShortText>
         <HeaderLinksDiv>
           {pages.map((page, pageRef) => (
             <LinksContent key={page} onClick={() => scrollToRef(pageRef)}>
@@ -110,6 +109,7 @@ function Main() {
             >
               {pages.map((page, pageRef) => (
                 <MobileLink key={page} onClick={() => scrollToRef(pageRef)}>
+                  <MobileLinkNumber>0{pageRef}</MobileLinkNumber>
                   {page}
                 </MobileLink>
               ))}
