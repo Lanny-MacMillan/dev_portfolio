@@ -6,6 +6,7 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-height: 100vh;
   padding: 80px 20px;
@@ -500,7 +501,7 @@ export const ContactInner = styled.div`
 `;
 
 export const AvatarWrap = styled.div`
-  width: min(100%, 150px);
+  width: min(100%, clamp(150px, 14vw, 240px));
 `;
 
 export const StatusPill = styled.div`
@@ -669,7 +670,15 @@ export const SocialLink = styled(motion.a)`
 `;
 
 export const Copyright = styled.div`
-  padding-top: 48px;
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
   font-size: 0.8em;
   color: rgba(255, 255, 255, 0.7);
+
+  @media only screen and (max-width: 600px) {
+    right: 72px;
+  }
 `;
