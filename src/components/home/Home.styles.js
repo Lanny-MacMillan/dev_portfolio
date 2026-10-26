@@ -39,14 +39,11 @@ export const HeaderContainer = styled.div`
     backdrop-filter: blur(14px) saturate(190%);
   }
 
-  /* the edge line and shadow only appear once the page has scrolled, so the
+  /* a soft shadow fades in once the page has scrolled, with no outline, so the
      header reads as part of the page at the top */
   &::after {
     opacity: var(--header-edge, 0);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.35),
-      0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -477,7 +474,6 @@ export const MobileMenu = styled(motion.nav)`
   background-color: var(--header-menu-bg);
   -webkit-backdrop-filter: blur(14px) saturate(190%);
   backdrop-filter: blur(14px) saturate(190%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: 769px) {
