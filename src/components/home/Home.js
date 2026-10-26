@@ -31,11 +31,13 @@ const Home = ({ home, largeScreen }) => {
                 <ChatArrow />
                 <TalkText>
                   I'm Lanny,
-                  <br />A full-stack developer who designs, builds and ships
-                  production software, from React and Next.js front ends to Node
-                  services, databases and AWS infrastructure. I'm comfortable owning
-                  a feature end to end, including integrations, deployment and the
-                  details that keep it running. Outside of work, I build indie games
+                  <br />A product engineer working across web, integrations, cloud
+                  and data. I build features in React, TypeScript and Node, then stay
+                  with them after launch: tracing tricky analytics failures to their
+                  root cause, cleaning up data safely, rolling changes out behind
+                  feature flags, and writing the docs the next person needs. I've
+                  been the engineering contact that support and fulfillment teams
+                  call when something breaks. Outside of work, I build indie games
                   and side projects that catch my interest.
                 </TalkText>
               </ChatDiv>
