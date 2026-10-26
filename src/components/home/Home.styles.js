@@ -4,8 +4,14 @@ import { motion } from 'framer-motion';
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 25;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+  box-shadow: ${(props) =>
+    props.$scrolled ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none'};
   /* margin-bottom: 2em auto; // for header */
   justify-content: space-between;
   width: 100%;

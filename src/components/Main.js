@@ -24,6 +24,8 @@ import {
 function Main() {
   const [largeScreen, setLargeScreen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef(null);
 
   const pages = ['// home', '// skills', '// projects', '// work', '// contact'];
 
@@ -37,14 +39,20 @@ function Main() {
 
   const scrollToRef = (ref) => {
     setMenuOpen(false);
-    // home sits below the header, so go to the very top to keep the header in view
+    // home sits below the header, so go to the very top
     if (ref === 0) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    pageRef[ref].current.scrollIntoView({
-      behavior: 'smooth',
-    });
+    // the header is fixed, so stop just below it
+    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0;
+    const top =
+      pageRef[ref].current.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight;
+    const lastSection = ref === pageRef.length - 1;
+    const bottom = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo({ top: lastSection ? bottom : top, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -64,6 +72,13 @@ function Main() {
   }, []);
 
   useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') {
         setMenuOpen(false);
@@ -80,9 +95,10 @@ function Main() {
         flexDirection: 'column',
         maxWidth: '100vw',
         overflow: 'hidden',
+        paddingTop: '3em',
       }}
     >
-      <HeaderContainer>
+      <HeaderContainer ref={headerRef} $scrolled={scrolled}>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
         <HeaderLinksDiv>
           {pages.map((page, pageRef) => (
