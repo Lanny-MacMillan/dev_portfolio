@@ -150,10 +150,18 @@ export const BodyContainer = styled.div`
   /* background: linear-gradient(#c4cbca, #141c3a); */
   /* border-bottom: 3px solid white; */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
+    /* phone browsers float a toolbar over the bottom of the page, so keep the
+       desk above it and let a floor strip in the next section's color sit under it */
+    --floor: 84px;
+    box-sizing: border-box;
     height: auto;
     min-height: calc(100vh - 3em);
     min-height: calc(100svh - 3em);
     min-height: calc(100dvh - 3em);
+    padding-bottom: var(--floor);
+    background:
+      linear-gradient(#141c3a, #141c3a) bottom / 100% var(--floor) no-repeat,
+      linear-gradient(#c4cbca, #1f2c5b calc(100% - var(--floor)));
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -316,7 +324,7 @@ export const TalkText = styled.div`
   font-size: 1.2em;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    padding: clamp(24px, 4vh, 45px) 20px;
+    padding: clamp(18px, 3vh, 45px) 20px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -392,7 +400,7 @@ export const BorderBlinkDiv = styled.div`
   width: ${(props) => (props.width ? props.width : '500px')};
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     margin-top: clamp(0.5em, 2vh, 2.5em);
-    width: clamp(150px, 23vh, 225px);
+    width: clamp(120px, 17vh, 225px);
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
