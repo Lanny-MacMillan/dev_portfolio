@@ -6,8 +6,6 @@ import {
   IntegrationsIcon,
   DatabaseIcon,
   UnityIcon2,
-  Ptag,
-  ClosingPtag,
 } from '../assets/icons.js';
 import {
   softwareDev,
@@ -28,7 +26,8 @@ import {
   Title,
   DescriptionBody,
   Description,
-  HTMLSnippet,
+  CodeTag,
+  CodeRow,
   Container,
   VertLine,
 } from './Skills.styles.js';
@@ -37,6 +36,8 @@ const Skills = ({ skills, largeScreen }) => {
   const cards = [
     {
       key: 'frontend',
+      open: '<p>',
+      close: '</p>',
       icon: <ReactIcon height={60} width={60} />,
       accent: frontendDev,
       title: ['Frontend', 'Development'],
@@ -45,6 +46,8 @@ const Skills = ({ skills, largeScreen }) => {
     },
     {
       key: 'backend',
+      open: '{',
+      close: '}',
       icon: <SoftwareIcon height={60} width={60} />,
       accent: softwareDev,
       title: ['Backend', '& APIs'],
@@ -52,6 +55,8 @@ const Skills = ({ skills, largeScreen }) => {
     },
     {
       key: 'cloud',
+      open: '$ deploy',
+      close: '✓ done',
       icon: <CloudIcon height={60} width={60} />,
       accent: mobileDev,
       title: ['Cloud', '& DevOps'],
@@ -60,6 +65,8 @@ const Skills = ({ skills, largeScreen }) => {
     },
     {
       key: 'integrations',
+      open: 'connect(',
+      close: ')',
       icon: <IntegrationsIcon height={60} width={60} />,
       accent: integrationsDev,
       title: ['Integrations', '& Analytics'],
@@ -68,6 +75,8 @@ const Skills = ({ skills, largeScreen }) => {
     },
     {
       key: 'data',
+      open: 'BEGIN;',
+      close: 'COMMIT;',
       icon: <DatabaseIcon height={60} width={60} />,
       accent: dataDev,
       title: ['Data', 'Migration'],
@@ -76,6 +85,8 @@ const Skills = ({ skills, largeScreen }) => {
     },
     {
       key: 'game',
+      open: 'void Update() {',
+      close: '}',
       icon: <UnityIcon2 height={60} width={60} />,
       accent: gameDev,
       title: ['Game', 'Development'],
@@ -105,13 +116,12 @@ const Skills = ({ skills, largeScreen }) => {
                 </Title>
               </SkillsHeader>
               <DescriptionBody>
-                <HTMLSnippet>
-                  {' '}
-                  <Ptag letterFill={mobileDev} height={25} width={25} />{' '}
+                <CodeTag>{card.open}</CodeTag>
+                <CodeRow>
                   <VertLine $borderColor={mobileDev} />
-                  <ClosingPtag letterFill={mobileDev} height={35} width={35} />{' '}
-                </HTMLSnippet>
-                <Description>{card.description}</Description>
+                  <Description>{card.description}</Description>
+                </CodeRow>
+                <CodeTag>{card.close}</CodeTag>
               </DescriptionBody>
             </SkillCard>
           ))}

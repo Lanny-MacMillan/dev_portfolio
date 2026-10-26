@@ -88,35 +88,40 @@ export const Title = styled.div`
 
 export const DescriptionBody = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   padding-top: 30px;
-  /* border: 2px solid yellow; */
+`;
+
+export const CodeTag = styled.span`
+  font-family: 'DM Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #00ddff;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+
+export const CodeRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  padding-left: 6px;
 `;
 
 export const Description = styled.div`
-  /* padding: 10px; */
-  padding-bottom: 36px;
-  /* border: 1px solid blue; */
-`;
-
-export const HTMLSnippet = styled.div`
-  /* padding: 15px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  height: auto;
-  color: white;
-  // width: 10%;
-  /* border: 2px solid yellow; */
+  padding: 4px 0;
 `;
 
 export const VertLine = styled.div`
-  color: ${(props) => (props.color ? props.color : 'white')};
   border: 1px dashed #00ddff;
   border-color: ${(props) => (props.$borderColor ? props.$borderColor : 'white')};
-  flex: 1;
+  flex: none;
+  align-self: stretch;
   min-height: 30px;
 `;
 export const SkillsGrid = styled.div`
