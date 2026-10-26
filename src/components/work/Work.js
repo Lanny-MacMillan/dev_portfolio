@@ -92,8 +92,8 @@ const Work = ({ work, largeScreen }) => {
                   </li>
                   <li>
                     Authored 400+ pull requests and reviewed 200+ for teammates.
-                    Wrote runbooks and full-stack flow docs, and expanded unit test
-                    coverage across the app.
+                    Wrote runbooks and full-stack flow docs, and expanded Jest and
+                    React Testing Library coverage across the app.
                   </li>
                 </Bullets>
               </Role>
@@ -113,10 +113,6 @@ const Work = ({ work, largeScreen }) => {
                     Introduced LaunchDarkly feature flags in two repos and redesigned
                     the user-plus-company targeting model, replacing Redux
                     conditionals with flags.
-                  </li>
-                  <li>
-                    Helped bring unit testing to a codebase that had none, with Jest
-                    and React Testing Library.
                   </li>
                 </Bullets>
               </Role>
