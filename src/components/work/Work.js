@@ -92,8 +92,11 @@ const Work = ({ work, largeScreen }) => {
                   </li>
                   <li>
                     Authored 400+ pull requests and reviewed 200+ for teammates.
-                    Wrote runbooks and full-stack flow docs, and expanded Jest and
-                    React Testing Library coverage across the app.
+                    Wrote runbooks and full-stack flow docs.
+                  </li>
+                  <li>
+                    Helped take Jest and React Testing Library coverage from next to
+                    nothing to full coverage of the app.
                   </li>
                 </Bullets>
               </Role>
