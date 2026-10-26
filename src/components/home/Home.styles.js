@@ -4,15 +4,47 @@ import { motion } from 'framer-motion';
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 25;
-  /* margin-bottom: 2em auto; // for header */
+  box-sizing: border-box;
   justify-content: space-between;
-  width: 100%;
   height: 3em;
-  background-color: #c4cbca;
   cursor: default;
-  /* background-color: #141c3a; */
+  /* Main.js blends these from the light hero to dark as the page scrolls */
+  --header-bg: rgba(196, 203, 202, 0.3);
+  --header-menu-bg: rgba(196, 203, 202, 0.7);
+  --header-text-shadow: none;
+  --header-line: rgba(20, 28, 58, 0.15);
+  transition:
+    --header-fg 0.2s ease,
+    --header-fg-muted 0.2s ease;
+
+  /* the glass lives on a pseudo-element so the mobile menu can blur the page
+     behind it on its own instead of inheriting this one's backdrop */
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: var(--header-bg);
+    -webkit-backdrop-filter: blur(14px) saturate(110%);
+    backdrop-filter: blur(14px) saturate(110%);
+  }
+
+  /* a soft shadow fades in once the page has scrolled, with no outline, so the
+     header reads as part of the page at the top */
+  &::after {
+    opacity: var(--header-edge, 0);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     justify-content: space-between;
@@ -34,7 +66,8 @@ export const OurHerosName = styled.div`
   font-weight: 800;
   margin-left: 2em;
   font-family: 'DM Sans', sans-serif;
-  color: #141c3a;
+  color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
 
   @media only screen and (max-width: 768px) {
     font-size: clamp(18px, 5.6vw, 24px);
@@ -88,7 +121,8 @@ export const PageRefIcon = styled.div`
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
   /* color: white; */
-  color: #141c3a;
+  color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     display: none;
   }
@@ -107,7 +141,8 @@ export const Links = styled.div`
   font-family: 'DM Sans', sans-serif;
 
   /* color: white; */
-  color: #141c3a;
+  color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     font-size: 16px;
@@ -413,7 +448,7 @@ export const MenuBar = styled.span`
   width: 24px;
   height: 3px;
   border-radius: 2px;
-  background: #141c3a;
+  background: var(--header-fg);
   transition:
     transform 0.3s ease,
     opacity 0.2s ease;
@@ -436,9 +471,10 @@ export const MobileMenu = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #c4cbca;
-  border-bottom: 2px solid #141c3a;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  background-color: var(--header-menu-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(110%);
+  backdrop-filter: blur(14px) saturate(110%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: 769px) {
     display: none;
@@ -451,7 +487,7 @@ export const MobileLinkNumber = styled.span`
   font-family: 'DM Mono', monospace;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(20, 28, 58, 0.6);
+  color: var(--header-fg-muted);
 `;
 
 export const MobileLink = styled.button`
@@ -461,12 +497,13 @@ export const MobileLink = styled.button`
   padding: 0 24px;
   background: none;
   border: none;
-  border-top: 1px solid rgba(20, 28, 58, 0.15);
+  border-top: 1px solid var(--header-line);
   text-align: left;
   font-size: 20px;
   font-weight: 800;
   font-family: 'DM Sans', sans-serif;
-  color: #141c3a;
+  color: var(--header-fg);
+  text-shadow: var(--header-text-shadow);
   cursor: pointer;
 
   &:first-child {
@@ -475,6 +512,6 @@ export const MobileLink = styled.button`
 
   &:hover,
   &:focus-visible {
-    background: rgba(20, 28, 58, 0.1);
+    background: rgba(128, 140, 170, 0.18);
   }
 `;

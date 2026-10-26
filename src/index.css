@@ -1,3 +1,15 @@
+@property --header-fg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #141c3a;
+}
+
+@property --header-fg-muted {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(20, 28, 58, 0.6);
+}
+
 html {
   background-color: #0a0f1e;
 }

@@ -24,6 +24,7 @@ import {
 function Main() {
   const [largeScreen, setLargeScreen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef(null);
 
   const pages = ['// home', '// skills', '// projects', '// work', '// contact'];
 
@@ -37,14 +38,20 @@ function Main() {
 
   const scrollToRef = (ref) => {
     setMenuOpen(false);
-    // home sits below the header, so go to the very top to keep the header in view
+    // home sits below the header, so go to the very top
     if (ref === 0) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    pageRef[ref].current.scrollIntoView({
-      behavior: 'smooth',
-    });
+    // the header is fixed, so stop just below it
+    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0;
+    const top =
+      pageRef[ref].current.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight;
+    const lastSection = ref === pageRef.length - 1;
+    const bottom = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo({ top: lastSection ? bottom : top, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -64,6 +71,60 @@ function Main() {
   }, []);
 
   useEffect(() => {
+    // fade the header from the light hero to dark as the first screen scrolls away
+    const light = {
+      bg: [196, 203, 202, 0.3],
+      menu: [196, 203, 202, 0.7],
+      line: [20, 28, 58, 0.15],
+    };
+    const dark = {
+      bg: [10, 15, 30, 0.14],
+      menu: [10, 15, 30, 0.62],
+      line: [255, 255, 255, 0.15],
+    };
+    const mix = (from, to, t) =>
+      `rgba(${from
+        .map((value, i) => (value + (to[i] - value) * t).toFixed(i === 3 ? 2 : 0))
+        .join(', ')})`;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const header = headerRef.current;
+      if (!header) return;
+      const range = Math.max(window.innerHeight - header.offsetHeight, 1) * 0.85;
+      const t = Math.min(Math.max(window.scrollY / range, 0), 1);
+      const style = header.style;
+      style.setProperty('--header-bg', mix(light.bg, dark.bg, t));
+      style.setProperty('--header-menu-bg', mix(light.menu, dark.menu, t));
+      style.setProperty(
+        '--header-text-shadow',
+        t < 0.5 ? 'none' : '0 1px 8px rgba(0, 0, 0, 0.5)',
+      );
+      style.setProperty(
+        '--header-edge',
+        Math.min(window.scrollY / (range * 0.25), 1).toFixed(2),
+      );
+      style.setProperty('--header-line', mix(light.line, dark.line, t));
+      style.setProperty('--header-fg', t < 0.5 ? '#141c3a' : '#ffffff');
+      style.setProperty(
+        '--header-fg-muted',
+        t < 0.5 ? 'rgba(20, 28, 58, 0.6)' : 'rgba(255, 255, 255, 0.65)',
+      );
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') {
         setMenuOpen(false);
@@ -80,9 +141,11 @@ function Main() {
         flexDirection: 'column',
         maxWidth: '100vw',
         overflow: 'hidden',
+        paddingTop: '3em',
+        background: '#c4cbca',
       }}
     >
-      <HeaderContainer>
+      <HeaderContainer ref={headerRef}>
         <OurHerosName>Lanny_MacMillan</OurHerosName>
         <HeaderLinksDiv>
           {pages.map((page, pageRef) => (
