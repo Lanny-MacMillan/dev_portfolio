@@ -42,7 +42,7 @@ const Skills = ({ skills, largeScreen }) => {
       accent: frontendDev,
       title: ['Frontend', 'Development'],
       description:
-        'React, TypeScript, JavaScript, HTML and CSS. Responsive design, tested with Jest and React Testing Library.',
+        'React, TypeScript, JavaScript, HTML and CSS. Responsive design, unit testing with Jest and React Testing Library.',
     },
     {
       key: 'backend',
