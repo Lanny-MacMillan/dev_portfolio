@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   ExperienceContainer,
@@ -10,9 +10,36 @@ import {
   Info,
   Title,
   JobTitle,
+  ToggleButton,
 } from './Work.styles.js';
 
-const Work = ({ work }) => {
+const PREVIEW_COUNT = 2;
+
+// On phones only the first couple of bullets show, with a toggle for the rest.
+const Bullets = ({ collapsed, children }) => {
+  const [expanded, setExpanded] = useState(false);
+  const items = React.Children.toArray(children);
+  const hidden = items.length - PREVIEW_COUNT;
+
+  if (!collapsed || hidden <= 0) {
+    return <ul>{items}</ul>;
+  }
+
+  return (
+    <>
+      <ul>{expanded ? items : items.slice(0, PREVIEW_COUNT)}</ul>
+      <ToggleButton
+        type="button"
+        aria-expanded={expanded}
+        onClick={() => setExpanded((open) => !open)}
+      >
+        {expanded ? 'Show less' : `Show ${hidden} more`}
+      </ToggleButton>
+    </>
+  );
+};
+
+const Work = ({ work, largeScreen }) => {
   const Timeline = () => {
     return (
       <TimeLine>
@@ -23,7 +50,7 @@ const Work = ({ work }) => {
               <Title>Thryv Inc.</Title>
               <JobTitle>Product Web Developer II</JobTitle>
               <Smalltext>Sept 2022 - current</Smalltext>
-              <ul>
+              <Bullets collapsed={!largeScreen}>
                 <li>
                   Helped build and launch Marketing Center, then maintained the
                   product, managed its analytics and kept shipping features and
@@ -64,7 +91,7 @@ const Work = ({ work }) => {
                   runbooks and full-stack flow docs, and expanded Jest and React
                   Testing Library coverage.
                 </li>
-              </ul>
+              </Bullets>
             </Info>
           </Card>
           <Card>
@@ -72,7 +99,7 @@ const Work = ({ work }) => {
               <Title>Two Dudes Games</Title>
               <JobTitle>Indie Game Developer</JobTitle>
               <Smalltext>December 2023 - current</Smalltext>
-              <ul>
+              <Bullets collapsed={!largeScreen}>
                 <li>
                   Designing and building 2D games with Unity and C#, using
                   object-oriented design to keep gameplay systems performant and easy
@@ -91,7 +118,7 @@ const Work = ({ work }) => {
                   Animate sprites and wire up animator controllers for characters,
                   enemies and bosses.
                 </li>
-              </ul>
+              </Bullets>
             </Info>
           </Card>
           <Card>
@@ -99,7 +126,7 @@ const Work = ({ work }) => {
               <Title>Commercial Electrical Solutions</Title>
               <JobTitle>Project Manager</JobTitle>
               <Smalltext>March 2018 - March 2022</Smalltext>
-              <ul>
+              <Bullets collapsed={!largeScreen}>
                 <li>
                   Led teams and schedules on projects in the million dollar range,
                   managing scope, budget and client expectations to deliver on time
@@ -118,7 +145,7 @@ const Work = ({ work }) => {
                   Contributed to the design and delivery of many projects, working
                   with clients and crews from planning through completion.
                 </li>
-              </ul>
+              </Bullets>
             </Info>
           </Card>
           <Card>
@@ -126,7 +153,7 @@ const Work = ({ work }) => {
               <Title>MacMillan Electric</Title>
               <JobTitle>Owner</JobTitle>
               <Smalltext>January 2016 - March 2018</Smalltext>
-              <ul>
+              <Bullets collapsed={!largeScreen}>
                 <li>
                   Owned and ran an electrical contracting business, covering daily
                   operations across multiple projects, until its buyout in 2018.
@@ -136,7 +163,7 @@ const Work = ({ work }) => {
                   alongside my own projects.
                 </li>
                 <li>Grew gross profit 60% each year in business.</li>
-              </ul>
+              </Bullets>
             </Info>
           </Card>
           <Card>
@@ -144,7 +171,7 @@ const Work = ({ work }) => {
               <Title>Commercial Electrical Solutions</Title>
               <JobTitle>Project Foreman</JobTitle>
               <Smalltext>February 2011 - January 2016</Smalltext>
-              <ul>
+              <Bullets collapsed={!largeScreen}>
                 <li>
                   Led install crews on small projects, following engineered plans
                   from start to finish.
@@ -157,7 +184,7 @@ const Work = ({ work }) => {
                   Mentored and taught apprentice electricians throughout my
                   electrical career.
                 </li>
-              </ul>
+              </Bullets>
             </Info>
             <JobTitle>Continued in Resume...</JobTitle>
           </Card>
@@ -168,9 +195,7 @@ const Work = ({ work }) => {
 
   return (
     <>
-      <ExperienceContainer ref={work}>
-        <Timeline />
-      </ExperienceContainer>
+      <ExperienceContainer ref={work}>{Timeline()}</ExperienceContainer>
     </>
   );
 };

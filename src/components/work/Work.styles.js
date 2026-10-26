@@ -210,3 +210,22 @@ export const Smalltext = styled.div`
   font-size: 0.85em;
   color: white;
 `;
+
+export const ToggleButton = styled.button`
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #4fecec;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+`;
