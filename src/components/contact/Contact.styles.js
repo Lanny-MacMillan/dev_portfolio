@@ -91,10 +91,16 @@ export const ShowDiv1 = styled.div`
   width: 30%;
   height: 70%;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  -webkit-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   @media only screen and (min-width: 320px) and (max-width: 600px) {
     /* margin: 0px 0px 0px 30px; */
@@ -130,10 +136,16 @@ export const ShowDiv2 = styled.div`
   height: 70%;
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  -webkit-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
 
   bottom: 60%;
@@ -323,7 +335,7 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 80vh;
+  min-height: 80vh;
   background-color: #68717d;
   border-top: 2px solid white;
 
@@ -341,7 +353,7 @@ export const StartProject = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-self: center;
-  height: 20vh;
+  min-height: 20vh;
   width: 90vw;
   /* background: #2a1e5c; */
   background: #141c3a;
@@ -350,13 +362,15 @@ export const StartProject = styled.div`
   position: relative;
   top: 125px;
   border: 2px solid white;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
     -5px -5px 15px rgba(255, 255, 255, 0.1);
   max-width: 1400px;
 
   @media only screen and (min-width: 320px) and (max-width: 800px) {
-    height: 25vh;
+    min-height: 25vh;
     flex-direction: column;
     top: 145px;
   }
@@ -423,21 +437,15 @@ export const ConnectBody = styled.div`
 export const FooterCenter = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-self: center;
+  gap: 24px;
   margin: 150px 0 30px 0;
-  width: 70%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 860px;
   @media only screen and (min-width: 320px) and (max-width: 600px) {
-    margin: 150px 0 50px 0;
-    max-width: 300px;
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
-    max-width: 300px;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1500px) {
-    max-width: 350px;
+    margin: 150px 0 40px 0;
+    max-width: 340px;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -468,4 +476,99 @@ export const InfoDiv = styled.div`
   flex-direction: column;
   align-self: center;
   width: '200px';
+`;
+
+export const AvatarWrap = styled.div`
+  width: min(100%, 260px);
+  align-self: center;
+`;
+
+export const EmailLink = styled.a`
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.25em;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
+  }
+`;
+
+export const LinkRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+`;
+
+export const LinkPill = styled(motion.a)`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 10px 14px;
+  border-radius: 40px;
+  background: white;
+  color: #141c3a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  text-decoration: none;
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
+  }
+`;
+
+export const Facts = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 36px;
+  padding: 18px 0 26px 0;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+`;
+
+export const Fact = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+`;
+
+export const FactLabel = styled.div`
+  color: rgba(255, 255, 255, 0.78);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.75em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;
+
+export const FactValue = styled.div`
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+`;
+
+export const Copyright = styled.div`
+  color: rgba(255, 255, 255, 0.78);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+  padding-top: 40px;
 `;

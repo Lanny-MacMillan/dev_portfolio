@@ -23,6 +23,15 @@ import {
   StyledButton,
   FooterCenter,
   InfoDiv,
+  AvatarWrap,
+  EmailLink,
+  Facts,
+  Fact,
+  FactLabel,
+  FactValue,
+  Copyright,
+  LinkRow,
+  LinkPill,
 } from './Contact.styles.js';
 
 const Contact = ({ contact, largeScreen }) => {
@@ -54,7 +63,7 @@ const Contact = ({ contact, largeScreen }) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
 
-  const iconSize = largeScreen ? '50px' : '40px';
+  const iconSize = '28px';
 
   const renderCalendlyPopupModal = (
     <>
@@ -88,56 +97,75 @@ const Contact = ({ contact, largeScreen }) => {
     <>
       <ContactContainer ref={contact}>
         <StartProject>
-          <ConnectHeader>Starting A Project?</ConnectHeader>
+          <ConnectHeader>Let's talk</ConnectHeader>
           <ConnectBody>
-            Interested in working together? We should set up a time to chat.
+            Open to new opportunities.
             <br />
-            Coffee is on me
+            Hiring, or building something? Email me or grab a time on my calendar.
           </ConnectBody>
           <CalendlyLink>{renderCalendlyPopupModal}</CalendlyLink>
         </StartProject>
         <Footer>
           <FooterCenter>
-            <Blinking />
+            <AvatarWrap>
+              <Blinking />
+            </AvatarWrap>
             <InfoDiv>
-              <IconsDiv>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
+              <EmailLink href="mailto:lanny.macmillan.dev@gmail.com">
+                lanny.macmillan.dev@gmail.com
+              </EmailLink>
+              <Facts>
+                <Fact>
+                  <FactLabel>Looking for</FactLabel>
+                  <FactValue>Product &amp; software engineering</FactValue>
+                </Fact>
+                <Fact>
+                  <FactLabel>Strengths</FactLabel>
+                  <FactValue>Web, integrations, cloud, data</FactValue>
+                </Fact>
+                <Fact>
+                  <FactLabel>Based in</FactLabel>
+                  <FactValue>Boston / Providence area</FactValue>
+                </Fact>
+              </Facts>
+              <LinkRow>
+                <LinkPill
+                  whileHover={{ scale: 1.08 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
+                  whileTap={{ scale: 0.96 }}
                   href="https://www.linkedin.com/in/lanny-macmillan/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
                 >
                   <LinkedInIcon height={iconSize} width={iconSize} />
-                </motion.a>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
+                  LinkedIn
+                </LinkPill>
+                <LinkPill
+                  whileHover={{ scale: 1.08 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
+                  whileTap={{ scale: 0.96 }}
                   href="mailto:lanny.macmillan.dev@gmail.com"
-                  rel="noopener noreferrer"
+                  aria-label="Send an email"
                 >
                   <GmailIcon height={iconSize} width={iconSize} />
-                </motion.a>
-                <motion.a
-                  whileHover={{
-                    scale: 1.2,
-                  }}
+                  Email
+                </LinkPill>
+                <LinkPill
+                  whileHover={{ scale: 1.08 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  whileTap={{ scale: 1.5 }}
+                  whileTap={{ scale: 0.96 }}
                   href="https://github.com/Lanny-MacMillan"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub profile"
                 >
                   <GitHubIcon height={iconSize} width={iconSize} />
-                </motion.a>
-              </IconsDiv>
+                  GitHub
+                </LinkPill>
+              </LinkRow>
             </InfoDiv>
+            <Copyright>&copy; 2026 Lanny MacMillan</Copyright>
           </FooterCenter>
         </Footer>
       </ContactContainer>
