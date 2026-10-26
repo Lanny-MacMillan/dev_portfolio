@@ -92,7 +92,8 @@ const Work = ({ work, largeScreen }) => {
                   </li>
                   <li>
                     Authored 400+ pull requests and reviewed 200+ for teammates.
-                    Wrote runbooks and full-stack flow docs.
+                    Wrote runbooks and full-stack flow docs, and expanded unit test
+                    coverage across the app.
                   </li>
                 </Bullets>
               </Role>
@@ -114,8 +115,8 @@ const Work = ({ work, largeScreen }) => {
                     conditionals with flags.
                   </li>
                   <li>
-                    Introduced unit testing with Jest and React Testing Library,
-                    building coverage up from none.
+                    Set up Jest and React Testing Library and opened up unit testing
+                    for the team.
                   </li>
                 </Bullets>
               </Role>
