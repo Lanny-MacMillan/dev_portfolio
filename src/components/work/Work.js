@@ -25,6 +25,10 @@ const Work = ({ work }) => {
               <Smalltext>Sept 2022 - current</Smalltext>
               <ul>
                 <li>
+                  Helped build and launch Marketing Center, then maintained the
+                  product and shipped its add-ons, including the SEO/AEO product.
+                </li>
+                <li>
                   Owned a production data remediation of roughly 49K records end to
                   end: wrote the audit, rewrite, verify and rollback tooling in
                   Node.js, defined the decision rules, and reported progress to
