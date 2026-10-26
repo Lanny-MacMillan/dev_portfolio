@@ -25,6 +25,40 @@ const Work = ({ work }) => {
               <Smalltext>Sept 2022 - current</Smalltext>
               <ul>
                 <li>
+                  Helped build and launch a customer-facing marketing product, then
+                  maintained it, managed its analytics and kept shipping features and
+                  add-ons.
+                </li>
+                <li>
+                  Led a large data cleanup project end to end: wrote the audit,
+                  update, verify and rollback tooling in Node.js, defined the
+                  decision rules, and reported progress to stakeholders.
+                </li>
+                <li>
+                  Built safety into production changes: dry-run by default,
+                  environment-gated writes, snapshots, audit trails and rollback
+                  scripts.
+                </li>
+                <li>
+                  Engineering point of contact for support and fulfillment teams.
+                  Traced recurring analytics and tagging failures to root causes and
+                  fixed them instead of patching symptoms.
+                </li>
+                <li>
+                  Shipped features across React and Node, including purchase flows, a
+                  reporting dashboard, scoped authentication and third-party
+                  integrations, with cloud environments provisioned as code.
+                </li>
+                <li>
+                  Introduced feature flags across multiple repos and redesigned the
+                  targeting model, replacing conditional logic in state.
+                </li>
+                <li>
+                  Authored 400+ pull requests and reviewed 200+ for teammates. Wrote
+                  runbooks and flow documentation, and expanded unit test coverage.
+                </li>
+                {/* Original, more specific bullets (restore if the agreement allows):
+                <li>
                   Helped build and launch Marketing Center, then maintained the
                   product, managed its analytics and kept shipping features and
                   add-ons across it.
@@ -64,6 +98,7 @@ const Work = ({ work }) => {
                   runbooks and full-stack flow docs, and expanded Jest and React
                   Testing Library coverage.
                 </li>
+                */}
               </ul>
             </Info>
           </Card>
