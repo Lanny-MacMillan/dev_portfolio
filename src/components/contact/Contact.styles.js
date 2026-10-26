@@ -9,6 +9,7 @@ export const ContactContainer = styled.div`
   position: relative;
   box-sizing: border-box;
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 80px 20px;
   color: white;
   background: linear-gradient(#2f4289, #141c3a 40%, #0a0f1e);
@@ -677,8 +678,4 @@ export const Copyright = styled.div`
   text-align: center;
   font-size: 0.8em;
   color: rgba(255, 255, 255, 0.7);
-
-  @media only screen and (max-width: 600px) {
-    right: 72px;
-  }
 `;
