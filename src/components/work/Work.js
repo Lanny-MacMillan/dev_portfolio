@@ -48,10 +48,11 @@ const Work = ({ work }) => {
                   including a batch repair across hundreds of accounts.
                 </li>
                 <li>
-                  Shipped features across React and Node for a customer-facing
-                  product, including purchase and upsell flows, a reporting
-                  dashboard, monthly reports, scoped authentication and a third-party
-                  search integration, with cloud environments provisioned as code.
+                  Shipped features for a customer-facing product across React and
+                  Node: purchase and upsell flows, an AI search visibility dashboard,
+                  monthly reports, scoped auth and a Google Search Console
+                  integration, with its dev, staging and prod GCP environments
+                  provisioned as code in Terraform.
                 </li>
                 {/* Original, more specific bullet (restore if the agreement allows):
                 <li>
