@@ -25,40 +25,6 @@ const Work = ({ work }) => {
               <Smalltext>Sept 2022 - current</Smalltext>
               <ul>
                 <li>
-                  Helped build and launch a customer-facing marketing product, then
-                  maintained it, managed its analytics and kept shipping features and
-                  add-ons.
-                </li>
-                <li>
-                  Led a large data cleanup project end to end: wrote the audit,
-                  update, verify and rollback tooling in Node.js, defined the
-                  decision rules, and reported progress to stakeholders.
-                </li>
-                <li>
-                  Built safety into production changes: dry-run by default,
-                  environment-gated writes, snapshots, audit trails and rollback
-                  scripts.
-                </li>
-                <li>
-                  Engineering point of contact for support and fulfillment teams.
-                  Traced recurring analytics and tagging failures to root causes and
-                  fixed them instead of patching symptoms.
-                </li>
-                <li>
-                  Shipped features across React and Node, including purchase flows, a
-                  reporting dashboard, scoped authentication and third-party
-                  integrations, with cloud environments provisioned as code.
-                </li>
-                <li>
-                  Introduced feature flags across multiple repos and redesigned the
-                  targeting model, replacing conditional logic in state.
-                </li>
-                <li>
-                  Authored 400+ pull requests and reviewed 200+ for teammates. Wrote
-                  runbooks and flow documentation, and expanded unit test coverage.
-                </li>
-                {/* Original, more specific bullets (restore if the agreement allows):
-                <li>
                   Helped build and launch Marketing Center, then maintained the
                   product, managed its analytics and kept shipping features and
                   add-ons across it.
@@ -82,12 +48,20 @@ const Work = ({ work }) => {
                   including a batch repair across hundreds of accounts.
                 </li>
                 <li>
+                  Shipped features across React and Node for a customer-facing
+                  product, including purchase and upsell flows, a reporting
+                  dashboard, monthly reports, scoped authentication and a third-party
+                  search integration, with cloud environments provisioned as code.
+                </li>
+                {/* Original, more specific bullet (restore if the agreement allows):
+                <li>
                   Shipped features for the SEO/AEO product across React and Node:
                   purchase and upsell flows, an AI search visibility dashboard,
                   monthly reports, scoped auth and a Google Search Console
                   integration, with its dev, staging and prod GCP environments
                   provisioned as code in Terraform.
                 </li>
+                */}
                 <li>
                   Introduced LaunchDarkly across five repos and redesigned the
                   user-plus-company targeting model, replacing Redux conditionals
@@ -98,7 +72,6 @@ const Work = ({ work }) => {
                   runbooks and full-stack flow docs, and expanded Jest and React
                   Testing Library coverage.
                 </li>
-                */}
               </ul>
             </Info>
           </Card>
