@@ -54,11 +54,6 @@ const Work = ({ work }) => {
                   provisioned as code in Terraform.
                 </li>
                 <li>
-                  Build and operate services on AWS day to day, using containers,
-                  queues and background workers alongside the Node.js and React
-                  stack.
-                </li>
-                <li>
                   Introduced LaunchDarkly across five repos and redesigned the
                   user-plus-company targeting model, replacing Redux conditionals
                   with feature flags.
