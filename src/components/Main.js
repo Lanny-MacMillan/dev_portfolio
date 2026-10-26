@@ -73,13 +73,13 @@ function Main() {
   useEffect(() => {
     // fade the header from the light hero to dark as the first screen scrolls away
     const light = {
-      bg: [196, 203, 202, 1],
-      menu: [196, 203, 202, 1],
+      bg: [196, 203, 202, 0.3],
+      menu: [196, 203, 202, 0.7],
       line: [20, 28, 58, 0.15],
     };
     const dark = {
-      bg: [10, 15, 30, 0.72],
-      menu: [10, 15, 30, 0.96],
+      bg: [10, 15, 30, 0.14],
+      menu: [10, 15, 30, 0.62],
       line: [255, 255, 255, 0.15],
     };
     const mix = (from, to, t) =>
@@ -96,15 +96,20 @@ function Main() {
       const style = header.style;
       style.setProperty('--header-bg', mix(light.bg, dark.bg, t));
       style.setProperty('--header-menu-bg', mix(light.menu, dark.menu, t));
+      style.setProperty(
+        '--header-text-shadow',
+        t < 0.5 ? 'none' : '0 1px 8px rgba(0, 0, 0, 0.5)',
+      );
+      style.setProperty(
+        '--header-edge',
+        Math.min(window.scrollY / (range * 0.25), 1).toFixed(2),
+      );
       style.setProperty('--header-line', mix(light.line, dark.line, t));
       style.setProperty('--header-fg', t < 0.5 ? '#141c3a' : '#ffffff');
       style.setProperty(
         '--header-fg-muted',
         t < 0.5 ? 'rgba(20, 28, 58, 0.6)' : 'rgba(255, 255, 255, 0.65)',
       );
-      const blur = t < 0.02 ? 'none' : `blur(${(t * 10).toFixed(1)}px)`;
-      style.backdropFilter = blur;
-      style.webkitBackdropFilter = blur;
     };
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
@@ -137,6 +142,7 @@ function Main() {
         maxWidth: '100vw',
         overflow: 'hidden',
         paddingTop: '3em',
+        background: '#c4cbca',
       }}
     >
       <HeaderContainer ref={headerRef}>
