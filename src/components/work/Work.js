@@ -78,6 +78,19 @@ const Work = ({ work }) => {
                   object-oriented design to keep gameplay systems performant and easy
                   to extend.
                 </li>
+                <li>
+                  Hands-on with core RPG systems in Unity: inventory and equipment,
+                  material-based crafting, stat and damage models with elemental
+                  effects, and prerequisite-gated skill trees.
+                </li>
+                <li>
+                  Experience with state-machine enemy and boss behavior, and with
+                  JSON save and load so progress persists between sessions.
+                </li>
+                <li>
+                  Animate sprites and wire up animator controllers for characters,
+                  enemies and bosses.
+                </li>
               </ul>
             </Info>
           </Card>
