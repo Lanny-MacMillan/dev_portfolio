@@ -95,8 +95,8 @@ const Work = ({ work, largeScreen }) => {
                     Wrote runbooks and full-stack flow docs.
                   </li>
                   <li>
-                    Helped take Jest and React Testing Library coverage from next to
-                    nothing to full coverage of the app.
+                    Helped build unit test coverage across the app from zero to full,
+                    using Jest and React Testing Library.
                   </li>
                 </Bullets>
               </Role>
