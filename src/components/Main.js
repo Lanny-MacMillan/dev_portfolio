@@ -73,13 +73,13 @@ function Main() {
   useEffect(() => {
     // fade the header from the light hero to dark as the first screen scrolls away
     const light = {
-      bg: [196, 203, 202, 1],
-      menu: [196, 203, 202, 1],
+      bg: [196, 203, 202, 0.55],
+      menu: [196, 203, 202, 0.78],
       line: [20, 28, 58, 0.15],
     };
     const dark = {
-      bg: [10, 15, 30, 0.72],
-      menu: [10, 15, 30, 0.96],
+      bg: [10, 15, 30, 0.5],
+      menu: [10, 15, 30, 0.78],
       line: [255, 255, 255, 0.15],
     };
     const mix = (from, to, t) =>
@@ -102,9 +102,6 @@ function Main() {
         '--header-fg-muted',
         t < 0.5 ? 'rgba(20, 28, 58, 0.6)' : 'rgba(255, 255, 255, 0.65)',
       );
-      const blur = t < 0.02 ? 'none' : `blur(${(t * 10).toFixed(1)}px)`;
-      style.backdropFilter = blur;
-      style.webkitBackdropFilter = blur;
     };
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
@@ -137,6 +134,7 @@ function Main() {
         maxWidth: '100vw',
         overflow: 'hidden',
         paddingTop: '3em',
+        background: '#c4cbca',
       }}
     >
       <HeaderContainer ref={headerRef}>

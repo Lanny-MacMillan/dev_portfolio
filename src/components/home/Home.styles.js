@@ -7,22 +7,36 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 25;
   box-sizing: border-box;
+  justify-content: space-between;
+  height: 3em;
+  cursor: default;
   /* Main.js blends these from the light hero to dark as the page scrolls */
-  --header-bg: #c4cbca;
-  --header-menu-bg: #c4cbca;
+  --header-bg: rgba(196, 203, 202, 0.55);
+  --header-menu-bg: rgba(196, 203, 202, 0.78);
   --header-line: rgba(20, 28, 58, 0.15);
   transition:
     --header-fg 0.2s ease,
     --header-fg-muted 0.2s ease;
-  /* margin-bottom: 2em auto; // for header */
-  justify-content: space-between;
-  width: 100%;
-  height: 3em;
-  background-color: var(--header-bg);
-  cursor: default;
-  /* background-color: #141c3a; */
+
+  /* the glass lives on a pseudo-element so the mobile menu can blur the page
+     behind it on its own instead of inheriting this one's backdrop */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--header-bg);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    backdrop-filter: blur(18px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 6px 20px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+  }
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     justify-content: space-between;
@@ -447,8 +461,10 @@ export const MobileMenu = styled(motion.nav)`
   flex-direction: column;
   overflow: hidden;
   background-color: var(--header-menu-bg);
-  border-bottom: 2px solid var(--header-fg);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: 769px) {
     display: none;
