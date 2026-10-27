@@ -130,22 +130,21 @@ const Work = ({ work, largeScreen }) => {
           <Card>
             <Info>
               <Title>Two Dudes Games</Title>
-              <JobTitle>Indie Game Developer</JobTitle>
+              <JobTitle>Game Developer</JobTitle>
               <Smalltext>December 2023 - current</Smalltext>
               <Bullets collapsed={!largeScreen}>
                 <li>
-                  Designing and building 2D games with Unity and C#, using
-                  object-oriented design to keep gameplay systems performant and easy
-                  to extend.
+                  Design and build 2D games in Unity and C#, using object-oriented
+                  design to keep gameplay systems performant and easy to extend.
                 </li>
                 <li>
-                  Hands-on with core RPG systems in Unity: inventory and equipment,
-                  material-based crafting, stat and damage models with elemental
-                  effects, and prerequisite-gated skill trees.
+                  Built core RPG systems: inventory and equipment, material-based
+                  crafting, stat and damage models with elemental effects, and
+                  prerequisite-gated skill trees.
                 </li>
                 <li>
-                  Experience with state-machine enemy and boss behavior, and with
-                  JSON save and load so progress persists between sessions.
+                  Implemented state-machine enemy and boss behavior and JSON save and
+                  load so progress persists between sessions.
                 </li>
                 <li>
                   Animate sprites and wire up animator controllers for characters,
