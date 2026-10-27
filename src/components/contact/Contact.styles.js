@@ -597,9 +597,9 @@ export const PrimaryAction = styled(motion.a)`
   color: #141c3a;
   border: 3px solid white;
 
-  /* the markup puts Email me in the middle; on phones the buttons wrap, so lead with it */
+  /* the markup puts Email me in the middle; on phones the buttons wrap, so put the white one last */
   @media only screen and (max-width: 700px) {
-    order: -1;
+    order: 1;
   }
 `;
 
