@@ -107,8 +107,8 @@ const Work = ({ work, largeScreen }) => {
                 <Smalltext>Sept 2022 - Dec 2024</Smalltext>
                 <Bullets collapsed={!largeScreen}>
                   <li>
-                    Helped build and launch Marketing Center, then maintained the
-                    product and managed its analytics.
+                    Helped build and launch Marketing Center, then maintained it as
+                    the go-to engineer for its analytics.
                   </li>
                   <li>
                     Kept shipping customer-facing features and add-ons across React
