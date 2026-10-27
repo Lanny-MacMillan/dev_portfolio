@@ -78,10 +78,11 @@ const Contact = ({ contact }) => {
             whileHover={{ scale: 1.06 }}
             transition={{ type: 'spring', stiffness: 300 }}
             whileTap={{ scale: 0.97 }}
-            href="/Lanny-MacMillan-Resume.docx"
-            download
+            href="/Lanny-MacMillan-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Download resume
+            View resume
           </ResumeAction>
         </ActionRow>
         <AddressRow>

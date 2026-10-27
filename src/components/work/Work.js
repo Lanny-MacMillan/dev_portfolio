@@ -215,7 +215,11 @@ const Work = ({ work, largeScreen }) => {
                 </li>
               </Bullets>
             </Info>
-            <ResumeLink href="/Lanny-MacMillan-Resume.docx" download>
+            <ResumeLink
+              href="/Lanny-MacMillan-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Continued in my resume &rarr;
             </ResumeLink>
           </Card>
