@@ -11,6 +11,7 @@ import {
   Title,
   JobTitle,
   ToggleButton,
+  ResumeLink,
   Role,
 } from './Work.styles.js';
 
@@ -214,7 +215,9 @@ const Work = ({ work, largeScreen }) => {
                 </li>
               </Bullets>
             </Info>
-            <JobTitle>Continued in Resume...</JobTitle>
+            <ResumeLink href="/Lanny-MacMillan-Resume.docx" download>
+              Continued in my resume &rarr;
+            </ResumeLink>
           </Card>
         </Outer>
       </TimeLine>
