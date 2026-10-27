@@ -117,7 +117,7 @@ export const theAdventure = {
 
   fullDescription:
     'This game was created using the unity Engine and C#. In this game we tackle a more robust inventory system, player levels, talent tree, crafting and equipment. In this side scrolling RPG you will face against an evil unseen in thousands of years, you will have to discover whats destroying the land, unite with the magi and bring a stop to it',
-  link: 'https://github.com/Lanny-MacMillan/TheAdventure_Two_Dudes',
+  link: null, // private repo
   liveLink: null,
   devTypeOneofTwo: 'Game',
   devTypeTwoofTwo: 'Development',
@@ -181,7 +181,7 @@ export const theQuickStop = {
 
   fullDescription:
     'A Typescript Library of pre-made, tested and documented UI components that can be easily reused across the user interface of a product. Components include elements like buttons, forms, cards, tooltips, modals and more. The Quickstop library uses Tailwind, a utility-first css framework that uses classes for styling, and can take additional classes to override or add custom styling to components',
-  link: 'https://github.com/Lanny-MacMillan/TheQuickStop',
+  link: null, // private repo
   liveLink: null,
   devTypeOneofTwo: 'Web',
   devTypeTwoofTwo: 'Development',
@@ -425,7 +425,7 @@ export const planEatRepeat = {
   mobileDescription:
     'Transform your dining experience with effortless meal planning, collaboration, and organization.',
 
-  link: 'https://github.com/qodebros/plan-eat-repeat-frontend',
+  link: null, // private repo
   fullDescription:
     'This app is a fun and interactive meal planning and preparation platform designed for friends and family, bringing everything you need into one convenient place. Built with a modern tech stack, we used React for a dynamic user interface, Node.js and Express for a robust backend, and Auth0 for secure authentication. The app is containerized with Docker for scalable deployment, and integrated with analytics tools to track and enhance user engagement. We also applied a thoughtfully chosen theme to ensure a visually appealing and user-friendly experience. Whether you are planning meals, sharing recipes, or prepping together, our app makes it easy and enjoyable!',
   liveLink: null,
