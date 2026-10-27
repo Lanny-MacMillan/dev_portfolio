@@ -206,6 +206,23 @@ export const JobTitle = styled.div`
   color: #4fecec;
 `;
 
+export const ResumeLink = styled.a`
+  display: inline-block;
+  color: #4fecec;
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+`;
+
 export const Smalltext = styled.div`
   font-size: 0.85em;
   color: white;

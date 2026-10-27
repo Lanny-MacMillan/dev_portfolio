@@ -608,6 +608,16 @@ export const SecondaryAction = styled(motion.button)`
   }
 `;
 
+export const ResumeAction = styled(motion.a)`
+  ${actionBase}
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+`;
+
 export const AddressRow = styled.div`
   display: flex;
   flex-direction: row;
