@@ -88,8 +88,8 @@ const Work = ({ work, largeScreen }) => {
                     symptoms, including a batch repair across hundreds of accounts.
                   </li>
                   <li>
-                    Extended LaunchDarkly feature flagging from its first two repos
-                    to five.
+                    Built several features on microservices and extended LaunchDarkly
+                    feature flagging from its first two repos to five.
                   </li>
                   <li>
                     Authored 400+ pull requests and reviewed 200+ for teammates.
@@ -107,9 +107,8 @@ const Work = ({ work, largeScreen }) => {
                 <Smalltext>Sept 2022 - Dec 2024</Smalltext>
                 <Bullets collapsed={!largeScreen}>
                   <li>
-                    Helped build and launch Marketing Center, including
-                    microservices, then maintained the product and managed its
-                    analytics.
+                    Helped build and launch Marketing Center, then maintained it as
+                    the go-to engineer for its analytics.
                   </li>
                   <li>
                     Kept shipping customer-facing features and add-ons across React
