@@ -10,7 +10,11 @@ import {
   ShowImageContainer,
   ShowImageColumn,
   ShowImage,
-  Link,
+  LinkList,
+  LinkLabel,
+  LinkAction,
+  LinkArrow,
+  StatusText,
   LowerDiv,
   LeftDiv,
   RightDiv,
@@ -46,48 +50,40 @@ const ViewPage = () => {
   const inDevelopment = status === 'In_Development';
   const projectAvailable = liveLink != null;
   const repoAvailable = link != null;
-  const projectLink = projectAvailable ? (
-    <p>
-      <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-        Open<WhiteSpan>_</WhiteSpan>Project<WhiteSpan>.</WhiteSpan>
-      </Link>
-    </p>
+
+  // Each row says what it is (Code / Live). Links get an arrow; states that
+  // are not links (private repo, in development) are muted so they do not
+  // read like broken links. A missing live link is hidden, not "unavailable".
+  const repoValue = repoAvailable ? (
+    <LinkAction href={link} target="_blank" rel="noopener noreferrer">
+      <span>
+        View<WhiteSpan>_</WhiteSpan>on<WhiteSpan>_</WhiteSpan>GitHub
+      </span>
+      <LinkArrow aria-hidden="true">{'\u2197'}</LinkArrow>
+    </LinkAction>
   ) : (
-    <p>
-      Link
-      <BlueSpan>_</BlueSpan>
-      Unavailable
-      <BlueSpan>.</BlueSpan>
-    </p>
+    <StatusText>
+      Private<BlueSpan>_</BlueSpan>Repo<BlueSpan>.</BlueSpan>
+    </StatusText>
   );
 
-  const projectDetails = inDevelopment ? (
-    <p>
-      In
-      <BlueSpan>_</BlueSpan>
-      Development
-      <BlueSpan>.</BlueSpan>
-    </p>
-  ) : (
-    projectLink
-  );
-
-  const repoDetails = repoAvailable ? (
-    <p>
-      <Link href={link} target="_blank" rel="noopener noreferrer">
-        Source
-        <WhiteSpan>_</WhiteSpan>Code
-      </Link>
-      <WhiteSpan>.</WhiteSpan>
-    </p>
-  ) : (
-    <p>
-      Private
-      <BlueSpan>_</BlueSpan>
-      Repo
-      <BlueSpan>.</BlueSpan>
-    </p>
-  );
+  let liveValue = null;
+  if (inDevelopment) {
+    liveValue = (
+      <StatusText>
+        In<BlueSpan>_</BlueSpan>Development<BlueSpan>.</BlueSpan>
+      </StatusText>
+    );
+  } else if (projectAvailable) {
+    liveValue = (
+      <LinkAction href={liveLink} target="_blank" rel="noopener noreferrer">
+        <span>
+          Open<WhiteSpan>_</WhiteSpan>Project
+        </span>
+        <LinkArrow aria-hidden="true">{'\u2197'}</LinkArrow>
+      </LinkAction>
+    );
+  }
 
   return (
     <Container>
@@ -149,8 +145,16 @@ const ViewPage = () => {
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ ease: 'easeInOut', duration: 1, delay: 3.5 }}
               >
-                {repoDetails}
-                {projectDetails}
+                <LinkList>
+                  <LinkLabel>Code</LinkLabel>
+                  {repoValue}
+                  {liveValue && (
+                    <>
+                      <LinkLabel>Live</LinkLabel>
+                      {liveValue}
+                    </>
+                  )}
+                </LinkList>
               </motion.div>
             </RightDiv>
           </LowerDiv>

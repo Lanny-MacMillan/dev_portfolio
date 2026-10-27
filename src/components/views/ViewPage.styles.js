@@ -108,6 +108,67 @@ export const Link = styled.a`
   cursor: pointer;
 `;
 
+export const LinkList = styled.div`
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: baseline;
+  gap: 12px 22px;
+  font-size: 1.05em;
+
+  @media only screen and (max-width: 1000px) {
+    margin-top: 1.4em;
+  }
+`;
+
+export const LinkLabel = styled.span`
+  font-family: 'DM Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.7em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: right;
+
+  @media only screen and (max-width: 600px) {
+    text-align: left;
+  }
+`;
+
+export const LinkAction = styled.a`
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  color: #4fecec;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+`;
+
+export const LinkArrow = styled.span`
+  font-weight: 800;
+  transition: transform 0.15s ease;
+
+  ${LinkAction}:hover & {
+    transform: translate(2px, -2px);
+  }
+`;
+
+export const StatusText = styled.span`
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.6);
+`;
+
 export const LowerDiv = styled.div`
   display: flex;
   flex-direction: row;
