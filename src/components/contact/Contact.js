@@ -14,6 +14,7 @@ import {
   ActionRow,
   PrimaryAction,
   SecondaryAction,
+  ResumeAction,
   AddressRow,
   EmailText,
   CopyButton,
@@ -73,6 +74,15 @@ const Contact = ({ contact }) => {
           >
             Book a call
           </SecondaryAction>
+          <ResumeAction
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            whileTap={{ scale: 0.97 }}
+            href="/Lanny-MacMillan-Resume.docx"
+            download
+          >
+            Download resume
+          </ResumeAction>
         </ActionRow>
         <AddressRow>
           <EmailText>{EMAIL}</EmailText>
