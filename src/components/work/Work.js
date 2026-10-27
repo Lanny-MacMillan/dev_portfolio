@@ -96,8 +96,9 @@ const Work = ({ work, largeScreen }) => {
                     Wrote runbooks and full-stack flow docs.
                   </li>
                   <li>
-                    Kept expanding unit test coverage with Jest and React Testing
-                    Library, writing tests alongside each feature I built.
+                    Helped raise unit test coverage from a handful of tests to about
+                    99% with Jest and React Testing Library, and tests are now
+                    required with every feature.
                   </li>
                 </Bullets>
               </Role>
@@ -118,10 +119,6 @@ const Work = ({ work, largeScreen }) => {
                     Introduced LaunchDarkly feature flags in two repos and redesigned
                     the user-plus-company targeting model, replacing Redux
                     conditionals with flags.
-                  </li>
-                  <li>
-                    Helped build unit test coverage across the app from zero to full,
-                    using Jest and React Testing Library.
                   </li>
                 </Bullets>
               </Role>
