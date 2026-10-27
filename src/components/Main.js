@@ -5,7 +5,7 @@ import Skills from './skills/Skills.js';
 import Projects from './projects/Projects.js';
 import Work from './work/Work.js';
 import Contact from './contact/Contact';
-import ScrollToTop from './util/ScrollToTop.js';
+// import ScrollToTop from './util/ScrollToTop.js';
 import CursorDrift from './assets/Tools/CursorDrift.jsx';
 import {
   HeaderContainer,
@@ -185,7 +185,9 @@ function Main() {
           )}
         </AnimatePresence>
       </HeaderContainer>
+      {/* Back-to-top arrow, off while the header stays fixed. Restore with the import above:
       <ScrollToTop />
+      */}
       <CursorDrift />
       <Home home={pageRef[0]} largeScreen={largeScreen} />
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />

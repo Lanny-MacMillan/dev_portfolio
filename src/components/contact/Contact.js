@@ -57,6 +57,14 @@ const Contact = ({ contact }) => {
           Hiring, or building something? Email me or grab a time on my calendar.
         </ContactPitch>
         <ActionRow>
+          <SecondaryAction
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => setIsOpen(true)}
+          >
+            Book a call
+          </SecondaryAction>
           <PrimaryAction
             whileHover={{ scale: 1.06 }}
             transition={{ type: 'spring', stiffness: 300 }}
@@ -66,14 +74,6 @@ const Contact = ({ contact }) => {
             <GmailIcon height="24px" width="24px" />
             Email me
           </PrimaryAction>
-          <SecondaryAction
-            whileHover={{ scale: 1.06 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => setIsOpen(true)}
-          >
-            Book a call
-          </SecondaryAction>
           <ResumeAction
             whileHover={{ scale: 1.06 }}
             transition={{ type: 'spring', stiffness: 300 }}
