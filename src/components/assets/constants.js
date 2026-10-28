@@ -463,7 +463,7 @@ export const nextHoliday = {
   fullDescription:
     'Next Holiday is a production-ready, full-stack holiday planning platform built with Next.js, TypeScript, MySQL and Prisma. A multi-tenant architecture lets families and households share accounts, invite members and plan more than 15 holiday types together, from gifts and budgets to tasks and cards. Real-time notifications are delivered by a separate Server-Sent Events microservice running on its own EC2 instance, so a notification failure never affects the core app. The app is deployed on AWS Amplify',
   link: 'https://github.com/Lanny-MacMillan/next-holiday',
-  liveLink: 'https://main.dqx5l2fwtu6o8.amplifyapp.com/',
+  liveLink: 'https://www.next-holiday.com/',
   devTypeOneofTwo: 'Web',
   devTypeTwoofTwo: 'Development',
   status: 'Live',
