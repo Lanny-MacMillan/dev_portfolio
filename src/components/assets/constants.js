@@ -16,10 +16,10 @@ import thryvAlt2 from './img/thryvAlt2.png';
 // import vacationImg from './img/vacation.png';
 // import geoDashImg from './img/geoDash.png';
 
-import planEatRepeatCover from './img/planEatRepeatCover.jpg';
-import planEatRepeatHero from './img/planEatRepeatHero.jpg';
-import planEatRepeatPanelTop from './img/planEatRepeatPanelTop.png';
-import planEatRepeatPanelBottom from './img/planEatRepeatPanelBottom.png';
+import theNodeForgeCover from './img/theNodeForgeCover.png';
+import theNodeForgeHero from './img/theNodeForgeHero.png';
+import theNodeForgePanelTop from './img/theNodeForgePanelTop.png';
+import theNodeForgePanelBottom from './img/theNodeForgePanelBottom.png';
 
 import crappyBirdCover from './img/crappyBirdCover.png';
 import crappyBirdHero from './img/crappyBirdHero.png';
@@ -411,38 +411,52 @@ export const aiToolbox = {
     <TypescriptIcon width={40} height={40} />,
   ],
 };
-export const planEatRepeat = {
-  nameText: 'Plan.Eat.Repeat.',
-  nameTextExpanded: 'All your meal options. In one place',
+export const theNodeForge = {
+  nameText: 'The Node Forge',
+  nameTextExpanded: 'Small npm packages. Built to be reused.',
   colorSplash: softwareDev,
-  image: planEatRepeatCover,
-  heroImage: planEatRepeatHero,
+  image: theNodeForgeCover,
+  heroImage: theNodeForgeHero,
   imagePosition: 'center 10%',
-  gameplayImage: planEatRepeatPanelTop,
-  gameplayImageTwo: planEatRepeatPanelBottom,
+  gameplayImage: theNodeForgePanelTop,
+  gameplayImageTwo: theNodeForgePanelBottom,
   description:
-    'Transform your familys dining experience with effortless meal planning, collaboration, and organization. Easily invite loved ones, assign meals, and track progress—all in one place. With Plan.Eat.Repeat., you’re in control of every step of your mealtime journey.',
+    'Five open-source npm packages published under The Node Forge, from an API rate limiter and JWT utilities to an image-resizing CLI, a web scraper and a URL validator.',
   mobileDescription:
-    'Transform your dining experience with effortless meal planning, collaboration, and organization.',
-
-  link: null, // private repo
+    'Five open-source TypeScript npm packages for everyday Node.js work.',
   fullDescription:
-    'This app is a fun and interactive meal planning and preparation platform designed for friends and family, bringing everything you need into one convenient place. Built with a modern tech stack, we used React for a dynamic user interface, Node.js and Express for a robust backend, and Auth0 for secure authentication. The app is containerized with Docker for scalable deployment, and integrated with analytics tools to track and enhance user engagement. We also applied a thoughtfully chosen theme to ensure a visually appealing and user-friendly experience. Whether you are planning meals, sharing recipes, or prepping together, our app makes it easy and enjoyable!',
-  liveLink: null,
-  devTypeOneofTwo: 'Web',
+    'I founded The Node Forge, a GitHub organization where a small group of developers builds lightweight, open-source npm packages in TypeScript. I own the org and publish and maintain five of its packages: api-rate-limit, an in-memory API rate limiter with Express support; jwt-utils, JWT generation and verification with middleware for Node frameworks; image-resizer-cli, a command-line tool for batch image resizing, conversion and compression; simple-web-scraper, a Puppeteer and Cheerio scraper with JSON and CSV export; and url-validator, which checks URL structure and whether a URL is live. Each package has its own documentation site and CI',
+  link: 'https://github.com/The-Node-Forge',
+  liveLink: 'https://www.npmjs.com/search?q=%40the-node-forge',
+  packages: [
+    {
+      name: 'api-rate-limit',
+      url: 'https://github.com/The-Node-Forge/api-rate-limit',
+    },
+    { name: 'jwt-utils', url: 'https://github.com/The-Node-Forge/jwt-utils' },
+    {
+      name: 'image-resizer-cli',
+      url: 'https://github.com/The-Node-Forge/image-resizer-cli',
+    },
+    {
+      name: 'simple-web-scraper',
+      url: 'https://github.com/The-Node-Forge/simple-web-scraper',
+    },
+    {
+      name: 'url-validator',
+      url: 'https://github.com/The-Node-Forge/url-validator',
+    },
+  ],
+  devTypeOneofTwo: 'Software',
   devTypeTwoofTwo: 'Development',
-  status: 'In_Development',
+  status: 'Live',
   icons: [
-    <ReactIconColor width={30} height={30} />,
-    <JavascriptIcon width={30} height={30} />,
-    <ExpressIcon width={30} height={30} />,
     <NodeJSIcon width={30} height={30} />,
+    <TypescriptIcon width={30} height={30} />,
   ],
   iconsLarge: [
-    <ReactIconColor width={40} height={40} />,
-    <JavascriptIcon width={40} height={40} />,
-    <ExpressIcon width={40} height={40} />,
     <NodeJSIcon width={40} height={40} />,
+    <TypescriptIcon width={40} height={40} />,
   ],
 };
 

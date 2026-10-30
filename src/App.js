@@ -17,7 +17,7 @@ function App() {
         <Route path="/2dNightmare" element={<ViewPage />} />
         <Route path="/TetrisReact" element={<ViewPage />} />
         {/* <Route path="/GeometryDash" element={<ViewPage />} /> */}
-        <Route path="/Plan.Eat.Repeat." element={<ViewPage />} />
+        <Route path="/TheNodeForge" element={<ViewPage />} />
         <Route path="/NextHoliday" element={<ViewPage />} />
         <Route path="/SSENotifications" element={<ViewPage />} />
         <Route path="/MacsClassicArcade" element={<ViewPage />} />
