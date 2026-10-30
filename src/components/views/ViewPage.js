@@ -14,6 +14,7 @@ import {
   LinkLabel,
   LinkAction,
   LinkArrow,
+  DescriptionLink,
   StatusText,
   LowerDiv,
   LeftDiv,
@@ -24,6 +25,26 @@ import {
   SubHeader,
 } from './ViewPage.styles';
 import Main from '../Main';
+
+const renderDescription = (text, packages) => {
+  if (!packages?.length) return text;
+  const pattern = new RegExp(`(${packages.map(({ name }) => name).join('|')})`, 'g');
+  return text.split(pattern).map((part, i) => {
+    const pkg = packages.find(({ name }) => name === part);
+    return pkg ? (
+      <DescriptionLink
+        key={i}
+        href={pkg.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {part}
+      </DescriptionLink>
+    ) : (
+      part
+    );
+  });
+};
 
 const ViewPage = () => {
   const location = useLocation();
@@ -41,6 +62,7 @@ const ViewPage = () => {
     fullDescription,
     liveLink,
     link,
+    packages,
     devTypeOneofTwo,
     devTypeTwoofTwo,
     status,
@@ -135,7 +157,7 @@ const ViewPage = () => {
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ ease: 'easeInOut', duration: 1, delay: 3 }}
               >
-                {fullDescription} <BlueSpan>.</BlueSpan>
+                {renderDescription(fullDescription, packages)} <BlueSpan>.</BlueSpan>
               </motion.div>
             </LeftDiv>
             <RightDiv>

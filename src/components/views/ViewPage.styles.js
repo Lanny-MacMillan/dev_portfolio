@@ -163,6 +163,24 @@ export const LinkArrow = styled.span`
   }
 `;
 
+export const DescriptionLink = styled.a`
+  color: inherit;
+  text-decoration: underline dotted #4fecec;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #4fecec;
+    text-decoration-style: solid;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #53ddec;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+`;
+
 export const StatusText = styled.span`
   font-family: 'DM Sans', sans-serif;
   font-weight: 800;

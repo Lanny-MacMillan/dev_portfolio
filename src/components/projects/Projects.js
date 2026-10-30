@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 import OtherProjectsCard from './OtherProjectsCard';
 import {
   nextHoliday,
-  planEatRepeat,
+  theNodeForge,
   thryvInc,
   theQuickStop,
   macsArcade,
@@ -27,7 +27,7 @@ const cards = [
   { project: thryvInc, span: 2, splash: '65px' },
   { project: theQuickStop, span: 1, splash: '220px' },
   { project: terminalQuest, span: 1, splash: '145px' },
-  { project: planEatRepeat, span: 2, splash: '165px' },
+  { project: theNodeForge, span: 2, splash: '165px' },
   { project: theAdventure, span: 2, splash: '148px' },
   { project: macsArcade, span: 1, splash: '195px' },
 ];
