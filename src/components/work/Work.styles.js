@@ -74,7 +74,7 @@ export const Header = styled.div`
   padding-bottom: 30px;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {

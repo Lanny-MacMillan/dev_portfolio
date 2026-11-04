@@ -551,7 +551,7 @@ export const ContactHeading = styled.h2`
   line-height: 1.05;
 
   @media only screen and (max-width: 768px) {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 `;
 

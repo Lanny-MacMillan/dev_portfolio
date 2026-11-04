@@ -37,7 +37,7 @@ export const Header = styled.div`
   padding-bottom: 30px;
   /* background: linear-gradient(#1f2c5b, #141c3a); */
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -56,7 +56,7 @@ export const SkillsHeader = styled.div`
     font-size: 24px;
   }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -125,6 +125,10 @@ export const CodeRow = styled.div`
 
 export const Description = styled.div`
   padding: 4px 0;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.95em;
+  }
 `;
 
 export const VertLine = styled.div`
@@ -176,7 +180,7 @@ export const SkillCard = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    padding: 40px;
+    padding: 32px 28px;
   }
 `;
 
