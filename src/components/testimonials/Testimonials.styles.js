@@ -82,7 +82,7 @@ export const QuoteCard = styled(motion.figure)`
     left: 20px;
     font-size: 4.5em;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(0, 221, 255, 0.45);
   }
 
   @media only screen and (max-width: 768px) {

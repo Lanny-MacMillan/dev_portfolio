@@ -3,7 +3,7 @@
 // Company names are left out of the credit lines on purpose (separation paperwork check pending).
 export const testimonials = [
   {
-    name: 'Bryan (Dragon) Hawkins',
+    name: 'Bryan Hawkins',
     title: 'Sr. Product Engineer and Tech Lead',
     quote:
       "He's someone who goes beyond just being a great engineer, with the ability to communicate and collaborate across virtually every department in an organization, understand the bigger picture, and contribute in ways that extend far beyond writing code.",

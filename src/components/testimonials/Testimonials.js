@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <TestimonialsContainer>
       <Heading>Kind words</Heading>
-      <Subheading>From teammates and partners I've worked with.</Subheading>
+      <Subheading>From teammates I've worked with.</Subheading>
       <Grid>
         {approved.map((t, i) => (
           <QuoteCard
