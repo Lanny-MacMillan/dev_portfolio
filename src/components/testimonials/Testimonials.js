@@ -19,7 +19,7 @@ const Testimonials = () => {
 
   return (
     <TestimonialsContainer>
-      <Heading>Kind words</Heading>
+      <Heading>Testimonials</Heading>
       <Subheading>From teammates I've worked with.</Subheading>
       <Grid>
         {approved.map((t, i) => (
