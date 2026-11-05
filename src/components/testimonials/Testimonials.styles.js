@@ -117,6 +117,7 @@ export const Credit = styled.figcaption`
 
 export const Name = styled.span`
   font-weight: 700;
+  color: #00ddff;
 
   @media only screen and (max-width: 768px) {
     font-size: 0.9em;
