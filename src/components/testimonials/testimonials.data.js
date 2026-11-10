@@ -28,7 +28,7 @@ export const testimonials = [
     name: 'Andrew Dye',
     title: 'Sr. Product Manager',
     quote:
-      'I appreciate your work and dedication. When you take on a task you own it from start to finish and follow up after.',
+      "I highly recommend Lanny to any team looking for a great engineer who actually takes accountability for their work. Having worked closely with him, I’ve always appreciated his dedication and work ethic. Lanny has that rare ownership mentality, once he takes on a task, he handles it completely from start to finish and always takes the initiative to follow up afterward. He's a fantastic teammate and would be an asset anywhere he goes. And he’s a nice guy!",
     approved: true,
   },
   {
