@@ -4,6 +4,7 @@ import Home from './home/Home';
 import Skills from './skills/Skills.js';
 import Projects from './projects/Projects.js';
 import Work from './work/Work.js';
+import Testimonials from './testimonials/Testimonials.js';
 import Contact from './contact/Contact';
 // import ScrollToTop from './util/ScrollToTop.js';
 import CursorDrift from './assets/Tools/CursorDrift.jsx';
@@ -193,6 +194,7 @@ function Main() {
       <Skills skills={pageRef[1]} largeScreen={largeScreen} />
       <Projects projects={pageRef[2]} largeScreen={largeScreen} />
       <Work work={pageRef[3]} largeScreen={largeScreen} />
+      <Testimonials />
       <Contact contact={pageRef[4]} largeScreen={largeScreen} />
     </div>
   );
